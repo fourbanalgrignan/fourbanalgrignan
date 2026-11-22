@@ -1,0 +1,1109 @@
+---
+title: ""
+format:
+  html:
+    title-block-style: none
+    page-layout: full
+---
+
+```{=html}
+<section class="grignan-home">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+/* =====================================
+   FOND ET DÉCORATIONS
+===================================== */
+
+html, body, #quarto-content {
+  background-color: #F4F0E8 !important;
+}
+
+.grignan-home {
+  font-family: Arial, sans-serif;
+  color: #293747;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  isolation: isolate;
+}
+
+.grignan-home * {
+  box-sizing: border-box;
+}
+
+/* LAVANDE À DROITE */
+
+.lavande-filigrane {
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  width: 190px;
+  height: auto;
+  opacity: 0.17;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ÉPI DE BLÉ À GAUCHE */
+
+.ble-filigrane {
+  position: fixed;
+  left: 8px;
+  bottom: 15px;
+  width: 175px;
+  height: auto;
+  opacity: 0.19;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =====================================
+   TITRE DOSSIER & INTRODUCTION
+===================================== */
+
+.gh-dossier-title {
+  text-align: center;
+  margin: 35px 0 38px;
+  padding: 28px 24px;
+  background: #f0f9ff;
+  border: 2px solid #bee3f8;
+  border-radius: 14px;
+  box-shadow: 0 3px 14px rgba(43, 108, 176, 0.07);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.gh-dossier-hero-bg {
+  position: absolute;
+  right: -14px;
+  bottom: -16px;
+  width: 215px;
+  height: 215px;
+  opacity: 0.09;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-7deg);
+}
+
+.gh-dossier-title > *:not(.gh-dossier-hero-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+.gh-section-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 13px;
+  border-radius: 20px;
+  background: #dbeafe;
+  color: #2b6cb0;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.grignan-home .gh-dossier-title h2 {
+  font-family: 'Comfortaa', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 30px !important;
+  color: #26394d !important;
+  margin: 0 0 14px !important;
+  letter-spacing: 1px;
+  text-align: center !important;
+}
+
+.gh-dossier-title p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+/* =====================================
+   GRILLE DES FICHES
+===================================== */
+
+.elus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.elus-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  min-width: 0;
+  padding: 24px;
+  background: #f7f8f8;
+  border: 1px solid #e1e5e7;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.elus-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 18px rgba(41,55,71,0.08);
+}
+
+.elus-number {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #a38b65;
+  margin-bottom: 9px;
+}
+
+/* DESSINS DE LETTRE */
+
+.elus-letter-icon {
+  width: 43px;
+  height: 36px;
+  margin-bottom: 13px;
+  flex-shrink: 0;
+}
+
+.elus-letter-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* TITRES */
+
+.grignan-home .elus-card h2 {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  text-align: left !important;
+  font-family: 'Comfortaa', Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.4 !important;
+  font-weight: 700 !important;
+  color: #293747 !important;
+  margin: 0 0 17px !important;
+  padding: 0 !important;
+  float: none !important;
+}
+
+/* COORDONNÉES */
+
+.contact-line {
+  width: 100%;
+  margin-bottom: 13px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #435264;
+  overflow-wrap: anywhere;
+}
+
+.contact-label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: #78899a;
+}
+
+.contact-line a {
+  color: #2b6cb0;
+  text-decoration: none;
+}
+
+.contact-line a:hover {
+  text-decoration: underline;
+}
+
+/* BOUTONS FORMULAIRES DE CONTACT */
+
+.contact-form-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 3px;
+  padding: 8px 14px;
+  background-color: #2b6cb0;
+  color: #ffffff !important;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.contact-form-btn:hover {
+  background-color: #1e4e8c;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transform: translateY(-1px);
+}
+
+.contact-form-btn--teal {
+  background-color: #5d978b;
+}
+
+.contact-form-btn--teal:hover {
+  background-color: #39766b;
+}
+
+.contact-address {
+  line-height: 1.65;
+}
+
+/* LIENS PDF */
+
+.elus-card-footer {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #e1e5e7;
+}
+
+.elus-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #2b6cb0 !important;
+  text-decoration: none !important;
+  font-weight: 700;
+}
+
+.elus-download:hover {
+  color: #1e4e8c !important;
+  text-decoration: underline !important;
+}
+
+/* SÉPARATION */
+
+.elus-separator {
+  margin: 38px 0 30px;
+  border: 0;
+  border-top: 1px solid #e1e5e7;
+}
+
+/* =====================================
+   MÉTHODOLOGIE
+===================================== */
+
+.methodology {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #293747;
+}
+
+.methodology-letter {
+  width: 100%;
+  max-width: 794px;
+  min-height: 1123px;
+  margin: 0 auto;
+  padding: 65px;
+  background: #ffffff;
+  border: 1px solid #e5e8eb;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(41,55,71,0.07);
+}
+
+/* EN-TÊTE */
+
+.methodology-header {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 auto 25px;
+  padding-bottom: 17px;
+  border-bottom: 2px solid #dce2e8;
+}
+
+.methodology-surtitle {
+  display: block;
+  width: 100%;
+  text-align: center !important;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #78899a;
+  margin-bottom: 12px;
+}
+
+.methodology-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.methodology-pencil {
+  display: block;
+  width: 48px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.grignan-home .methodology-title h2 {
+  display: block !important;
+  width: auto !important;
+  max-width: none !important;
+  text-align: center !important;
+  font-family: 'Comfortaa', Arial, sans-serif !important;
+  font-size: 23px !important;
+  line-height: 1.4 !important;
+  color: #293f56 !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  text-indent: 0 !important;
+}
+
+/* INTRODUCTION */
+
+.methodology-intro {
+  display: block;
+  max-width: 580px;
+  margin: 0 auto 23px;
+  text-align: center !important;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #536477;
+}
+
+/* ENCADRÉS */
+
+.methodology-section {
+  display: flex;
+  gap: 13px;
+  padding: 13px 15px;
+  margin-bottom: 12px;
+  border-radius: 7px;
+  border-left: 5px solid;
+  align-items: flex-start;
+}
+
+.methodology-number {
+  min-width: 29px;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 13px;
+  flex-shrink: 0;
+  color: white;
+}
+
+.methodology-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.grignan-home .methodology-content h3 {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  margin: 2px 0 6px !important;
+  padding: 0 !important;
+  font-weight: bold !important;
+  float: none !important;
+}
+
+.methodology-content p {
+  font-size: 12.5px;
+  line-height: 1.55;
+  margin: 0;
+  color: #435264;
+}
+
+/* COULEURS DES SIX ÉTAPES */
+
+.method-blue {
+  background: #edf3f8;
+  border-color: #547b9f;
+}
+
+.method-blue .methodology-number {
+  background: #547b9f;
+}
+
+.method-blue h3 {
+  color: #385d7d !important;
+}
+
+.method-teal {
+  background: #eaf4f2;
+  border-color: #5d978b;
+}
+
+.method-teal .methodology-number {
+  background: #5d978b;
+}
+
+.method-teal h3 {
+  color: #39766b !important;
+}
+
+.method-ochre {
+  background: #f8f1e5;
+  border-color: #c39a54;
+}
+
+.method-ochre .methodology-number {
+  background: #c39a54;
+}
+
+.method-ochre h3 {
+  color: #967337 !important;
+}
+
+.method-violet {
+  background: #f1eef7;
+  border-color: #8978aa;
+}
+
+.method-violet .methodology-number {
+  background: #8978aa;
+}
+
+.method-violet h3 {
+  color: #6d5b91 !important;
+}
+
+.method-rose {
+  background: #f8eeee;
+  border-color: #bd7777;
+}
+
+.method-rose .methodology-number {
+  background: #bd7777;
+}
+
+.method-rose h3 {
+  color: #995c5c !important;
+}
+
+.method-slate {
+  background: #edf0f3;
+  border-color: #758697;
+}
+
+.method-slate .methodology-number {
+  background: #758697;
+}
+
+.method-slate h3 {
+  color: #526477 !important;
+}
+
+/* PIED DE PAGE */
+
+.methodology-footer {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 1px solid #dce2e8;
+  text-align: center;
+  font-size: 10px;
+  color: #82909d;
+  letter-spacing: 0.4px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+  .elus-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .elus-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grignan-home .gh-dossier-title h2 {
+    font-size: 25px !important;
+  }
+
+  .gh-dossier-hero-bg {
+    width: 150px;
+    height: 150px;
+    right: -22px;
+    bottom: -18px;
+  }
+
+  .gh-dossier-title p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .methodology-letter {
+    min-height: auto;
+    padding: 28px 18px;
+  }
+
+  .grignan-home .methodology-title h2 {
+    font-size: 18px !important;
+  }
+
+  .methodology-pencil {
+    width: 42px;
+    height: 30px;
+  }
+
+  .methodology-content p {
+    font-size: 12px;
+  }
+
+  .lavande-filigrane {
+    width: 110px;
+    right: -12px;
+    bottom: 5px;
+    opacity: 0.12;
+  }
+
+  .ble-filigrane {
+    width: 105px;
+    left: -15px;
+    bottom: 5px;
+    opacity: 0.13;
+  }
+}
+
+@media (max-width: 360px) {
+  .methodology-title {
+    gap: 7px;
+  }
+
+  .grignan-home .methodology-title h2 {
+    font-size: 16px !important;
+  }
+}
+
+/* IMPRESSION A4 */
+
+@media print {
+  .lavande-filigrane,
+  .ble-filigrane {
+    display: none;
+  }
+
+  .methodology-letter {
+    width: 210mm;
+    min-height: 297mm;
+    max-width: none;
+    margin: 0;
+    padding: 15mm 17mm;
+    border: none;
+    box-shadow: none;
+  }
+
+  .methodology-section {
+    break-inside: avoid;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+</style>
+
+<!-- =====================================
+     ÉPI DE BLÉ SVG À GAUCHE
+===================================== -->
+
+<svg class="ble-filigrane"
+     viewBox="0 0 200 430"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-hidden="true">
+
+  <!-- Tige principale -->
+  <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
+        fill="none"
+        stroke="#71805B"
+        stroke-width="3"
+        stroke-linecap="round"/>
+
+  <!-- Feuilles -->
+  <g fill="#89966C">
+    <path d="M98 350 Q55 328 38 290 Q79 302 98 350"/>
+    <path d="M95 375 Q136 342 150 303 Q111 319 95 375"/>
+    <path d="M93 290 Q48 265 43 228 Q79 246 93 290"/>
+    <path d="M90 315 Q128 281 138 244 Q105 263 90 315"/>
+    <path d="M91 225 Q52 201 55 164 Q84 184 91 225"/>
+    <path d="M91 250 Q130 218 139 184 Q105 198 91 250"/>
+  </g>
+
+  <!-- Grains de blé côté gauche -->
+  <g fill="#C4A15E">
+    <ellipse cx="101" cy="42" rx="7" ry="17" transform="rotate(-28 101 42)"/>
+    <ellipse cx="86" cy="57" rx="7" ry="16" transform="rotate(-58 86 57)"/>
+    <ellipse cx="111" cy="69" rx="7" ry="17" transform="rotate(25 111 69)"/>
+    <ellipse cx="79" cy="82" rx="7" ry="16" transform="rotate(-58 79 82)"/>
+    <ellipse cx="112" cy="97" rx="7" ry="17" transform="rotate(25 112 97)"/>
+    <ellipse cx="77" cy="110" rx="7" ry="16" transform="rotate(-55 77 110)"/>
+    <ellipse cx="108" cy="126" rx="7" ry="17" transform="rotate(22 108 126)"/>
+    <ellipse cx="80" cy="139" rx="7" ry="15" transform="rotate(-45 80 139)"/>
+    <ellipse cx="101" cy="154" rx="7" ry="16" transform="rotate(15 101 154)"/>
+    <ellipse cx="88" cy="169" rx="7" ry="15" transform="rotate(-35 88 169)"/>
+  </g>
+
+  <!-- Grains de blé côté droit -->
+  <g fill="#D3B474">
+    <ellipse cx="115" cy="50" rx="6" ry="14" transform="rotate(40 115 50)"/>
+    <ellipse cx="96" cy="74" rx="6" ry="14" transform="rotate(-25 96 74)"/>
+    <ellipse cx="121" cy="83" rx="6" ry="14" transform="rotate(45 121 83)"/>
+    <ellipse cx="91" cy="102" rx="6" ry="14" transform="rotate(-25 91 102)"/>
+    <ellipse cx="119" cy="112" rx="6" ry="14" transform="rotate(42 119 112)"/>
+    <ellipse cx="91" cy="131" rx="6" ry="13" transform="rotate(-20 91 131)"/>
+    <ellipse cx="113" cy="141" rx="6" ry="13" transform="rotate(38 113 141)"/>
+    <ellipse cx="94" cy="158" rx="6" ry="12" transform="rotate(-15 94 158)"/>
+  </g>
+
+  <!-- Barbes fines des épis -->
+  <g stroke="#B69A61" stroke-width="1.2"
+     stroke-linecap="round" opacity="0.9">
+    <path d="M101 42L89 15"/>
+    <path d="M86 57L66 36"/>
+    <path d="M111 69L127 42"/>
+    <path d="M79 82L55 63"/>
+    <path d="M112 97L132 69"/>
+    <path d="M77 110L52 93"/>
+    <path d="M108 126L128 101"/>
+    <path d="M80 139L58 125"/>
+    <path d="M101 154L117 133"/>
+    <path d="M88 169L69 155"/>
+  </g>
+
+</svg>
+
+<!-- =====================================
+     BRIN DE LAVANDE SVG À DROITE
+===================================== -->
+
+<svg class="lavande-filigrane"
+     viewBox="0 0 200 420"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-hidden="true">
+
+  <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
+        fill="none" stroke="#687D58"
+        stroke-width="3.5" stroke-linecap="round"/>
+
+  <g fill="#82936D">
+    <path d="M105 340 Q55 320 42 278 Q85 290 105 340"/>
+    <path d="M103 365 Q145 330 158 292 Q115 310 103 365"/>
+    <path d="M108 275 Q60 250 55 215 Q90 230 108 275"/>
+    <path d="M112 300 Q150 265 155 230 Q120 250 112 300"/>
+    <path d="M115 210 Q78 185 77 155 Q107 175 115 210"/>
+    <path d="M120 230 Q155 200 165 170 Q130 185 120 230"/>
+    <path d="M130 145 Q102 120 107 92 Q130 110 130 145"/>
+    <path d="M135 165 Q165 140 173 112 Q143 128 135 165"/>
+  </g>
+
+  <g fill="#9274A9">
+    <ellipse cx="145" cy="28" rx="8" ry="14" transform="rotate(20 145 28)"/>
+    <ellipse cx="132" cy="40" rx="8" ry="14" transform="rotate(-35 132 40)"/>
+    <ellipse cx="155" cy="48" rx="8" ry="14" transform="rotate(35 155 48)"/>
+    <ellipse cx="127" cy="60" rx="8" ry="14" transform="rotate(-30 127 60)"/>
+    <ellipse cx="151" cy="69" rx="8" ry="14" transform="rotate(30 151 69)"/>
+    <ellipse cx="120" cy="81" rx="8" ry="14" transform="rotate(-25 120 81)"/>
+    <ellipse cx="144" cy="90" rx="8" ry="14" transform="rotate(25 144 90)"/>
+    <ellipse cx="119" cy="105" rx="7" ry="13" transform="rotate(-25 119 105)"/>
+    <ellipse cx="138" cy="116" rx="7" ry="13" transform="rotate(25 138 116)"/>
+    <ellipse cx="116" cy="130" rx="7" ry="12" transform="rotate(-20 116 130)"/>
+    <ellipse cx="132" cy="140" rx="7" ry="12" transform="rotate(25 132 140)"/>
+  </g>
+
+  <g fill="#B49AC6">
+    <circle cx="145" cy="28" r="2"/>
+    <circle cx="132" cy="40" r="2"/>
+    <circle cx="155" cy="48" r="2"/>
+    <circle cx="127" cy="60" r="2"/>
+    <circle cx="151" cy="69" r="2"/>
+    <circle cx="120" cy="81" r="2"/>
+    <circle cx="144" cy="90" r="2"/>
+  </g>
+</svg>
+
+<!-- =====================================
+     TITRE DOSSIER & INTRODUCTION
+===================================== -->
+
+<div class="gh-dossier-title">
+
+  <!-- Filigrane SVG Courrier : enveloppe -->
+  <svg class="gh-dossier-hero-bg" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="24" y="48" width="172" height="124" rx="12" fill="none" stroke="#2b6cb0" stroke-width="5"/>
+    <path d="M28 54 L110 118 L192 54" fill="none" stroke="#2b6cb0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M28 166 L86 112 M192 166 L134 112" fill="none" stroke="#2b6cb0" stroke-width="4.5" stroke-linecap="round"/>
+  </svg>
+
+  <span class="gh-section-badge">Interpeller · Associations et Fondations</span>
+
+  <h2>INTERPELLER LES ASSOCIATIONS ET FONDATIONS</h2>
+
+  <p>
+    Retrouvez ci-dessous les fiches de contact des associations et fondations dédiées à la sauvegarde du patrimoine. Des modèles de lettres sont proposés, librement personnalisables selon vos souhaits.
+  </p>
+
+</div>
+
+<!-- =====================================
+     GRILLE DES FICHES ACTEURS
+===================================== -->
+
+<div class="elus-grid">
+
+  <!-- 01 : SITES & MONUMENTS (SPPEF) -->
+
+  <article class="elus-card">
+
+    <div class="elus-number">01 · ASSOCIATION NATIONALE</div>
+
+    <div class="elus-letter-icon" aria-hidden="true">
+      <svg viewBox="0 0 64 48" fill="none">
+        <rect x="5" y="5" width="54" height="38"
+              rx="5" fill="#edf3f8"
+              stroke="#547b9f" stroke-width="2"/>
+        <path d="M7 9L32 27L57 9"
+              stroke="#547b9f" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 41L24 25M57 41L40 25"
+              stroke="#547b9f" stroke-width="2"
+              stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <h2>Sites &amp; Monuments (SPPEF)</h2>
+
+    <div class="contact-line">
+      <span class="contact-label">Courriel</span>
+      <a href="mailto:contact@sppef.org">
+        contact@sppef.org
+      </a>
+    </div>
+
+    <div class="contact-line contact-address">
+      <span class="contact-label">Adresse postale</span>
+      39 avenue de La Motte-Picquet<br>
+      75007 PARIS
+    </div>
+
+    <div class="elus-card-footer">
+      <a class="elus-download"
+         href="agir 2/Interpeller/Associations et Fondations/Modèle de lettre pour Association Sites et monuments.pdf"
+         target="_blank">
+        🔗 Télécharger le modèle de lettre
+      </a>
+    </div>
+
+  </article>
+
+  <!-- 02 : VIEILLES MAISONS FRANÇAISES (VMF) -->
+
+  <article class="elus-card">
+
+    <div class="elus-number">02 · ASSOCIATION NATIONALE</div>
+
+    <div class="elus-letter-icon" aria-hidden="true">
+      <svg viewBox="0 0 64 48" fill="none">
+        <rect x="5" y="5" width="54" height="38"
+              rx="5" fill="#eaf4f2"
+              stroke="#5d978b" stroke-width="2"/>
+        <path d="M7 9L32 27L57 9"
+              stroke="#5d978b" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 41L24 25M57 41L40 25"
+              stroke="#5d978b" stroke-width="2"
+              stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <h2>Vieilles Maisons Françaises (VMF)</h2>
+
+    <div class="contact-line">
+      <span class="contact-label">Contact en ligne</span>
+      <a class="contact-form-btn contact-form-btn--teal"
+         href="https://www.vmfpatrimoine.org/contact"
+         target="_blank"
+         rel="noopener noreferrer">
+        ✉️ Accéder au formulaire de contact
+      </a>
+    </div>
+
+    <div class="contact-line contact-address">
+      <span class="contact-label">Adresse postale</span>
+      93 rue de l’Université<br>
+      75007 PARIS
+    </div>
+
+    <div class="elus-card-footer">
+      <a class="elus-download"
+         href="agir 2/Interpeller/Associations et Fondations/Modèle de lettre pour Association Vieilles Maisons Françaises.pdf"
+         target="_blank">
+        🔗 Télécharger le modèle de lettre
+      </a>
+    </div>
+
+  </article>
+
+  <!-- 03 : LA DEMEURE HISTORIQUE -->
+
+  <article class="elus-card">
+
+    <div class="elus-number">03 · ASSOCIATION NATIONALE</div>
+
+    <div class="elus-letter-icon" aria-hidden="true">
+      <svg viewBox="0 0 64 48" fill="none">
+        <rect x="5" y="5" width="54" height="38"
+              rx="5" fill="#f8f1e5"
+              stroke="#c39a54" stroke-width="2"/>
+        <path d="M7 9L32 27L57 9"
+              stroke="#c39a54" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 41L24 25M57 41L40 25"
+              stroke="#c39a54" stroke-width="2"
+              stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <h2>La Demeure Historique</h2>
+
+    <div class="contact-line">
+      <span class="contact-label">Courriels · Délégués Rhône-Alpes &amp; Drôme</span>
+      <a href="mailto:marc.estrangin@wanadoo.fr">
+        marc.estrangin@wanadoo.fr
+      </a><br>
+      <a href="mailto:amicie.de-vauplane@wanadoo.fr">
+        amicie.de-vauplane@wanadoo.fr
+      </a>
+    </div>
+
+    <div class="contact-line contact-address">
+      <span class="contact-label">Adresse postale</span>
+      Hôtel de Nesmond<br>
+      57, Quai de la Tournelle<br>
+      F 75005 PARIS
+    </div>
+
+    <div class="elus-card-footer">
+      <a class="elus-download"
+         href="agir 2/Interpeller/Associations et Fondations/Modèle de lettre pour association la demeure historique.pdf"
+         target="_blank">
+        🔗 Télécharger le modèle de lettre
+      </a>
+    </div>
+
+  </article>
+
+  <!-- 04 : FONDATION DU PATRIMOINE -->
+
+  <article class="elus-card">
+
+    <div class="elus-number">04 · FONDATION NATIONALE</div>
+
+    <div class="elus-letter-icon" aria-hidden="true">
+      <svg viewBox="0 0 64 48" fill="none">
+        <rect x="5" y="5" width="54" height="38"
+              rx="5" fill="#f1eef7"
+              stroke="#8978aa" stroke-width="2"/>
+        <path d="M7 9L32 27L57 9"
+              stroke="#8978aa" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 41L24 25M57 41L40 25"
+              stroke="#8978aa" stroke-width="2"
+              stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <h2>Fondation du patrimoine</h2>
+
+    <div class="contact-line">
+      <span class="contact-label">Courriel</span>
+      <a href="mailto:rhonealpes@fondation-patrimoine.org">
+        rhonealpes@fondation-patrimoine.org
+      </a>
+    </div>
+
+    <div class="contact-line contact-address">
+      <span class="contact-label">Adresse postale · Délégation Rhône-Alpes</span>
+      Fort de Vaise<br>
+      27 bd Antoine de St Exupéry<br>
+      69009 LYON
+    </div>
+
+    <div class="elus-card-footer">
+      <a class="elus-download"
+         href="agir 2/Interpeller/Associations et Fondations/Modèle de lettre pour la Fondation du patrimoine.pdf"
+         target="_blank">
+        🔗 Télécharger le modèle de lettre
+      </a>
+    </div>
+
+  </article>
+
+</div>
+
+<hr class="elus-separator">
+
+<!-- =====================================
+     MÉTHODOLOGIE RÉDACTIONNELLE
+===================================== -->
+
+<div class="methodology">
+
+  <div class="methodology-letter">
+
+    <header class="methodology-header">
+
+      <div class="methodology-surtitle">
+        Guide pratique · Correspondance institutionnelle
+      </div>
+
+      <div class="methodology-title">
+
+        <svg class="methodology-pencil"
+             viewBox="0 0 100 64"
+             fill="none"
+             aria-hidden="true">
+
+          <path d="M8 49 C17 38, 24 58, 34 46 S48 39, 55 47"
+                stroke="#547b9f"
+                stroke-width="2.8"
+                stroke-linecap="round"/>
+
+          <g transform="rotate(-38 65 28)">
+
+            <rect x="58" y="5" width="13" height="43"
+                  rx="2" fill="#d6ad63"
+                  stroke="#967337" stroke-width="1.5"/>
+
+            <rect x="58" y="5" width="13" height="8"
+                  rx="2" fill="#bd7777"
+                  stroke="#995c5c" stroke-width="1.2"/>
+
+            <path d="M58 15H71"
+                  stroke="#967337" stroke-width="1.5"/>
+
+            <path d="M58 48L64.5 59L71 48Z"
+                  fill="#e8d5ad"
+                  stroke="#967337" stroke-width="1.4"/>
+
+            <path d="M62.5 55.5L64.5 59L66.5 55.5"
+                  fill="#526477"/>
+
+          </g>
+
+        </svg>
+
+        <h2>Méthodologie rédactionnelle suggérée</h2>
+
+      </div>
+
+    </header>
+
+    <p class="methodology-intro">
+      Une démarche structurée pour interpeller un interlocuteur,
+      présenter les faits et formuler une demande argumentée
+      concernant la transformation du four banal de Grignan.
+    </p>
+
+    <section class="methodology-section method-blue">
+      <div class="methodology-number">1</div>
+      <div class="methodology-content">
+        <h3>La contextualisation</h3>
+        <p>
+          Présenter succinctement le four banal, son histoire
+          et son importance patrimoniale.
+        </p>
+      </div>
+    </section>
+
+    <section class="methodology-section method-teal">
+      <div class="methodology-number">2</div>
+      <div class="methodology-content">
+        <h3>La présentation des faits</h3>
+        <p>
+          Exposer la transformation de 2026 par l'installation
+          d'Hélène Delprat et le montant de la commande publique.
+        </p>
+      </div>
+    </section>
+
+    <section class="methodology-section method-ochre">
+      <div class="methodology-number">3</div>
+      <div class="methodology-content">
+        <h3>La formulation des interrogations</h3>
+        <p>
+          Interroger les choix artistiques, patrimoniaux,
+          financiers et administratifs, sans commencer
+          par imposer une conclusion.
+        </p>
+      </div>
+    </section>
+
+    <section class="methodology-section method-violet">
+      <div class="methodology-number">4</div>
+      <div class="methodology-content">
+        <h3>La mise en perspective</h3>
+        <p>
+          Dépasser le cas particulier pour aborder les enjeux
+          plus larges : responsabilités, intérêt général,
+          transparence, gouvernance, respect des institutions
+          et préservation du patrimoine.
+        </p>
+      </div>
+    </section>
+
+    <section class="methodology-section method-rose">
+      <div class="methodology-number">5</div>
+      <div class="methodology-content">
+        <h3>La sollicitation concrète</h3>
+        <p>
+          Formuler une demande précise et adaptée au destinataire :
+          obtenir des explications, demander une vérification,
+          solliciter une prise de position, engager une éventuelle
+          procédure de retrait de l'œuvre, appeler à l'ouverture
+          d'un débat ou demander une action relevant de ses compétences.
+        </p>
+      </div>
+    </section>
+
+    <section class="methodology-section method-slate">
+      <div class="methodology-number">6</div>
+      <div class="methodology-content">
+        <h3>L'ouverture au dialogue</h3>
+        <p>
+          Se tenir à la disposition du destinataire pour échanger,
+          apporter des précisions ou transmettre des informations
+          et des documents complémentaires.
+        </p>
+      </div>
+    </section>
+
+    <footer class="methodology-footer">
+      FOUR BANAL DE GRIGNAN · REPÈRES POUR LA RÉDACTION D'UN COURRIER
+    </footer>
+
+  </div>
+
+</div>
+
+</section>
+```

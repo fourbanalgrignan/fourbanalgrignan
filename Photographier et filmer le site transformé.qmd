@@ -1,0 +1,1055 @@
+---
+title: ""
+format:
+  html:
+    title-block-style: none
+    page-layout: full
+---
+
+```{=html}
+<section class="grignan-home">
+
+<style>
+@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap)');
+
+/* =====================================
+   FOND ET DÉCORATIONS
+===================================== */
+
+html, body, #quarto-content {
+  background-color: #F4F0E8 !important;
+}
+
+.grignan-home {
+  display: block !important;
+  font-family: Arial, sans-serif;
+  color: #293747;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  isolation: isolate;
+}
+
+.grignan-home * {
+  box-sizing: border-box;
+}
+
+/* LAVANDE À DROITE */
+
+.lavande-filigrane {
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  width: 190px;
+  height: auto;
+  opacity: 0.17;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ÉPI DE BLÉ À GAUCHE */
+
+.ble-filigrane {
+  position: fixed;
+  left: 8px;
+  bottom: 15px;
+  width: 175px;
+  height: auto;
+  opacity: 0.19;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =====================================
+   TITRE DOSSIER & INTRODUCTION
+===================================== */
+
+.gh-dossier-title {
+  text-align: center;
+  margin: 35px 0 34px;
+  padding: 28px 24px;
+  background: #f0fff4;
+  border: 2px solid #9ae6b4;
+  border-radius: 14px;
+  box-shadow: 0 3px 14px rgba(47, 133, 90, 0.08);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.gh-dossier-hero-bg {
+  position: absolute;
+  right: -14px;
+  bottom: -16px;
+  width: 210px;
+  height: 210px;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-8deg);
+}
+
+.gh-dossier-title > *:not(.gh-dossier-hero-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+.gh-section-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 13px;
+  border-radius: 20px;
+  background: #c6f6d5;
+  color: #2f855a;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.grignan-home .gh-dossier-title h2 {
+  font-family: 'Comfortaa', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 30px !important;
+  color: #26394d !important;
+  margin: 0 0 12px !important;
+  letter-spacing: 1px;
+  text-align: center !important;
+  border: none !important;
+}
+
+.gh-dossier-title p {
+  font-size: 17px;
+  line-height: 1.55;
+  color: #4a5568;
+  margin: 0 auto;
+  max-width: 680px;
+}
+
+/* =====================================
+   GRILLE DES 3 ENCADRÉS CARRÉS DU HAUT
+===================================== */
+
+.grignan-home .shots-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  width: 100% !important;
+  align-items: stretch !important;
+}
+
+.grignan-home .shot-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 20px !important;
+  background: #f7f8f8 !important;
+  border: 1px solid #c6f6d5 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 10px rgba(47, 133, 90, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grignan-home .shot-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(47, 133, 90, 0.11);
+}
+
+.shot-meta {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  margin-bottom: 12px !important;
+  gap: 6px !important;
+}
+
+.shot-number {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #2f855a;
+}
+
+.shot-number--ochre {
+  color: #967337;
+}
+
+.shot-number--blue {
+  color: #385d7d;
+}
+
+.shot-tag {
+  padding: 3px 8px;
+  border-radius: 5px;
+  background: #dcfce7;
+  color: #2f855a;
+  font-size: 10.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.shot-tag--ochre {
+  background: #f8f1e5;
+  color: #967337;
+}
+
+.shot-tag--blue {
+  background: #edf3f8;
+  color: #385d7d;
+}
+
+.shot-frame {
+  width: 100% !important;
+  margin-bottom: 14px !important;
+  padding: 8px !important;
+  background: #ffffff !important;
+  border: 1px solid #dce3e6 !important;
+  border-radius: 8px !important;
+}
+
+.shot-frame svg {
+  display: block;
+  width: 100%;
+  height: 88px;
+}
+
+.grignan-home .shot-card h2 {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  font-family: 'Comfortaa', Arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.35 !important;
+  font-weight: 700 !important;
+  color: #293747 !important;
+  margin: 0 0 8px !important;
+  padding: 0 0 6px !important;
+  border-bottom: 1px solid #e4e9ec !important;
+  float: none !important;
+}
+
+.shot-desc {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  color: #435264 !important;
+  margin: 0 !important;
+}
+
+/* =====================================
+   4e ENCADRÉ HORIZONTAL EN DESSOUS (PLEINE LARGEUR)
+===================================== */
+
+.grignan-home .archives-horizontal-card {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin-top: 20px !important;
+  gap: 20px !important;
+  padding: 18px 22px !important;
+  background: linear-gradient(135deg, #fbf7ef 0%, #f5ede0 100%) !important;
+  border: 1px solid #dcc7a1 !important;
+  border-left: 5px solid #c39a54 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 3px 14px rgba(150, 115, 55, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grignan-home .archives-horizontal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(150, 115, 55, 0.12);
+}
+
+.archives-illustration {
+  flex: 0 0 82px !important;
+  width: 82px !important;
+  height: 68px !important;
+  background: #ffffff !important;
+  border: 1px solid #e4d4b7 !important;
+  border-radius: 9px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 5px !important;
+}
+
+.archives-illustration svg {
+  width: 68px;
+  height: 54px;
+  display: block;
+}
+
+.archives-body {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+.archives-header-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  margin-bottom: 6px !important;
+}
+
+.grignan-home .archives-body h3 {
+  display: inline-block !important;
+  width: auto !important;
+  text-align: left !important;
+  font-family: 'Comfortaa', Arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+  color: #4a3819 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.archives-kicker {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: #967337;
+  background: #efe3ce;
+  padding: 3px 9px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.archives-body p {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  color: #5b492c !important;
+  margin: 0 !important;
+}
+
+/* SÉPARATION */
+
+.elus-separator {
+  margin: 34px 0 28px;
+  border: 0;
+  border-top: 1px solid #e1e5e7;
+}
+
+/* =====================================
+   GUIDE PRATIQUE & LÉGENDE À COPIER
+===================================== */
+
+.methodology {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #293747;
+}
+
+.methodology-letter {
+  width: 100%;
+  max-width: 794px;
+  margin: 0 auto;
+  padding: 38px 46px;
+  background: #ffffff;
+  border: 1px solid #e5e8eb;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(41,55,71,0.07);
+}
+
+.methodology-header {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 auto 20px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #dce2e8;
+}
+
+.methodology-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.methodology-icon-svg {
+  display: block;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.grignan-home .methodology-title h2 {
+  display: block !important;
+  width: auto !important;
+  max-width: none !important;
+  text-align: center !important;
+  font-family: 'Comfortaa', Arial, sans-serif !important;
+  font-size: 20px !important;
+  line-height: 1.35 !important;
+  color: #293f56 !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  text-indent: 0 !important;
+  border: none !important;
+}
+
+.methodology-section {
+  display: flex;
+  gap: 13px;
+  padding: 12px 15px;
+  margin-bottom: 11px;
+  border-radius: 7px;
+  border-left: 5px solid;
+  align-items: flex-start;
+}
+
+.methodology-number {
+  min-width: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 13px;
+  flex-shrink: 0;
+  color: white;
+}
+
+.methodology-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.grignan-home .methodology-content h3 {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.35 !important;
+  margin: 1px 0 4px !important;
+  padding: 0 !important;
+  font-weight: bold !important;
+  border: none !important;
+}
+
+.methodology-content p {
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin: 0;
+  color: #435264;
+}
+
+.method-teal {
+  background: #eaf4f2;
+  border-color: #5d978b;
+}
+
+.method-teal .methodology-number {
+  background: #5d978b;
+}
+
+.method-teal h3 {
+  color: #39766b !important;
+}
+
+.method-ochre {
+  background: #f8f1e5;
+  border-color: #c39a54;
+}
+
+.method-ochre .methodology-number {
+  background: #c39a54;
+}
+
+.method-ochre h3 {
+  color: #967337 !important;
+}
+
+.method-blue {
+  background: #edf3f8;
+  border-color: #547b9f;
+}
+
+.method-blue .methodology-number {
+  background: #547b9f;
+}
+
+.method-blue h3 {
+  color: #385d7d !important;
+}
+
+/* LÉGENDE PRÊTE À COPIER */
+
+.caption-box {
+  margin-top: 20px;
+  padding: 18px 20px;
+  background: #fdfcf9;
+  border: 1.5px dashed #2f855a;
+  border-radius: 8px;
+}
+
+.caption-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.caption-title {
+  font-family: 'Comfortaa', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #293f56;
+  margin: 0;
+}
+
+.caption-note {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #2f855a;
+  background: #dcfce7;
+  padding: 3px 9px;
+  border-radius: 12px;
+}
+
+.caption-sample {
+  padding: 12px 14px;
+  background: #ffffff;
+  border: 1px solid #dce2e8;
+  border-radius: 6px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #293747;
+  margin-bottom: 12px;
+  white-space: pre-line;
+}
+
+.caption-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.caption-feedback {
+  font-size: 12px;
+  font-weight: 700;
+  color: #2f855a;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.caption-feedback.is-visible {
+  opacity: 1;
+}
+
+.caption-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 15px;
+  background-color: #2f855a;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.caption-copy-btn:hover {
+  background-color: #276749;
+}
+
+.methodology-footer {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #dce2e8;
+  text-align: center;
+  font-size: 10px;
+  color: #82909d;
+  letter-spacing: 0.4px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 760px) {
+  .grignan-home .shots-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .grignan-home .gh-dossier-title h2 {
+    font-size: 24px !important;
+  }
+
+  .gh-dossier-hero-bg {
+    width: 150px;
+    height: 150px;
+    right: -22px;
+    bottom: -18px;
+  }
+
+  .gh-dossier-title p {
+    font-size: 15.5px;
+    padding: 0 10px;
+  }
+
+  .methodology-letter {
+    padding: 24px 16px;
+  }
+
+  .grignan-home .methodology-title h2 {
+    font-size: 17px !important;
+  }
+
+  .grignan-home .archives-horizontal-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .lavande-filigrane {
+    width: 110px;
+    right: -12px;
+    bottom: 5px;
+    opacity: 0.12;
+  }
+
+  .ble-filigrane {
+    width: 105px;
+    left: -15px;
+    bottom: 5px;
+    opacity: 0.13;
+  }
+}
+</style>
+
+<!-- =====================================
+     ÉPI DE BLÉ SVG À GAUCHE
+===================================== -->
+
+<svg class="ble-filigrane"
+     viewBox="0 0 200 430"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     aria-hidden="true">
+
+  <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
+        fill="none"
+        stroke="#71805B"
+        stroke-width="3"
+        stroke-linecap="round"/>
+
+  <g fill="#89966C">
+    <path d="M98 350 Q55 328 38 290 Q79 302 98 350"/>
+    <path d="M95 375 Q136 342 150 303 Q111 319 95 375"/>
+    <path d="M93 290 Q48 265 43 228 Q79 246 93 290"/>
+    <path d="M90 315 Q128 281 138 244 Q105 263 90 315"/>
+    <path d="M91 225 Q52 201 55 164 Q84 184 91 225"/>
+    <path d="M91 250 Q130 218 139 184 Q105 198 91 250"/>
+  </g>
+
+  <g fill="#C4A15E">
+    <ellipse cx="101" cy="42" rx="7" ry="17" transform="rotate(-28 101 42)"/>
+    <ellipse cx="86" cy="57" rx="7" ry="16" transform="rotate(-58 86 57)"/>
+    <ellipse cx="111" cy="69" rx="7" ry="17" transform="rotate(25 111 69)"/>
+    <ellipse cx="79" cy="82" rx="7" ry="16" transform="rotate(-58 79 82)"/>
+    <ellipse cx="112" cy="97" rx="7" ry="17" transform="rotate(25 112 97)"/>
+    <ellipse cx="77" cy="110" rx="7" ry="16" transform="rotate(-55 77 110)"/>
+    <ellipse cx="108" cy="126" rx="7" ry="17" transform="rotate(22 108 126)"/>
+    <ellipse cx="80" cy="139" rx="7" ry="15" transform="rotate(-45 80 139)"/>
+    <ellipse cx="101" cy="154" rx="7" ry="16" transform="rotate(15 101 154)"/>
+    <ellipse cx="88" cy="169" rx="7" ry="15" transform="rotate(-35 88 169)"/>
+  </g>
+
+  <g fill="#D3B474">
+    <ellipse cx="115" cy="50" rx="6" ry="14" transform="rotate(40 115 50)"/>
+    <ellipse cx="96" cy="74" rx="6" ry="14" transform="rotate(-25 96 74)"/>
+    <ellipse cx="121" cy="83" rx="6" ry="14" transform="rotate(45 121 83)"/>
+    <ellipse cx="91" cy="102" rx="6" ry="14" transform="rotate(-25 91 102)"/>
+    <ellipse cx="119" cy="112" rx="6" ry="14" transform="rotate(42 119 112)"/>
+    <ellipse cx="91" cy="131" rx="6" ry="13" transform="rotate(-20 91 131)"/>
+    <ellipse cx="113" cy="141" rx="6" ry="13" transform="rotate(38 113 141)"/>
+    <ellipse cx="94" cy="158" rx="6" ry="12" transform="rotate(-15 94 158)"/>
+  </g>
+
+  <g stroke="#B69A61" stroke-width="1.2"
+     stroke-linecap="round" opacity="0.9">
+    <path d="M101 42L89 15"/>
+    <path d="M86 57L66 36"/>
+    <path d="M111 69L127 42"/>
+    <path d="M79 82L55 63"/>
+    <path d="M112 97L132 69"/>
+    <path d="M77 110L52 93"/>
+    <path d="M108 126L128 101"/>
+    <path d="M80 139L58 125"/>
+    <path d="M101 154L117 133"/>
+    <path d="M88 169L69 155"/>
+  </g>
+
+</svg>
+
+<!-- =====================================
+     BRIN DE LAVANDE SVG À DROITE
+===================================== -->
+
+<svg class="lavande-filigrane"
+     viewBox="0 0 200 420"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     aria-hidden="true">
+
+  <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
+        fill="none" stroke="#687D58"
+        stroke-width="3.5" stroke-linecap="round"/>
+
+  <g fill="#82936D">
+    <path d="M105 340 Q55 320 42 278 Q85 290 105 340"/>
+    <path d="M103 365 Q145 330 158 292 Q115 310 103 365"/>
+    <path d="M108 275 Q60 250 55 215 Q90 230 108 275"/>
+    <path d="M112 300 Q150 265 155 230 Q120 250 112 300"/>
+    <path d="M115 210 Q78 185 77 155 Q107 175 115 210"/>
+    <path d="M120 230 Q155 200 165 170 Q130 185 120 230"/>
+    <path d="M130 145 Q102 120 107 92 Q130 110 130 145"/>
+    <path d="M135 165 Q165 140 173 112 Q143 128 135 165"/>
+  </g>
+
+  <g fill="#9274A9">
+    <ellipse cx="145" cy="28" rx="8" ry="14" transform="rotate(20 145 28)"/>
+    <ellipse cx="132" cy="40" rx="8" ry="14" transform="rotate(-35 132 40)"/>
+    <ellipse cx="155" cy="48" rx="8" ry="14" transform="rotate(35 155 48)"/>
+    <ellipse cx="127" cy="60" rx="8" ry="14" transform="rotate(-30 127 60)"/>
+    <ellipse cx="151" cy="69" rx="8" ry="14" transform="rotate(30 151 69)"/>
+    <ellipse cx="120" cy="81" rx="8" ry="14" transform="rotate(-25 120 81)"/>
+    <ellipse cx="144" cy="90" rx="8" ry="14" transform="rotate(25 144 90)"/>
+    <ellipse cx="119" cy="105" rx="7" ry="13" transform="rotate(-25 119 105)"/>
+    <ellipse cx="138" cy="116" rx="7" ry="13" transform="rotate(25 138 116)"/>
+    <ellipse cx="116" cy="130" rx="7" ry="12" transform="rotate(-20 116 130)"/>
+    <ellipse cx="132" cy="140" rx="7" ry="12" transform="rotate(25 132 140)"/>
+  </g>
+
+  <g fill="#B49AC6">
+    <circle cx="145" cy="28" r="2"/>
+    <circle cx="132" cy="40" r="2"/>
+    <circle cx="155" cy="48" r="2"/>
+    <circle cx="127" cy="60" r="2"/>
+    <circle cx="151" cy="69" r="2"/>
+    <circle cx="120" cy="81" r="2"/>
+    <circle cx="144" cy="90" r="2"/>
+  </g>
+
+</svg>
+
+<!-- =====================================
+     TITRE DOSSIER & INTRODUCTION
+===================================== -->
+
+<div class="gh-dossier-title">
+
+  <!-- Filigrane SVG Témoignage photo & vidéo : objectif & viseur -->
+  <svg class="gh-dossier-hero-bg" viewBox="0 0 220 220" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+    <rect x="28" y="54" width="164" height="122" rx="18" fill="none" stroke="#2f855a" stroke-width="5"/>
+    <path d="M72 54 L86 32 L134 32 L148 54" fill="none" stroke="#2f855a" stroke-width="5" stroke-linejoin="round"/>
+    <circle cx="110" cy="115" r="38" fill="none" stroke="#2f855a" stroke-width="5"/>
+    <circle cx="110" cy="115" r="16" fill="#2f855a"/>
+  </svg>
+
+  <span class="gh-section-badge">Diffuser · Témoignage visuel</span>
+
+  <h2>PHOTOGRAPHIER ET FILMER LE SITE TRANSFORMÉ</h2>
+
+  <p>
+    Lors de votre passage rue du Four à Grignan, prenez en photo ou en vidéo l’état actuel du Four banal et partagez vos images sur les réseaux sociaux.
+  </p>
+
+</div>
+
+<!-- =====================================
+     3 ENCADRÉS CARRÉS DU HAUT
+===================================== -->
+
+<div class="shots-grid">
+
+  <!-- 01 : PLAN LARGE -->
+
+  <div class="shot-card">
+
+    <div class="shot-meta">
+      <span class="shot-number">01 · PLAN LARGE</span>
+      <span class="shot-tag">LA RUELLE</span>
+    </div>
+
+    <div class="shot-frame" aria-hidden="true">
+      <svg viewBox="0 0 220 88" fill="none">
+        <rect x="4" y="4" width="212" height="80" rx="5" fill="#f4f7f6" stroke="#d5e2df" stroke-width="1.5"/>
+        <path d="M16 76L76 48H144L204 76" fill="#e7e1d4" stroke="#b5a892" stroke-width="1.3"/>
+        <path d="M16 12L76 25V48L16 76V12Z" fill="#efe9dc" stroke="#b5a892" stroke-width="1.3"/>
+        <path d="M204 12L144 25V48L204 76V12Z" fill="#efe9dc" stroke="#b5a892" stroke-width="1.3"/>
+        <rect x="94" y="26" width="32" height="22" rx="2" fill="#2f3b48"/>
+      </svg>
+    </div>
+
+    <h2>Vue d’ensemble</h2>
+
+    <p class="shot-desc">
+      Cadrez le portail sombre depuis la rue du Four pour montrer le contraste avec les pierres anciennes du village.
+    </p>
+
+  </div>
+
+  <!-- 02 : GROS PLAN -->
+
+  <div class="shot-card">
+
+    <div class="shot-meta">
+      <span class="shot-number shot-number--ochre">02 · GROS PLAN</span>
+      <span class="shot-tag shot-tag--ochre">LES DÉTAILS</span>
+    </div>
+
+    <div class="shot-frame" aria-hidden="true">
+      <svg viewBox="0 0 220 88" fill="none">
+        <rect x="4" y="4" width="212" height="80" rx="5" fill="#fbf8f2" stroke="#e6dcc8" stroke-width="1.5"/>
+        <g stroke="#3b4958" stroke-width="2.2">
+          <line x1="76" y1="14" x2="76" y2="74"/>
+          <line x1="98" y1="14" x2="98" y2="74"/>
+          <line x1="120" y1="14" x2="120" y2="74"/>
+          <line x1="142" y1="14" x2="142" y2="74"/>
+        </g>
+        <circle cx="110" cy="44" r="22" fill="#ffffff" fill-opacity="0.82" stroke="#c39a54" stroke-width="2.2"/>
+        <circle cx="110" cy="34" r="4.2" fill="#c39a54"/>
+        <path d="M99 51C101 42 105 39 110 39C115 39 119 42 121 51" stroke="#293747" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <h2>Détails de la grille</h2>
+
+    <p class="shot-desc">
+      Approchez-vous des motifs du portail et de la silhouette attribuée à Madame de Sévigné (tête déformée et robe percée).
+    </p>
+
+  </div>
+
+  <!-- 03 : VIDÉO COURTE -->
+
+  <div class="shot-card">
+
+    <div class="shot-meta">
+      <span class="shot-number shot-number--blue">03 · VIDÉO</span>
+      <span class="shot-tag shot-tag--blue">1-2 minutes</span>
+    </div>
+
+    <div class="shot-frame" aria-hidden="true">
+      <svg viewBox="0 0 220 88" fill="none">
+        <rect x="4" y="4" width="212" height="80" rx="5" fill="#f3f7fb" stroke="#d4e0ec" stroke-width="1.5"/>
+        <rect x="58" y="15" width="104" height="48" rx="6" fill="#ffffff" stroke="#547b9f" stroke-width="1.8"/>
+        <polygon points="104,29 104,49 122,39" fill="#547b9f"/>
+        <line x1="58" y1="72" x2="162" y2="72" stroke="#c5d4e3" stroke-width="2.8" stroke-linecap="round"/>
+        <line x1="58" y1="72" x2="108" y2="72" stroke="#547b9f" stroke-width="2.8" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <h2>Travelling lent</h2>
+
+    <p class="shot-desc">
+      Filmez en avançant doucement vers la grille puis vers l’intérieur de la « chambre de lecture » (format vertical 9:16 pour les réseaux).
+    </p>
+
+  </div>
+
+</div>
+
+<!-- =====================================
+     4e ENCADRÉ HORIZONTAL EN DESSOUS
+===================================== -->
+
+<div class="archives-horizontal-card">
+
+  <div class="archives-illustration" aria-hidden="true">
+    <svg viewBox="0 0 76 58" fill="none" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
+      <!-- Dossier d'archives arrière -->
+      <path d="M8 16C8 13.8 9.8 12 12 12H26L30 16H64C66.2 16 68 17.8 68 20V46C68 48.2 66.2 50 64 50H12C9.8 50 8 48.2 8 46V16Z"
+            fill="#e7d3b0" stroke="#967337" stroke-width="1.8" stroke-linejoin="round"/>
+      <!-- Document ancien incliné -->
+      <g transform="rotate(-7 26 26)">
+        <rect x="16" y="9" width="22" height="28" rx="2" fill="#fffdf8" stroke="#967337" stroke-width="1.5"/>
+        <line x1="20" y1="15" x2="34" y2="15" stroke="#c39a54" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="20" y1="20" x2="34" y2="20" stroke="#c39a54" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="20" y1="25" x2="29" y2="25" stroke="#c39a54" stroke-width="1.5" stroke-linecap="round"/>
+      </g>
+      <!-- Photo ancienne sépia -->
+      <g transform="rotate(6 49 30)">
+        <rect x="37" y="14" width="24" height="25" rx="2" fill="#ffffff" stroke="#7a5c28" stroke-width="1.5"/>
+        <rect x="40" y="17" width="18" height="14" rx="1" fill="#efe3ce"/>
+        <path d="M43 31V25C43 22 45.8 20 49 20C52.2 20 55 22 55 25V31" fill="#c39a54"/>
+        <circle cx="53" cy="20" r="1.5" fill="#967337"/>
+      </g>
+      <!-- Rabat avant du dossier -->
+      <path d="M8 29H68V46C68 48.2 66.2 50 64 50H12C9.8 50 8 48.2 8 46V29Z"
+            fill="#f4e6ce" stroke="#967337" stroke-width="1.8" stroke-linejoin="round"/>
+      <rect x="31" y="36" width="14" height="5" rx="2" fill="#ffffff" stroke="#967337" stroke-width="1.3"/>
+    </svg>
+  </div>
+
+  <div class="archives-body">
+    <div class="archives-header-row">
+      <h3>Publiez vos archives sur le four banal</h3>
+      <span class="archives-kicker">04 · Mémoire du village</span>
+    </div>
+    <p>
+      Vous possédez d’anciennes photographies, cartes postales ou documents du four banal <strong>avant sa transformation</strong> ? Partagez-les également en ligne pour témoigner de l’aspect authentique et historique du lieu.
+    </p>
+  </div>
+
+</div>
+
+<hr class="elus-separator">
+
+<!-- =====================================
+     REPÈRES RAPIDES & LÉGENDE À COPIER
+===================================== -->
+
+<div class="methodology">
+
+  <div class="methodology-letter">
+
+    <header class="methodology-header">
+
+      <div class="methodology-title">
+
+        <!-- SVG APPAREIL PHOTO -->
+        <svg class="methodology-icon-svg"
+             viewBox="0 0 48 48"
+             fill="none"
+             aria-hidden="true">
+          <circle cx="24" cy="24" r="21" fill="#eaf4f2" stroke="#5d978b" stroke-width="1.8"/>
+          <path d="M13 19.5C13 18.4 13.9 17.5 15 17.5H18L20 15H28L30 17.5H33C34.1 17.5 35 18.4 35 19.5V31C35 32.1 34.1 33 33 33H15C13.9 33 13 32.1 13 31V19.5Z" fill="#ffffff" stroke="#39766b" stroke-width="1.8" stroke-linejoin="round"/>
+          <circle cx="24" cy="25" r="4.5" fill="#eaf4f2" stroke="#39766b" stroke-width="1.8"/>
+        </svg>
+
+        <h2>Publier en 3 étapes simples</h2>
+
+        <!-- SVG PARTAGE -->
+        <svg class="methodology-icon-svg"
+             viewBox="0 0 48 48"
+             fill="none"
+             aria-hidden="true">
+          <circle cx="24" cy="24" r="21" fill="#edf3f8" stroke="#547b9f" stroke-width="1.8"/>
+          <line x1="18.5" y1="21.5" x2="29.5" y2="15.5" stroke="#547b9f" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="18.5" y1="26.5" x2="29.5" y2="32.5" stroke="#547b9f" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="32.5" cy="14" r="4.2" fill="#ffffff" stroke="#385d7d" stroke-width="2"/>
+          <circle cx="15" cy="24" r="4.2" fill="#ffffff" stroke="#385d7d" stroke-width="2"/>
+          <circle cx="32.5" cy="34" r="4.2" fill="#ffffff" stroke="#385d7d" stroke-width="2"/>
+        </svg>
+
+      </div>
+
+    </header>
+
+    <section class="methodology-section method-teal">
+      <div class="methodology-number">1</div>
+      <div class="methodology-content">
+        <h3>Cadrer sans passants reconnaissables</h3>
+        <p>
+          Le Four banal donnant sur la voie publique, vous pouvez le photographier et le filmer librement. Veillez simplement à ne pas montrer le visage de passants sans leur accord.
+        </p>
+      </div>
+    </section>
+
+    <section class="methodology-section method-ochre">
+      <div class="methodology-number">2</div>
+      <div class="methodology-content">
+        <h3>Soigner la lumière et la netteté</h3>
+        <p>
+          Photographiez de jour (sans contre-jour) et essuyez l'objectif pour que les détails du métal et de la pierre restent parfaitement visibles.
+        </p>
+      </div>
+    </section>
+
+    <section class="methodology-section method-blue">
+      <div class="methodology-number">3</div>
+      <div class="methodology-content">
+        <h3>Ajouter le lieu « Grignan » et une légende factuelle</h3>
+        <p>
+          Géolocalisez votre publication à <strong>Grignan</strong> et accompagnez-la du texte ci-dessous.
+        </p>
+      </div>
+    </section>
+
+    <!-- LÉGENDE PRÊTE À COPIER -->
+
+    <div class="caption-box">
+
+      <div class="caption-header">
+        <h3 class="caption-title">Légende prête à publier</h3>
+        <span class="caption-note">Vous êtes libres de personnaliser ce texte !</span>
+      </div>
+
+      <div class="caption-sample" id="legende-reseaux">Voici l’entrée actuelle de l’ancien Four banal de Grignan (Drôme), inaugurée en septembre 2026 pour les 400 ans de Madame de Sévigné.
+
+Un gigantesque portail et une grille représentant la Marquise avec une tête déformée et la robe percée transforment ce lieu historique. Une commande publique de 200 000 € réalisée sans consultation des habitants et en toute illégalité car aucune demande préalable à l’ABF n'a été effectuée.
+
+Est-ce vraiment en adéquation avec l’esprit du Four banal et l’identité de Grignan ?
+
+#Grignan #FourBanal #Patrimoine #MadameDeSévigné #DrômeProvençale</div>
+
+      <div class="caption-actions">
+        <span class="caption-feedback" id="caption-feedback">✓ Texte copié !</span>
+        <button type="button"
+                class="caption-copy-btn"
+                onclick="copierLegende()">
+          📋 Copier la légende
+        </button>
+      </div>
+
+    </div>
+
+    <footer class="methodology-footer">
+      FOUR BANAL DE GRIGNAN · TÉMOIGNAGE PHOTO &amp; VIDÉO CITOYEN
+    </footer>
+
+  </div>
+
+</div>
+
+<script>
+function copierLegende() {
+  const texteElement = document.getElementById('legende-reseaux');
+  const feedback = document.getElementById('caption-feedback');
+  if (!texteElement) return;
+
+  navigator.clipboard.writeText(texteElement.innerText.trim()).then(() => {
+    if (feedback) {
+      feedback.classList.add('is-visible');
+      setTimeout(() => feedback.classList.remove('is-visible'), 2500);
+    }
+  });
+}
+</script>
+
+</section>
+```

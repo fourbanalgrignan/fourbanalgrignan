@@ -1,0 +1,915 @@
+---
+title: ""
+format:
+  html:
+    title-block-style: none
+    page-layout: full
+---
+
+```{=html}
+<section class="grignan-home">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+/* =====================================
+   FOND ET DÉCORATIONS
+===================================== */
+
+html, body, #quarto-content {
+  background-color: #F4F0E8 !important;
+}
+
+.grignan-home {
+  font-family: Arial, sans-serif;
+  color: #293747;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  isolation: isolate;
+}
+
+.grignan-home * {
+  box-sizing: border-box;
+}
+
+/* LAVANDE À DROITE */
+
+.lavande-filigrane {
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  width: 190px;
+  height: auto;
+  opacity: 0.17;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ÉPI DE BLÉ À GAUCHE */
+
+.ble-filigrane {
+  position: fixed;
+  left: 8px;
+  bottom: 15px;
+  width: 175px;
+  height: auto;
+  opacity: 0.19;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =====================================
+   TITRE DOSSIER & INTRODUCTION
+===================================== */
+
+.gh-dossier-title {
+  text-align: center;
+  margin: 35px 0 38px;
+  padding: 28px 24px;
+  background: #f0fff4;
+  border: 2px solid #9ae6b4;
+  border-radius: 14px;
+  box-shadow: 0 3px 14px rgba(47, 133, 90, 0.08);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.gh-dossier-hero-bg {
+  position: absolute;
+  right: -14px;
+  bottom: -16px;
+  width: 215px;
+  height: 215px;
+  opacity: 0.09;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-7deg);
+}
+
+.gh-dossier-title > *:not(.gh-dossier-hero-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+.gh-section-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 13px;
+  border-radius: 20px;
+  background: #c6f6d5;
+  color: #2f855a;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.grignan-home .gh-dossier-title h2 {
+  font-family: 'Comfortaa', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 30px !important;
+  color: #26394d !important;
+  margin: 0 0 14px !important;
+  letter-spacing: 1px;
+  text-align: center !important;
+}
+
+.gh-dossier-title p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+/* =====================================
+   GRILLE DES AFFICHES & TRACTS
+===================================== */
+
+.posters-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.poster-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  min-width: 0;
+  padding: 24px;
+  background: #f7f8f8;
+  border: 1px solid #c6f6d5;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.poster-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(47, 133, 90, 0.11);
+}
+
+.poster-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 14px;
+  gap: 8px;
+}
+
+.poster-number {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #2f855a;
+}
+
+.poster-format {
+  padding: 3px 9px;
+  border-radius: 5px;
+  background: #dcfce7;
+  color: #2f855a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* APERÇU VISUEL DE L'AFFICHE */
+
+.poster-preview-link {
+  display: block;
+  width: 100%;
+  margin-bottom: 18px;
+  background: #ffffff;
+  border: 1px solid #dce3e6;
+  border-radius: 8px;
+  padding: 10px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.poster-preview-link:hover {
+  border-color: #2f855a;
+}
+
+.poster-preview-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.414;
+  object-fit: contain;
+  background: #fdfcfb;
+  border-radius: 4px;
+}
+
+.poster-zoom-hint {
+  display: block;
+  margin-top: 8px;
+  text-align: center;
+  font-size: 11.5px;
+  color: #6c7f92;
+  font-weight: 700;
+}
+
+/* TEXTE DE LA CARTE */
+
+.grignan-home .poster-card h2 {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  font-family: 'Comfortaa', Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.4 !important;
+  font-weight: 700 !important;
+  color: #293747 !important;
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+  float: none !important;
+}
+
+.poster-desc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #435264;
+  margin: 0 0 18px;
+}
+
+/* BOUTONS D'ACTION */
+
+.poster-actions {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #e1e5e7;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.poster-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: 1 1 45%;
+  padding: 9px 11px;
+  background-color: #2f855a;
+  color: #ffffff !important;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.poster-btn-primary:hover {
+  background-color: #276749;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transform: translateY(-1px);
+}
+
+.poster-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: 1 1 45%;
+  padding: 9px 11px;
+  background-color: #ffffff;
+  color: #2f855a !important;
+  border: 1px solid #2f855a;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.poster-btn-secondary--inline {
+  flex: 0 1 auto;
+  padding: 9px 14px;
+}
+
+.poster-btn-secondary:hover {
+  background-color: #f0fff4;
+}
+
+/* SÉPARATION */
+
+.elus-separator {
+  margin: 38px 0 30px;
+  border: 0;
+  border-top: 1px solid #e1e5e7;
+}
+
+/* =====================================
+   GUIDE PRATIQUE D'IMPRESSION
+===================================== */
+
+.methodology {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #293747;
+}
+
+.methodology-letter {
+  width: 100%;
+  max-width: 794px;
+  margin: 0 auto;
+  padding: 50px 58px;
+  background: #ffffff;
+  border: 1px solid #e5e8eb;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(41,55,71,0.07);
+}
+
+.methodology-header {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 auto 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #dce2e8;
+}
+
+.methodology-surtitle {
+  display: block;
+  width: 100%;
+  text-align: center !important;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #78899a;
+  margin-bottom: 12px;
+}
+
+.methodology-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.methodology-icon-svg {
+  display: block;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+.grignan-home .methodology-title h2 {
+  display: block !important;
+  width: auto !important;
+  max-width: none !important;
+  text-align: center !important;
+  font-family: 'Comfortaa', Arial, sans-serif !important;
+  font-size: 21px !important;
+  line-height: 1.4 !important;
+  color: #293f56 !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  text-indent: 0 !important;
+}
+
+.methodology-section {
+  display: flex;
+  gap: 13px;
+  padding: 13px 15px;
+  margin-bottom: 12px;
+  border-radius: 7px;
+  border-left: 5px solid;
+  align-items: flex-start;
+}
+
+.methodology-number {
+  min-width: 29px;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 13px;
+  flex-shrink: 0;
+  color: white;
+}
+
+.methodology-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.grignan-home .methodology-content h3 {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  margin: 2px 0 5px !important;
+  padding: 0 !important;
+  font-weight: bold !important;
+}
+
+.methodology-content p {
+  font-size: 12.5px;
+  line-height: 1.55;
+  margin: 0;
+  color: #435264;
+}
+
+.method-teal {
+  background: #eaf4f2;
+  border-color: #5d978b;
+}
+
+.method-teal .methodology-number {
+  background: #5d978b;
+}
+
+.method-teal h3 {
+  color: #39766b !important;
+}
+
+.method-ochre {
+  background: #f8f1e5;
+  border-color: #c39a54;
+}
+
+.method-ochre .methodology-number {
+  background: #c39a54;
+}
+
+.method-ochre h3 {
+  color: #967337 !important;
+}
+
+.method-blue {
+  background: #edf3f8;
+  border-color: #547b9f;
+}
+
+.method-blue .methodology-number {
+  background: #547b9f;
+}
+
+.method-blue h3 {
+  color: #385d7d !important;
+}
+
+.methodology-footer {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 1px solid #dce2e8;
+  text-align: center;
+  font-size: 10px;
+  color: #82909d;
+  letter-spacing: 0.4px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 720px) {
+  .posters-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .poster-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grignan-home .gh-dossier-title h2 {
+    font-size: 25px !important;
+  }
+
+  .gh-dossier-hero-bg {
+    width: 150px;
+    height: 150px;
+    right: -22px;
+    bottom: -18px;
+  }
+
+  .gh-dossier-title p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .methodology-letter {
+    padding: 28px 18px;
+  }
+
+  .methodology-title {
+    gap: 9px;
+  }
+
+  .methodology-icon-svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .grignan-home .methodology-title h2 {
+    font-size: 17px !important;
+  }
+
+  .lavande-filigrane {
+    width: 110px;
+    right: -12px;
+    bottom: 5px;
+    opacity: 0.12;
+  }
+
+  .ble-filigrane {
+    width: 105px;
+    left: -15px;
+    bottom: 5px;
+    opacity: 0.13;
+  }
+}
+</style>
+
+<!-- =====================================
+     ÉPI DE BLÉ SVG À GAUCHE
+===================================== -->
+
+<svg class="ble-filigrane"
+     viewBox="0 0 200 430"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-hidden="true">
+
+  <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
+        fill="none"
+        stroke="#71805B"
+        stroke-width="3"
+        stroke-linecap="round"/>
+
+  <g fill="#89966C">
+    <path d="M98 350 Q55 328 38 290 Q79 302 98 350"/>
+    <path d="M95 375 Q136 342 150 303 Q111 319 95 375"/>
+    <path d="M93 290 Q48 265 43 228 Q79 246 93 290"/>
+    <path d="M90 315 Q128 281 138 244 Q105 263 90 315"/>
+    <path d="M91 225 Q52 201 55 164 Q84 184 91 225"/>
+    <path d="M91 250 Q130 218 139 184 Q105 198 91 250"/>
+  </g>
+
+  <g fill="#C4A15E">
+    <ellipse cx="101" cy="42" rx="7" ry="17" transform="rotate(-28 101 42)"/>
+    <ellipse cx="86" cy="57" rx="7" ry="16" transform="rotate(-58 86 57)"/>
+    <ellipse cx="111" cy="69" rx="7" ry="17" transform="rotate(25 111 69)"/>
+    <ellipse cx="79" cy="82" rx="7" ry="16" transform="rotate(-58 79 82)"/>
+    <ellipse cx="112" cy="97" rx="7" ry="17" transform="rotate(25 112 97)"/>
+    <ellipse cx="77" cy="110" rx="7" ry="16" transform="rotate(-55 77 110)"/>
+    <ellipse cx="108" cy="126" rx="7" ry="17" transform="rotate(22 108 126)"/>
+    <ellipse cx="80" cy="139" rx="7" ry="15" transform="rotate(-45 80 139)"/>
+    <ellipse cx="101" cy="154" rx="7" ry="16" transform="rotate(15 101 154)"/>
+    <ellipse cx="88" cy="169" rx="7" ry="15" transform="rotate(-35 88 169)"/>
+  </g>
+
+  <g fill="#D3B474">
+    <ellipse cx="115" cy="50" rx="6" ry="14" transform="rotate(40 115 50)"/>
+    <ellipse cx="96" cy="74" rx="6" ry="14" transform="rotate(-25 96 74)"/>
+    <ellipse cx="121" cy="83" rx="6" ry="14" transform="rotate(45 121 83)"/>
+    <ellipse cx="91" cy="102" rx="6" ry="14" transform="rotate(-25 91 102)"/>
+    <ellipse cx="119" cy="112" rx="6" ry="14" transform="rotate(42 119 112)"/>
+    <ellipse cx="91" cy="131" rx="6" ry="13" transform="rotate(-20 91 131)"/>
+    <ellipse cx="113" cy="141" rx="6" ry="13" transform="rotate(38 113 141)"/>
+    <ellipse cx="94" cy="158" rx="6" ry="12" transform="rotate(-15 94 158)"/>
+  </g>
+
+  <g stroke="#B69A61" stroke-width="1.2"
+     stroke-linecap="round" opacity="0.9">
+    <path d="M101 42L89 15"/>
+    <path d="M86 57L66 36"/>
+    <path d="M111 69L127 42"/>
+    <path d="M79 82L55 63"/>
+    <path d="M112 97L132 69"/>
+    <path d="M77 110L52 93"/>
+    <path d="M108 126L128 101"/>
+    <path d="M80 139L58 125"/>
+    <path d="M101 154L117 133"/>
+    <path d="M88 169L69 155"/>
+  </g>
+
+</svg>
+
+<!-- =====================================
+     BRIN DE LAVANDE SVG À DROITE
+===================================== -->
+
+<svg class="lavande-filigrane"
+     viewBox="0 0 200 420"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-hidden="true">
+
+  <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
+        fill="none" stroke="#687D58"
+        stroke-width="3.5" stroke-linecap="round"/>
+
+  <g fill="#82936D">
+    <path d="M105 340 Q55 320 42 278 Q85 290 105 340"/>
+    <path d="M103 365 Q145 330 158 292 Q115 310 103 365"/>
+    <path d="M108 275 Q60 250 55 215 Q90 230 108 275"/>
+    <path d="M112 300 Q150 265 155 230 Q120 250 112 300"/>
+    <path d="M115 210 Q78 185 77 155 Q107 175 115 210"/>
+    <path d="M120 230 Q155 200 165 170 Q130 185 120 230"/>
+    <path d="M130 145 Q102 120 107 92 Q130 110 130 145"/>
+    <path d="M135 165 Q165 140 173 112 Q143 128 135 165"/>
+  </g>
+
+  <g fill="#9274A9">
+    <ellipse cx="145" cy="28" rx="8" ry="14" transform="rotate(20 145 28)"/>
+    <ellipse cx="132" cy="40" rx="8" ry="14" transform="rotate(-35 132 40)"/>
+    <ellipse cx="155" cy="48" rx="8" ry="14" transform="rotate(35 155 48)"/>
+    <ellipse cx="127" cy="60" rx="8" ry="14" transform="rotate(-30 127 60)"/>
+    <ellipse cx="151" cy="69" rx="8" ry="14" transform="rotate(30 151 69)"/>
+    <ellipse cx="120" cy="81" rx="8" ry="14" transform="rotate(-25 120 81)"/>
+    <ellipse cx="144" cy="90" rx="8" ry="14" transform="rotate(25 144 90)"/>
+    <ellipse cx="119" cy="105" rx="7" ry="13" transform="rotate(-25 119 105)"/>
+    <ellipse cx="138" cy="116" rx="7" ry="13" transform="rotate(25 138 116)"/>
+    <ellipse cx="116" cy="130" rx="7" ry="12" transform="rotate(-20 116 130)"/>
+    <ellipse cx="132" cy="140" rx="7" ry="12" transform="rotate(25 132 140)"/>
+  </g>
+
+  <g fill="#B49AC6">
+    <circle cx="145" cy="28" r="2"/>
+    <circle cx="132" cy="40" r="2"/>
+    <circle cx="155" cy="48" r="2"/>
+    <circle cx="127" cy="60" r="2"/>
+    <circle cx="151" cy="69" r="2"/>
+    <circle cx="120" cy="81" r="2"/>
+    <circle cx="144" cy="90" r="2"/>
+  </g>
+
+</svg>
+
+<!-- =====================================
+     TITRE DOSSIER & INTRODUCTION
+===================================== -->
+
+<div class="gh-dossier-title">
+
+  <!-- Filigrane SVG Supports visuels : affiche épinglée & tract -->
+  <svg class="gh-dossier-hero-bg" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="44" y="28" width="114" height="154" rx="10" fill="none" stroke="#2f855a" stroke-width="5"/>
+    <circle cx="101" cy="24" r="8" fill="#2f855a"/>
+    <line x1="68" y1="68" x2="134" y2="68" stroke="#2f855a" stroke-width="5" stroke-linecap="round"/>
+    <line x1="68" y1="94" x2="124" y2="94" stroke="#2f855a" stroke-width="5" stroke-linecap="round"/>
+    <rect x="68" y="114" width="66" height="42" rx="6" fill="none" stroke="#2f855a" stroke-width="4.5"/>
+  </svg>
+
+  <span class="gh-section-badge">Diffuser · Supports visuels</span>
+
+  <h2>IMPRIMER DES AFFICHES</h2>
+
+  <p>
+    Téléchargez et imprimez librement les tracts et affiches ci-dessous pour informer les habitants, les commerçants et les visiteurs autour du Four banal de Grignan.
+  </p>
+
+</div>
+
+<!-- =====================================
+     GRILLE DES 2 SUPPORTS VISUELS
+===================================== -->
+
+<div class="posters-grid">
+
+  <!-- 01 : TRACT DES 5 POINTS CLÉS -->
+
+  <article class="poster-card">
+
+    <div class="poster-meta">
+      <span class="poster-number">01 · TRACT D'INFORMATION</span>
+      <span class="poster-format">PNG · A4 / A5</span>
+    </div>
+
+    <a class="poster-preview-link"
+       href="agir 2/Diffuser/Imprimer des affiches/TRACT 1 A4.png"
+       target="_blank"
+       title="Ouvrir le tract en grand format">
+      <img class="poster-preview-img"
+           src="agir 2/Diffuser/Imprimer des affiches/TRACT 1 A4.png"
+           alt="Aperçu du tract des 5 points clés sur le Four banal de Grignan">
+      <span class="poster-zoom-hint">🔍 Cliquer pour afficher en taille réelle</span>
+    </a>
+
+    <h2>Les 5 points clés de l'affaire du Four banal</h2>
+
+    <p class="poster-desc">
+      Une synthèse claire et accessible en cinq repères essentiels pour comprendre l'affaire du portail « satanique » au four banal. Idéal pour la distribution de main à main ou en boîte aux lettres.
+    </p>
+
+    <div class="poster-actions">
+      <a class="poster-btn-primary"
+         href="agir 2/Diffuser/Imprimer des affiches/TRACT 1 A4.png"
+         download="TRACT 1 A4.png">
+        ⬇️ PNG format A4
+      </a>
+      <a class="poster-btn-primary"
+         href="agir 2/Diffuser/Imprimer des affiches/TRACT 1 A5.png"
+         download="TRACT 1 A5.png">
+        ⬇️ PNG format A5
+      </a>
+      <button type="button"
+              class="poster-btn-secondary"
+              onclick="imprimerImage('agir 2/Diffuser/Imprimer des affiches/TRACT 1 A4.png')">
+        🖨️ Imprimer (A4)
+      </button>
+      <button type="button"
+              class="poster-btn-secondary"
+              onclick="imprimerImage('agir 2/Diffuser/Imprimer des affiches/TRACT 1 A5.png')">
+        🖨️ Imprimer (A5)
+      </button>
+    </div>
+
+  </article>
+
+  <!-- 02 : AFFICHE COMPARATIVE SUBVENTIONS PORTAIL / EHPAD -->
+
+  <article class="poster-card">
+
+    <div class="poster-meta">
+      <span class="poster-number">02 · VISUEL COMPARATIF</span>
+      <span class="poster-format">PNG · RÉSEAUX &amp; AFFICHAGE</span>
+    </div>
+
+    <a class="poster-preview-link"
+       href="agir 2/Diffuser/Imprimer des affiches/Visuel 1.png"
+       target="_blank"
+       title="Ouvrir le visuel comparatif en grand format">
+      <img class="poster-preview-img"
+           src="agir 2/Diffuser/Imprimer des affiches/Visuel 1.png"
+           alt="Aperçu du visuel comparant les subventions du portail et de l'EHPAD de Grignan">
+      <span class="poster-zoom-hint">🔍 Cliquer pour afficher en taille réelle</span>
+    </a>
+
+    <h2>Comparatif des subventions : Portail vs EHPAD de Grignan</h2>
+
+    <p class="poster-desc">
+      Visuel mettant en perspective les montants et subventions publics alloués à l'installation du portail face aux financements consacrés à l'EHPAD de Grignan. À partager sur les réseaux sociaux.
+    </p>
+
+    <div class="poster-actions">
+      <a class="poster-btn-primary"
+         href="agir 2/Diffuser/Imprimer des affiches/Visuel 1.png"
+         download="Visuel 1.png">
+        ⬇️ Télécharger (PNG)
+      </a>
+      <button type="button"
+              class="poster-btn-secondary poster-btn-secondary--inline"
+              onclick="imprimerImage('agir 2/Diffuser/Imprimer des affiches/Visuel 1.png')">
+        🖨️ Imprimer
+      </button>
+    </div>
+
+  </article>
+
+</div>
+
+<hr class="elus-separator">
+
+<!-- =====================================
+     REPÈRES D'IMPRESSION & DE DIFFUSION
+===================================== -->
+
+<div class="methodology">
+
+  <div class="methodology-letter">
+
+    <header class="methodology-header">
+
+      <div class="methodology-surtitle">
+        Guide pratique · Diffusion citoyenne
+      </div>
+
+      <div class="methodology-title">
+
+        <!-- SVG PARTAGE SUR INTERNET (À GAUCHE) -->
+        <svg class="methodology-icon-svg"
+             viewBox="0 0 48 48"
+             fill="none"
+             aria-hidden="true">
+          <circle cx="24" cy="24" r="21" fill="#eaf4f2" stroke="#5d978b" stroke-width="1.8"/>
+          <line x1="18.5" y1="21.5" x2="29.5" y2="15.5" stroke="#5d978b" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="18.5" y1="26.5" x2="29.5" y2="32.5" stroke="#5d978b" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="32.5" cy="14" r="4.2" fill="#ffffff" stroke="#39766b" stroke-width="2"/>
+          <circle cx="15" cy="24" r="4.2" fill="#ffffff" stroke="#39766b" stroke-width="2"/>
+          <circle cx="32.5" cy="34" r="4.2" fill="#ffffff" stroke="#39766b" stroke-width="2"/>
+        </svg>
+
+        <h2>Conseils pour l'impression et la diffusion</h2>
+
+        <!-- SVG IMPRIMANTE (À DROITE) -->
+        <svg class="methodology-icon-svg"
+             viewBox="0 0 48 48"
+             fill="none"
+             aria-hidden="true">
+          <circle cx="24" cy="24" r="21" fill="#edf3f8" stroke="#547b9f" stroke-width="1.8"/>
+          <path d="M16 18V12.5H32V18" fill="#ffffff" stroke="#385d7d" stroke-width="1.8" stroke-linejoin="round"/>
+          <rect x="11.5" y="18" width="25" height="12.5" rx="2.5" fill="#ffffff" stroke="#385d7d" stroke-width="1.8"/>
+          <rect x="16" y="25.5" width="16" height="10.5" rx="1" fill="#f8f1e5" stroke="#385d7d" stroke-width="1.8"/>
+          <line x1="19" y1="29.5" x2="29" y2="29.5" stroke="#547b9f" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="32.5" x2="26.5" y2="32.5" stroke="#547b9f" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="32" cy="21.5" r="1.3" fill="#5d978b"/>
+        </svg>
+
+      </div>
+
+    </header>
+
+    <section class="methodology-section method-teal">
+      <div class="methodology-number">1</div>
+      <div class="methodology-content">
+        <h3>Format d'impression recommandé</h3>
+        <p>
+          Les deux formats <strong>A4</strong> (21 × 29,7 cm) et <strong>A5</strong> (14,8 × 21 cm) sont directement mis à votre disposition pour s'adapter à vos besoins : le format A4 pour un affichage lisible et le format A5 pour une distribution pratique de main à main ou en boîte aux lettres.
+        </p>
+      </div>
+    </section>
+
+    <section class="methodology-section method-ochre">
+      <div class="methodology-number">2</div>
+      <div class="methodology-content">
+        <h3>Actions et lieux de diffusion de proximité</h3>
+        <p>
+          <strong>Distribuez des tracts sur le marché</strong>, <strong>discutez à la sortie de l’école</strong>, <strong>affichez à votre fenêtre ou derrière votre voiture</strong> et déposez-en dans les <strong>boîtes à livres</strong>. Pensez aussi aux panneaux d'affichage libre communaux, aux vitrines de commerçants (avec leur accord) et aux boîtes aux lettres (hors mentions « Stop Pub »).
+        </p>
+      </div>
+    </section>
+
+    <section class="methodology-section method-blue">
+      <div class="methodology-number">3</div>
+      <div class="methodology-content">
+        <h3>Diffusion sur les réseaux sociaux</h3>
+        <p>
+          Partagez les visuels en public ou auprès de vos proches via <strong>Facebook, Instagram, Twitter/X, Telegram, WhatsApp</strong>, etc., afin de relayer l'information au-delà du village.
+        </p>
+      </div>
+    </section>
+
+    <footer class="methodology-footer">
+      FOUR BANAL DE GRIGNAN · SUPPORTS D'INFORMATION CITOYENNE
+    </footer>
+
+  </div>
+
+</div>
+
+<!-- =====================================
+     SCRIPT D'IMPRESSION DIRECTE DE L'IMAGE
+===================================== -->
+
+<script>
+function imprimerImage(url) {
+  const fenetreImpression = window.open('', '_blank');
+  if (!fenetreImpression) return;
+  fenetreImpression.document.write(`
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+      <meta charset="utf-8">
+      <title>Impression du support</title>
+      <style>
+        @page { margin: 8mm; }
+        body {
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          background: #ffffff;
+        }
+        img {
+          max-width: 100%;
+          max-height: 96vh;
+          height: auto;
+          display: block;
+        }
+      </style>
+    </head>
+    <body>
+      <img src="${url}" onload="window.print(); window.close();">
+    </body>
+    </html>
+  `);
+  fenetreImpression.document.close();
+}
+</script>
+
+</section>
+```

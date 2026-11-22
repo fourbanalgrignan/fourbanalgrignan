@@ -1,0 +1,858 @@
+---
+title: ""
+format:
+  html:
+    title-block-style: none
+    page-layout: full
+---
+
+```{=html}
+<section class="grignan-home grignan-rassembler">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
+
+/* =====================================
+   FOND ET DÉCORATIONS
+===================================== */
+
+html, body, #quarto-content {
+  background-color: #F4F0E8 !important;
+}
+
+.grignan-home {
+  display: block !important;
+  font-family: Arial, sans-serif;
+  color: #293747;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  isolation: isolate;
+}
+
+.grignan-home * {
+  box-sizing: border-box;
+}
+
+.lavande-filigrane {
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  width: 190px;
+  height: auto;
+  opacity: 0.16;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.ble-filigrane {
+  position: fixed;
+  left: 8px;
+  bottom: 15px;
+  width: 175px;
+  height: auto;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =====================================
+   EN-TÊTE PRINCIPAL (PILIER RASSEMBLER)
+===================================== */
+
+.rassembler-hero {
+  margin: 30px 0 30px;
+  padding: 28px 24px;
+  background: #fff5f5;
+  border: 2px solid #feb2b2;
+  border-radius: 14px;
+  box-shadow: 0 3px 14px rgba(197, 48, 48, 0.08);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.rassembler-hero-bg {
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-6deg);
+  width: 240px;
+  height: 240px;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.rassembler-hero > *:not(.rassembler-hero-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+.rassembler-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 13px;
+  border-radius: 20px;
+  background: #fed7d7;
+  color: #c53030;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.grignan-home .rassembler-hero h2 {
+  font-family: 'Comfortaa', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 30px !important;
+  color: #26394d !important;
+  margin: 0 0 8px !important;
+  letter-spacing: 1px;
+  text-align: center !important;
+  border: none !important;
+}
+
+.rassembler-sublead {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 16.5px;
+  color: #c53030;
+  margin: 0 auto 14px;
+}
+
+.rassembler-hero-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4a5568;
+  max-width: 720px;
+  margin: 0 auto 24px;
+}
+
+.rassembler-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn-primary-red {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 24px;
+  background: #c53030;
+  color: #ffffff !important;
+  border-radius: 8px;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(197, 48, 48, 0.22);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary-red:hover {
+  background: #9b2c2c;
+  transform: translateY(-2px);
+}
+
+.btn-secondary-navy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 22px;
+  background: #ffffff;
+  color: #26394d !important;
+  border: 1.5px solid #feb2b2;
+  border-radius: 8px;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-secondary-navy:hover {
+  background: #fff5f5;
+  border-color: #c53030;
+  transform: translateY(-2px);
+}
+
+/* =====================================
+   TITRES DE RUBRIQUES
+===================================== */
+
+.avis-rubrique-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 34px 0 18px;
+}
+
+.avis-rubrique-line {
+  flex: 1;
+  height: 1px;
+  background: #feb2b2;
+}
+
+.grignan-home .avis-rubrique-header h3 {
+  font-family: 'Comfortaa', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #26394d !important;
+  margin: 0 !important;
+  padding: 6px 16px !important;
+  background: #fff5f5;
+  border: 1px solid #feb2b2;
+  border-radius: 20px;
+  text-align: center !important;
+  white-space: nowrap;
+}
+
+/* =====================================
+   2 FORMATS D'ÉVÈNEMENT
+===================================== */
+
+.grignan-home .formats-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+}
+
+.format-card {
+  background: #f7f8f8;
+  border: 1px solid #feb2b2;
+  border-top: 4px solid #c53030;
+  border-radius: 12px;
+  padding: 22px 20px;
+  box-shadow: 0 2px 10px rgba(197, 48, 48, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.format-card--teal {
+  border-top-color: #c53030;
+}
+
+.format-tag {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #fed7d7;
+  color: #c53030;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.format-card--teal .format-tag {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+.grignan-home .format-card h4 {
+  font-family: 'Comfortaa', Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #26394d !important;
+  margin: 0 !important;
+  border: none !important;
+  text-align: left !important;
+}
+
+.format-card p {
+  font-size: 13.5px;
+  line-height: 1.52;
+  color: #4a5a6c;
+  margin: 0;
+}
+
+.format-points {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #526477;
+}
+
+/* =====================================
+   MISE EN LIEN : FORMULAIRE DIRECT + COORDINATION
+===================================== */
+
+.lien-box {
+  background: #ffffff;
+  border: 1px solid #feb2b2;
+  border-radius: 12px;
+  padding: 24px 26px;
+  box-shadow: 0 4px 18px rgba(197, 48, 48, 0.06);
+}
+
+.lien-intro {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #435264;
+  margin: 0 auto 20px;
+  text-align: center;
+  max-width: 700px;
+}
+
+.grignan-home .lien-columns {
+  display: grid !important;
+  grid-template-columns: 1.35fr 0.9fr !important;
+  gap: 22px !important;
+  align-items: start;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff5f5;
+  border: 1px solid #feb2b2;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.grignan-home .event-form h4,
+.grignan-home .coord-side h4 {
+  font-family: 'Comfortaa', Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #26394d !important;
+  margin: 0 0 4px !important;
+  border: none !important;
+  text-align: left !important;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field-group label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #38495c;
+}
+
+.field-group input,
+.field-group select,
+.field-group textarea {
+  width: 100%;
+  padding: 9px 11px;
+  border: 1px solid #cbd3dc;
+  border-radius: 7px;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #293747;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field-group input:focus,
+.field-group select:focus,
+.field-group textarea:focus {
+  outline: none;
+  border-color: #c53030;
+  box-shadow: 0 0 0 3px rgba(197, 48, 48, 0.14);
+}
+
+.field-group textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+.btn-submit-form {
+  margin-top: 4px;
+  padding: 12px 18px;
+  background: #c53030;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-submit-form:hover:not(:disabled) {
+  background: #9b2c2c;
+  transform: translateY(-1px);
+}
+
+.btn-submit-form:disabled {
+  opacity: 0.78;
+  cursor: default;
+}
+
+.form-feedback {
+  display: none;
+  padding: 11px 13px;
+  border-radius: 7px;
+  background: #eaf4f2;
+  border: 1px solid #b5dcd4;
+  color: #275c52;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.coord-side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.coord-card {
+  padding: 16px;
+  background: #fff5f5;
+  border: 1px solid #feb2b2;
+  border-left: 4px solid #c53030;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.coord-card > *:not(.coord-watermark) {
+  position: relative;
+  z-index: 1;
+}
+
+.coord-watermark {
+  position: absolute;
+  right: -8px;
+  bottom: -10px;
+  width: 86px;
+  height: 86px;
+  opacity: 0.11;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-8deg);
+}
+
+.coord-card p {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #4a5a6c;
+  margin: 0 0 10px;
+}
+
+.coord-link {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #c53030 !important;
+  text-decoration: none !important;
+}
+
+.coord-link:hover {
+  text-decoration: underline !important;
+}
+
+/* =====================================
+   ENCADRÉ CADRE & BONNES PRATIQUES
+===================================== */
+
+.tips-callout {
+  margin-top: 26px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #f8f3e8 0%, #f3ebd9 100%);
+  border: 1px solid #dfd1b5;
+  border-left: 5px solid #c39a54;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.tips-icon {
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  background: #ffffff;
+  border: 1px solid #dfd1b5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tips-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.grignan-home .tips-body h4 {
+  font-family: 'Comfortaa', Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #785923 !important;
+  margin: 0 0 8px !important;
+  border: none !important;
+}
+
+.tips-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #4a3b20;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 760px) {
+  .grignan-home .formats-grid,
+  .grignan-home .lien-columns,
+  .form-row-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .avis-rubrique-header h3 {
+    white-space: normal !important;
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .grignan-home .rassembler-hero h2 {
+    font-size: 22px !important;
+  }
+
+  .rassembler-hero-bg {
+    width: 155px;
+    height: 155px;
+    right: -25px;
+    top: 20px;
+  }
+
+  .tips-callout {
+    flex-direction: column;
+  }
+
+  .lavande-filigrane {
+    width: 110px;
+    right: -12px;
+    bottom: 5px;
+    opacity: 0.12;
+  }
+
+  .ble-filigrane {
+    width: 105px;
+    left: -15px;
+    bottom: 5px;
+    opacity: 0.13;
+  }
+}
+</style>
+
+<!-- =====================================
+     ÉPI DE BLÉ SVG À GAUCHE
+===================================== -->
+
+<svg class="ble-filigrane" viewBox="0 0 200 430" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+  <path d="M95 420 Q105 320 92 220 Q83 130 105 35" fill="none" stroke="#71805B" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#89966C">
+    <path d="M98 350 Q55 328 38 290 Q79 302 98 350"/>
+    <path d="M95 375 Q136 342 150 303 Q111 319 95 375"/>
+    <path d="M93 290 Q48 265 43 228 Q79 246 93 290"/>
+    <path d="M90 315 Q128 281 138 244 Q105 263 90 315"/>
+    <path d="M91 225 Q52 201 55 164 Q84 184 91 225"/>
+    <path d="M91 250 Q130 218 139 184 Q105 198 91 250"/>
+  </g>
+  <g fill="#C4A15E">
+    <ellipse cx="101" cy="42" rx="7" ry="17" transform="rotate(-28 101 42)"/>
+    <ellipse cx="86" cy="57" rx="7" ry="16" transform="rotate(-58 86 57)"/>
+    <ellipse cx="111" cy="69" rx="7" ry="17" transform="rotate(25 111 69)"/>
+    <ellipse cx="79" cy="82" rx="7" ry="16" transform="rotate(-58 79 82)"/>
+    <ellipse cx="112" cy="97" rx="7" ry="17" transform="rotate(25 112 97)"/>
+    <ellipse cx="77" cy="110" rx="7" ry="16" transform="rotate(-55 77 110)"/>
+    <ellipse cx="108" cy="126" rx="7" ry="17" transform="rotate(22 108 126)"/>
+    <ellipse cx="80" cy="139" rx="7" ry="15" transform="rotate(-45 80 139)"/>
+    <ellipse cx="101" cy="154" rx="7" ry="16" transform="rotate(15 101 154)"/>
+    <ellipse cx="88" cy="169" rx="7" ry="15" transform="rotate(-35 88 169)"/>
+  </g>
+  <g fill="#D3B474">
+    <ellipse cx="115" cy="50" rx="6" ry="14" transform="rotate(40 115 50)"/>
+    <ellipse cx="96" cy="74" rx="6" ry="14" transform="rotate(-25 96 74)"/>
+    <ellipse cx="121" cy="83" rx="6" ry="14" transform="rotate(45 121 83)"/>
+    <ellipse cx="91" cy="102" rx="6" ry="14" transform="rotate(-25 91 102)"/>
+    <ellipse cx="119" cy="112" rx="6" ry="14" transform="rotate(42 119 112)"/>
+    <ellipse cx="91" cy="131" rx="6" ry="13" transform="rotate(-20 91 131)"/>
+    <ellipse cx="113" cy="141" rx="6" ry="13" transform="rotate(38 113 141)"/>
+    <ellipse cx="94" cy="158" rx="6" ry="12" transform="rotate(-15 94 158)"/>
+  </g>
+</svg>
+
+<!-- =====================================
+     BRIN DE LAVANDE SVG À DROITE
+===================================== -->
+
+<svg class="lavande-filigrane" viewBox="0 0 200 420" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+  <path d="M105 410 Q95 300 115 190 Q120 100 145 25" fill="none" stroke="#687D58" stroke-width="3.5" stroke-linecap="round"/>
+  <g fill="#82936D">
+    <path d="M105 340 Q55 320 42 278 Q85 290 105 340"/>
+    <path d="M103 365 Q145 330 158 292 Q115 310 103 365"/>
+    <path d="M108 275 Q60 250 55 215 Q90 230 108 275"/>
+    <path d="M112 300 Q150 265 155 230 Q120 250 112 300"/>
+    <path d="M115 210 Q78 185 77 155 Q107 175 115 210"/>
+    <path d="M120 230 Q155 200 165 170 Q130 185 120 230"/>
+    <path d="M130 145 Q102 120 107 92 Q130 110 130 145"/>
+    <path d="M135 165 Q165 140 173 112 Q143 128 135 165"/>
+  </g>
+  <g fill="#9274A9">
+    <ellipse cx="145" cy="28" rx="8" ry="14" transform="rotate(20 145 28)"/>
+    <ellipse cx="132" cy="40" rx="8" ry="14" transform="rotate(-35 132 40)"/>
+    <ellipse cx="155" cy="48" rx="8" ry="14" transform="rotate(35 155 48)"/>
+    <ellipse cx="127" cy="60" rx="8" ry="14" transform="rotate(-30 127 60)"/>
+    <ellipse cx="151" cy="69" rx="8" ry="14" transform="rotate(30 151 69)"/>
+    <ellipse cx="120" cy="81" rx="8" ry="14" transform="rotate(-25 120 81)"/>
+    <ellipse cx="144" cy="90" rx="8" ry="14" transform="rotate(25 144 90)"/>
+    <ellipse cx="119" cy="105" rx="7" ry="13" transform="rotate(-25 119 105)"/>
+    <ellipse cx="138" cy="116" rx="7" ry="13" transform="rotate(25 138 116)"/>
+    <ellipse cx="116" cy="130" rx="7" ry="12" transform="rotate(-20 116 130)"/>
+    <ellipse cx="132" cy="140" rx="7" ry="12" transform="rotate(25 132 140)"/>
+  </g>
+</svg>
+
+<!-- =====================================
+     EN-TÊTE PRINCIPAL
+===================================== -->
+
+<header class="rassembler-hero">
+
+  <!-- Grand SVG filigrane Rassemblement / Groupe citoyen -->
+  <svg class="rassembler-hero-bg" viewBox="0 0 220 220" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+    <circle cx="110" cy="110" r="92" fill="none" stroke="#9e2a2b" stroke-width="3" stroke-dasharray="9 8"/>
+    <circle cx="82" cy="82" r="22" fill="#9e2a2b"/>
+    <path d="M44 156 C44 126 64 110 82 110 C100 110 120 126 120 156 Z" fill="#9e2a2b"/>
+    <circle cx="138" cy="82" r="22" fill="#26394d"/>
+    <path d="M100 156 C100 126 120 110 138 110 C156 110 176 126 176 156 Z" fill="#26394d"/>
+  </svg>
+
+  <span class="rassembler-badge">Pilier 3 · Rassembler</span>
+
+  <h2>ORGANISER UN ÉVÈNEMENT</h2>
+
+  <p class="rassembler-sublead">Rassemblement devant la mairie, réunions citoyennes</p>
+
+  <p class="rassembler-hero-desc">
+    Donner corps à l’expression citoyenne à Grignan, c’est aussi se retrouver. Qu’il s’agisse d’un rassemblement visible devant la mairie ou de réunions citoyennes d’échange, cette page aide les habitants à se rejoindre et à coordonner des initiatives locales.
+  </p>
+
+  <div class="rassembler-actions">
+    <a class="btn-primary-red" href="#formulaire-evenement">
+      Proposer ou rejoindre un rendez-vous
+    </a>
+    <a class="btn-secondary-navy" href="#mise-en-lien">
+      Mettre les habitants en lien
+    </a>
+  </div>
+
+</header>
+
+<!-- =====================================
+     RUBRIQUE 1 : DEUX FORMATS D'ACTION
+===================================== -->
+
+<div class="avis-rubrique-header">
+  <div class="avis-rubrique-line"></div>
+  <h3>🏛️ Deux formats pour se rassembler</h3>
+  <div class="avis-rubrique-line"></div>
+</div>
+
+<div class="formats-grid">
+
+  <article class="format-card">
+    <span class="format-tag">Temps fort collectif</span>
+    <h4>Rassemblement devant la mairie</h4>
+    <p>
+      Un moment public, clair et pacifique pour marquer l’attachement au patrimoine communal, à la transparence et à l’écoute des habitants.
+    </p>
+    <ul class="format-points">
+      <li>Horaire accessible (fin de journée ou week-end)</li>
+      <li>Prise de parole courte, factuelle et respectueuse</li>
+      <li>Point de rendez-vous précis et encadrement serein</li>
+    </ul>
+  </article>
+
+  <article class="format-card format-card--teal">
+    <span class="format-tag">Échange de proximité</span>
+    <h4>Réunions citoyennes</h4>
+    <p>
+      Des rencontres à taille humaine (salle, lieu public ou chez un habitant) pour discuter tranquillement, comprendre le dossier et décider ensemble des suites.
+    </p>
+    <ul class="format-points">
+      <li>Partage des informations, photos et documents</li>
+      <li>Récolte des questions et propositions des riverains</li>
+      <li>Répartition simple des tâches (relais, affichage, suivi)</li>
+    </ul>
+  </article>
+
+</div>
+
+<!-- =====================================
+     RUBRIQUE 2 : METTRE LES GENS EN LIEN
+===================================== -->
+
+<div id="mise-en-lien" class="avis-rubrique-header">
+  <div class="avis-rubrique-line"></div>
+  <h3>🤝 Comment mettre les habitants en lien</h3>
+  <div class="avis-rubrique-line"></div>
+</div>
+
+<div class="lien-box">
+  <p class="lien-intro">
+    Pour éviter que chacun reste isolé, l’organisation repose sur deux leviers complémentaires : <strong>recueillir les disponibilités et propositions</strong> via le formulaire ci-dessous, puis <strong>coordonner les volontaires</strong> dans un espace d’échange dédié.
+  </p>
+
+  <div class="lien-columns">
+
+    <!-- Cible invisible pour l'envoi natif sans quitter la page -->
+    <iframe name="hidden_script_target" id="hidden_script_target" style="display:none;" onload="confirmScriptSent()"></iframe>
+
+    <!-- Formulaire direct relié au Google Apps Script -->
+    <form id="formulaire-evenement"
+          class="event-form"
+          action="https://script.google.com/macros/s/AKfycbwlfDTJVlAgJjc42K3pQyaBewt59pGYAGmjxIiXAnkYcdUQBFIPeIMXgTqywSLSOiVLLA/exec"
+          method="POST"
+          target="hidden_script_target"
+          onsubmit="startScriptSubmit()">
+
+      <h4>S’impliquer ou proposer un rendez-vous</h4>
+
+      <div class="form-row-2">
+        <div class="field-group">
+          <label for="ev-nom">Prénom ou nom</label>
+          <input id="ev-nom" name="nom" type="text" placeholder="Ex : MARTIN Claire" required>
+        </div>
+        <div class="field-group">
+          <label for="ev-contact">Email ou téléphone</label>
+          <input id="ev-contact" name="contact" type="text" placeholder="Pour vous recontacter" required>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label for="ev-dispo">Votre proposition, participation ou disponibilité</label>
+        <textarea id="ev-dispo" name="dispo" placeholder="Ex : Participer à un rassemblement devant la mairie, accueillir une réunion citoyenne, disponibilité le samedi matin..." required></textarea>
+      </div>
+
+      <button type="submit" id="ev-submit-btn" class="btn-submit-form">
+        Envoyer ma proposition
+      </button>
+
+      <div id="ev-feedback" class="form-feedback">
+        <strong>Merci ! Votre proposition a bien été enregistrée.</strong><br>
+        Elle a été transmise à l’équipe d’organisation (<em>fourbanalgrignan@gmail.com</em>) qui reviendra vers vous rapidement.
+      </div>
+    </form>
+
+    <!-- Levier collectif de coordination -->
+    <div class="coord-side">
+      <div class="coord-card">
+        <svg class="coord-watermark" viewBox="0 0 24 24" fill="#26A5E4" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+          <path d="M21.944 4.506a1.5 1.5 0 0 0-1.648-.327L2.88 11.17a1.5 1.5 0 0 0 .142 2.83l4.242 1.326 2.138 5.345a1.5 1.5 0 0 0 2.523.488l2.573-2.757 4.46 3.345a1.5 1.5 0 0 0 2.38-.925l2.52-14.2a1.5 1.5 0 0 0-.486-1.199ZM9.56 14.37l8.53-6.634-6.447 8.155-.425 3.175-1.658-4.696Z"/>
+        </svg>
+        <h4>Groupe de coordination citoyenne</h4>
+        <p>
+          Idéal pour caler une date, partager un créneau de réunion citoyenne ou s’organiser entre voisins sans multiplier les messages privés.
+        </p>
+        <a class="coord-link" href="https://t.me/+cnvUPHQfgHA1Zjc8" target="_blank" rel="noopener noreferrer">
+          Rejoindre le groupe Telegram →
+        </a>
+      </div>
+
+      <div class="coord-card">
+        <svg class="coord-watermark" viewBox="0 0 24 24" fill="none" stroke="#547b9f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+        </svg>
+        <h4>Contact direct par courriel</h4>
+        <p>
+          Pour toute proposition ou question pratique liée à l’organisation des rendez-vous à Grignan.
+        </p>
+        <a class="coord-link" href="mailto:fourbanalgrignan@gmail.com">
+          fourbanalgrignan@gmail.com
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =====================================
+     CADRE & BONNES PRATIQUES
+===================================== -->
+
+<div class="tips-callout">
+  <div class="tips-icon" aria-hidden="true">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#967337" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    </svg>
+  </div>
+  <div class="tips-body">
+    <h4>Repères pour un rassemblement serein et crédible</h4>
+    <ul class="tips-list">
+      <li><strong>Cadre légal et paisible :</strong> tout rassemblement sur la voie publique se prépare en amont (déclaration si nécessaire, respect de la circulation et de la tranquillité publique).</li>
+      <li><strong>Ton digne et centré sur le fond :</strong> privilégier des échanges constructifs sur le Four banal, la cohérence patrimoniale et l’usage de l’argent public.</li>
+      <li><strong>Protection des coordonnées :</strong> les emails ou numéros saisis dans le formulaire servent uniquement à organiser les rendez-vous et ne sont jamais affichés publiquement sur la page.</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+var scriptSubmitted = false;
+
+function startScriptSubmit() {
+  scriptSubmitted = true;
+  var btn = document.getElementById('ev-submit-btn');
+  var box = document.getElementById('ev-feedback');
+  if (box) {
+    box.style.display = 'none';
+  }
+  if (btn) {
+    btn.textContent = 'Envoi en cours…';
+  }
+}
+
+function confirmScriptSent() {
+  if (!scriptSubmitted) return;
+  scriptSubmitted = false;
+  var btn = document.getElementById('ev-submit-btn');
+  var box = document.getElementById('ev-feedback');
+  var form = document.getElementById('formulaire-evenement');
+  if (box) {
+    box.style.display = 'block';
+  }
+  if (btn) {
+    btn.disabled = false;
+    btn.textContent = 'Envoyer ma proposition';
+  }
+  if (form) {
+    form.reset();
+  }
+}
+</script>
+
+</section>
+```

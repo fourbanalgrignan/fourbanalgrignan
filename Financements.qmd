@@ -1,0 +1,888 @@
+---
+title: ""
+format:
+  html:
+    title-block-style: none
+    page-layout: full
+---
+
+```{=html}
+<section class="funding-page">
+
+<style>
+@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap)');
+
+/* =====================================
+   FOND ET DÉCORATIONS
+===================================== */
+
+html, body, #quarto-content {
+  background-color: #F4F0E8 !important;
+}
+
+.funding-page {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #293747;
+  background: transparent;
+  padding: 35px 22px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+}
+
+.funding-page * {
+  box-sizing: border-box;
+}
+
+/* LAVANDE À DROITE */
+
+.lavande-filigrane {
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  width: 190px;
+  height: auto;
+  opacity: 0.17;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ÉPI DE BLÉ À GAUCHE */
+
+.ble-filigrane {
+  position: fixed;
+  left: 8px;
+  bottom: 15px;
+  width: 175px;
+  height: auto;
+  opacity: 0.19;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =====================================
+   EN-TÊTE
+===================================== */
+
+.funding-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 38px;
+  padding: 26px 12px 10px;
+  overflow: visible;
+}
+
+.sac-argent-filigrane {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  width: 210px;
+  height: auto;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.funding-eyebrow {
+  color: #9b784b;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.funding-header h1 {
+  color: #26394d;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: clamp(32px, 5vw, 46px);
+  line-height: 1.3;
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+
+.funding-header p {
+  color: #59636e;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* =====================================
+   CONTENU FINANCEMENT
+===================================== */
+
+.funding {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: #293747;
+  box-shadow: none;
+}
+
+/* =====================================
+   COÛT GLOBAL
+===================================== */
+
+.funding-total {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 9px;
+  border: 1px solid #e5e0d8;
+  position: relative;
+  overflow: hidden;
+}
+
+.funding-total > span {
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  color: #94764b;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.funding-total > strong {
+  display: block;
+  font-size: 36px;
+  color: #26394d;
+  margin: 8px 0 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.funding-bar {
+  display: flex;
+  height: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.commune-part {
+  width: 25%;
+  background: #344e68;
+}
+
+.drac-part {
+  width: 75%;
+  background: #b9b9b0;
+}
+
+.funding-legend {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #555;
+  position: relative;
+  z-index: 1;
+}
+
+/* ARGENT QUI S'ENVOLE */
+
+.money-flying {
+  position: absolute;
+  right: 25px;
+  top: 5px;
+  width: 115px;
+  height: 105px;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 560px) {
+  .money-flying {
+    width: 75px;
+    height: 75px;
+    right: 8px;
+    top: 8px;
+    opacity: 0.55;
+  }
+}
+
+/* =====================================
+   RÉPARTITION DES FINANCEMENTS
+===================================== */
+
+.funding-flow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.funding-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e5e0d8;
+  border-radius: 9px;
+}
+
+.institution-logo {
+  flex: 0 0 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  background: #f1eee7;
+  border-radius: 50%;
+  font-size: 23px;
+}
+
+/* DRAPEAU FRANÇAIS */
+
+.french-flag {
+  display: flex;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 43px;
+  height: 43px;
+  padding: 0;
+  flex: 0 0 43px;
+}
+
+.french-flag span {
+  flex: 1;
+  height: 100%;
+}
+
+.french-flag span:nth-child(1) {
+  background: #002395;
+}
+
+.french-flag span:nth-child(2) {
+  background: #ffffff;
+}
+
+.french-flag span:nth-child(3) {
+  background: #ed2939;
+}
+
+.funding-card h3 {
+  font-family: Georgia, serif;
+  font-size: 19px;
+  color: #26394d;
+  margin: 2px 0 8px;
+  line-height: 1.4;
+}
+
+.funding-card strong {
+  font-size: 25px;
+  color: #344e68;
+}
+
+.funding-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #777;
+  margin-bottom: 0;
+}
+
+/* =====================================
+   DOCUMENT OFFICIEL
+===================================== */
+
+.funding-reference {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 18px;
+  padding: 17px;
+  background: #f7f5f1;
+  border: 1px solid #e5e0d8;
+  border-left: 4px solid #b49363;
+  border-radius: 9px;
+  color: #252525;
+  text-decoration: none;
+  transition: background .2s, border-color .2s;
+}
+
+.funding-reference:hover {
+  background: #f0ece3;
+  border-color: #c5b18e;
+}
+
+.reference-icon {
+  flex: 0 0 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: #eee8dc;
+  border-radius: 9px;
+  font-size: 23px;
+}
+
+.reference-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+}
+
+.reference-label {
+  color: #94764b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+
+.reference-content strong {
+  color: #26394d;
+  font-size: 16px;
+}
+
+.reference-description {
+  color: #596575;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.reference-meeting {
+  color: #687585;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.reference-action {
+  color: #94764b;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.reference-arrow {
+  color: #94764b;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* =====================================
+   DESTINATION DE LA COMMANDE
+===================================== */
+
+.funding-destination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.funding-destination > span {
+  display: block;
+  font-size: 28px;
+  color: #a8895d;
+  margin-bottom: 10px;
+}
+
+.funding-destination > div {
+  background: #344e68;
+  color: white;
+  padding: 20px;
+  border-radius: 9px;
+}
+
+.funding-destination small {
+  color: #d6dce2;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+}
+
+.funding-destination strong {
+  display: block;
+  font-size: 19px;
+  margin: 8px 0;
+}
+
+.funding-destination p {
+  font-size: 13px;
+  margin: 0;
+  color: #e1e6eb;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 750px) {
+
+  .funding-page {
+    padding: 25px 12px;
+  }
+
+  .sac-argent-filigrane {
+    width: 165px;
+    top: 30%;
+    opacity: 0.12;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .lavande-filigrane {
+    width: 110px;
+    right: -12px;
+    bottom: 5px;
+    opacity: 0.12;
+  }
+
+  .ble-filigrane {
+    width: 105px;
+    left: -15px;
+    bottom: 5px;
+    opacity: 0.13;
+  }
+}
+
+@media(max-width: 560px) {
+
+  .funding-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .funding-legend {
+    font-size: 10px;
+  }
+
+  .funding-total {
+    padding: 17px;
+  }
+
+  .funding-total > strong {
+    font-size: 32px;
+  }
+
+  .funding-reference {
+    padding: 13px;
+    gap: 10px;
+  }
+
+  .reference-icon {
+    flex-basis: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .reference-label {
+    font-size: 9px;
+  }
+
+  .funding-destination > div {
+    padding: 17px;
+  }
+}
+
+/* =====================================
+   IMPRESSION
+===================================== */
+
+@media print {
+
+  .lavande-filigrane,
+  .ble-filigrane,
+  .sac-argent-filigrane {
+    display: none;
+  }
+
+}
+</style>
+
+
+<!-- =====================================
+     ÉPI DE BLÉ SVG À GAUCHE
+===================================== -->
+
+<svg class="ble-filigrane"
+     viewBox="0 0 200 430"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     aria-hidden="true">
+
+  <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
+        fill="none"
+        stroke="#71805B"
+        stroke-width="3"
+        stroke-linecap="round"/>
+
+  <g fill="#89966C">
+    <path d="M98 350 Q55 328 38 290 Q79 302 98 350"/>
+    <path d="M95 375 Q136 342 150 303 Q111 319 95 375"/>
+    <path d="M93 290 Q48 265 43 228 Q79 246 93 290"/>
+    <path d="M90 315 Q128 281 138 244 Q105 263 90 315"/>
+    <path d="M91 225 Q52 201 55 164 Q84 184 91 225"/>
+    <path d="M91 250 Q130 218 139 184 Q105 198 91 250"/>
+  </g>
+
+  <g fill="#C4A15E">
+    <ellipse cx="101" cy="42" rx="7" ry="17" transform="rotate(-28 101 42)"/>
+    <ellipse cx="86" cy="57" rx="7" ry="16" transform="rotate(-58 86 57)"/>
+    <ellipse cx="111" cy="69" rx="7" ry="17" transform="rotate(25 111 69)"/>
+    <ellipse cx="79" cy="82" rx="7" ry="16" transform="rotate(-58 79 82)"/>
+    <ellipse cx="112" cy="97" rx="7" ry="17" transform="rotate(25 112 97)"/>
+    <ellipse cx="77" cy="110" rx="7" ry="16" transform="rotate(-55 77 110)"/>
+    <ellipse cx="108" cy="126" rx="7" ry="17" transform="rotate(22 108 126)"/>
+    <ellipse cx="80" cy="139" rx="7" ry="15" transform="rotate(-45 80 139)"/>
+    <ellipse cx="101" cy="154" rx="7" ry="16" transform="rotate(15 101 154)"/>
+    <ellipse cx="88" cy="169" rx="7" ry="15" transform="rotate(-35 88 169)"/>
+  </g>
+
+  <g fill="#D3B474">
+    <ellipse cx="115" cy="50" rx="6" ry="14" transform="rotate(40 115 50)"/>
+    <ellipse cx="96" cy="74" rx="6" ry="14" transform="rotate(-25 96 74)"/>
+    <ellipse cx="121" cy="83" rx="6" ry="14" transform="rotate(45 121 83)"/>
+    <ellipse cx="91" cy="102" rx="6" ry="14" transform="rotate(-25 91 102)"/>
+    <ellipse cx="119" cy="112" rx="6" ry="14" transform="rotate(42 119 112)"/>
+    <ellipse cx="91" cy="131" rx="6" ry="13" transform="rotate(-20 91 131)"/>
+    <ellipse cx="113" cy="141" rx="6" ry="13" transform="rotate(38 113 141)"/>
+    <ellipse cx="94" cy="158" rx="6" ry="12" transform="rotate(-15 94 158)"/>
+  </g>
+
+  <g stroke="#B69A61" stroke-width="1.2"
+     stroke-linecap="round" opacity="0.9">
+    <path d="M101 42L89 15"/>
+    <path d="M86 57L66 36"/>
+    <path d="M111 69L127 42"/>
+    <path d="M79 82L55 63"/>
+    <path d="M112 97L132 69"/>
+    <path d="M77 110L52 93"/>
+    <path d="M108 126L128 101"/>
+    <path d="M80 139L58 125"/>
+    <path d="M101 154L117 133"/>
+    <path d="M88 169L69 155"/>
+  </g>
+
+</svg>
+
+
+<!-- =====================================
+     BRIN DE LAVANDE SVG À DROITE
+===================================== -->
+
+<svg class="lavande-filigrane"
+     viewBox="0 0 200 420"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     aria-hidden="true">
+
+  <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
+        fill="none" stroke="#687D58"
+        stroke-width="3.5" stroke-linecap="round"/>
+
+  <g fill="#82936D">
+    <path d="M105 340 Q55 320 42 278 Q85 290 105 340"/>
+    <path d="M103 365 Q145 330 158 292 Q115 310 103 365"/>
+    <path d="M108 275 Q60 250 55 215 Q90 230 108 275"/>
+    <path d="M112 300 Q150 265 155 230 Q120 250 112 300"/>
+    <path d="M115 210 Q78 185 77 155 Q107 175 115 210"/>
+    <path d="M120 230 Q155 200 165 170 Q130 185 120 230"/>
+    <path d="M130 145 Q102 120 107 92 Q130 110 130 145"/>
+    <path d="M135 165 Q165 140 173 112 Q143 128 135 165"/>
+  </g>
+
+  <g fill="#9274A9">
+    <ellipse cx="145" cy="28" rx="8" ry="14" transform="rotate(20 145 28)"/>
+    <ellipse cx="132" cy="40" rx="8" ry="14" transform="rotate(-35 132 40)"/>
+    <ellipse cx="155" cy="48" rx="8" ry="14" transform="rotate(35 155 48)"/>
+    <ellipse cx="127" cy="60" rx="8" ry="14" transform="rotate(-30 127 60)"/>
+    <ellipse cx="151" cy="69" rx="8" ry="14" transform="rotate(30 151 69)"/>
+    <ellipse cx="120" cy="81" rx="8" ry="14" transform="rotate(-25 120 81)"/>
+    <ellipse cx="144" cy="90" rx="8" ry="14" transform="rotate(25 144 90)"/>
+    <ellipse cx="119" cy="105" rx="7" ry="13" transform="rotate(-25 119 105)"/>
+    <ellipse cx="138" cy="116" rx="7" ry="13" transform="rotate(25 138 116)"/>
+    <ellipse cx="116" cy="130" rx="7" ry="12" transform="rotate(-20 116 130)"/>
+    <ellipse cx="132" cy="140" rx="7" ry="12" transform="rotate(25 132 140)"/>
+  </g>
+
+  <g fill="#B49AC6">
+    <circle cx="145" cy="28" r="2"/>
+    <circle cx="132" cy="40" r="2"/>
+    <circle cx="155" cy="48" r="2"/>
+    <circle cx="127" cy="60" r="2"/>
+    <circle cx="151" cy="69" r="2"/>
+    <circle cx="120" cy="81" r="2"/>
+    <circle cx="144" cy="90" r="2"/>
+  </g>
+
+</svg>
+
+
+<!-- =====================================
+     EN-TÊTE
+===================================== -->
+
+<header class="funding-header">
+
+  <!-- FILIGRANE SAC D'ARGENT EUROS -->
+  <svg class="sac-argent-filigrane"
+       viewBox="0 0 220 220"
+       xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+       aria-hidden="true">
+
+    <!-- Lien / fronces nouées en haut du sac -->
+    <path d="M86 58 L74 36 L98 44 L110 26 L122 44 L146 36 L134 58 Z"
+          fill="#9b784b"/>
+    <rect x="84" y="55" width="52" height="10" rx="4"
+          fill="#26394d"/>
+
+    <!-- Corps arrondi du sac d'argent -->
+    <path d="M84 65
+             C56 76, 38 106, 40 144
+             C42 178, 68 196, 110 196
+             C152 196, 178 178, 180 144
+             C182 106, 164 76, 136 65 Z"
+          fill="none"
+          stroke="#26394d"
+          stroke-width="6"
+          stroke-linejoin="round"/>
+
+    <!-- Liséré intérieur doré -->
+    <path d="M88 73
+             C64 83, 49 109, 51 143
+             C53 170, 74 185, 110 185
+             C146 185, 167 170, 169 143
+             C171 109, 156 83, 132 73"
+          fill="none"
+          stroke="#9b784b"
+          stroke-width="2.2"
+          stroke-dasharray="5 4"/>
+
+    <!-- Symbole Euro (€) central -->
+    <path d="M126 106
+             C118 99, 104 100, 97 110
+             C91 120, 91 140, 97 150
+             C104 160, 118 161, 126 154"
+          fill="none"
+          stroke="#9b784b"
+          stroke-width="6.5"
+          stroke-linecap="round"/>
+    <line x1="84" y1="123" x2="114" y2="123"
+          stroke="#26394d"
+          stroke-width="4.5"
+          stroke-linecap="round"/>
+    <line x1="84" y1="137" x2="114" y2="137"
+          stroke="#26394d"
+          stroke-width="4.5"
+          stroke-linecap="round"/>
+
+  </svg>
+
+  <div class="funding-eyebrow">
+    DOSSIER DOCUMENTAIRE · GRIGNAN
+  </div>
+
+  <h1>Financement de la commande publique</h1>
+
+  <p>
+    Répartition de l'enveloppe financière attribuée au projet
+    artistique de transformation de l'ancien four banal.
+  </p>
+
+</header>
+
+
+<!-- =====================================
+     FINANCEMENT
+===================================== -->
+
+<section class="funding">
+
+  <div class="funding-total">
+
+    <!-- ARGENT QUI S'ENVOLE -->
+
+    <svg class="money-flying"
+         viewBox="0 0 150 120"
+         xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+         aria-hidden="true">
+
+      <!-- Billet principal -->
+      <g transform="rotate(-18 75 55)">
+        <rect x="48" y="38" width="75" height="42"
+              rx="4" fill="#A5B69A"
+              stroke="#687D58" stroke-width="1.5"/>
+
+        <rect x="54" y="44" width="63" height="30"
+              rx="2" fill="none"
+              stroke="#E8E5D9" stroke-width="1"/>
+
+        <circle cx="85" cy="59" r="11"
+                fill="#E8E5D9" opacity="0.8"/>
+
+        <text x="85" y="65"
+              text-anchor="middle"
+              font-size="17"
+              font-family="Georgia"
+              font-weight="bold"
+              fill="#687D58">€</text>
+      </g>
+
+      <!-- Deuxième billet -->
+      <g transform="rotate(17 35 78)">
+        <rect x="8" y="65" width="54" height="30"
+              rx="3" fill="#D3B474"
+              stroke="#A8895D" stroke-width="1.3"/>
+
+        <rect x="13" y="70" width="44" height="20"
+              rx="2" fill="none"
+              stroke="#F4F0E8" stroke-width="1"/>
+
+        <text x="35" y="85"
+              text-anchor="middle"
+              font-size="13"
+              font-family="Georgia"
+              font-weight="bold"
+              fill="#80663E">€</text>
+      </g>
+
+      <!-- Petit billet qui s'envole -->
+      <g transform="rotate(-35 115 20)">
+        <rect x="101" y="8" width="34" height="21"
+              rx="2" fill="#B9C5A8"
+              stroke="#71805B" stroke-width="1"/>
+
+        <text x="118" y="23"
+              text-anchor="middle"
+              font-size="11"
+              font-family="Georgia"
+              fill="#52664B">€</text>
+      </g>
+
+      <!-- Traits de mouvement -->
+      <g fill="none"
+         stroke="#B69A61"
+         stroke-width="1.7"
+         stroke-linecap="round"
+         opacity="0.8">
+
+        <path d="M18 35 Q27 25 36 29"/>
+        <path d="M112 99 Q124 91 135 95"/>
+        <path d="M72 15 Q80 8 88 12"/>
+        <path d="M22 105 Q30 99 38 102"/>
+
+      </g>
+
+      <!-- Petites étoiles -->
+      <g fill="#C4A15E">
+        <path d="M39 15 L42 22 L49 25 L42 28 L39 35 L36 28 L29 25 L36 22 Z"/>
+        <path d="M132 48 L134 53 L139 55 L134 57 L132 62 L130 57 L125 55 L130 53 Z"/>
+      </g>
+
+    </svg>
+
+
+    <span>COÛT GLOBAL DU PROJET</span>
+
+    <strong>200 000 €</strong>
+
+    <div class="funding-bar">
+      <div class="commune-part"></div>
+      <div class="drac-part"></div>
+    </div>
+
+    <div class="funding-legend">
+      <span>25 % Commune</span>
+      <span>75 % DRAC</span>
+    </div>
+
+  </div>
+
+
+  <!-- RÉPARTITION DES FINANCEMENTS -->
+
+  <div class="funding-flow">
+
+    <div class="funding-card">
+
+      <div class="institution-logo">🏛️</div>
+
+      <div>
+        <h3>Commune de Grignan</h3>
+        <strong>50 000 €</strong>
+        <p>Participation communale</p>
+      </div>
+
+    </div>
+
+
+    <div class="funding-card">
+
+      <div class="institution-logo french-flag" title="République française">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div>
+        <h3>DRAC</h3>
+        <strong>150 000 €</strong>
+        <p>Direction régionale des affaires culturelles</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- DOCUMENT OFFICIEL -->
+
+  <a class="funding-reference"
+     href="https://www.ville-grignan.fr/fr/decouvrir-la-commune/compte-rendus-des-conseils-municipaux.html"
+     target="_blank"
+     rel="noopener noreferrer">
+
+    <div class="reference-icon">📑</div>
+
+    <div class="reference-content">
+
+      <span class="reference-label">
+        DOCUMENT MUNICIPAL · SOURCE OFFICIELLE
+      </span>
+
+      <strong>Délibération n° 14</strong>
+
+      <span class="reference-description">
+        Commande publique d'une œuvre d'art en hommage à la Marquise de Sévigné : choix de l'artiste
+      </span>
+
+      <span class="reference-meeting">
+        Compte rendu du conseil municipal du vendredi 21 mars 2025
+      </span>
+
+      <span class="reference-action">
+        Consulter le document ↗
+      </span>
+
+    </div>
+
+    <div class="reference-arrow">↗</div>
+
+  </a>
+
+
+  <!-- DESTINATION DE LA COMMANDE -->
+
+  <div class="funding-destination">
+
+    <span>↓</span>
+
+    <div>
+      <small>COMMANDE PUBLIQUE</small>
+      <strong>Œuvre d’Hélène Delprat</strong>
+      <p>« Le froid me chasse » - Ancien four banal de Grignan</p>
+    </div>
+
+  </div>
+
+</section>
+
+</section>
+```

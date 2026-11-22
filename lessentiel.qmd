@@ -1,0 +1,1076 @@
+---
+title: ""
+format:
+  html:
+    title-block-style: none
+    page-layout: full
+---
+
+```{=html}
+<section class="recap-grignan">
+
+<style>
+@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap)');
+
+/* =====================================
+   FOND ET DÉCORATIONS
+===================================== */
+
+html,
+body,
+#quarto-content {
+  background-color: #F4F0E8 !important;
+}
+
+.recap-grignan {
+  --navy: #203653;
+  --blue: #3979ad;
+  --gold: #b58a38;
+  --red: #bd514b;
+  --green: #42836b;
+  --purple: #784ba0;
+  --ink: #303b49;
+  --muted: #687585;
+
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: var(--ink);
+  background: transparent;
+  padding: 30px 10px;
+  max-width: 950px;
+  margin: auto;
+  position: relative;
+  isolation: isolate;
+}
+
+.recap-grignan *,
+.facebook-video * {
+  box-sizing: border-box;
+}
+
+/* LAVANDE À DROITE */
+
+.lavande-filigrane {
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  width: 190px;
+  height: auto;
+  opacity: 0.17;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ÉPI DE BLÉ À GAUCHE */
+
+.ble-filigrane {
+  position: fixed;
+  left: 8px;
+  bottom: 15px;
+  width: 175px;
+  height: auto;
+  opacity: 0.19;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =====================================
+   EN-TÊTE
+===================================== */
+
+.recap-grignan .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  padding: 30px 10px 35px;
+  margin: 0 auto;
+}
+
+.recap-grignan .header h1.essentiel-title {
+  display: block;
+  width: 100%;
+  color: #111111 !important;
+  font-family: 'Comfortaa', sans-serif !important;
+  font-size: clamp(42px, 8.5vw, 64px);
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center !important;
+  margin: 12px auto;
+  padding: 0;
+  border: none;
+}
+
+.recap-grignan .header h1.essentiel-title .anchorjs-link {
+  display: none !important;
+}
+
+.recap-grignan .header-filigrane {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.recap-grignan .header-filigrane svg {
+  width: 175px;
+  height: auto;
+  opacity: 0.72;
+}
+
+.recap-grignan .eyebrow {
+  color: #9b784b;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.recap-grignan .subtitle {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.65;
+  text-align: center;
+}
+
+/* =====================================
+   CARTES
+===================================== */
+
+.recap-grignan .timeline {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.recap-grignan .card {
+  background: #f8f9fa;
+  border: 1px solid #e1e6ec;
+  border-radius: 11px;
+  padding: 21px;
+  box-shadow: 0 3px 10px rgba(30,50,75,.045);
+  border-top: 4px solid var(--blue);
+}
+
+.recap-grignan .card.gold {
+  border-top-color: var(--gold);
+}
+
+.recap-grignan .card.red {
+  border-top-color: var(--red);
+}
+
+.recap-grignan .card.green {
+  border-top-color: var(--green);
+}
+
+.recap-grignan .card.navy {
+  border-top-color: var(--navy);
+}
+
+.recap-grignan .card.purple {
+  border-top-color: var(--purple);
+}
+
+.recap-grignan .card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 13px;
+}
+
+.recap-grignan .symbol {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #edf3fa;
+  border-radius: 12px;
+  font-size: 24px;
+}
+
+.recap-grignan .gold .symbol {
+  background: #f8f1df;
+}
+
+.recap-grignan .red .symbol {
+  background: #faeae8;
+}
+
+.recap-grignan .green .symbol {
+  background: #e8f3ed;
+}
+
+.recap-grignan .purple .symbol {
+  background: #f2eaf8;
+}
+
+.recap-grignan .number {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.recap-grignan .gold .number {
+  color: var(--gold);
+}
+
+.recap-grignan .purple .number {
+  color: var(--purple);
+}
+
+.recap-grignan .legal .number {
+  color: var(--red);
+}
+
+.recap-grignan h3 {
+  color: var(--navy);
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin: 3px 0 0;
+}
+
+.recap-grignan p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #596675;
+  margin: 0;
+}
+
+.recap-grignan strong {
+  color: var(--navy);
+}
+
+.recap-grignan .gold strong {
+  color: #967024;
+}
+
+.recap-grignan .red strong,
+.recap-grignan .legal strong {
+  color: var(--red);
+}
+
+.recap-grignan .purple strong {
+  color: var(--purple);
+}
+
+/* =====================================
+   FINANCEMENT
+===================================== */
+
+.recap-grignan .money {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 5px 0 12px;
+}
+
+.recap-grignan .money strong {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  color: #a43f39;
+}
+
+.recap-grignan .money span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* =====================================
+   THÈME ENCADRÉS 5 ET 6 (LEGAL)
+===================================== */
+
+.recap-grignan .legal {
+  background: #fff8f6;
+  border: 1px solid #f0d4cf;
+  border-top: 4px solid var(--red);
+}
+
+.recap-grignan .legal .symbol {
+  background: #f9e6e2;
+}
+
+.recap-grignan .legal h3 {
+  color: #a43f39;
+}
+
+/* =====================================
+   RÉFÉRENCES ET BOUTONS
+===================================== */
+
+.recap-grignan .references {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid #edf0f3;
+}
+
+.recap-grignan .legal .references {
+  border-top-color: #f0d4cf;
+}
+
+.recap-grignan .reference,
+.recap-grignan .legal-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 10px;
+  background: #f1f5f9;
+  border: 1px solid #e0e7ef;
+  border-radius: 7px;
+  text-decoration: none !important;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: background .2s, border-color .2s;
+}
+
+.recap-grignan .legal .reference,
+.recap-grignan .legal .legal-link {
+  background: #fdf1ef;
+  border-color: #edd0cb;
+  color: #8c3731;
+}
+
+.recap-grignan .reference:hover,
+.recap-grignan .legal-link:hover {
+  background: #e5edf6;
+  border-color: #b7c9dc;
+}
+
+.recap-grignan .legal .reference:hover,
+.recap-grignan .legal .legal-link:hover {
+  background: #f9e2de;
+  border-color: #e2b4ac;
+}
+
+.recap-grignan .reference-icon {
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.recap-grignan .reference small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.recap-grignan .legal .reference small {
+  color: #875650;
+}
+
+/* BOUTON RÉPONSE UDAP */
+
+.recap-grignan .udap-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 6px;
+  padding: 13px 15px;
+  background: #f9e6e2;
+  border: 1px solid #e7b9b1;
+  border-radius: 8px;
+  color: #923c35;
+  text-decoration: none !important;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.5;
+  transition: background .2s, transform .2s;
+}
+
+.recap-grignan .udap-link:hover {
+  background: #f3d5cf;
+  transform: translateY(-2px);
+}
+
+.recap-grignan .udap-link small {
+  display: block;
+  font-size: 11px;
+  font-weight: normal;
+  color: #875650;
+}
+
+/* =====================================
+   CONCLUSION
+===================================== */
+
+.recap-grignan .conclusion {
+  margin-top: 20px;
+  padding: 22px;
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  border-radius: 11px;
+}
+
+.recap-grignan .conclusion .icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.recap-grignan .conclusion strong {
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 24px;
+}
+
+.recap-grignan .conclusion p {
+  color: #dce5ee;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+/* =====================================
+   VIDÉO FACEBOOK (CADRE PAYSAGE + VIDÉO VERTICALE ENTIÈRE)
+===================================== */
+
+.facebook-video {
+  max-width: 950px;
+  margin: 25px auto;
+  padding: 20px;
+  background: transparent;
+  border-radius: 14px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.facebook-video h2 {
+  color: #26394d;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 25px;
+  margin: 0 0 8px;
+}
+
+.facebook-video .subtitle {
+  color: #687585;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.facebook-video .video-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.facebook-video iframe {
+  height: 100%;
+  aspect-ratio: 9 / 16;
+  width: auto;
+  max-width: 100%;
+  border: 0;
+  display: block;
+}
+
+.facebook-video .fullscreen-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 18px auto 10px;
+  padding: 15px 24px;
+  background: #1877f2;
+  color: #ffffff;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .4px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(24,119,242,.22);
+  transition: background .2s, transform .2s;
+}
+
+.facebook-video .fullscreen-button:hover {
+  background: #125fc4;
+  transform: translateY(-2px);
+}
+
+.facebook-video .button-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.facebook-video .facebook-link {
+  display: block;
+  margin-top: 8px;
+  color: #3979ad;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.facebook-video .facebook-link:hover {
+  text-decoration: underline;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:620px) {
+
+  .recap-grignan {
+    padding: 18px 5px;
+  }
+
+  .recap-grignan .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .recap-grignan .card {
+    padding: 17px;
+  }
+
+  .recap-grignan .header {
+    padding: 25px 10px;
+  }
+
+  .recap-grignan .header-filigrane svg {
+    width: 145px;
+  }
+
+  .recap-grignan .card-head {
+    gap: 10px;
+  }
+
+  .recap-grignan h3 {
+    font-size: 16px;
+  }
+
+  .recap-grignan p {
+    font-size: 16px;
+  }
+
+  .facebook-video {
+    padding: 13px;
+  }
+
+  .facebook-video h2 {
+    font-size: 21px;
+  }
+
+  .facebook-video .video-container {
+    aspect-ratio: 4 / 3;
+  }
+
+  .facebook-video .fullscreen-button {
+    width: 100%;
+    padding: 14px 10px;
+    font-size: 12px;
+  }
+
+  .lavande-filigrane {
+    width: 110px;
+    right: -12px;
+    bottom: 5px;
+    opacity: 0.12;
+  }
+
+  .ble-filigrane {
+    width: 105px;
+    left: -15px;
+    bottom: 5px;
+    opacity: 0.13;
+  }
+}
+
+/* =====================================
+   IMPRESSION
+===================================== */
+
+@media print {
+
+  .lavande-filigrane,
+  .ble-filigrane {
+    display: none;
+  }
+
+}
+</style>
+
+
+<!-- =====================================
+     ÉPI DE BLÉ SVG À GAUCHE
+===================================== -->
+
+<svg class="ble-filigrane"
+     viewBox="0 0 200 430"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     aria-hidden="true">
+
+  <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
+        fill="none"
+        stroke="#71805B"
+        stroke-width="3"
+        stroke-linecap="round"/>
+
+  <g fill="#89966C">
+    <path d="M98 350 Q55 328 38 290 Q79 302 98 350"/>
+    <path d="M95 375 Q136 342 150 303 Q111 319 95 375"/>
+    <path d="M93 290 Q48 265 43 228 Q79 246 93 290"/>
+    <path d="M90 315 Q128 281 138 244 Q105 263 90 315"/>
+    <path d="M91 225 Q52 201 55 164 Q84 184 91 225"/>
+    <path d="M91 250 Q130 218 139 184 Q105 198 91 250"/>
+  </g>
+
+  <g fill="#C4A15E">
+    <ellipse cx="101" cy="42" rx="7" ry="17" transform="rotate(-28 101 42)"/>
+    <ellipse cx="86" cy="57" rx="7" ry="16" transform="rotate(-58 86 57)"/>
+    <ellipse cx="111" cy="69" rx="7" ry="17" transform="rotate(25 111 69)"/>
+    <ellipse cx="79" cy="82" rx="7" ry="16" transform="rotate(-58 79 82)"/>
+    <ellipse cx="112" cy="97" rx="7" ry="17" transform="rotate(25 112 97)"/>
+    <ellipse cx="77" cy="110" rx="7" ry="16" transform="rotate(-55 77 110)"/>
+    <ellipse cx="108" cy="126" rx="7" ry="17" transform="rotate(22 108 126)"/>
+    <ellipse cx="80" cy="139" rx="7" ry="15" transform="rotate(-45 80 139)"/>
+    <ellipse cx="101" cy="154" rx="7" ry="16" transform="rotate(15 101 154)"/>
+    <ellipse cx="88" cy="169" rx="7" ry="15" transform="rotate(-35 88 169)"/>
+  </g>
+
+  <g fill="#D3B474">
+    <ellipse cx="115" cy="50" rx="6" ry="14" transform="rotate(40 115 50)"/>
+    <ellipse cx="96" cy="74" rx="6" ry="14" transform="rotate(-25 96 74)"/>
+    <ellipse cx="121" cy="83" rx="6" ry="14" transform="rotate(45 121 83)"/>
+    <ellipse cx="91" cy="102" rx="6" ry="14" transform="rotate(-25 91 102)"/>
+    <ellipse cx="119" cy="112" rx="6" ry="14" transform="rotate(42 119 112)"/>
+    <ellipse cx="91" cy="131" rx="6" ry="13" transform="rotate(-20 91 131)"/>
+    <ellipse cx="113" cy="141" rx="6" ry="13" transform="rotate(38 113 141)"/>
+    <ellipse cx="94" cy="158" rx="6" ry="12" transform="rotate(-15 94 158)"/>
+  </g>
+
+  <g stroke="#B69A61" stroke-width="1.2"
+     stroke-linecap="round" opacity="0.9">
+    <path d="M101 42L89 15"/>
+    <path d="M86 57L66 36"/>
+    <path d="M111 69L127 42"/>
+    <path d="M79 82L55 63"/>
+    <path d="M112 97L132 69"/>
+    <path d="M77 110L52 93"/>
+    <path d="M108 126L128 101"/>
+    <path d="M80 139L58 125"/>
+    <path d="M101 154L117 133"/>
+    <path d="M88 169L69 155"/>
+  </g>
+
+</svg>
+
+
+<!-- =====================================
+     BRIN DE LAVANDE SVG À DROITE
+===================================== -->
+
+<svg class="lavande-filigrane"
+     viewBox="0 0 200 420"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     aria-hidden="true">
+
+  <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
+        fill="none"
+        stroke="#687D58"
+        stroke-width="3.5"
+        stroke-linecap="round"/>
+
+  <g fill="#82936D">
+    <path d="M105 340 Q55 320 42 278 Q85 290 105 340"/>
+    <path d="M103 365 Q145 330 158 292 Q115 310 103 365"/>
+    <path d="M108 275 Q60 250 55 215 Q90 230 108 275"/>
+    <path d="M112 300 Q150 265 155 230 Q120 250 112 300"/>
+    <path d="M115 210 Q78 185 77 155 Q107 175 115 210"/>
+    <path d="M120 230 Q155 200 165 170 Q130 185 120 230"/>
+    <path d="M130 145 Q102 120 107 92 Q130 110 130 145"/>
+    <path d="M135 165 Q165 140 173 112 Q143 128 135 165"/>
+  </g>
+
+  <g fill="#9274A9">
+    <ellipse cx="145" cy="28" rx="8" ry="14" transform="rotate(20 145 28)"/>
+    <ellipse cx="132" cy="40" rx="8" ry="14" transform="rotate(-35 132 40)"/>
+    <ellipse cx="155" cy="48" rx="8" ry="14" transform="rotate(35 155 48)"/>
+    <ellipse cx="127" cy="60" rx="8" ry="14" transform="rotate(-30 127 60)"/>
+    <ellipse cx="151" cy="69" rx="8" ry="14" transform="rotate(30 151 69)"/>
+    <ellipse cx="120" cy="81" rx="8" ry="14" transform="rotate(-25 120 81)"/>
+    <ellipse cx="144" cy="90" rx="8" ry="14" transform="rotate(25 144 90)"/>
+    <ellipse cx="119" cy="105" rx="7" ry="13" transform="rotate(-25 119 105)"/>
+    <ellipse cx="138" cy="116" rx="7" ry="13" transform="rotate(25 138 116)"/>
+    <ellipse cx="116" cy="130" rx="7" ry="12" transform="rotate(-20 116 130)"/>
+    <ellipse cx="132" cy="140" rx="7" ry="12" transform="rotate(25 132 140)"/>
+  </g>
+
+  <g fill="#B49AC6">
+    <circle cx="145" cy="28" r="2"/>
+    <circle cx="132" cy="40" r="2"/>
+    <circle cx="155" cy="48" r="2"/>
+    <circle cx="127" cy="60" r="2"/>
+    <circle cx="151" cy="69" r="2"/>
+    <circle cx="120" cy="81" r="2"/>
+    <circle cx="144" cy="90" r="2"/>
+  </g>
+
+</svg>
+
+
+<!-- =====================================
+     EN-TÊTE DE PAGE
+===================================== -->
+
+<header class="header">
+
+  <div class="header-filigrane" aria-hidden="true">
+    <svg viewBox="0 0 260 66" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
+      <!-- Lignes de filigrane latérales -->
+      <path d="M12 48 H76" stroke="#b58a38" stroke-width="1.2" stroke-linecap="round" opacity="0.65"/>
+      <path d="M184 48 H248" stroke="#b58a38" stroke-width="1.2" stroke-linecap="round" opacity="0.65"/>
+      <circle cx="12" cy="48" r="2" fill="#9b784b"/>
+      <circle cx="248" cy="48" r="2" fill="#9b784b"/>
+
+      <!-- Feuilles d'ornement gauche -->
+      <path d="M74 48 C65 39 54 37 44 41 C53 45 64 47 74 48 Z" fill="none" stroke="#9b784b" stroke-width="1.2"/>
+      <path d="M62 48 C55 54 46 56 38 54 C46 50 54 48 62 48 Z" fill="none" stroke="#9b784b" stroke-width="1.1"/>
+
+      <!-- Feuilles d'ornement droite -->
+      <path d="M186 48 C195 39 206 37 216 41 C207 45 196 47 186 48 Z" fill="none" stroke="#9b784b" stroke-width="1.2"/>
+      <path d="M198 48 C205 54 214 56 222 54 C214 50 206 48 198 48 Z" fill="none" stroke="#9b784b" stroke-width="1.1"/>
+
+      <!-- Médaillon central : Arche patrimoniale du four banal & clé de voûte -->
+      <path d="M98 54 V34 C98 17 112 8 130 8 C148 8 162 17 162 34 V54" fill="none" stroke="#9b784b" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M106 54 V35 C106 22 116 15 130 15 C144 15 154 22 154 35 V54" fill="none" stroke="#b58a38" stroke-width="1.1" stroke-dasharray="3 2.5"/>
+      <path d="M88 54 H172" stroke="#9b784b" stroke-width="1.4" stroke-linecap="round"/>
+
+      <!-- Clé de voûte & losange d'essentiel au centre -->
+      <path d="M126 6 L130 13 L134 6 Z" fill="#b58a38"/>
+      <path d="M130 25 L136 33 L130 41 L124 33 Z" fill="none" stroke="#9b784b" stroke-width="1.3"/>
+      <circle cx="130" cy="33" r="2" fill="#b58a38"/>
+    </svg>
+  </div>
+
+  <div class="eyebrow">
+    GRIGNAN · DRÔME · 2026
+  </div>
+
+  <h1 class="essentiel-title">L'essentiel</h1>
+
+  <div class="subtitle">
+    L'affaire du four banal en six points essentiels<br>
+    <strong>Comprendre les enjeux en 2 minutes</strong>
+  </div>
+
+</header>
+
+
+<!-- =====================================
+     LES SIX POINTS
+===================================== -->
+
+<div class="timeline">
+
+
+  <!-- 01 : INAUGURATION -->
+
+  <article class="card gold">
+
+    <div class="card-head">
+      <div class="symbol">🏛️</div>
+
+      <div>
+        <div class="number">01 · INAUGURATION</div>
+        <h3>Une inauguration symbolique</h3>
+      </div>
+    </div>
+
+    <p>
+      Le <strong>19 septembre 2026</strong>, la municipalité inaugure
+      l'installation en présence de Bruno Durieux, ancien maire et
+      ministre, et de l'artiste Hélène Delprat.
+      L'événement se déroule lors des Journées européennes du patrimoine,
+      dont le thème officiel était
+      <strong>« Patrimoine en péril »</strong>.
+    </p>
+
+    <div class="references">
+
+      <a class="reference"
+         href="https://www.coe.int/fr/web/portal/-/european-heritage-days-2026-heritage-at-risk-revive-resist-reimagine"
+         target="_blank" rel="noopener">
+
+        <span class="reference-icon">🇪🇺</span>
+
+        <span>
+          Conseil de l'Europe
+          <small>Thème officiel des JEP 2026</small>
+        </span>
+
+      </a>
+
+      <a class="reference"
+         href="https://www.ledauphine.com/culture-loisirs/2026/09/20/au-four-banal-une-chambre-de-lecture-qui-invite-a-la-reverie"
+         target="_blank" rel="noopener">
+
+        <span class="reference-icon">📰</span>
+
+        <span>
+          Le Dauphiné Libéré
+          <small>Article du 20 septembre 2026</small>
+        </span>
+
+      </a>
+
+    </div>
+
+  </article>
+
+
+  <!-- 02 : PATRIMOINE -->
+
+  <article class="card gold">
+
+    <div class="card-head">
+      <div class="symbol">🏚️</div>
+
+      <div>
+        <div class="number">02 · PATRIMOINE</div>
+        <h3>Sabotage patrimonial</h3>
+      </div>
+    </div>
+
+    <p>
+      Le four banal a été transformé. Sa vocation historique et son
+      identité patrimoniale ont été reléguées au second plan,
+      au profit d'un nouvel aménagement qui efface les traces
+      de son histoire séculaire.
+    </p>
+
+  </article>
+
+
+  <!-- 03 : ICONOGRAPHIE (THÈME VIOLET) -->
+
+  <article class="card purple">
+
+    <div class="card-head">
+      <div class="symbol">💀</div>
+
+      <div>
+        <div class="number">03 · ICONOGRAPHIE</div>
+        <h3>Une représentation macabre et satanique</h3>
+      </div>
+    </div>
+
+    <p>
+      Crânes, démons, flammes et motifs morbides composent une
+      iconographie à caractère <strong>satanique</strong>,
+      susceptible de choquer une partie des habitants
+      et des visiteurs.
+    </p>
+
+  </article>
+
+
+  <!-- 04 : CONTROVERSE (THÈME VIOLET) -->
+
+  <article class="card purple">
+
+    <div class="card-head">
+      <div class="symbol">🎭</div>
+
+      <div>
+        <div class="number">04 · CONTROVERSE</div>
+        <h3>Un projet en dissonance</h3>
+      </div>
+    </div>
+
+    <p>
+      Une installation en profond décalage avec l'esprit du four banal,
+      l'histoire de Grignan et la vocation originelle du lieu.
+      Une provocation artistique dont la dimension semble pleinement
+      <strong>assumée par l'artiste</strong>.
+    </p>
+
+  </article>
+
+
+  <!-- 05 : FINANCEMENT (MÊME THÈME QUE L'ENCADRÉ 6) -->
+
+  <article class="card legal">
+
+    <div class="card-head">
+      <div class="symbol">💶</div>
+
+      <div>
+        <div class="number">05 · FINANCEMENT PUBLIC</div>
+        <h3>Une dépense considérable</h3>
+      </div>
+    </div>
+
+    <div class="money">
+      <strong>200 000 €</strong>
+      <span>ENVELOPPE GLOBALE DU PROJET</span>
+    </div>
+
+    <p>
+      Dont <strong>50 000 € à la charge de la commune</strong>.
+      Un engagement financier qui interroge sur les priorités
+      dans l'utilisation de l'argent public.
+    </p>
+
+    <div class="references">
+
+      <a class="reference"
+         href="https://www.ville-grignan.fr/fr/decouvrir-la-commune/compte-rendus-des-conseils-municipaux.html"
+         target="_blank" rel="noopener">
+
+        <span class="reference-icon">📑</span>
+
+        <span>
+          Délibération n° 14
+          <small>Commande publique : œuvre d'art en hommage à la Marquise de Sévigné – choix de l'artiste</small>
+        </span>
+
+      </a>
+
+    </div>
+
+  </article>
+
+
+  <!-- 06 : CADRE JURIDIQUE -->
+
+  <article class="card legal">
+
+    <div class="card-head">
+      <div class="symbol">⚖️</div>
+
+      <div>
+        <div class="number">06 · CADRE JURIDIQUE</div>
+        <h3>Un contournement du cadre légal ?</h3>
+      </div>
+    </div>
+
+    <p>
+      L'absence alléguée d'autorisation préalable de l'Architecte
+      des Bâtiments de France soulève une question de conformité
+      aux articles <strong>L632-1 et L632-2 du Code du patrimoine</strong>.
+    </p>
+
+    <div class="references">
+
+      <a class="legal-link"
+         href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074236/LEGISCTA000032858256/"
+         target="_blank" rel="noopener">
+
+        <span class="reference-icon">⚖️</span>
+        <span>Consulter le Code du patrimoine</span>
+
+      </a>
+
+      <!-- RÉPONSE ÉCRITE DE L'UDAP -->
+
+      <a class="udap-link"
+         href="Comprendre/Reponse-UDAP-Drome.pdf"
+         target="_blank"
+         rel="noopener">
+
+        <span class="reference-icon">📄</span>
+
+        <span>
+          Réponse écrite de l'UDAP de la Drôme
+          <small>
+            Concernant le dépôt d'une demande d'autorisation préalable à l'installation de l'œuvre
+          </small>
+        </span>
+
+      </a>
+
+    </div>
+
+  </article>
+
+
+</div>
+
+
+<!-- =====================================
+     CONCLUSION
+===================================== -->
+
+<div class="conclusion">
+
+  <div class="icon">⚠️</div>
+
+  <strong>
+    Un patrimoine transformé, 200 000 € engagés et des questions juridiques soulevées.
+  </strong>
+
+  <p>
+    Derrière une commande artistique, six enjeux majeurs
+    pour l'avenir du patrimoine de Grignan.
+  </p>
+
+</div>
+
+</section>
+
+
+<!-- =====================================
+     VIDÉO FACEBOOK
+===================================== -->
+
+<section class="facebook-video">
+
+  <h2>🎬 L'affaire du four banal en vidéo</h2>
+
+  <p class="subtitle">
+    Découvrez les enjeux de la transformation du four banal de Grignan.
+  </p>
+
+  <div class="video-container">
+
+    <iframe
+      src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2007222076609783&show_text=false&width=300"
+      title="Vidéo Facebook – Four banal de Grignan"
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share; fullscreen"
+      allowfullscreen="true"
+      loading="lazy">
+    </iframe>
+
+  </div>
+
+  <a class="fullscreen-button"
+     href="https://www.facebook.com/reel/2007222076609783"
+     target="_blank"
+     rel="noopener noreferrer">
+
+    <span class="button-icon">⛶</span>
+    VOIR LA VIDÉO EN PLEIN ÉCRAN
+
+  </a>
+
+  <a class="facebook-link"
+     href="https://www.facebook.com/reel/2007222076609783"
+     target="_blank"
+     rel="noopener noreferrer">
+
+    ↗ Ouvrir directement sur Facebook
+
+  </a>
+
+</section>
+```

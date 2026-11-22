@@ -1,0 +1,763 @@
+---
+title: ""
+format:
+  html:
+    title-block-style: none
+    page-layout: full
+---
+
+```{=html}
+<section class="grignan-home grignan-avis">
+
+<style>
+@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap)');
+
+/* =====================================
+   FOND ET DÉCORATIONS
+===================================== */
+
+html, body, #quarto-content {
+  background-color: #F4F0E8 !important;
+}
+
+.grignan-home {
+  display: block !important;
+  font-family: Arial, sans-serif;
+  color: #293747;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  isolation: isolate;
+}
+
+.grignan-home * {
+  box-sizing: border-box;
+}
+
+.lavande-filigrane {
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  width: 190px;
+  height: auto;
+  opacity: 0.16;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.ble-filigrane {
+  position: fixed;
+  left: 8px;
+  bottom: 15px;
+  width: 175px;
+  height: auto;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =====================================
+   EN-TÊTE & BOUTON PRINCIPAL GOOGLE MAPS
+===================================== */
+
+.avis-hero {
+  margin: 30px 0 30px;
+  padding: 28px 24px;
+  background: #f0fff4;
+  border: 2px solid #9ae6b4;
+  border-radius: 14px;
+  box-shadow: 0 3px 14px rgba(47, 133, 90, 0.08);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.avis-hero-bg-pin {
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  transform: translateY(-50%) rotate(10deg);
+  width: 230px;
+  height: 230px;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.avis-hero > *:not(.avis-hero-bg-pin) {
+  position: relative;
+  z-index: 1;
+}
+
+.avis-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 13px;
+  border-radius: 20px;
+  background: #c6f6d5;
+  color: #2f855a;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.grignan-home .avis-hero h2 {
+  font-family: 'Comfortaa', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 30px !important;
+  color: #26394d !important;
+  margin: 0 0 12px !important;
+  letter-spacing: 1px;
+  text-align: center !important;
+  border: none !important;
+}
+
+.avis-hero-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4a5568;
+  max-width: 720px;
+  margin: 0 auto 22px;
+}
+
+/* Étoiles décoratives */
+.avis-stars-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #9ae6b4;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #2f855a;
+}
+
+.avis-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 28px;
+  background: #2f855a;
+  color: #ffffff !important;
+  border-radius: 8px;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(47, 133, 90, 0.22);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.avis-cta-btn:hover {
+  background: #276749;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(47, 133, 90, 0.28);
+}
+
+.avis-cta-sub {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #526477;
+}
+
+/* =====================================
+   TITRES DE RUBRIQUES
+===================================== */
+
+.avis-rubrique-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 34px 0 18px;
+}
+
+.avis-rubrique-line {
+  flex: 1;
+  height: 1px;
+  background: #c6f6d5;
+}
+
+.grignan-home .avis-rubrique-header h3 {
+  font-family: 'Comfortaa', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #26394d !important;
+  margin: 0 !important;
+  padding: 6px 16px !important;
+  background: #f0fff4;
+  border: 1px solid #9ae6b4;
+  border-radius: 20px;
+  text-align: center !important;
+  white-space: nowrap;
+}
+
+/* =====================================
+   3 ÉTAPES POUR PUBLIER UN AVIS
+===================================== */
+
+.grignan-home .steps-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+}
+
+.step-card {
+  background: #f7f8f8;
+  border: 1px solid #c6f6d5;
+  border-top: 4px solid #2f855a;
+  border-radius: 12px;
+  padding: 20px 18px;
+  box-shadow: 0 2px 10px rgba(47, 133, 90, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-card:nth-child(2) {
+  border-top-color: #c39a54;
+}
+
+.step-card:nth-child(3) {
+  border-top-color: #547b9f;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #2f855a;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.step-card:nth-child(2) .step-num {
+  background: #f8f1e5;
+  color: #967337;
+}
+
+.step-card:nth-child(3) .step-num {
+  background: #edf3f8;
+  color: #385d7d;
+}
+
+.grignan-home .step-card h4 {
+  font-family: 'Comfortaa', Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #293747 !important;
+  margin: 0 !important;
+  border: none !important;
+  text-align: left !important;
+}
+
+.step-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #526477;
+  margin: 0;
+}
+
+/* =====================================
+   EXEMPLES D'AVIS GOOGLE MAPS
+===================================== */
+
+.grignan-home .reviews-examples-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+}
+
+.gmaps-review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 22px;
+  background: #ffffff;
+  border: 1px solid #c6f6d5;
+  border-radius: 12px;
+  box-shadow: 0 3px 14px rgba(47, 133, 90, 0.06);
+}
+
+.gmaps-review-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.gmaps-review-author {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.gmaps-avatar {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f855a;
+  color: #ffffff;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gmaps-avatar--ochre {
+  background: #967337;
+}
+
+.gmaps-author-info strong {
+  display: block;
+  font-size: 14.5px;
+  color: #26394d;
+  line-height: 1.25;
+}
+
+.gmaps-author-meta {
+  display: block;
+  font-size: 11.5px;
+  color: #6b7b8c;
+  margin-top: 2px;
+}
+
+.gmaps-review-ext {
+  flex-shrink: 0;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #2f855a !important;
+  background: #dcfce7;
+  padding: 5px 9px;
+  border-radius: 6px;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.gmaps-review-ext:hover {
+  background: #2f855a;
+  color: #ffffff !important;
+}
+
+.gmaps-stars-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.gmaps-stars-gold {
+  color: #f4b400;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.gmaps-stars-empty {
+  color: #d5dbe1;
+}
+
+.gmaps-review-date {
+  font-size: 12px;
+  color: #6b7b8c;
+}
+
+.gmaps-review-text {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #293747;
+  margin: 0 0 10px;
+}
+
+.gmaps-review-visit {
+  font-size: 11.5px;
+  color: #6b7b8c;
+  margin: 0;
+}
+
+/* =====================================
+   ENCADRÉ CONSEILS ANTI-FILTRE GOOGLE
+===================================== */
+
+.tips-callout {
+  margin-top: 28px;
+  padding: 22px 24px;
+  background: linear-gradient(135deg, #f8f3e8 0%, #f3ebd9 100%);
+  border: 1px solid #dfd1b5;
+  border-left: 5px solid #c39a54;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.tips-icon {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  background: #ffffff;
+  border: 1px solid #dfd1b5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tips-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.grignan-home .tips-body h4 {
+  font-family: 'Comfortaa', Arial, sans-serif !important;
+  font-size: 15.5px !important;
+  font-weight: 700 !important;
+  color: #785923 !important;
+  margin: 0 0 8px !important;
+  border: none !important;
+}
+
+.tips-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #4a3b20;
+}
+
+.tips-list li {
+  margin-bottom: 6px;
+}
+
+/* =====================================
+   RAPPEL BOUTON EN BAS DE PAGE
+===================================== */
+
+.avis-bottom-cta {
+  margin-top: 26px;
+  text-align: center;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 760px) {
+  .grignan-home .steps-grid,
+  .grignan-home .reviews-examples-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .avis-rubrique-header h3 {
+    white-space: normal !important;
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .grignan-home .avis-hero h2 {
+    font-size: 22px !important;
+  }
+
+  .avis-hero-bg-pin {
+    width: 150px;
+    height: 150px;
+    right: -25px;
+    top: 20px;
+    transform: rotate(10deg);
+  }
+
+  .tips-callout {
+    flex-direction: column;
+  }
+
+  .lavande-filigrane {
+    width: 110px;
+    right: -12px;
+    bottom: 5px;
+    opacity: 0.12;
+  }
+
+  .ble-filigrane {
+    width: 105px;
+    left: -15px;
+    bottom: 5px;
+    opacity: 0.13;
+  }
+}
+</style>
+
+<!-- =====================================
+     ÉPI DE BLÉ SVG À GAUCHE
+===================================== -->
+
+<svg class="ble-filigrane" viewBox="0 0 200 430" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+  <path d="M95 420 Q105 320 92 220 Q83 130 105 35" fill="none" stroke="#71805B" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#89966C">
+    <path d="M98 350 Q55 328 38 290 Q79 302 98 350"/>
+    <path d="M95 375 Q136 342 150 303 Q111 319 95 375"/>
+    <path d="M93 290 Q48 265 43 228 Q79 246 93 290"/>
+    <path d="M90 315 Q128 281 138 244 Q105 263 90 315"/>
+    <path d="M91 225 Q52 201 55 164 Q84 184 91 225"/>
+    <path d="M91 250 Q130 218 139 184 Q105 198 91 250"/>
+  </g>
+  <g fill="#C4A15E">
+    <ellipse cx="101" cy="42" rx="7" ry="17" transform="rotate(-28 101 42)"/>
+    <ellipse cx="86" cy="57" rx="7" ry="16" transform="rotate(-58 86 57)"/>
+    <ellipse cx="111" cy="69" rx="7" ry="17" transform="rotate(25 111 69)"/>
+    <ellipse cx="79" cy="82" rx="7" ry="16" transform="rotate(-58 79 82)"/>
+    <ellipse cx="112" cy="97" rx="7" ry="17" transform="rotate(25 112 97)"/>
+    <ellipse cx="77" cy="110" rx="7" ry="16" transform="rotate(-55 77 110)"/>
+    <ellipse cx="108" cy="126" rx="7" ry="17" transform="rotate(22 108 126)"/>
+    <ellipse cx="80" cy="139" rx="7" ry="15" transform="rotate(-45 80 139)"/>
+    <ellipse cx="101" cy="154" rx="7" ry="16" transform="rotate(15 101 154)"/>
+    <ellipse cx="88" cy="169" rx="7" ry="15" transform="rotate(-35 88 169)"/>
+  </g>
+  <g fill="#D3B474">
+    <ellipse cx="115" cy="50" rx="6" ry="14" transform="rotate(40 115 50)"/>
+    <ellipse cx="96" cy="74" rx="6" ry="14" transform="rotate(-25 96 74)"/>
+    <ellipse cx="121" cy="83" rx="6" ry="14" transform="rotate(45 121 83)"/>
+    <ellipse cx="91" cy="102" rx="6" ry="14" transform="rotate(-25 91 102)"/>
+    <ellipse cx="119" cy="112" rx="6" ry="14" transform="rotate(42 119 112)"/>
+    <ellipse cx="91" cy="131" rx="6" ry="13" transform="rotate(-20 91 131)"/>
+    <ellipse cx="113" cy="141" rx="6" ry="13" transform="rotate(38 113 141)"/>
+    <ellipse cx="94" cy="158" rx="6" ry="12" transform="rotate(-15 94 158)"/>
+  </g>
+</svg>
+
+<!-- =====================================
+     BRIN DE LAVANDE SVG À DROITE
+===================================== -->
+
+<svg class="lavande-filigrane" viewBox="0 0 200 420" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+  <path d="M105 410 Q95 300 115 190 Q120 100 145 25" fill="none" stroke="#687D58" stroke-width="3.5" stroke-linecap="round"/>
+  <g fill="#82936D">
+    <path d="M105 340 Q55 320 42 278 Q85 290 105 340"/>
+    <path d="M103 365 Q145 330 158 292 Q115 310 103 365"/>
+    <path d="M108 275 Q60 250 55 215 Q90 230 108 275"/>
+    <path d="M112 300 Q150 265 155 230 Q120 250 112 300"/>
+    <path d="M115 210 Q78 185 77 155 Q107 175 115 210"/>
+    <path d="M120 230 Q155 200 165 170 Q130 185 120 230"/>
+    <path d="M130 145 Q102 120 107 92 Q130 110 130 145"/>
+    <path d="M135 165 Q165 140 173 112 Q143 128 135 165"/>
+  </g>
+  <g fill="#9274A9">
+    <ellipse cx="145" cy="28" rx="8" ry="14" transform="rotate(20 145 28)"/>
+    <ellipse cx="132" cy="40" rx="8" ry="14" transform="rotate(-35 132 40)"/>
+    <ellipse cx="155" cy="48" rx="8" ry="14" transform="rotate(35 155 48)"/>
+    <ellipse cx="127" cy="60" rx="8" ry="14" transform="rotate(-30 127 60)"/>
+    <ellipse cx="151" cy="69" rx="8" ry="14" transform="rotate(30 151 69)"/>
+    <ellipse cx="120" cy="81" rx="8" ry="14" transform="rotate(-25 120 81)"/>
+    <ellipse cx="144" cy="90" rx="8" ry="14" transform="rotate(25 144 90)"/>
+    <ellipse cx="119" cy="105" rx="7" ry="13" transform="rotate(-25 119 105)"/>
+    <ellipse cx="138" cy="116" rx="7" ry="13" transform="rotate(25 138 116)"/>
+    <ellipse cx="116" cy="130" rx="7" ry="12" transform="rotate(-20 116 130)"/>
+    <ellipse cx="132" cy="140" rx="7" ry="12" transform="rotate(25 132 140)"/>
+  </g>
+</svg>
+
+<!-- =====================================
+     EN-TÊTE & APPEL À L'ACTION GOOGLE MAPS
+===================================== -->
+
+<header class="avis-hero">
+
+  <svg class="avis-hero-bg-pin" viewBox="0 0 200 200" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+    <circle cx="100" cy="100" r="82" fill="none" stroke="#2f855a" stroke-width="3" stroke-dasharray="8 8"/>
+    <circle cx="100" cy="100" r="54" fill="none" stroke="#2f855a" stroke-width="2"/>
+    <path d="M100 32 C69 32 44 57 44 88 C44 130 100 174 100 174 C100 174 156 130 156 88 C156 57 131 32 100 32 Z" fill="#2f855a"/>
+    <circle cx="100" cy="88" r="22" fill="#f0fff4"/>
+  </svg>
+
+  <span class="avis-badge">Expression citoyenne · Google Maps</span>
+
+  <h2>RÉDIGER UN AVIS SUR LE FOUR BANAL</h2>
+
+  <div class="avis-stars-row">
+    <span>★☆☆☆☆</span>
+    <span>· Fiche Google Maps « Le four banal - Grignan »</span>
+  </div>
+
+  <p class="avis-hero-desc">
+    Habitants, amoureux du patrimoine ou visiteurs de passage à Grignan : exprimez librement votre ressenti sur la transformation du Four banal directement sur sa fiche Google Maps. Chaque témoignage compte pour informer les prochains visiteurs.
+  </p>
+
+  <a class="avis-cta-btn"
+     href="https://www.google.com/maps/place/Le+four+banal/@44.4196069,4.9077472,17.26z/data=!4m15!1m8!3m7!1s0x12b57a932ea89c4f:0x8303759220ccc8a!2s26230+Grignan!3b1!8m2!3d44.4198926!4d4.9081328!16zL20vMGZ4dngz!3m5!1s0x12b57b5bfe0cded5:0x935818fa4a24a5eb!8m2!3d44.419593!4d4.9088738!16s%2Fg%2F11t0h4c3zd"
+     target="_blank"
+     rel="noopener noreferrer">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </svg>
+    Ouvrir la fiche Google Maps et laisser un avis
+  </a>
+
+  <span class="avis-cta-sub">S’ouvre dans un nouvel onglet · Connexion à votre compte Google requise</span>
+
+</header>
+
+<!-- =====================================
+     RUBRIQUE 1 : MODE D'EMPLOI EN 3 ÉTAPES
+===================================== -->
+
+<div class="avis-rubrique-header">
+  <div class="avis-rubrique-line"></div>
+  <h3>🧭 Comment publier votre avis en 1 minute</h3>
+  <div class="avis-rubrique-line"></div>
+</div>
+
+<div class="steps-grid">
+
+  <div class="step-card">
+    <span class="step-num">1</span>
+    <h4>Ouvrez la fiche du lieu</h4>
+    <p>
+      Cliquez sur le bouton ci-dessus pour accéder à la fiche officielle <strong>« Le four banal »</strong> à Grignan, puis sélectionnez l’onglet <strong>« Avis »</strong> et le bouton <strong>« Rédiger un avis »</strong>.
+    </p>
+  </div>
+
+  <div class="step-card">
+    <span class="step-num">2</span>
+    <h4>Notez et racontez votre vécu</h4>
+    <p>
+      Attribuez la note de votre choix et décrivez avec vos propres mots votre sentiment face au portail et à la transformation de l’édifice.
+    </p>
+  </div>
+
+  <div class="step-card">
+    <span class="step-num">3</span>
+    <h4>Ajoutez vos photos (facultatif)</h4>
+    <p>
+      Vous avez pris des clichés sur place ou des photos du four tel qu’il était avant les travaux ? Joignez-les à votre avis pour illustrer concrètement le changement.
+    </p>
+  </div>
+
+</div>
+
+<!-- =====================================
+     RUBRIQUE 2 : EXEMPLES D'AVIS PUBLIÉS
+===================================== -->
+
+<div class="avis-rubrique-header">
+  <div class="avis-rubrique-line"></div>
+  <h3>💬 Exemples d’avis déjà publiés sur Google Maps</h3>
+  <div class="avis-rubrique-line"></div>
+</div>
+
+<div class="reviews-examples-grid">
+
+  <!-- AVIS 1 : LÉO DUBOIS -->
+  <article class="gmaps-review-card">
+    <div>
+      <div class="gmaps-review-top">
+        <div class="gmaps-review-author">
+          <span class="gmaps-avatar">LD</span>
+          <div class="gmaps-author-info">
+            <strong>Léo Dubois</strong>
+            <span class="gmaps-author-meta">6 avis · 9 photos</span>
+          </div>
+        </div>
+        <a class="gmaps-review-ext"
+           href="https://maps.app.goo.gl/ZzZZaF1JkBsr3DLn8"
+           target="_blank"
+           rel="noopener noreferrer">
+          Voir sur Maps ↗
+        </a>
+      </div>
+
+      <div class="gmaps-stars-line">
+        <span><span class="gmaps-stars-gold">★</span><span class="gmaps-stars-empty">★★★★</span></span>
+        <span class="gmaps-review-date">il y a 4 semaines</span>
+      </div>
+
+      <p class="gmaps-review-text">
+        « Scandaleux ! Le magnifique four banal a été saboté par une "œuvre" aux motifs qui nous semblent sataniques, financée par le contribuable à hauteur de 200 000 euros et installée dans l’illégalité la plus totale. Nous sommes affligés par cette atteinte à notre histoire et à notre patrimoine. 😢 »
+      </p>
+    </div>
+
+    <p class="gmaps-review-visit">Visité en octobre</p>
+  </article>
+
+  <!-- AVIS 2 : BOIS CHANTAL -->
+  <article class="gmaps-review-card">
+    <div>
+      <div class="gmaps-review-top">
+        <div class="gmaps-review-author">
+          <span class="gmaps-avatar gmaps-avatar--ochre">BC</span>
+          <div class="gmaps-author-info">
+            <strong>Bois Chantal</strong>
+            <span class="gmaps-author-meta">Local Guide · 97 avis · 47 photos</span>
+          </div>
+        </div>
+        <a class="gmaps-review-ext"
+           href="https://maps.app.goo.gl/aWTxGj8fAx649pgr8"
+           target="_blank"
+           rel="noopener noreferrer">
+          Voir sur Maps ↗
+        </a>
+      </div>
+
+      <div class="gmaps-stars-line">
+        <span><span class="gmaps-stars-gold">★</span><span class="gmaps-stars-empty">★★★★</span></span>
+        <span class="gmaps-review-date">il y a 3 semaines</span>
+      </div>
+
+      <p class="gmaps-review-text">
+        « Je souhaiterais connaître le lien de ses représentations et l’historique du lieu ? Il y a peut-être une notion qui nous échappe ? Par manque de culture, d’ouverture ? Avons-nous les moyens actuellement de payer ce type de réalisation ?? »
+      </p>
+    </div>
+  </article>
+
+</div>
+
+<!-- =====================================
+     CONSEILS PRATIQUES POUR ÉVITER LE FILTRAGE AUTOMATIQUE
+===================================== -->
+
+<div class="tips-callout">
+  <div class="tips-icon" aria-hidden="true">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#967337" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="12" y1="16" x2="12" y2="12"/>
+      <line x1="12" y1="8" x2="12.01" y2="8"/>
+    </svg>
+  </div>
+  <div class="tips-body">
+    <h4>Bon à savoir pour que votre avis reste visible sur Google</h4>
+    <ul class="tips-list">
+      <li><strong>Évitez tout copier-coller :</strong> les filtres automatiques de Google peuvent masquer les avis identiques publiés par plusieurs comptes.</li>
+      <li><strong>Restez courtois et factuel :</strong> pas d’insultes ni d’attaques personnelles contre des individus nommés. Concentrez-vous sur l’installation de l’œuvre, la cohérence et l’usage des fonds publics.</li>
+      <li><strong>Parlez en votre nom :</strong> un retour personnel d’habitant ou de visiteur est toujours plus crédible et durable.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="avis-bottom-cta">
+  <a class="avis-cta-btn"
+     href="https://www.google.com/maps/place/Le+four+banal/@44.4196069,4.9077472,17.26z/data=!4m15!1m8!3m7!1s0x12b57a932ea89c4f:0x8303759220ccc8a!2s26230+Grignan!3b1!8m2!3d44.4198926!4d4.9081328!16zL20vMGZ4dngz!3m5!1s0x12b57b5bfe0cded5:0x935818fa4a24a5eb!8m2!3d44.419593!4d4.9088738!16s%2Fg%2F11t0h4c3zd"
+     target="_blank"
+     rel="noopener noreferrer">
+    ★ Je donne mon avis sur Google Maps
+  </a>
+</div>
+
+</section>
+```

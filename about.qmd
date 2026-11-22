@@ -1,0 +1,572 @@
+---
+title: ""
+format:
+  html:
+    title-block-style: none
+    page-layout: full
+---
+
+```{=html}
+<section class="about-page">
+
+<style>
+@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap)');
+
+/* =====================================
+   FOND ET DÉCORATIONS
+===================================== */
+
+html, body, #quarto-content {
+  background-color: #F4F0E8 !important;
+}
+
+#title-block-header {
+  display: none !important;
+}
+
+.about-page {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #293747;
+  background: transparent;
+  padding: 35px 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+}
+
+.about-page * {
+  box-sizing: border-box;
+}
+
+/* LAVANDE À DROITE */
+
+.lavande-filigrane {
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  width: 190px;
+  height: auto;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ÉPI DE BLÉ À GAUCHE */
+
+.ble-filigrane {
+  position: fixed;
+  left: 8px;
+  bottom: 15px;
+  width: 175px;
+  height: auto;
+  opacity: 0.30;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =====================================
+   EN-TÊTE
+===================================== */
+
+.about-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 38px;
+  padding: 26px 12px 10px;
+  overflow: visible;
+}
+
+.about-filigrane {
+  position: absolute;
+  left: 50%;
+  top: 32%;
+  transform: translate(-50%, -50%);
+  width: 215px;
+  height: auto;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.about-eyebrow {
+  color: #9b784b;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.about-header h1 {
+  color: #26394d;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: clamp(32px, 5vw, 46px);
+  line-height: 1.3;
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+
+.about-header p {
+  color: #59636e;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* =====================================
+   GRILLE DE CONTENU
+===================================== */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.about-card {
+  background: #ffffff;
+  border: 1px solid #e5e0d8;
+  border-radius: 12px;
+  padding: 26px;
+  box-shadow: 0 4px 15px rgba(38, 57, 77, 0.045);
+}
+
+.about-tag {
+  display: block;
+  color: #9b784b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  margin-bottom: 10px;
+}
+
+.about-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.about-card h2 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  color: #26394d;
+  margin: 0 0 12px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.about-card p {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: #4d5965;
+  margin: 0;
+}
+
+/* =====================================
+   ENCART MÉTHODE & SOURCES
+===================================== */
+
+.about-callout {
+  background: #fcfaf6;
+  border: 1px solid #e5e0d8;
+  border-left: 5px solid #b49363;
+  border-radius: 10px;
+  padding: 26px 28px;
+  margin-bottom: 22px;
+}
+
+.about-callout span {
+  display: block;
+  color: #9b784b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  margin-bottom: 8px;
+}
+
+.about-callout h2 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  color: #26394d;
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.about-callout p {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: #4d5965;
+  margin: 0;
+}
+
+/* =====================================
+   BANNIÈRE DE CONTACT / RECTIFICATION
+===================================== */
+
+.about-contact {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #26394d;
+  color: #ffffff;
+  padding: 26px 28px;
+  border-radius: 12px;
+  box-shadow: 0 5px 16px rgba(38, 57, 77, 0.10);
+}
+
+.about-contact-icon {
+  font-size: 34px;
+  flex-shrink: 0;
+}
+
+.about-contact span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1.8px;
+  font-weight: bold;
+  color: #d2b17d;
+  margin-bottom: 6px;
+}
+
+.about-contact h2 {
+  font-family: Georgia, serif;
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.about-contact p {
+  margin: 0;
+  color: #e3e7eb;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.about-footer {
+  text-align: center;
+  color: #899098;
+  font-size: 15px;
+  padding: 26px 10px 10px;
+  line-height: 1.6;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 750px) {
+
+  .about-page {
+    padding: 25px 14px;
+  }
+
+  .about-filigrane {
+    width: 170px;
+    top: 30%;
+    opacity: 0.12;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-card,
+  .about-callout,
+  .about-contact {
+    padding: 21px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .lavande-filigrane {
+    width: 110px;
+    right: -12px;
+    bottom: 5px;
+    opacity: 0.20;
+  }
+
+  .ble-filigrane {
+    width: 105px;
+    left: -15px;
+    bottom: 5px;
+    opacity: 0.22;
+  }
+
+  .about-contact {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* =====================================
+   IMPRESSION
+===================================== */
+
+@media print {
+
+  .lavande-filigrane,
+  .ble-filigrane,
+  .about-filigrane {
+    display: none !important;
+  }
+
+}
+</style>
+
+
+<!-- =====================================
+     ÉPI DE BLÉ SVG À GAUCHE
+===================================== -->
+
+<svg class="ble-filigrane"
+     viewBox="0 0 200 430"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     aria-hidden="true">
+
+  <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
+        fill="none"
+        stroke="#71805B"
+        stroke-width="3"
+        stroke-linecap="round"/>
+
+  <g fill="#89966C">
+    <path d="M98 350 Q55 328 38 290 Q79 302 98 350"/>
+    <path d="M95 375 Q136 342 150 303 Q111 319 95 375"/>
+    <path d="M93 290 Q48 265 43 228 Q79 246 93 290"/>
+    <path d="M90 315 Q128 281 138 244 Q105 263 90 315"/>
+    <path d="M91 225 Q52 201 55 164 Q84 184 91 225"/>
+    <path d="M91 250 Q130 218 139 184 Q105 198 91 250"/>
+  </g>
+
+  <g fill="#C4A15E">
+    <ellipse cx="101" cy="42" rx="7" ry="17" transform="rotate(-28 101 42)"/>
+    <ellipse cx="86" cy="57" rx="7" ry="16" transform="rotate(-58 86 57)"/>
+    <ellipse cx="111" cy="69" rx="7" ry="17" transform="rotate(25 111 69)"/>
+    <ellipse cx="79" cy="82" rx="7" ry="16" transform="rotate(-58 79 82)"/>
+    <ellipse cx="112" cy="97" rx="7" ry="17" transform="rotate(25 112 97)"/>
+    <ellipse cx="77" cy="110" rx="7" ry="16" transform="rotate(-55 77 110)"/>
+    <ellipse cx="108" cy="126" rx="7" ry="17" transform="rotate(22 108 126)"/>
+    <ellipse cx="80" cy="139" rx="7" ry="15" transform="rotate(-45 80 139)"/>
+    <ellipse cx="101" cy="154" rx="7" ry="16" transform="rotate(15 101 154)"/>
+    <ellipse cx="88" cy="169" rx="7" ry="15" transform="rotate(-35 88 169)"/>
+  </g>
+
+  <g fill="#D3B474">
+    <ellipse cx="115" cy="50" rx="6" ry="14" transform="rotate(40 115 50)"/>
+    <ellipse cx="96" cy="74" rx="6" ry="14" transform="rotate(-25 96 74)"/>
+    <ellipse cx="121" cy="83" rx="6" ry="14" transform="rotate(45 121 83)"/>
+    <ellipse cx="91" cy="102" rx="6" ry="14" transform="rotate(-25 91 102)"/>
+    <ellipse cx="119" cy="112" rx="6" ry="14" transform="rotate(42 119 112)"/>
+    <ellipse cx="91" cy="131" rx="6" ry="13" transform="rotate(-20 91 131)"/>
+    <ellipse cx="113" cy="141" rx="6" ry="13" transform="rotate(38 113 141)"/>
+    <ellipse cx="94" cy="158" rx="6" ry="12" transform="rotate(-15 94 158)"/>
+  </g>
+
+  <g stroke="#B69A61" stroke-width="1.2"
+     stroke-linecap="round" opacity="0.9">
+    <path d="M101 42L89 15"/>
+    <path d="M86 57L66 36"/>
+    <path d="M111 69L127 42"/>
+    <path d="M79 82L55 63"/>
+    <path d="M112 97L132 69"/>
+    <path d="M77 110L52 93"/>
+    <path d="M108 126L128 101"/>
+    <path d="M80 139L58 125"/>
+    <path d="M101 154L117 133"/>
+    <path d="M88 169L69 155"/>
+  </g>
+
+</svg>
+
+
+<!-- =====================================
+     BRIN DE LAVANDE SVG À DROITE
+===================================== -->
+
+<svg class="lavande-filigrane"
+     viewBox="0 0 200 420"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     aria-hidden="true">
+
+  <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
+        fill="none" stroke="#687D58"
+        stroke-width="3.5" stroke-linecap="round"/>
+
+  <g fill="#82936D">
+    <path d="M105 340 Q55 320 42 278 Q85 290 105 340"/>
+    <path d="M103 365 Q145 330 158 292 Q115 310 103 365"/>
+    <path d="M108 275 Q60 250 55 215 Q90 230 108 275"/>
+    <path d="M112 300 Q150 265 155 230 Q120 250 112 300"/>
+    <path d="M115 210 Q78 185 77 155 Q107 175 115 210"/>
+    <path d="M120 230 Q155 200 165 170 Q130 185 120 230"/>
+    <path d="M130 145 Q102 120 107 92 Q130 110 130 145"/>
+    <path d="M135 165 Q165 140 173 112 Q143 128 135 165"/>
+  </g>
+
+  <g fill="#9274A9">
+    <ellipse cx="145" cy="28" rx="8" ry="14" transform="rotate(20 145 28)"/>
+    <ellipse cx="132" cy="40" rx="8" ry="14" transform="rotate(-35 132 40)"/>
+    <ellipse cx="155" cy="48" rx="8" ry="14" transform="rotate(35 155 48)"/>
+    <ellipse cx="127" cy="60" rx="8" ry="14" transform="rotate(-30 127 60)"/>
+    <ellipse cx="151" cy="69" rx="8" ry="14" transform="rotate(30 151 69)"/>
+    <ellipse cx="120" cy="81" rx="8" ry="14" transform="rotate(-25 120 81)"/>
+    <ellipse cx="144" cy="90" rx="8" ry="14" transform="rotate(25 144 90)"/>
+    <ellipse cx="119" cy="105" rx="7" ry="13" transform="rotate(-25 119 105)"/>
+    <ellipse cx="138" cy="116" rx="7" ry="13" transform="rotate(25 138 116)"/>
+    <ellipse cx="116" cy="130" rx="7" ry="12" transform="rotate(-20 116 130)"/>
+    <ellipse cx="132" cy="140" rx="7" ry="12" transform="rotate(25 132 140)"/>
+  </g>
+
+  <g fill="#B49AC6">
+    <circle cx="145" cy="28" r="2"/>
+    <circle cx="132" cy="40" r="2"/>
+    <circle cx="155" cy="48" r="2"/>
+    <circle cx="127" cy="60" r="2"/>
+    <circle cx="151" cy="69" r="2"/>
+    <circle cx="120" cy="81" r="2"/>
+    <circle cx="144" cy="90" r="2"/>
+  </g>
+
+</svg>
+
+
+<!-- =====================================
+     EN-TÊTE
+===================================== -->
+
+<header class="about-header">
+
+  <!-- FILIGRANE PLUME & PARCHEMIN -->
+  <svg class="about-filigrane"
+       viewBox="0 0 240 180"
+       xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+       aria-hidden="true">
+
+    <!-- Feuille / parchemin -->
+    <rect x="44" y="26" width="110" height="128" rx="8"
+          fill="none"
+          stroke="#26394d"
+          stroke-width="4"/>
+    <line x1="64" y1="54" x2="132" y2="54" stroke="#9b784b" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="64" y1="74" x2="132" y2="74" stroke="#9b784b" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="64" y1="94" x2="118" y2="94" stroke="#9b784b" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="64" y1="114" x2="104" y2="114" stroke="#9b784b" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Plume d'écriture -->
+    <path d="M196 24 C162 32, 134 62, 122 106 C146 98, 178 74, 196 24 Z"
+          fill="#9b784b"
+          opacity="0.85"/>
+    <path d="M196 24 L112 132"
+          fill="none"
+          stroke="#26394d"
+          stroke-width="3.5"
+          stroke-linecap="round"/>
+
+  </svg>
+
+  <div class="about-eyebrow">
+    DOSSIER DOCUMENTAIRE · GRIGNAN
+  </div>
+
+  <h1>À propos</h1>
+
+  <p>
+    Présentation de cette démarche citoyenne et indépendante consacrée
+    à la transformation de l’ancien four banal de Grignan.
+  </p>
+
+</header>
+
+
+<!-- =====================================
+     DEUX CARTES PRINCIPALES
+===================================== -->
+
+<div class="about-grid">
+
+  <article class="about-card">
+    <span class="about-tag">01 · DÉMARCHE CITOYENNE</span>
+    <div class="about-icon">🧭</div>
+    <h2>Un site indépendant</h2>
+    <p>
+      Ce site est un dossier documentaire indépendant, créé à titre citoyen
+      pour rassembler et rendre accessibles les informations relatives à la
+      transformation de l’ancien four banal de Grignan et à la commande
+      artistique <em>Le froid me chasse</em>. Il n’est rattaché à aucun parti
+      politique, aucune institution ni aucun organe de presse.
+    </p>
+  </article>
+
+  <article class="about-card">
+    <span class="about-tag">02 · OBJECTIF DU DOSSIER</span>
+    <div class="about-icon">🏛️</div>
+    <h2>Informer et éclairer le débat</h2>
+    <p>
+      Le patrimoine communal appartient à tous. Ce dossier vise à mettre
+      en lumière les enjeux liés à la préservation d’un édifice historique,
+      à l’utilisation de l'argent public et au respect des règles d'urbanisme applicables dans le périmètre protégé de Grignan, afin que
+      chacun puisse se forger sa propre opinion.
+    </p>
+  </article>
+
+</div>
+
+
+<!-- =====================================
+     ENCART MÉTHODE & SOURCES
+===================================== -->
+
+<div class="about-callout">
+  <span>MÉTHODE ET VÉRIFICATION</span>
+  <h2>Des informations appuyées sur des pièces publiques</h2>
+  <p>
+    Les éléments présentés sur ce site reposent sur des sources vérifiables :
+    délibérations et bulletins municipaux, textes législatifs, réponse écrite de
+    l’Unité départementale de l’architecture et du patrimoine de la Drôme (ABF),
+    articles de presse ainsi que des photographies du site avant et après travaux.
+    La distinction est faite entre les faits documentés et l’analyse critique
+    portée sur le projet.
+  </p>
+</div>
+
+
+<!-- =====================================
+     BANNIÈRE DE CONTACT / RECTIFICATION
+===================================== -->
+
+<div class="about-contact">
+
+  <div class="about-contact-icon">✉️</div>
+
+  <div>
+    <span>TRANSPARENCE &amp; RECTIFICATION</span>
+    <h2>Une remarque, un document ou une précision ?</h2>
+    <p>
+      Ce dossier a vocation à rester exact et à jour. Si vous constatez une
+      imprécision factuelle ou souhaitez porter à connaissance un document
+      officiel complémentaire concernant le four banal de Grignan, n’hésitez
+      pas à nous écrire : fourbanalgrignan@gmail.com
+    </p>
+  </div>
+
+</div>
+
+
+<div class="about-footer">
+  Dossier indépendant d’information · Four banal de Grignan · Affaire du portail
+  <br>
+  Réalisé en s'inspirant du dossier Gardasil de MEHA France.
+</div>
+
+</section>
+```

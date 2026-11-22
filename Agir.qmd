@@ -1,0 +1,783 @@
+---
+title: ""
+format:
+  html:
+    title-block-style: none
+    page-layout: full
+---
+
+```{=html}
+<section class="grignan-home">
+
+<style>
+@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap)');
+
+/* =====================================
+   FOND ET DÉCORATIONS
+===================================== */
+
+html,
+body,
+#quarto-content {
+  background-color: #F4F0E8 !important;
+}
+
+.grignan-home {
+  font-family: Arial, sans-serif;
+  color: #293747;
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+  isolation: isolate;
+}
+
+.grignan-home * {
+  box-sizing: border-box;
+}
+
+/* LAVANDE À DROITE */
+
+.lavande-filigrane {
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  width: 190px;
+  height: auto;
+  opacity: 0.17;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ÉPI DE BLÉ À GAUCHE */
+
+.ble-filigrane {
+  position: fixed;
+  left: 8px;
+  bottom: 15px;
+  width: 175px;
+  height: auto;
+  opacity: 0.19;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =====================================
+   EN-TÊTE DE PAGE
+===================================== */
+
+.gh-page-header {
+  text-align: center;
+  padding: 40px 20px 30px;
+}
+
+.gh-kicker {
+  color: #9b784b;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.gh-page-header h1 {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 700;
+  font-size: clamp(50px, 9vw, 76px);
+  color: #c45c1e;
+  margin: 0 0 18px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.gh-page-header p {
+  font-size: 21px;
+  color: #666;
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* =====================================
+   TITRE DOSSIER
+===================================== */
+
+.gh-dossier-title {
+  text-align: center;
+  margin: 15px 0 38px;
+}
+
+.gh-dossier-title h2 {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #26394d;
+  margin: 0 0 10px;
+  letter-spacing: 1px;
+}
+
+.gh-dossier-title p {
+  font-size: 19px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* =====================================
+   SECTIONS AGIR
+===================================== */
+
+.agir-section {
+  margin-bottom: 52px;
+  padding: 0 10px;
+}
+
+.agir-section-title {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 24px;
+}
+
+.agir-number {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  flex-shrink: 0;
+}
+
+.agir-section-title h2 {
+  margin: 0;
+  font-size: 31px;
+  font-weight: 700;
+}
+
+/* COULEURS DES PILIERS */
+
+.agir-section.interpeller .agir-number { background: #2b6cb0; }
+.agir-section.interpeller h2 { color: #2b6cb0; }
+
+.agir-section.diffuser .agir-number { background: #38a169; }
+.agir-section.diffuser h2 { color: #38a169; }
+
+.agir-section.rassembler .agir-number { background: #c53030; }
+.agir-section.rassembler h2 { color: #c53030; }
+
+/* =====================================
+   CARTES
+===================================== */
+
+.agir-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.agir-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 21px 22px;
+  background: #f8f9fa;
+  border-radius: 14px;
+  border: 2px solid #e2e8f0;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+a.agir-card {
+  cursor: pointer;
+}
+
+.agir-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  text-decoration: none;
+}
+
+.agir-section.interpeller .agir-card {
+  border-color: #bee3f8;
+  background: #f0f9ff;
+}
+
+.agir-section.diffuser .agir-card {
+  border-color: #c6f6d5;
+  background: #f0fff4;
+}
+
+.agir-section.rassembler .agir-card {
+  border-color: #fed7d7;
+  background: #fff5f5;
+}
+
+/* ICÔNES */
+
+.agir-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.agir-section.interpeller .agir-icon { background: #2b6cb0; }
+.agir-section.diffuser .agir-icon { background: #38a169; }
+.agir-section.rassembler .agir-icon { background: #c53030; }
+
+/* TEXTE DES CARTES */
+
+.agir-card-content {
+  min-width: 0;
+}
+
+.agir-card-content h3 {
+  margin: 0 0 7px;
+  font-size: 22px;
+  line-height: 1.3;
+  color: #1a202c;
+}
+
+.agir-card-content p {
+  margin: 0;
+  font-size: 18px;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* =====================================
+   BOÎTE À IDÉE SVG + POST-IT
+===================================== */
+
+.boite-idee-svg-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 18px 0 38px;
+  padding: 0 12px;
+}
+
+.boite-idee-svg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+}
+
+.postit-mail-link {
+  color: #26394d;
+  text-decoration: none;
+}
+
+.postit-mail-link:hover text {
+  text-decoration: underline;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 600px) {
+
+  .gh-page-header {
+    padding: 32px 16px 28px;
+  }
+
+  .gh-kicker {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .gh-page-header h1 {
+    font-size: 52px;
+  }
+
+  .gh-page-header p {
+    font-size: 19px;
+  }
+
+  .gh-dossier-title h2 {
+    font-size: 25px;
+  }
+
+  .gh-dossier-title p {
+    font-size: 17px;
+    padding: 0 10px;
+  }
+
+  .agir-section {
+    padding: 0 5px;
+    margin-bottom: 42px;
+  }
+
+  .agir-section-title {
+    gap: 13px;
+    margin-bottom: 19px;
+  }
+
+  .agir-number {
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+
+  .agir-section-title h2 {
+    font-size: 27px;
+  }
+
+  .agir-card {
+    padding: 17px 14px;
+    gap: 14px;
+  }
+
+  .agir-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+
+  .agir-card-content h3 {
+    font-size: 19px;
+  }
+
+  .agir-card-content p {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  /* FILIGRANES SUR MOBILE */
+
+  .lavande-filigrane {
+    width: 110px;
+    right: -12px;
+    bottom: 5px;
+    opacity: 0.12;
+  }
+
+  .ble-filigrane {
+    width: 105px;
+    left: -15px;
+    bottom: 5px;
+    opacity: 0.13;
+  }
+}
+
+/* =====================================
+   IMPRESSION
+===================================== */
+
+@media print {
+
+  .lavande-filigrane,
+  .ble-filigrane {
+    display: none;
+  }
+
+}
+</style>
+
+
+<!-- =====================================
+     ÉPI DE BLÉ SVG À GAUCHE
+===================================== -->
+
+<svg class="ble-filigrane"
+     viewBox="0 0 200 430"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     aria-hidden="true">
+
+  <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
+        fill="none"
+        stroke="#71805B"
+        stroke-width="3"
+        stroke-linecap="round"/>
+
+  <g fill="#89966C">
+    <path d="M98 350 Q55 328 38 290 Q79 302 98 350"/>
+    <path d="M95 375 Q136 342 150 303 Q111 319 95 375"/>
+    <path d="M93 290 Q48 265 43 228 Q79 246 93 290"/>
+    <path d="M90 315 Q128 281 138 244 Q105 263 90 315"/>
+    <path d="M91 225 Q52 201 55 164 Q84 184 91 225"/>
+    <path d="M91 250 Q130 218 139 184 Q105 198 91 250"/>
+  </g>
+
+  <g fill="#C4A15E">
+    <ellipse cx="101" cy="42" rx="7" ry="17" transform="rotate(-28 101 42)"/>
+    <ellipse cx="86" cy="57" rx="7" ry="16" transform="rotate(-58 86 57)"/>
+    <ellipse cx="111" cy="69" rx="7" ry="17" transform="rotate(25 111 69)"/>
+    <ellipse cx="79" cy="82" rx="7" ry="16" transform="rotate(-58 79 82)"/>
+    <ellipse cx="112" cy="97" rx="7" ry="17" transform="rotate(25 112 97)"/>
+    <ellipse cx="77" cy="110" rx="7" ry="16" transform="rotate(-55 77 110)"/>
+    <ellipse cx="108" cy="126" rx="7" ry="17" transform="rotate(22 108 126)"/>
+    <ellipse cx="80" cy="139" rx="7" ry="15" transform="rotate(-45 80 139)"/>
+    <ellipse cx="101" cy="154" rx="7" ry="16" transform="rotate(15 101 154)"/>
+    <ellipse cx="88" cy="169" rx="7" ry="15" transform="rotate(-35 88 169)"/>
+  </g>
+
+  <g fill="#D3B474">
+    <ellipse cx="115" cy="50" rx="6" ry="14" transform="rotate(40 115 50)"/>
+    <ellipse cx="96" cy="74" rx="6" ry="14" transform="rotate(-25 96 74)"/>
+    <ellipse cx="121" cy="83" rx="6" ry="14" transform="rotate(45 121 83)"/>
+    <ellipse cx="91" cy="102" rx="6" ry="14" transform="rotate(-25 91 102)"/>
+    <ellipse cx="119" cy="112" rx="6" ry="14" transform="rotate(42 119 112)"/>
+    <ellipse cx="91" cy="131" rx="6" ry="13" transform="rotate(-20 91 131)"/>
+    <ellipse cx="113" cy="141" rx="6" ry="13" transform="rotate(38 113 141)"/>
+    <ellipse cx="94" cy="158" rx="6" ry="12" transform="rotate(-15 94 158)"/>
+  </g>
+
+  <g stroke="#B69A61" stroke-width="1.2"
+     stroke-linecap="round" opacity="0.9">
+    <path d="M101 42L89 15"/>
+    <path d="M86 57L66 36"/>
+    <path d="M111 69L127 42"/>
+    <path d="M79 82L55 63"/>
+    <path d="M112 97L132 69"/>
+    <path d="M77 110L52 93"/>
+    <path d="M108 126L128 101"/>
+    <path d="M80 139L58 125"/>
+    <path d="M101 154L117 133"/>
+    <path d="M88 169L69 155"/>
+  </g>
+
+</svg>
+
+
+<!-- =====================================
+     BRIN DE LAVANDE SVG À DROITE
+===================================== -->
+
+<svg class="lavande-filigrane"
+     viewBox="0 0 200 420"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     aria-hidden="true">
+
+  <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
+        fill="none" stroke="#687D58"
+        stroke-width="3.5" stroke-linecap="round"/>
+
+  <g fill="#82936D">
+    <path d="M105 340 Q55 320 42 278 Q85 290 105 340"/>
+    <path d="M103 365 Q145 330 158 292 Q115 310 103 365"/>
+    <path d="M108 275 Q60 250 55 215 Q90 230 108 275"/>
+    <path d="M112 300 Q150 265 155 230 Q120 250 112 300"/>
+    <path d="M115 210 Q78 185 77 155 Q107 175 115 210"/>
+    <path d="M120 230 Q155 200 165 170 Q130 185 120 230"/>
+    <path d="M130 145 Q102 120 107 92 Q130 110 130 145"/>
+    <path d="M135 165 Q165 140 173 112 Q143 128 135 165"/>
+  </g>
+
+  <g fill="#9274A9">
+    <ellipse cx="145" cy="28" rx="8" ry="14" transform="rotate(20 145 28)"/>
+    <ellipse cx="132" cy="40" rx="8" ry="14" transform="rotate(-35 132 40)"/>
+    <ellipse cx="155" cy="48" rx="8" ry="14" transform="rotate(35 155 48)"/>
+    <ellipse cx="127" cy="60" rx="8" ry="14" transform="rotate(-30 127 60)"/>
+    <ellipse cx="151" cy="69" rx="8" ry="14" transform="rotate(30 151 69)"/>
+    <ellipse cx="120" cy="81" rx="8" ry="14" transform="rotate(-25 120 81)"/>
+    <ellipse cx="144" cy="90" rx="8" ry="14" transform="rotate(25 144 90)"/>
+    <ellipse cx="119" cy="105" rx="7" ry="13" transform="rotate(-25 119 105)"/>
+    <ellipse cx="138" cy="116" rx="7" ry="13" transform="rotate(25 138 116)"/>
+    <ellipse cx="116" cy="130" rx="7" ry="12" transform="rotate(-20 116 130)"/>
+    <ellipse cx="132" cy="140" rx="7" ry="12" transform="rotate(25 132 140)"/>
+  </g>
+
+  <g fill="#B49AC6">
+    <circle cx="145" cy="28" r="2"/>
+    <circle cx="132" cy="40" r="2"/>
+    <circle cx="155" cy="48" r="2"/>
+    <circle cx="127" cy="60" r="2"/>
+    <circle cx="151" cy="69" r="2"/>
+    <circle cx="120" cy="81" r="2"/>
+    <circle cx="144" cy="90" r="2"/>
+  </g>
+
+</svg>
+
+
+<!-- =====================================
+     EN-TÊTE DE PAGE
+===================================== -->
+
+<div class="gh-page-header">
+
+  <div class="gh-kicker">
+    GRIGNAN · AFFAIRE DU PORTAIL
+  </div>
+
+  <h1>Agir</h1>
+
+  <p>Interpeller · Diffuser · Rassembler</p>
+
+</div>
+
+
+<!-- =====================================
+     TITRE DOSSIER
+===================================== -->
+
+<div class="gh-dossier-title">
+
+  <h2>PASSER À L’ACTION</h2>
+
+  <p>Trois façons concrètes de faire bouger les choses</p>
+
+</div>
+
+
+<!-- =====================================
+1. INTERPELLER
+===================================== -->
+
+<div class="agir-section interpeller">
+
+  <div class="agir-section-title">
+    <div class="agir-number">1</div>
+    <h2>Interpeller</h2>
+  </div>
+
+  <div class="agir-cards">
+
+    <a href="Elus%20locaux.html" class="agir-card">
+      <div class="agir-icon">🏛️</div>
+      <div class="agir-card-content">
+        <h3>Élus locaux</h3>
+        <p>Mairie, Député, Communauté de communes (CCEPPG)</p>
+      </div>
+    </a>
+
+    <a href="Tourisme.html" class="agir-card">
+      <div class="agir-icon">🗺️</div>
+      <div class="agir-card-content">
+        <h3>Tourisme</h3>
+        <p>Office de tourisme de Grignan</p>
+      </div>
+    </a>
+
+    <a href="Institutions%20publiques.html" class="agir-card">
+      <div class="agir-icon">🏛️</div>
+      <div class="agir-card-content">
+        <h3>Institutions publiques</h3>
+        <p>Bâtiments de France (ABF), préfecture, DRAC, conseil départemental</p>
+      </div>
+    </a>
+
+    <a href="Associations%20et%20Fondations.html" class="agir-card">
+      <div class="agir-icon">🤝</div>
+      <div class="agir-card-content">
+        <h3>Associations et Fondations</h3>
+        <p>Fondation du patrimoine, SSMAD, etc.</p>
+      </div>
+    </a>
+
+    <a href="La%20presse.html" class="agir-card">
+      <div class="agir-icon">📰</div>
+      <div class="agir-card-content">
+        <h3>La presse</h3>
+        <p>Le Dauphiné, La Tribune, ICI Drôme Ardèche, France 3</p>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+
+<!-- =====================================
+2. DIFFUSER
+===================================== -->
+
+<div class="agir-section diffuser">
+
+  <div class="agir-section-title">
+    <div class="agir-number">2</div>
+    <h2>Diffuser</h2>
+  </div>
+
+  <div class="agir-cards">
+
+    <a href="Imprimer%20et%20publier%20des%20affiches.html" class="agir-card">
+      <div class="agir-icon">🖨️</div>
+      <div class="agir-card-content">
+        <h3>Imprimer &amp; publier des affiches</h3>
+        <p>Tracts et visuels</p>
+      </div>
+    </a>
+
+    <a href="Ecrire%20des%20lettres%20littéraires%20et%20de%20réflexion.html" class="agir-card">
+      <div class="agir-icon">✉️</div>
+      <div class="agir-card-content">
+        <h3>Écrire des lettres littéraires</h3>
+        <p>S’adresser à la Marquise, à un ami, à sa famille</p>
+      </div>
+    </a>
+
+    <a href="Echanger et réaliser des micro-trottoirs.html" class="agir-card">
+      <div class="agir-icon">🗣️</div>
+      <div class="agir-card-content">
+        <h3>Échanger et réaliser des micro-trottoirs</h3>
+        <p>Sonder et communiquer sur l’affaire du Four banal</p>
+      </div>
+    </a>
+
+    <a href="Photographier et filmer le site transformé.html" class="agir-card">
+      <div class="agir-icon">📷</div>
+      <div class="agir-card-content">
+        <h3>Photographier et filmer le site transformé</h3>
+        <p>Prendre en photo/vidéo et partager sur les réseaux sociaux</p>
+      </div>
+    </a>
+
+    <a href="Création et satire.html" class="agir-card">
+      <div class="agir-icon">🎨</div>
+      <div class="agir-card-content">
+        <h3>Création &amp; satire</h3>
+        <p>Dessins, caricatures, vidéos humoristiques et articles satiriques</p>
+      </div>
+    </a>
+
+    <a href="Rédiger un avis sur Google Maps.html" class="agir-card">
+      <div class="agir-icon">📍</div>
+      <div class="agir-card-content">
+        <h3>Rédiger un avis sur Google Maps</h3>
+        <p>Exprimez votre ressenti sur la transformation du Four banal</p>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+
+<!-- =====================================
+3. RASSEMBLER
+===================================== -->
+
+<div class="agir-section rassembler">
+
+  <div class="agir-section-title">
+    <div class="agir-number">3</div>
+    <h2>Rassembler</h2>
+  </div>
+
+  <div class="agir-cards">
+
+    <a href="Organiser un évènement.html" class="agir-card">
+      <div class="agir-icon">👥</div>
+      <div class="agir-card-content">
+        <h3>Organiser un évènement</h3>
+        <p>Rassemblement devant la mairie, réunions citoyennes</p>
+      </div>
+    </a>
+
+    <a href="Monter un collectif.html" class="agir-card">
+      <div class="agir-icon">🤝</div>
+      <div class="agir-card-content">
+        <h3>Monter un collectif</h3>
+        <p>Pour la défense du Four banal</p>
+      </div>
+    </a>
+
+    <a href="Signer la pétition.html" class="agir-card">
+      <div class="agir-icon">✍️</div>
+      <div class="agir-card-content">
+        <h3>Signer la pétition</h3>
+        <p>En ligne sur mypetition.org et partagez !</p>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+
+<!-- =====================================
+BOÎTE À IDÉE SVG + POST-IT
+===================================== -->
+
+<div class="boite-idee-svg-wrap">
+  <svg class="boite-idee-svg" viewBox="0 0 500 215" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" role="img" aria-label="Boîte à idée et post-it : contactez nous fourbanalgrignan@gmail.com">
+    <defs>
+      <linearGradient id="boisBoite" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#e3b66b"/>
+        <stop offset="100%" stop-color="#c48e3c"/>
+      </linearGradient>
+      <linearGradient id="toitBoite" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#edd098"/>
+        <stop offset="100%" stop-color="#cfa052"/>
+      </linearGradient>
+      <radialGradient id="haloAmpoule" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#fde047" stop-opacity="0.7"/>
+        <stop offset="100%" stop-color="#fde047" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+
+    <!-- Ombre portée douce -->
+    <ellipse cx="105" cy="186" rx="74" ry="9" fill="rgba(41,55,71,0.12)"/>
+
+    <!-- Halo lumineux autour de l'ampoule -->
+    <circle cx="105" cy="36" r="28" fill="url(#haloAmpoule)"/>
+
+    <!-- Ampoule d'idée -->
+    <path d="M105 16 C95 16 88 23 88 32 C88 38 92 42 95 46 L115 46 C118 42 122 38 122 32 C122 23 115 16 105 16 Z"
+          fill="#fef08a" stroke="#7a5828" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="M101 46 L109 46 L108 51 L102 51 Z" fill="#7a5828"/>
+    <path d="M101 35 L105 27 L109 35" fill="none" stroke="#b45309" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Toit en pente de la boîte -->
+    <polygon points="34,74 105,52 176,74 166,82 105,63 44,82"
+             fill="url(#toitBoite)" stroke="#7a5828" stroke-width="2.2" stroke-linejoin="round"/>
+    <!-- Fente noire -->
+    <rect x="74" y="64" width="62" height="7" rx="3.5" fill="#293747"/>
+
+    <!-- Corps de la boîte -->
+    <rect x="44" y="78" width="122" height="104" rx="12"
+          fill="url(#boisBoite)" stroke="#7a5828" stroke-width="2.4"/>
+    <!-- Encadrement intérieur -->
+    <rect x="55" y="90" width="100" height="80" rx="8"
+          fill="#fdfbf7" stroke="#a87c38" stroke-width="1.6"/>
+    <!-- Petite serrure décorative -->
+    <circle cx="105" cy="154" r="5" fill="#c48e3c" stroke="#7a5828" stroke-width="1.6"/>
+    <rect x="103.5" y="154" width="3" height="6" rx="1" fill="#7a5828"/>
+
+    <!-- Texte sur la boîte -->
+    <text x="105" y="114" text-anchor="middle" font-family="Comfortaa, Arial, sans-serif" font-size="16" font-weight="700" fill="#26394d">BOÎTE</text>
+    <text x="105" y="133" text-anchor="middle" font-family="Comfortaa, Arial, sans-serif" font-size="16" font-weight="700" fill="#26394d">À IDÉE</text>
+
+    <!-- Petit brin de lavande décoratif à gauche de la boîte -->
+    <g transform="translate(18, 120) rotate(-18)">
+      <path d="M10 56 Q12 30 16 6" fill="none" stroke="#687D58" stroke-width="2.2" stroke-linecap="round"/>
+      <ellipse cx="16" cy="7" rx="3.5" ry="6.5" fill="#9274A9"/>
+      <ellipse cx="12" cy="15" rx="3.5" ry="6" transform="rotate(-25 12 15)" fill="#9274A9"/>
+      <ellipse cx="20" cy="17" rx="3.5" ry="6" transform="rotate(25 20 17)" fill="#9274A9"/>
+      <ellipse cx="12" cy="25" rx="3.2" ry="5.5" transform="rotate(-20 12 25)" fill="#B49AC6"/>
+      <ellipse cx="19" cy="27" rx="3.2" ry="5.5" transform="rotate(20 19 27)" fill="#B49AC6"/>
+    </g>
+
+    <!-- Post-it jaune -->
+    <g transform="translate(202, 34) rotate(3)">
+      <!-- Ombre post-it -->
+      <polygon points="5,9 273,4 277,142 3,147" fill="rgba(41,55,71,0.13)"/>
+      <!-- Feuille post-it -->
+      <path d="M0,4 L268,0 L272,132 L242,154 L0,142 Z"
+            fill="#fef08a" stroke="#d4b13a" stroke-width="2.2" stroke-linejoin="round"/>
+      <!-- Coin replié -->
+      <polygon points="242,154 246,133 272,132"
+               fill="#f5d95e" stroke="#d4b13a" stroke-width="2" stroke-linejoin="round"/>
+      <!-- Scotch en haut -->
+      <rect x="106" y="-7" width="58" height="16" rx="2"
+            fill="#ffffff" fill-opacity="0.78" stroke="#dfd3b0" stroke-width="1.2"/>
+
+      <!-- Texte du post-it -->
+      <text x="135" y="62" text-anchor="middle" font-family="'Comfortaa', Arial, sans-serif" font-size="16" font-weight="700" fill="#293747">Contactez nous ↴</text>
+      <a href="mailto:fourbanalgrignan@gmail.com" class="postit-mail-link">
+        <text x="135" y="96" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.5" font-weight="700" fill="#39766b" text-decoration="underline">fourbanalgrignan@gmail.com</text>
+      </a>
+    </g>
+  </svg>
+</div>
+
+</section>
+```

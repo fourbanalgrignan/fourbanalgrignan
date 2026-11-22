@@ -1,0 +1,1254 @@
+---
+title: ""
+format:
+  html:
+    title-block-style: none
+    page-layout: full
+---
+
+```{=html}
+<section class="grignan-home">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+/* =====================================
+   FOND ET DÉCORATIONS
+===================================== */
+
+html, body, #quarto-content {
+  background-color: #F4F0E8 !important;
+}
+
+.grignan-home {
+  font-family: Arial, sans-serif;
+  color: #293747;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  isolation: isolate;
+}
+
+.grignan-home * {
+  box-sizing: border-box;
+}
+
+/* LAVANDE À DROITE */
+
+.lavande-filigrane {
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  width: 190px;
+  height: auto;
+  opacity: 0.17;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ÉPI DE BLÉ À GAUCHE */
+
+.ble-filigrane {
+  position: fixed;
+  left: 8px;
+  bottom: 15px;
+  width: 175px;
+  height: auto;
+  opacity: 0.19;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =====================================
+   TITRE DOSSIER & INTRODUCTION
+===================================== */
+
+.gh-dossier-title {
+  text-align: center;
+  margin: 35px 0 38px;
+  padding: 28px 24px;
+  background: #f0fff4;
+  border: 2px solid #9ae6b4;
+  border-radius: 14px;
+  box-shadow: 0 3px 14px rgba(47, 133, 90, 0.08);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.gh-dossier-hero-bg {
+  position: absolute;
+  right: -14px;
+  bottom: -16px;
+  width: 215px;
+  height: 215px;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-7deg);
+}
+
+.gh-dossier-title > *:not(.gh-dossier-hero-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+.gh-section-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 13px;
+  border-radius: 20px;
+  background: #c6f6d5;
+  color: #2f855a;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.grignan-home .gh-dossier-title h2 {
+  font-family: 'Comfortaa', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 30px !important;
+  color: #26394d !important;
+  margin: 0 0 14px !important;
+  letter-spacing: 1px;
+  text-align: center !important;
+}
+
+.gh-dossier-title p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+/* =====================================
+   SCÈNE ILLUSTRÉE DE DIALOGUE & BULLES
+===================================== */
+
+.dialogue-stage {
+  background: #f7f8f8;
+  border: 1px solid #c6f6d5;
+  border-radius: 14px;
+  padding: 28px 26px 26px;
+  box-shadow: 0 4px 18px rgba(47, 133, 90, 0.07);
+}
+
+.dialogue-stage-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.dialogue-stage-kicker {
+  display: inline-block;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #2f855a;
+  background: #dcfce7;
+  padding: 4px 11px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.grignan-home .dialogue-stage-header h2 {
+  font-family: 'Comfortaa', Arial, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #293747 !important;
+  margin: 0 0 6px !important;
+  text-align: center !important;
+}
+
+.dialogue-stage-header p {
+  font-size: 13.5px;
+  color: #526477;
+  margin: 0 auto;
+  max-width: 620px;
+  line-height: 1.5;
+}
+
+/* PERSONNAGES EN VIS-À-VIS */
+
+.characters-banner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 740px;
+  margin: 0 auto 18px;
+  padding: 14px 20px 0;
+  background: #ffffff;
+  border: 1px solid #e1e7e9;
+  border-radius: 10px;
+}
+
+.character-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.character-box--right {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.character-svg {
+  width: 78px;
+  height: 86px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.character-role {
+  display: block;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #2f855a;
+  margin-bottom: 3px;
+}
+
+.character-role--ochre {
+  color: #967337;
+}
+
+.character-sub {
+  display: block;
+  font-size: 12px;
+  color: #607285;
+  line-height: 1.4;
+}
+
+.characters-center-badge {
+  align-self: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #F4F0E8;
+  border: 1px dashed #c39a54;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #7a5c28;
+  text-align: center;
+}
+
+/* FLUX DE BULLES DE CONVERSATION */
+
+.bubbles-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.bubble-row {
+  display: flex;
+  width: 100%;
+}
+
+.bubble-row--left {
+  justify-content: flex-start;
+}
+
+.bubble-row--right {
+  justify-content: flex-end;
+}
+
+.speech-bubble {
+  position: relative;
+  max-width: 82%;
+  padding: 15px 18px;
+  border-radius: 14px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  box-shadow: 0 2px 10px rgba(41,55,71,0.05);
+}
+
+.speech-bubble--question {
+  background: #f0fff4;
+  border: 1.5px solid #2f855a;
+  color: #243647;
+  border-bottom-left-radius: 3px;
+}
+
+.speech-bubble--question::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  bottom: -9px;
+  width: 14px;
+  height: 14px;
+  background: #f0fff4;
+  border-right: 1.5px solid #2f855a;
+  border-bottom: 1.5px solid #2f855a;
+  transform: rotate(45deg);
+}
+
+.speech-bubble--answer {
+  background: #ffffff;
+  border: 1.5px solid #c39a54;
+  color: #293747;
+  border-bottom-right-radius: 3px;
+}
+
+.speech-bubble--answer::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: -9px;
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-right: 1.5px solid #c39a54;
+  border-bottom: 1.5px solid #c39a54;
+  transform: rotate(45deg);
+}
+
+.bubble-label {
+  display: inline-block;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.bubble-label--teal {
+  background: #2f855a;
+  color: #ffffff;
+}
+
+.bubble-label--ochre {
+  background: #f8f1e5;
+  color: #967337;
+}
+
+.speech-bubble p {
+  margin: 0;
+}
+
+.speech-bubble ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.speech-bubble li {
+  margin-bottom: 4px;
+}
+
+/* SÉPARATION */
+
+.elus-separator {
+  margin: 38px 0 30px;
+  border: 0;
+  border-top: 1px solid #e1e5e7;
+}
+
+/* =====================================
+   GUIDE PRATIQUE MICRO-TROTTOIR (2 MIN)
+===================================== */
+
+.methodology {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #293747;
+}
+
+.methodology-letter {
+  width: 100%;
+  max-width: 794px;
+  margin: 0 auto;
+  padding: 46px 54px;
+  background: #ffffff;
+  border: 1px solid #e5e8eb;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(41,55,71,0.07);
+}
+
+.methodology-header {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 auto 22px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #dce2e8;
+}
+
+.methodology-surtitle {
+  display: block;
+  width: 100%;
+  text-align: center !important;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #78899a;
+  margin-bottom: 12px;
+}
+
+.methodology-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.methodology-icon-svg {
+  display: block;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.grignan-home .methodology-title h2 {
+  display: block !important;
+  width: auto !important;
+  max-width: none !important;
+  text-align: center !important;
+  font-family: 'Comfortaa', Arial, sans-serif !important;
+  font-size: 21px !important;
+  line-height: 1.4 !important;
+  color: #293f56 !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  text-indent: 0 !important;
+}
+
+.methodology-intro {
+  display: block;
+  max-width: 620px;
+  margin: 0 auto 24px;
+  text-align: center !important;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #536477;
+}
+
+.methodology-section {
+  display: flex;
+  gap: 13px;
+  padding: 13px 15px;
+  margin-bottom: 12px;
+  border-radius: 7px;
+  border-left: 5px solid;
+  align-items: flex-start;
+}
+
+.methodology-number {
+  min-width: 29px;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 13px;
+  flex-shrink: 0;
+  color: white;
+}
+
+.methodology-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.grignan-home .methodology-content h3 {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  margin: 2px 0 5px !important;
+  padding: 0 !important;
+  font-weight: bold !important;
+}
+
+.methodology-content p {
+  font-size: 12.5px;
+  line-height: 1.55;
+  margin: 0;
+  color: #435264;
+}
+
+.method-teal {
+  background: #eaf4f2;
+  border-color: #5d978b;
+}
+
+.method-teal .methodology-number {
+  background: #5d978b;
+}
+
+.method-teal h3 {
+  color: #39766b !important;
+}
+
+.method-ochre {
+  background: #f8f1e5;
+  border-color: #c39a54;
+}
+
+.method-ochre .methodology-number {
+  background: #c39a54;
+}
+
+.method-ochre h3 {
+  color: #967337 !important;
+}
+
+.method-violet {
+  background: #f1eef7;
+  border-color: #8978aa;
+}
+
+.method-violet .methodology-number {
+  background: #8978aa;
+}
+
+.method-violet h3 {
+  color: #6d5b91 !important;
+}
+
+.method-blue {
+  background: #edf3f8;
+  border-color: #547b9f;
+}
+
+.method-blue .methodology-number {
+  background: #547b9f;
+}
+
+.method-blue h3 {
+  color: #385d7d !important;
+}
+
+/* =====================================
+   ENCADRÉ DROIT À L'IMAGE (COPIE DOUBLE)
+===================================== */
+
+.consent-box {
+  margin-top: 26px;
+  padding: 22px 24px;
+  background: #fdfcf9;
+  border: 1.5px dashed #547b9f;
+  border-radius: 8px;
+}
+
+.consent-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dce3ea;
+}
+
+.consent-title {
+  font-family: 'Comfortaa', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #293f56;
+  margin: 0;
+}
+
+.consent-badge {
+  padding: 3px 9px;
+  border-radius: 5px;
+  background: #edf3f8;
+  color: #385d7d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.consent-text {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #334354;
+  margin: 0 0 14px;
+}
+
+.consent-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 18px;
+  padding: 12px 14px;
+  background: #ffffff;
+  border: 1px solid #dce2e8;
+  border-radius: 6px;
+  font-size: 12.5px;
+  color: #293747;
+  margin-bottom: 16px;
+}
+
+.consent-field-line {
+  border-bottom: 1px dotted #9aa8b6;
+  padding-bottom: 4px;
+}
+
+.consent-field-line--tall {
+  grid-column: 1 / -1;
+  min-height: 44px;
+  border-bottom: none;
+}
+
+.consent-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.consent-print-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 16px;
+  background-color: #547b9f;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.consent-print-btn:hover {
+  background-color: #385d7d;
+  transform: translateY(-1px);
+}
+
+.methodology-footer {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 1px solid #dce2e8;
+  text-align: center;
+  font-size: 10px;
+  color: #82909d;
+  letter-spacing: 0.4px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 720px) {
+  .characters-banner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px;
+  }
+
+  .characters-center-badge {
+    align-self: center;
+    margin: 4px 0;
+  }
+
+  .speech-bubble {
+    max-width: 94%;
+  }
+
+  .consent-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grignan-home .gh-dossier-title h2 {
+    font-size: 25px !important;
+  }
+
+  .gh-dossier-hero-bg {
+    width: 150px;
+    height: 150px;
+    right: -22px;
+    bottom: -18px;
+  }
+
+  .gh-dossier-title p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .dialogue-stage {
+    padding: 20px 15px;
+  }
+
+  .methodology-letter {
+    padding: 28px 18px;
+  }
+
+  .methodology-title {
+    gap: 9px;
+  }
+
+  .methodology-icon-svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .grignan-home .methodology-title h2 {
+    font-size: 17px !important;
+  }
+
+  .lavande-filigrane {
+    width: 110px;
+    right: -12px;
+    bottom: 5px;
+    opacity: 0.12;
+  }
+
+  .ble-filigrane {
+    width: 105px;
+    left: -15px;
+    bottom: 5px;
+    opacity: 0.13;
+  }
+}
+</style>
+
+<!-- =====================================
+     ÉPI DE BLÉ SVG À GAUCHE
+===================================== -->
+
+<svg class="ble-filigrane"
+     viewBox="0 0 200 430"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     aria-hidden="true">
+
+  <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
+        fill="none"
+        stroke="#71805B"
+        stroke-width="3"
+        stroke-linecap="round"/>
+
+  <g fill="#89966C">
+    <path d="M98 350 Q55 328 38 290 Q79 302 98 350"/>
+    <path d="M95 375 Q136 342 150 303 Q111 319 95 375"/>
+    <path d="M93 290 Q48 265 43 228 Q79 246 93 290"/>
+    <path d="M90 315 Q128 281 138 244 Q105 263 90 315"/>
+    <path d="M91 225 Q52 201 55 164 Q84 184 91 225"/>
+    <path d="M91 250 Q130 218 139 184 Q105 198 91 250"/>
+  </g>
+
+  <g fill="#C4A15E">
+    <ellipse cx="101" cy="42" rx="7" ry="17" transform="rotate(-28 101 42)"/>
+    <ellipse cx="86" cy="57" rx="7" ry="16" transform="rotate(-58 86 57)"/>
+    <ellipse cx="111" cy="69" rx="7" ry="17" transform="rotate(25 111 69)"/>
+    <ellipse cx="79" cy="82" rx="7" ry="16" transform="rotate(-58 79 82)"/>
+    <ellipse cx="112" cy="97" rx="7" ry="17" transform="rotate(25 112 97)"/>
+    <ellipse cx="77" cy="110" rx="7" ry="16" transform="rotate(-55 77 110)"/>
+    <ellipse cx="108" cy="126" rx="7" ry="17" transform="rotate(22 108 126)"/>
+    <ellipse cx="80" cy="139" rx="7" ry="15" transform="rotate(-45 80 139)"/>
+    <ellipse cx="101" cy="154" rx="7" ry="16" transform="rotate(15 101 154)"/>
+    <ellipse cx="88" cy="169" rx="7" ry="15" transform="rotate(-35 88 169)"/>
+  </g>
+
+  <g fill="#D3B474">
+    <ellipse cx="115" cy="50" rx="6" ry="14" transform="rotate(40 115 50)"/>
+    <ellipse cx="96" cy="74" rx="6" ry="14" transform="rotate(-25 96 74)"/>
+    <ellipse cx="121" cy="83" rx="6" ry="14" transform="rotate(45 121 83)"/>
+    <ellipse cx="91" cy="102" rx="6" ry="14" transform="rotate(-25 91 102)"/>
+    <ellipse cx="119" cy="112" rx="6" ry="14" transform="rotate(42 119 112)"/>
+    <ellipse cx="91" cy="131" rx="6" ry="13" transform="rotate(-20 91 131)"/>
+    <ellipse cx="113" cy="141" rx="6" ry="13" transform="rotate(38 113 141)"/>
+    <ellipse cx="94" cy="158" rx="6" ry="12" transform="rotate(-15 94 158)"/>
+  </g>
+
+  <g stroke="#B69A61" stroke-width="1.2"
+     stroke-linecap="round" opacity="0.9">
+    <path d="M101 42L89 15"/>
+    <path d="M86 57L66 36"/>
+    <path d="M111 69L127 42"/>
+    <path d="M79 82L55 63"/>
+    <path d="M112 97L132 69"/>
+    <path d="M77 110L52 93"/>
+    <path d="M108 126L128 101"/>
+    <path d="M80 139L58 125"/>
+    <path d="M101 154L117 133"/>
+    <path d="M88 169L69 155"/>
+  </g>
+
+</svg>
+
+<!-- =====================================
+     BRIN DE LAVANDE SVG À DROITE
+===================================== -->
+
+<svg class="lavande-filigrane"
+     viewBox="0 0 200 420"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     aria-hidden="true">
+
+  <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
+        fill="none" stroke="#687D58"
+        stroke-width="3.5" stroke-linecap="round"/>
+
+  <g fill="#82936D">
+    <path d="M105 340 Q55 320 42 278 Q85 290 105 340"/>
+    <path d="M103 365 Q145 330 158 292 Q115 310 103 365"/>
+    <path d="M108 275 Q60 250 55 215 Q90 230 108 275"/>
+    <path d="M112 300 Q150 265 155 230 Q120 250 112 300"/>
+    <path d="M115 210 Q78 185 77 155 Q107 175 115 210"/>
+    <path d="M120 230 Q155 200 165 170 Q130 185 120 230"/>
+    <path d="M130 145 Q102 120 107 92 Q130 110 130 145"/>
+    <path d="M135 165 Q165 140 173 112 Q143 128 135 165"/>
+  </g>
+
+  <g fill="#9274A9">
+    <ellipse cx="145" cy="28" rx="8" ry="14" transform="rotate(20 145 28)"/>
+    <ellipse cx="132" cy="40" rx="8" ry="14" transform="rotate(-35 132 40)"/>
+    <ellipse cx="155" cy="48" rx="8" ry="14" transform="rotate(35 155 48)"/>
+    <ellipse cx="127" cy="60" rx="8" ry="14" transform="rotate(-30 127 60)"/>
+    <ellipse cx="151" cy="69" rx="8" ry="14" transform="rotate(30 151 69)"/>
+    <ellipse cx="120" cy="81" rx="8" ry="14" transform="rotate(-25 120 81)"/>
+    <ellipse cx="144" cy="90" rx="8" ry="14" transform="rotate(25 144 90)"/>
+    <ellipse cx="119" cy="105" rx="7" ry="13" transform="rotate(-25 119 105)"/>
+    <ellipse cx="138" cy="116" rx="7" ry="13" transform="rotate(25 138 116)"/>
+    <ellipse cx="116" cy="130" rx="7" ry="12" transform="rotate(-20 116 130)"/>
+    <ellipse cx="132" cy="140" rx="7" ry="12" transform="rotate(25 132 140)"/>
+  </g>
+
+  <g fill="#B49AC6">
+    <circle cx="145" cy="28" r="2"/>
+    <circle cx="132" cy="40" r="2"/>
+    <circle cx="155" cy="48" r="2"/>
+    <circle cx="127" cy="60" r="2"/>
+    <circle cx="151" cy="69" r="2"/>
+    <circle cx="120" cy="81" r="2"/>
+    <circle cx="144" cy="90" r="2"/>
+  </g>
+
+</svg>
+
+<!-- =====================================
+     TITRE DOSSIER & INTRODUCTION
+===================================== -->
+
+<div class="gh-dossier-title">
+
+  <!-- Filigrane SVG Dialogue citoyen : bulles d'échange & micro -->
+  <svg class="gh-dossier-hero-bg" viewBox="0 0 220 220" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+    <rect x="28" y="42" width="114" height="74" rx="18" fill="none" stroke="#2f855a" stroke-width="5"/>
+    <path d="M54 116 L42 138 L76 116" fill="none" stroke="#2f855a" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="78" y="96" width="114" height="74" rx="18" fill="none" stroke="#2f855a" stroke-width="5"/>
+    <path d="M166 170 L178 192 L144 170" fill="none" stroke="#2f855a" stroke-width="5" stroke-linejoin="round"/>
+  </svg>
+
+  <span class="gh-section-badge">Diffuser · Dialogue citoyen</span>
+
+  <h2>ÉCHANGER ET RÉALISER DES MICRO-TROTTOIRS</h2>
+
+  <p>
+    Sonder les passants, engager la conversation au marché ou devant le Four banal et recueillir les avis en vidéo : voici des exemples concrets d’échanges et une méthode simple pour réaliser un micro-trottoir de 2 minutes.
+  </p>
+
+</div>
+
+<!-- =====================================
+     PRÉSENTATION VISUELLE : PERSONNAGES & BULLES
+===================================== -->
+
+<section class="dialogue-stage" aria-label="Exemple de dialogue citoyen">
+
+  <div class="dialogue-stage-header">
+    <span class="dialogue-stage-kicker">Exemples de questionnement &amp; éléments de réponse</span>
+    <h2>Engager le dialogue autour de l’affaire du Four banal</h2>
+    <p>
+      Inspirez-vous de ces amorces de questions et de ces repères factuels pour expliquer la situation avec calme, clarté et précision.
+    </p>
+  </div>
+
+  <!-- BANDEAU DES 2 PERSONNAGES QUI DISCUTENT -->
+
+  <div class="characters-banner">
+
+    <!-- PERSONNAGE 1 : CITOYEN / INTERVIEWEUR -->
+    <div class="character-box">
+      <svg class="character-svg" viewBox="0 0 90 100" fill="none" aria-hidden="true">
+        <circle cx="45" cy="30" r="16" fill="#f5d5be" stroke="#293747" stroke-width="2"/>
+        <path d="M29 27C30 16 40 12 51 14C58 15 61 21 61 27C55 23 41 22 29 27Z" fill="#3b4d61"/>
+        <circle cx="41" cy="30" r="1.8" fill="#293747"/>
+        <circle cx="51" cy="30" r="1.8" fill="#293747"/>
+        <path d="M42 37Q46 40 50 37" stroke="#293747" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M20 96C20 72 30 60 45 60C60 60 70 72 70 96" fill="#5d978b" stroke="#293747" stroke-width="2"/>
+        <!-- Micro à la main -->
+        <line x1="66" y1="68" x2="77" y2="52" stroke="#293747" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="79" cy="49" r="5" fill="#293747"/>
+      </svg>
+      <div>
+        <span class="character-role">Citoyen · Questionnement</span>
+        <span class="character-sub">Pose des questions ouvertes pour sonder le ressenti</span>
+      </div>
+    </div>
+
+    <div class="characters-center-badge">
+      💬 Échange sur place<br>5 minutes
+    </div>
+
+    <!-- PERSONNAGE 2 : PASSANT / HABITANT -->
+    <div class="character-box character-box--right">
+      <svg class="character-svg" viewBox="0 0 90 100" fill="none" aria-hidden="true">
+        <circle cx="45" cy="30" r="16" fill="#f2cbb0" stroke="#293747" stroke-width="2"/>
+        <path d="M28 31C28 17 37 12 48 13C58 14 62 21 62 32C58 24 51 21 44 21C36 21 31 25 28 31Z" fill="#7a583b"/>
+        <circle cx="39" cy="30" r="1.8" fill="#293747"/>
+        <circle cx="49" cy="30" r="1.8" fill="#293747"/>
+        <path d="M40 37Q44 40 48 37" stroke="#293747" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M20 96C20 72 30 60 45 60C60 60 70 72 70 96" fill="#c39a54" stroke="#293747" stroke-width="2"/>
+      </svg>
+      <div>
+        <span class="character-role character-role--ochre">Passant ou habitant</span>
+        <span class="character-sub">Découvre les faits et partage son avis librement</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BULLES DE DIALOGUE -->
+
+  <div class="bubbles-flow">
+
+    <!-- BULLE 1 : QUESTION D'AMORCE -->
+    <div class="bubble-row bubble-row--left">
+      <div class="speech-bubble speech-bubble--question">
+        <span class="bubble-label bubble-label--teal">Questionnement · Accroche</span>
+        <p>
+          « Bonjour ! Avez-vous vu la nouvelle grille installée à l’entrée de l’ancien four banal de Grignan, rue du Four ? Qu’en pensez-vous à première vue ? »
+        </p>
+      </div>
+    </div>
+
+    <!-- BULLE 2 : ÉLÉMENTS DE RÉPONSE SUR LE LIEU ET LA GRILLE -->
+    <div class="bubble-row bubble-row--right">
+      <div class="speech-bubble speech-bubble--answer">
+        <span class="bubble-label bubble-label--ochre">Éléments de réponse · Les faits visuels</span>
+        <p>
+          <strong>Ce que l’on observe sur place :</strong> l’ancien four banal médiéval a été fermé par un gigantesque portail aux motifs qui me semblent macabres et une grille représentant Madame de Sévigné avec une tête déformée et la robe percée de trous, devant un espace baptisé « chambre de lecture ».
+        </p>
+      </div>
+    </div>
+
+    <!-- BULLE 3 : QUESTION SUR LE PATRIMOINE ET L'ARGENT PUBLIC -->
+    <div class="bubble-row bubble-row--left">
+      <div class="speech-bubble speech-bubble--question">
+        <span class="bubble-label bubble-label--teal">Questionnement · Patrimoine &amp; budget</span>
+        <p>
+          « Saviez-vous que cette commande publique a été inaugurée en septembre 2026, l’année même du 400<sup>e</sup> anniversaire de la Marquise de Sévigné, et pendant les Journées européennes du patrimoine sans consultation des habitants ? »
+        </p>
+      </div>
+    </div>
+
+    <!-- BULLE 4 : ÉLÉMENTS DE RÉPONSE SUR LES ENJEUX -->
+    <div class="bubble-row bubble-row--right">
+      <div class="speech-bubble speech-bubble--answer">
+        <span class="bubble-label bubble-label--ochre">Éléments de réponse · Repères clés</span>
+        <ul>
+          <li><strong>Une question d’argent public et de concertation :</strong> 200 000 euros ont été engagés sans demander l’avis des Grignanais.</li>
+          <li><strong>Un non-respect du cadre légal :</strong> aucune demande d’autorisation préalable n’a été déposée auprès de l’Architecte des Bâtiments de France (ABF).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- BULLE 5 : QUESTION SUR L'ADÉQUATION DE L'ŒUVRE -->
+    <div class="bubble-row bubble-row--left">
+      <div class="speech-bubble speech-bubble--question">
+        <span class="bubble-label bubble-label--teal">Questionnement · Adéquation de l’œuvre</span>
+        <p>
+          « Est-ce que, selon vous, cette œuvre est en adéquation avec l’esprit du Four banal et l’identité de Grignan ? »
+        </p>
+      </div>
+    </div>
+
+    <!-- BULLE 6 : ÉLÉMENTS DE RÉPONSE SUR L'ADÉQUATION DE L'ŒUVRE -->
+    <div class="bubble-row bubble-row--right">
+      <div class="speech-bubble speech-bubble--answer">
+        <span class="bubble-label bubble-label--ochre">Éléments de réponse · Adéquation de l’œuvre</span>
+        <p>
+          <strong>Un lieu historique dénaturé :</strong> le four banal était le lieu de cuisson du pain et de la vie du village.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<hr class="elus-separator">
+
+<!-- =====================================
+     MÉTHODOLOGIE MICRO-TROTTOIR (2 MIN)
+     & DROIT À L'IMAGE EN COPIE DOUBLE
+===================================== -->
+
+<div class="methodology">
+
+  <div class="methodology-letter">
+
+    <header class="methodology-header">
+
+      <div class="methodology-surtitle">
+        Guide pratique · Vidéo citoyenne
+      </div>
+
+      <div class="methodology-title">
+
+        <!-- SVG CAMÉRA / SMARTPHONE (À GAUCHE) -->
+        <svg class="methodology-icon-svg"
+             viewBox="0 0 48 48"
+             fill="none"
+             aria-hidden="true">
+          <circle cx="24" cy="24" r="21" fill="#eaf4f2" stroke="#5d978b" stroke-width="1.8"/>
+          <rect x="12" y="17" width="17" height="14" rx="2.5" fill="#ffffff" stroke="#39766b" stroke-width="1.8"/>
+          <path d="M29 21L36 17.5V30.5L29 27V21Z" fill="#ffffff" stroke="#39766b" stroke-width="1.8" stroke-linejoin="round"/>
+          <circle cx="17.5" cy="22" r="1.6" fill="#bd7777"/>
+        </svg>
+
+        <h2>Méthodologie : filmer et interviewer en 2 minutes</h2>
+
+        <!-- SVG MICROPHONE (À DROITE) -->
+        <svg class="methodology-icon-svg"
+             viewBox="0 0 48 48"
+             fill="none"
+             aria-hidden="true">
+          <circle cx="24" cy="24" r="21" fill="#f8f1e5" stroke="#c39a54" stroke-width="1.8"/>
+          <rect x="20" y="12" width="8" height="14" rx="4" fill="#ffffff" stroke="#967337" stroke-width="1.8"/>
+          <path d="M16 23C16 27.4 19.6 31 24 31C28.4 31 32 27.4 32 23" stroke="#967337" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="24" y1="31" x2="24" y2="36" stroke="#967337" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="19" y1="36" x2="29" y2="36" stroke="#967337" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+
+      </div>
+
+    </header>
+
+    <p class="methodology-intro">
+      Un micro-trottoir court, spontané et bien cadré permet de donner la parole aux habitants et aux visiteurs en toute bienveillance. Suivez ces 4 étapes pour tenir un format dynamique de 2 minutes.
+    </p>
+
+    <section class="methodology-section method-teal">
+      <div class="methodology-number">1</div>
+      <div class="methodology-content">
+        <h3>Préparer le cadrage et le son (avant de lancer l’enregistrement)</h3>
+        <p>
+          Filmez avec votre téléphone à l’horizontale pour le site ou à la verticale pour les réseaux sociaux. Placez-vous dans un endroit calme (rue du Four, place du village), à l’abri du vent, à environ 1 mètre de la personne pour capter une voix claire.
+        </p>
+      </div>
+    </section>
+
+    <section class="methodology-section method-ochre">
+      <div class="methodology-number">2</div>
+      <div class="methodology-content">
+        <h3>Se présenter et mettre à l’aise (début – 0 min 20)</h3>
+        <p>
+          Annoncez clairement votre démarche citoyenne autour du Four banal de Grignan, précisez que l’échange ne durera pas plus de <strong>2 minutes</strong> et vérifiez l’accord oral de votre interlocuteur avant de lancer l'enregistrement.
+        </p>
+      </div>
+    </section>
+
+    <section class="methodology-section method-violet">
+      <div class="methodology-number">3</div>
+      <div class="methodology-content">
+        <h3>Poser 3 questions courtes et ouvertes (0 min 20 – 1 min 45)</h3>
+        <p>
+          Laissez la personne s’exprimer sans lui couper la parole ni orienter sa réponse : <strong>1)</strong> « Connaissez-vous l’histoire du Four banal ? » · <strong>2)</strong> « Que vous inspire cette nouvelle œuvre ? » · <strong>3)</strong> « Comment auriez-vous souhaité que l’on célèbre les 400 ans de Madame de Sévigné ? »
+        </p>
+      </div>
+    </section>
+
+    <section class="methodology-section method-blue">
+      <div class="methodology-number">4</div>
+      <div class="methodology-content">
+        <h3>Conclure et faire signer le droit à l’image (1 min 45 – 2 min 00)</h3>
+        <p>
+          Remerciez chaleureusement votre interlocuteur, indiquez où la vidéo sera visible, puis faites remplir et signer le formulaire d’autorisation ci-dessous en <strong>copie double</strong> (un exemplaire conservé par vos soins, un remis au participant).
+        </p>
+      </div>
+    </section>
+
+    <!-- ENCADRÉ AUTORISATION DROIT À L'IMAGE EN COPIE DOUBLE -->
+
+    <div class="consent-box">
+
+      <div class="consent-header">
+        <h3 class="consent-title">Autorisation de droit à l’image (à établir en copie double)</h3>
+        <span class="consent-badge">2 EXEMPLAIRES · NOM &amp; SIGNATURE</span>
+      </div>
+
+      <p class="consent-text">
+        Je soussigné(e), autorise la captation et la diffusion gratuite de mon image et de mes propos recueillis lors d’un micro-trottoir citoyen consacré à l’affaire du <strong>Four banal de Grignan</strong>, exclusivement sur le <strong>site internet</strong> et les <strong>réseaux sociaux</strong> dédiés à ce dossier patrimonial, sans limite de durée ni exploitation commerciale. Établi en <strong>copie double</strong> (un exemplaire remis à l’interlocuteur, un conservé par l’auteur de la vidéo).
+      </p>
+
+      <div class="consent-fields">
+        <div class="consent-field-line"><strong>Nom :</strong></div>
+        <div class="consent-field-line"><strong>Prénom :</strong></div>
+        <div class="consent-field-line"><strong>Fait à Grignan, le :</strong></div>
+        <div class="consent-field-line"><strong>Contact (facultatif) :</strong></div>
+        <div class="consent-field-line consent-field-line--tall">
+          <strong>Signature (précédée de la mention « Lu et approuvé ») :</strong>
+        </div>
+      </div>
+
+      <div class="consent-actions">
+        <button type="button"
+                class="consent-print-btn"
+                onclick="imprimerDroitImage()">
+          🖨️ Imprimer la fiche droit à l’image (copie double A4)
+        </button>
+      </div>
+
+    </div>
+
+    <footer class="methodology-footer">
+      FOUR BANAL DE GRIGNAN · DIALOGUE CITOYEN &amp; MICRO-TROTTOIRS
+    </footer>
+
+  </div>
+
+</div>
+
+<!-- =====================================
+     SCRIPT D'IMPRESSION COPIE DOUBLE A4
+===================================== -->
+
+<script>
+function imprimerDroitImage() {
+  const fenetreImpression = window.open('', '_blank');
+  if (!fenetreImpression) return;
+
+  const modeleExemplaire = (destinataire) => `
+    <div class="fiche">
+      <div class="fiche-top">
+        <span class="titre">AUTORISATION DE DROIT À L'IMAGE — MICRO-TROTTOIR</span>
+        <span class="badge">${destinataire}</span>
+      </div>
+      <p class="objet">Dossier citoyen : <strong>Affaire du Four banal de Grignan</strong></p>
+      <p class="texte">
+        Je soussigné(e), autorise la captation et la diffusion gratuite de mon image et de mes propos recueillis ce jour lors d'un micro-trottoir citoyen consacré à l'affaire du <strong>Four banal de Grignan</strong>, uniquement sur le <strong>site internet</strong> et les <strong>réseaux sociaux</strong> dédiés à la défense et à l'information autour du patrimoine du Four banal de Grignan, sans exploitation commerciale.
+      </p>
+      <div class="grille">
+        <div class="champ"><strong>Nom :</strong></div>
+        <div class="champ"><strong>Prénom :</strong></div>
+        <div class="champ"><strong>Fait à :</strong> Grignan, le ____ / ____ / 2026</div>
+        <div class="champ"><strong>Téléphone ou e-mail (facultatif) :</strong></div>
+      </div>
+      <div class="signature">
+        <strong>Signature du participant</strong> (précédée de la mention <em>« Lu et approuvé »</em>) :
+      </div>
+    </div>
+  `;
+
+  fenetreImpression.document.write(`
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+      <meta charset="utf-8">
+      <title>Autorisation droit à l'image - Copie double</title>
+      <style>
+        @page { size: A4; margin: 12mm; }
+        body {
+          font-family: Arial, sans-serif;
+          color: #293747;
+          margin: 0;
+          padding: 0;
+        }
+        .fiche {
+          border: 1.5px solid #547b9f;
+          border-radius: 8px;
+          padding: 18px 22px;
+          margin-bottom: 14mm;
+          background: #ffffff;
+        }
+        .fiche-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #dce2e8;
+          padding-bottom: 8px;
+          margin-bottom: 10px;
+        }
+        .titre {
+          font-size: 13px;
+          font-weight: bold;
+          color: #293f56;
+        }
+        .badge {
+          font-size: 10px;
+          font-weight: bold;
+          padding: 3px 8px;
+          border-radius: 4px;
+          background: #edf3f8;
+          color: #385d7d;
+          text-transform: uppercase;
+        }
+        .objet {
+          font-size: 12px;
+          margin: 0 0 8px;
+          color: #39766b;
+        }
+        .texte {
+          font-size: 11.5px;
+          line-height: 1.5;
+          margin: 0 0 14px;
+          text-align: justify;
+        }
+        .grille {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 10px 18px;
+          margin-bottom: 12px;
+          font-size: 12px;
+        }
+        .champ {
+          border-bottom: 1px dotted #78899a;
+          padding-bottom: 4px;
+        }
+        .signature {
+          border: 1px dashed #9aa8b6;
+          border-radius: 5px;
+          padding: 8px 12px;
+          min-height: 52px;
+          font-size: 11.5px;
+        }
+        .decoupe {
+          text-align: center;
+          font-size: 10px;
+          color: #78899a;
+          border-top: 1px dashed #9aa8b6;
+          margin: 0 0 14mm;
+          padding-top: 4px;
+        }
+      </style>
+    </head>
+    <body>
+      ${modeleExemplaire('Exemplaire 1 / 2 · À conserver par l’auteur de la vidéo')}
+      <div class="decoupe">✂ Découper suivant les pointillés (copie double)</div>
+      ${modeleExemplaire('Exemplaire 2 / 2 · À remettre au participant')}
+      <script>
+        window.onload = function() { window.print(); window.close(); };
+      <\/script>
+    </body>
+    </html>
+  `);
+  fenetreImpression.document.close();
+}
+</script>
+
+</section>
+```

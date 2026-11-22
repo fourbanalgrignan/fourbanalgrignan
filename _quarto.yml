@@ -1,0 +1,26 @@
+project:
+  type: website
+  resources:
+    - CNAME
+
+website:
+  title: "Four banal Grignan"
+  navbar:
+    left:
+      - text: Accueil
+        href: Accueil.html
+      - text: Comprendre
+        href: comprendre.html
+      - text: Agir
+        href: agir.html
+      - text: À propos
+        href: about.html
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: false
+    title-block-style: none
