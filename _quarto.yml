@@ -10,9 +10,9 @@ website:
       - text: Accueil
         href: Accueil.html
       - text: Comprendre
-        href: comprendre.html
+        href: Comprendre.html
       - text: Agir
-        href: agir.html
+        href: Agir.html
       - text: À propos
         href: about.html
 
