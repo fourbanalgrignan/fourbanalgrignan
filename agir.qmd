@@ -1,0 +1,440 @@
+---
+title: "Agir"
+format:
+  html:
+    title-block-style: none
+    page-layout: full
+---
+
+```{=html}
+<section class="grignan-home">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+.grignan-home {
+  font-family: Arial, sans-serif;
+  color: #293747;
+  max-width: 900px;
+  margin: auto;
+}
+
+.grignan-home * {
+  box-sizing: border-box;
+}
+
+/* EN-TÊTE DE PAGE */
+
+.gh-page-header {
+  text-align: center;
+  padding: 40px 20px 30px;
+}
+
+.gh-kicker {
+  color: #9b784b;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.gh-page-header h1 {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 700;
+  font-size: clamp(50px, 9vw, 76px);
+  color: #c45c1e;
+  margin: 0 0 18px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.gh-page-header p {
+  font-size: 21px;
+  color: #666;
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* TITRE DOSSIER */
+
+.gh-dossier-title {
+  text-align: center;
+  margin: 15px 0 38px;
+}
+
+.gh-dossier-title h2 {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #26394d;
+  margin: 0 0 10px;
+  letter-spacing: 1px;
+}
+
+.gh-dossier-title p {
+  font-size: 19px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* SECTIONS AGIR */
+
+.agir-section {
+  margin-bottom: 52px;
+  padding: 0 10px;
+}
+
+.agir-section-title {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 24px;
+}
+
+.agir-number {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  flex-shrink: 0;
+}
+
+.agir-section-title h2 {
+  margin: 0;
+  font-size: 31px;
+  font-weight: 700;
+}
+
+/* Couleurs des piliers */
+
+.agir-section.interpeller .agir-number { background: #2b6cb0; }
+.agir-section.interpeller h2 { color: #2b6cb0; }
+
+.agir-section.diffuser .agir-number { background: #38a169; }
+.agir-section.diffuser h2 { color: #38a169; }
+
+.agir-section.rassembler .agir-number { background: #c53030; }
+.agir-section.rassembler h2 { color: #c53030; }
+
+/* CARTES */
+
+.agir-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.agir-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 21px 22px;
+  background: #f8f9fa;
+  border-radius: 14px;
+  border: 2px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.agir-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.agir-section.interpeller .agir-card {
+  border-color: #bee3f8;
+  background: #f0f9ff;
+}
+
+.agir-section.diffuser .agir-card {
+  border-color: #c6f6d5;
+  background: #f0fff4;
+}
+
+.agir-section.rassembler .agir-card {
+  border-color: #fed7d7;
+  background: #fff5f5;
+}
+
+.agir-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.agir-section.interpeller .agir-icon { background: #2b6cb0; }
+.agir-section.diffuser .agir-icon { background: #38a169; }
+.agir-section.rassembler .agir-icon { background: #c53030; }
+
+.agir-card-content {
+  min-width: 0;
+}
+
+.agir-card-content h3 {
+  margin: 0 0 7px;
+  font-size: 22px;
+  line-height: 1.3;
+  color: #1a202c;
+}
+
+.agir-card-content p {
+  margin: 0;
+  font-size: 18px;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+  .gh-page-header {
+    padding: 32px 16px 28px;
+  }
+
+  .gh-kicker {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .gh-page-header h1 {
+    font-size: 52px;
+  }
+
+  .gh-page-header p {
+    font-size: 19px;
+  }
+
+  .gh-dossier-title h2 {
+    font-size: 25px;
+  }
+
+  .gh-dossier-title p {
+    font-size: 17px;
+    padding: 0 10px;
+  }
+
+  .agir-section {
+    padding: 0 5px;
+    margin-bottom: 42px;
+  }
+
+  .agir-section-title {
+    gap: 13px;
+    margin-bottom: 19px;
+  }
+
+  .agir-number {
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+
+  .agir-section-title h2 {
+    font-size: 27px;
+  }
+
+  .agir-card {
+    padding: 17px 14px;
+    gap: 14px;
+  }
+
+  .agir-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+
+  .agir-card-content h3 {
+    font-size: 19px;
+  }
+
+  .agir-card-content p {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+}
+</style>
+
+<!-- EN-TÊTE DE PAGE -->
+
+<div class="gh-page-header">
+  <div class="gh-kicker">
+    GRIGNAN · AFFAIRE DU PORTAIL
+  </div>
+  <h1>Agir</h1>
+  <p>Interpeller · Diffuser · Rassembler</p>
+</div>
+
+<!-- TITRE DOSSIER -->
+
+<div class="gh-dossier-title">
+  <h2>PASSER À L’ACTION</h2>
+  <p>Trois façons concrètes de faire bouger les choses</p>
+</div>
+
+<!-- 1. INTERPELLER -->
+
+<div class="agir-section interpeller">
+  <div class="agir-section-title">
+    <div class="agir-number">1</div>
+    <h2>Interpeller</h2>
+  </div>
+
+  <div class="agir-cards">
+
+    <div class="agir-card">
+      <div class="agir-icon">🏛️</div>
+      <div class="agir-card-content">
+        <h3>Élus locaux</h3>
+        <p>Mairie, Député, Communauté de communes (CCEPPG)</p>
+      </div>
+    </div>
+
+    <div class="agir-card">
+      <div class="agir-icon">🗺️</div>
+      <div class="agir-card-content">
+        <h3>Tourisme</h3>
+        <p>Office de tourisme de Grignan</p>
+      </div>
+    </div>
+
+    <div class="agir-card">
+      <div class="agir-icon">🏛️</div>
+      <div class="agir-card-content">
+        <h3>Institutions publiques</h3>
+        <p>Bâtiments de France (ABF), préfecture, DRAC, conseil départemental</p>
+      </div>
+    </div>
+
+    <div class="agir-card">
+      <div class="agir-icon">🤝</div>
+      <div class="agir-card-content">
+        <h3>Associations et Fondations</h3>
+        <p>Fondation du patrimoine, SSMAD, etc.</p>
+      </div>
+    </div>
+
+    <div class="agir-card">
+      <div class="agir-icon">📰</div>
+      <div class="agir-card-content">
+        <h3>La presse</h3>
+        <p>Le Dauphiné, La Tribune, ICI Drôme Ardèche, France 3</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 2. DIFFUSER -->
+
+<div class="agir-section diffuser">
+  <div class="agir-section-title">
+    <div class="agir-number">2</div>
+    <h2>Diffuser</h2>
+  </div>
+
+  <div class="agir-cards">
+
+    <div class="agir-card">
+      <div class="agir-icon">🖨️</div>
+      <div class="agir-card-content">
+        <h3>Imprimer des affiches</h3>
+        <p>Tracts et visuels</p>
+      </div>
+    </div>
+
+    <div class="agir-card">
+      <div class="agir-icon">✉️</div>
+      <div class="agir-card-content">
+        <h3>Écrire des lettres littéraires</h3>
+        <p>S’adresser à la Marquise, à un ami, à sa famille</p>
+      </div>
+    </div>
+
+    <div class="agir-card">
+      <div class="agir-icon">🗣️</div>
+      <div class="agir-card-content">
+        <h3>Échanger et réaliser des micro-trottoirs</h3>
+        <p>Sonder et communiquer sur l’affaire du Four banal</p>
+      </div>
+    </div>
+
+    <div class="agir-card">
+      <div class="agir-icon">📷</div>
+      <div class="agir-card-content">
+        <h3>Photographier et filmer le site transformé</h3>
+        <p>Prendre en photo/vidéo et partager sur les réseaux sociaux</p>
+      </div>
+    </div>
+
+    <div class="agir-card">
+      <div class="agir-icon">🎨</div>
+      <div class="agir-card-content">
+        <h3>Création &amp; satire</h3>
+        <p>Dessins, caricatures, vidéos humoristiques et articles satiriques</p>
+      </div>
+    </div>
+
+    <div class="agir-card">
+      <div class="agir-icon">📍</div>
+      <div class="agir-card-content">
+        <h3>Rédiger un avis sur Google Maps</h3>
+        <p>Exprimez votre ressenti sur la transformation du Four banal</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 3. RASSEMBLER -->
+
+<div class="agir-section rassembler">
+  <div class="agir-section-title">
+    <div class="agir-number">3</div>
+    <h2>Rassembler</h2>
+  </div>
+
+  <div class="agir-cards">
+
+    <div class="agir-card">
+      <div class="agir-icon">👥</div>
+      <div class="agir-card-content">
+        <h3>Organiser un évènement</h3>
+        <p>Rassemblement devant la mairie, réunions citoyennes</p>
+      </div>
+    </div>
+
+    <div class="agir-card">
+      <div class="agir-icon">🤝</div>
+      <div class="agir-card-content">
+        <h3>Monter un collectif</h3>
+        <p>Pour la défense du Four banal</p>
+      </div>
+    </div>
+
+    <div class="agir-card">
+      <div class="agir-icon">✍️</div>
+      <div class="agir-card-content">
+        <h3>Signer la pétition</h3>
+        <p>En ligne sur change.org et partagez !</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</section>
+```
