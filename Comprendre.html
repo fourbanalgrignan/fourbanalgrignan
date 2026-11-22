@@ -185,62 +185,86 @@ body,
 }
 
 /* =====================================
-   EN-TÊTE DE PAGE
+   EN-TÊTE DE PAGE (HARMONISÉ AVEC AGIR)
 ===================================== */
 
 .grignan-home .gh-page-header {
+  position: relative;
   text-align: center;
-  padding: 40px 20px 30px;
+  padding: 58px 20px 38px;
+  overflow: hidden;
+}
+
+.comprendre-titre-filigrane {
+  position: absolute;
+  left: 50%;
+  top: 39%;
+  transform: translate(-50%, -50%);
+  width: 440px;
+  max-width: 94vw;
+  height: auto;
+  opacity: 0.17;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.grignan-home .gh-kicker,
+.grignan-home .gh-page-header h1,
+.grignan-home .gh-page-header p {
+  position: relative;
+  z-index: 1;
 }
 
 .grignan-home .gh-kicker {
   color: #9b784b;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: bold;
   letter-spacing: 3px;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 
 .grignan-home .gh-page-header h1 {
   font-family: 'Comfortaa', sans-serif;
   font-weight: 700;
-  font-size: clamp(42px, 8.5vw, 64px);
+  font-size: clamp(50px, 9vw, 76px);
   color: #2a9d8f;
-  margin: 0 0 14px;
+  margin: 0 0 18px;
   line-height: 1.15;
   letter-spacing: -0.5px;
 }
 
 .grignan-home .gh-page-header p {
-  font-size: 16px;
+  font-size: 21px;
   color: #666;
   margin: 0 auto;
-  max-width: 520px;
+  max-width: 600px;
   line-height: 1.5;
 }
 
 /* =====================================
-   TITRE DOSSIER
+   TITRE DOSSIER (HARMONISÉ AVEC AGIR)
 ===================================== */
 
 .grignan-home .gh-dossier-title {
   text-align: center;
-  margin: 10px 0 32px;
+  margin: 15px 0 38px;
 }
 
 .grignan-home .gh-dossier-title h2 {
   font-family: 'Comfortaa', sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 30px;
   color: #26394d;
-  margin: 0 0 6px;
+  margin: 0 0 10px;
   letter-spacing: 1px;
 }
 
 .grignan-home .gh-dossier-title p {
-  font-size: 15px;
+  font-size: 19px;
   color: #666;
   margin: 0;
+  line-height: 1.5;
 }
 
 /* =====================================
@@ -347,13 +371,40 @@ body,
 }
 
 /* =====================================
-   RESPONSIVE
+   RESPONSIVE (HARMONISÉ AVEC AGIR)
 ===================================== */
 
 @media(max-width:600px) {
 
   .grignan-home .gh-page-header {
-    padding: 30px 16px 25px;
+    padding: 36px 16px 30px;
+  }
+
+  .comprendre-titre-filigrane {
+    width: 280px;
+    opacity: 0.14;
+  }
+
+  .grignan-home .gh-kicker {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .grignan-home .gh-page-header h1 {
+    font-size: 52px;
+  }
+
+  .grignan-home .gh-page-header p {
+    font-size: 19px;
+  }
+
+  .grignan-home .gh-dossier-title h2 {
+    font-size: 25px;
+  }
+
+  .grignan-home .gh-dossier-title p {
+    font-size: 17px;
+    padding: 0 10px;
   }
 
   .grignan-home a.gh-item {
@@ -394,7 +445,8 @@ body,
 @media print {
 
   .lavande-filigrane,
-  .ble-filigrane {
+  .ble-filigrane,
+  .comprendre-titre-filigrane {
     display: none;
   }
 
@@ -511,6 +563,90 @@ body,
 
 <div class="gh-page-header">
 
+  <!-- Filigrane SVG : Cerveau dans tête humaine + ampoule éclairée + livre ouvert en bas -->
+  <svg class="comprendre-titre-filigrane" viewbox="0 0 430 235" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <radialgradient id="lueurAmpouleComprendre" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.72"></stop>
+        <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"></stop>
+      </radialgradient>
+      <radialgradient id="lueurCerveauComprendre" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#2a9d8f" stop-opacity="0.32"></stop>
+        <stop offset="100%" stop-color="#2a9d8f" stop-opacity="0"></stop>
+      </radialgradient>
+    </defs>
+
+    <!-- Halo de l'ampoule -->
+    <circle cx="272" cy="42" r="42" fill="url(#lueurAmpouleComprendre)"></circle>
+    <!-- Halo autour du cerveau -->
+    <circle cx="176" cy="92" r="68" fill="url(#lueurCerveauComprendre)"></circle>
+
+    <!-- AMPOULE ÉCLAIRÉE EN HAUT À DROITE -->
+    <g stroke="#d97706" stroke-width="2.4" stroke-linecap="round">
+      <line x1="272" y1="6" x2="272" y2="14"></line>
+      <line x1="244" y1="15" x2="250" y2="21"></line>
+      <line x1="300" y1="15" x2="294" y2="21"></line>
+      <line x1="234" y1="40" x2="242" y2="40"></line>
+      <line x1="302" y1="40" x2="310" y2="40"></line>
+    </g>
+    <g fill="none" stroke="#9b784b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M272 18 C259 18 250 27 250 39 C250 46 255 51 259 56 L285 56 C289 51 294 46 294 39 C294 27 285 18 272 18 Z" fill="#fef08a" fill-opacity="0.55"></path>
+      <path d="M265 43 Q268 35 272 40 Q276 35 279 43" stroke="#2a9d8f" stroke-width="2.1"></path>
+      <line x1="262" y1="61" x2="282" y2="61"></line>
+      <line x1="264" y1="66" x2="280" y2="66"></line>
+      <path d="M267 66 Q272 71 277 66"></path>
+    </g>
+
+    <!-- PROFIL DE TÊTE HUMAINE (tourné vers la droite) -->
+    <g fill="none" stroke="#2a9d8f" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M132 162
+               C133 144 130 130 121 118
+               C108 100 107 74 118 53
+               C129 30 155 18 182 20
+               C207 22 225 37 230 58
+               C232 65 233 71 242 84
+               C245 88 243 93 236 95
+               L233 96
+               C236 100 235 103 231 105
+               C234 109 233 112 229 114
+               C229 122 225 129 215 131
+               C203 133 193 133 187 142
+               C184 148 184 155 185 162"></path>
+    </g>
+
+    <!-- CERVEAU À L'INTÉRIEUR DU CRÂNE -->
+    <g fill="#2a9d8f" fill-opacity="0.09" stroke="#2a9d8f" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M140 87
+               C132 85 128 77 131 69
+               C130 60 136 51 146 49
+               C150 39 163 35 173 39
+               C182 34 195 37 201 45
+               C210 48 215 57 212 66
+               C216 74 211 84 202 86
+               C199 94 189 98 180 94
+               C173 99 162 98 156 92
+               C148 94 142 91 140 87 Z"></path>
+      <path fill="none" d="M145 67 C154 63 163 65 169 71"></path>
+      <path fill="none" d="M172 41 C171 51 174 61 179 68"></path>
+      <path fill="none" d="M199 48 C192 53 188 60 189 68"></path>
+      <path fill="none" d="M152 82 C161 78 170 79 177 83"></path>
+      <path fill="none" d="M182 77 C190 74 198 76 203 80"></path>
+    </g>
+
+    <!-- LIVRE OUVERT SUR LE CÔTÉ BAS (droite) -->
+    <g transform="translate(242, 138)" fill="none" stroke="#9b784b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 62 Q44 54 78 68 Q112 54 150 62" stroke-width="2.9"></path>
+      <path d="M12 56 L12 18 Q45 10 78 24 L78 62 Q45 48 12 56 Z" fill="#fdfbf7" fill-opacity="0.78"></path>
+      <path d="M144 56 L144 18 Q111 10 78 24 L78 62 Q111 48 144 56 Z" fill="#fdfbf7" fill-opacity="0.78"></path>
+      <path d="M24 29 Q46 24 67 31" stroke-width="1.8"></path>
+      <path d="M24 39 Q46 34 67 41" stroke-width="1.8"></path>
+      <path d="M24 48 Q44 44 63 49" stroke-width="1.8"></path>
+      <path d="M89 31 Q110 24 132 29" stroke-width="1.8"></path>
+      <path d="M89 41 Q110 34 132 39" stroke-width="1.8"></path>
+      <path d="M89 49 Q108 44 128 48" stroke-width="1.8"></path>
+    </g>
+  </svg>
+
   <div class="gh-kicker">
     GRIGNAN · AFFAIRE DU PORTAIL
   </div>
@@ -533,6 +669,7 @@ body,
   <h2 class="anchored">LE DOSSIER</h2>
 
   <p>Tout savoir, sources à l’appui 📚</p>
+  <p>Cliquez sur la rubrique de votre choix : ╰┈➤ˎˊ˗</p>
 
 </div>
 
