@@ -268,7 +268,7 @@ body,
   }
 
   .grignan-home .gh-page-header h1 {
-    font-size: 52px;
+    font-size: 45px;
   }
 
   .grignan-home .gh-page-header p {
