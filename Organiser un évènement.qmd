@@ -570,7 +570,7 @@ html, body, #quarto-content {
      ÉPI DE BLÉ SVG À GAUCHE
 ===================================== -->
 
-<svg class="ble-filigrane" viewBox="0 0 200 430" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+<svg class="ble-filigrane" viewBox="0 0 200 430" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
   <path d="M95 420 Q105 320 92 220 Q83 130 105 35" fill="none" stroke="#71805B" stroke-width="3" stroke-linecap="round"/>
   <g fill="#89966C">
     <path d="M98 350 Q55 328 38 290 Q79 302 98 350"/>
@@ -608,7 +608,7 @@ html, body, #quarto-content {
      BRIN DE LAVANDE SVG À DROITE
 ===================================== -->
 
-<svg class="lavande-filigrane" viewBox="0 0 200 420" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+<svg class="lavande-filigrane" viewBox="0 0 200 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
   <path d="M105 410 Q95 300 115 190 Q120 100 145 25" fill="none" stroke="#687D58" stroke-width="3.5" stroke-linecap="round"/>
   <g fill="#82936D">
     <path d="M105 340 Q55 320 42 278 Q85 290 105 340"/>
@@ -642,7 +642,7 @@ html, body, #quarto-content {
 <header class="rassembler-hero">
 
   <!-- Grand SVG filigrane Rassemblement / Groupe citoyen -->
-  <svg class="rassembler-hero-bg" viewBox="0 0 220 220" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+  <svg class="rassembler-hero-bg" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <circle cx="110" cy="110" r="92" fill="none" stroke="#9e2a2b" stroke-width="3" stroke-dasharray="9 8"/>
     <circle cx="82" cy="82" r="22" fill="#9e2a2b"/>
     <path d="M44 156 C44 126 64 110 82 110 C100 110 120 126 120 156 Z" fill="#9e2a2b"/>
@@ -770,7 +770,7 @@ html, body, #quarto-content {
     <!-- Levier collectif de coordination -->
     <div class="coord-side">
       <div class="coord-card">
-        <svg class="coord-watermark" viewBox="0 0 24 24" fill="#26A5E4" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+        <svg class="coord-watermark" viewBox="0 0 24 24" fill="#26A5E4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M21.944 4.506a1.5 1.5 0 0 0-1.648-.327L2.88 11.17a1.5 1.5 0 0 0 .142 2.83l4.242 1.326 2.138 5.345a1.5 1.5 0 0 0 2.523.488l2.573-2.757 4.46 3.345a1.5 1.5 0 0 0 2.38-.925l2.52-14.2a1.5 1.5 0 0 0-.486-1.199ZM9.56 14.37l8.53-6.634-6.447 8.155-.425 3.175-1.658-4.696Z"/>
         </svg>
         <h4>Groupe de coordination citoyenne</h4>
@@ -783,7 +783,7 @@ html, body, #quarto-content {
       </div>
 
       <div class="coord-card">
-        <svg class="coord-watermark" viewBox="0 0 24 24" fill="none" stroke="#547b9f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+        <svg class="coord-watermark" viewBox="0 0 24 24" fill="none" stroke="#547b9f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="2" y="4" width="20" height="16" rx="2"/>
           <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
         </svg>

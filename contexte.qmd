@@ -673,7 +673,7 @@ html, body, #quarto-content {
 
 <svg class="ble-filigrane"
      viewBox="0 0 200 430"
-     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     xmlns="http://www.w3.org/2000/svg"
      aria-hidden="true">
 
   <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
@@ -739,7 +739,7 @@ html, body, #quarto-content {
 
 <svg class="lavande-filigrane"
      viewBox="0 0 200 420"
-     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     xmlns="http://www.w3.org/2000/svg"
      aria-hidden="true">
 
   <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
@@ -793,7 +793,7 @@ html, body, #quarto-content {
   <!-- FILIGRANE LIVRE & HORLOGE -->
   <svg class="context-filigrane"
        viewBox="0 0 280 170"
-       xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+       xmlns="http://www.w3.org/2000/svg"
        aria-hidden="true">
 
     <!-- Livre ouvert à gauche -->
@@ -1041,7 +1041,7 @@ html, body, #quarto-content {
     <!-- FILIGRANE CALENDRIER & LOUPE EN BAS DE L'ENCADRÉ -->
     <svg class="timeline-filigrane"
          viewBox="0 0 190 160"
-         xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+         xmlns="http://www.w3.org/2000/svg"
          aria-hidden="true">
 
       <!-- Calendrier à gauche -->

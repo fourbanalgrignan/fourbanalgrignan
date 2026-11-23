@@ -10,7 +10,7 @@ format:
 <section class="recap-grignan">
 
 <style>
-@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap)');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 
 /* =====================================
    FOND ET DÉCORATIONS
@@ -616,7 +616,7 @@ body,
 
 <svg class="ble-filigrane"
      viewBox="0 0 200 430"
-     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     xmlns="http://www.w3.org/2000/svg"
      aria-hidden="true">
 
   <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
@@ -681,7 +681,7 @@ body,
 
 <svg class="lavande-filigrane"
      viewBox="0 0 200 420"
-     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     xmlns="http://www.w3.org/2000/svg"
      aria-hidden="true">
 
   <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
@@ -735,7 +735,7 @@ body,
 <header class="header">
 
   <div class="header-filigrane" aria-hidden="true">
-    <svg viewBox="0 0 260 66" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
+    <svg viewBox="0 0 260 66" xmlns="http://www.w3.org/2000/svg">
       <!-- Lignes de filigrane latérales -->
       <path d="M12 48 H76" stroke="#b58a38" stroke-width="1.2" stroke-linecap="round" opacity="0.65"/>
       <path d="M184 48 H248" stroke="#b58a38" stroke-width="1.2" stroke-linecap="round" opacity="0.65"/>

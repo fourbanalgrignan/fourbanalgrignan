@@ -11,7 +11,7 @@ format:
 <section class="artwork-page">
 
 <style>
-@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap)');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 
 /* =====================================
    FOND ET DÉCORATIONS
@@ -367,7 +367,7 @@ html, body, #quarto-content {
 
 <svg class="ble-filigrane"
      viewBox="0 0 200 430"
-     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     xmlns="http://www.w3.org/2000/svg"
      aria-hidden="true">
 
   <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
@@ -432,7 +432,7 @@ html, body, #quarto-content {
 
 <svg class="lavande-filigrane"
      viewBox="0 0 200 420"
-     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     xmlns="http://www.w3.org/2000/svg"
      aria-hidden="true">
 
   <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
@@ -486,7 +486,7 @@ html, body, #quarto-content {
   <!-- FILIGRANE LOUPE -->
   <svg class="loupe-filigrane"
        viewBox="0 0 220 200"
-       xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+       xmlns="http://www.w3.org/2000/svg"
        aria-hidden="true">
 
     <!-- Cercle extérieur de la loupe -->

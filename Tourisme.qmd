@@ -10,7 +10,7 @@ format:
 <section class="grignan-home">
 
 <style>
-@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap)');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 
 /* =====================================
    FOND ET DÉCORATIONS
@@ -593,7 +593,7 @@ html, body, #quarto-content {
 
 <svg class="ble-filigrane"
      viewBox="0 0 200 430"
-     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     xmlns="http://www.w3.org/2000/svg"
      aria-hidden="true">
 
   <!-- Tige principale -->
@@ -662,7 +662,7 @@ html, body, #quarto-content {
 
 <svg class="lavande-filigrane"
      viewBox="0 0 200 420"
-     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     xmlns="http://www.w3.org/2000/svg"
      aria-hidden="true">
 
   <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
@@ -712,7 +712,7 @@ html, body, #quarto-content {
 <div class="gh-dossier-title">
 
   <!-- Filigrane SVG Courrier : enveloppe -->
-  <svg class="gh-dossier-hero-bg" viewBox="0 0 220 220" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+  <svg class="gh-dossier-hero-bg" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="24" y="48" width="172" height="124" rx="12" fill="none" stroke="#2b6cb0" stroke-width="5"/>
     <path d="M28 54 L110 118 L192 54" fill="none" stroke="#2b6cb0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M28 166 L86 112 M192 166 L134 112" fill="none" stroke="#2b6cb0" stroke-width="4.5" stroke-linecap="round"/>
