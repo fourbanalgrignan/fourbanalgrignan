@@ -10,7 +10,7 @@ format:
 <section class="grignan-home">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap)');
 
 /* =====================================
    FOND ET DÉCORATIONS
@@ -184,8 +184,8 @@ body,
 .agir-section.interpeller .agir-number { background: #2b6cb0; }
 .agir-section.interpeller h2 { color: #2b6cb0; }
 
-.agir-section.diffuser .agir-number { background: #38a169; }
-.agir-section.diffuser h2 { color: #38a169; }
+.agir-section.diffuser .agir-number { background: #568239; }
+.agir-section.diffuser h2 { color: #43692B; }
 
 .agir-section.rassembler .agir-number { background: #c53030; }
 .agir-section.rassembler h2 { color: #c53030; }
@@ -229,8 +229,8 @@ a.agir-card {
 }
 
 .agir-section.diffuser .agir-card {
-  border-color: #c6f6d5;
-  background: #f0fff4;
+  border-color: #b7d7ad;
+  background: #f0f7ed;
 }
 
 .agir-section.rassembler .agir-card {
@@ -253,7 +253,7 @@ a.agir-card {
 }
 
 .agir-section.interpeller .agir-icon { background: #2b6cb0; }
-.agir-section.diffuser .agir-icon { background: #38a169; }
+.agir-section.diffuser .agir-icon { background: #568239; }
 .agir-section.rassembler .agir-icon { background: #c53030; }
 
 /* TEXTE DES CARTES */
@@ -419,7 +419,7 @@ a.agir-card {
 
 <svg class="ble-filigrane"
      viewBox="0 0 200 430"
-     xmlns="http://www.w3.org/2000/svg"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
      aria-hidden="true">
 
   <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
@@ -484,7 +484,7 @@ a.agir-card {
 
 <svg class="lavande-filigrane"
      viewBox="0 0 200 420"
-     xmlns="http://www.w3.org/2000/svg"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
      aria-hidden="true">
 
   <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
@@ -538,7 +538,7 @@ a.agir-card {
   <!-- Filigrane SVG : Ampoule éclairée au-dessus & mains solidaires -->
   <svg class="agir-titre-filigrane"
        viewBox="0 0 400 225"
-       xmlns="http://www.w3.org/2000/svg"
+       xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
        aria-hidden="true">
     <defs>
       <radialGradient id="lueurAmpouleDessus" cx="50%" cy="50%" r="50%">
@@ -800,7 +800,7 @@ BOÎTE À IDÉE SVG + POST-IT
 ===================================== -->
 
 <div class="boite-idee-svg-wrap">
-  <svg class="boite-idee-svg" viewBox="0 0 500 215" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Boîte à idée et post-it : contactez nous fourbanalgrignan@gmail.com">
+  <svg class="boite-idee-svg" viewBox="0 0 500 215" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" role="img" aria-label="Boîte à idée et post-it : contactez nous fourbanalgrignan@gmail.com">
     <defs>
       <linearGradient id="boisBoite" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="#e3b66b"/>
