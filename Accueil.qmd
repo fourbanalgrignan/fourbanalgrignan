@@ -616,7 +616,7 @@ html, body, #quarto-content {
 
   <div class="gh-buttons">
 
-    <a class="gh-button comprendre" href="comprendre.html">
+    <a class="gh-button comprendre" href="Comprendre.html">
       <div class="gh-button-icon">💡</div>
       <div class="gh-button-content">
         <h3>Comprendre</h3>
@@ -624,7 +624,7 @@ html, body, #quarto-content {
       </div>
     </a>
 
-    <a class="gh-button agir" href="agir.html">
+    <a class="gh-button agir" href="Agir.html">
       <div class="gh-button-icon">👥</div>
       <div class="gh-button-content">
         <h3>Agir</h3>
@@ -677,13 +677,6 @@ html, body, #quarto-content {
     Ce dossier met les faits et les sources à disposition de chacun, pour que chacun puisse se forger une opinion et, s’il le souhaite, agir.
   </p>
 
-</div>
-
-
-<div class="gh-footer">
-  Dossier indépendant d’information · Four banal de Grignan · Affaire du portail
-  <br>
-  Réalisé en s'inspirant du dossier Gardasil de MEHA France.
 </div>
 
 </section>

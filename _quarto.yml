@@ -5,16 +5,37 @@ project:
 
 website:
   title: "Four banal Grignan"
+  site-url: "https://www.fourbanalgrignan.fr"
+  description: "Comprendre l'affaire du portail du Four banal à Grignan et agir pour la préservation du patrimoine."
+  favicon: "Comprendre/logositefbg2.jpg"
+  open-graph:
+    image: "Comprendre/logositefbg2.jpg"
+    locale: fr_FR
+  twitter-card:
+    image: "Comprendre/logositefbg2.jpg"
+    card-style: summary_large_image
   navbar:
+    logo: "Comprendre/logositefbg2.jpg"
+    logo-alt: "Logo Four banal Grignan"
     left:
       - text: Accueil
-        href: Accueil.html
+        href: Accueil.qmd
       - text: Comprendre
-        href: comprendre.html
+        href: Comprendre.qmd
       - text: Agir
-        href: agir.html
+        href: Agir.qmd
       - text: À propos
-        href: about.html
+        href: about.qmd
+  page-footer:
+    background: "#F4F0E8"
+    foreground: "#899098"
+    border: true
+    left: "Dossier indépendant d’information · Four banal de Grignan"
+    right:
+      - text: "À propos"
+        href: "about.qmd"
+      - text: "Mentions légales"
+        href: "Mentions légales.qmd"
 
 format:
   html:

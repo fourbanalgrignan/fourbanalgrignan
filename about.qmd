@@ -78,14 +78,18 @@ html, body, #quarto-content {
   overflow: visible;
 }
 
-.about-filigrane {
+.about-filigrane-q {
   position: absolute;
   left: 50%;
-  top: 32%;
-  transform: translate(-50%, -50%);
-  width: 215px;
-  height: auto;
-  opacity: 0.14;
+  top: 38%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 195px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(38, 57, 77, 0.08);
+  -webkit-text-stroke: 2px rgba(155, 120, 75, 0.24);
+  user-select: none;
   pointer-events: none;
   z-index: -1;
 }
@@ -215,6 +219,7 @@ html, body, #quarto-content {
   padding: 26px 28px;
   border-radius: 12px;
   box-shadow: 0 5px 16px rgba(38, 57, 77, 0.10);
+  margin-bottom: 24px;
 }
 
 .about-contact-icon {
@@ -246,6 +251,43 @@ html, body, #quarto-content {
   line-height: 1.65;
 }
 
+.about-contact a {
+  color: #d2b17d;
+  text-decoration: underline;
+}
+
+/* =====================================
+   ACCÈS MENTIONS LÉGALES
+===================================== */
+
+.about-legal-bar {
+  text-align: center;
+  margin: 10px 0 8px;
+}
+
+.about-legal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fcfaf6;
+  color: #26394d !important;
+  border: 1.5px solid #b49363;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-size: 15.5px;
+  font-weight: 700;
+  text-decoration: none !important;
+  box-shadow: 0 3px 10px rgba(38, 57, 77, 0.06);
+  transition: all 0.2s ease;
+}
+
+.about-legal-btn:hover {
+  background: #26394d;
+  color: #ffffff !important;
+  border-color: #26394d;
+  transform: translateY(-1px);
+}
+
 /* =====================================
    FOOTER
 ===================================== */
@@ -254,8 +296,18 @@ html, body, #quarto-content {
   text-align: center;
   color: #899098;
   font-size: 15px;
-  padding: 26px 10px 10px;
-  line-height: 1.6;
+  padding: 18px 10px 10px;
+  line-height: 1.7;
+}
+
+.about-footer a {
+  color: #9b784b;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.about-footer a:hover {
+  color: #26394d;
 }
 
 /* =====================================
@@ -268,10 +320,9 @@ html, body, #quarto-content {
     padding: 25px 14px;
   }
 
-  .about-filigrane {
-    width: 170px;
-    top: 30%;
-    opacity: 0.12;
+  .about-filigrane-q {
+    font-size: 155px;
+    top: 36%;
   }
 
   .about-grid {
@@ -316,7 +367,7 @@ html, body, #quarto-content {
 
   .lavande-filigrane,
   .ble-filigrane,
-  .about-filigrane {
+  .about-filigrane-q {
     display: none !important;
   }
 
@@ -446,33 +497,8 @@ html, body, #quarto-content {
 
 <header class="about-header">
 
-  <!-- FILIGRANE PLUME & PARCHEMIN -->
-  <svg class="about-filigrane"
-       viewBox="0 0 240 180"
-       xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
-       aria-hidden="true">
-
-    <!-- Feuille / parchemin -->
-    <rect x="44" y="26" width="110" height="128" rx="8"
-          fill="none"
-          stroke="#26394d"
-          stroke-width="4"/>
-    <line x1="64" y1="54" x2="132" y2="54" stroke="#9b784b" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="64" y1="74" x2="132" y2="74" stroke="#9b784b" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="64" y1="94" x2="118" y2="94" stroke="#9b784b" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="64" y1="114" x2="104" y2="114" stroke="#9b784b" stroke-width="2.5" stroke-linecap="round"/>
-
-    <!-- Plume d'écriture -->
-    <path d="M196 24 C162 32, 134 62, 122 106 C146 98, 178 74, 196 24 Z"
-          fill="#9b784b"
-          opacity="0.85"/>
-    <path d="M196 24 L112 132"
-          fill="none"
-          stroke="#26394d"
-          stroke-width="3.5"
-          stroke-linecap="round"/>
-
-  </svg>
+  <!-- FILIGRANE POINT D'INTERROGATION STYLÉ -->
+  <div class="about-filigrane-q" aria-hidden="true">?</div>
 
   <div class="about-eyebrow">
     DOSSIER DOCUMENTAIRE · GRIGNAN
@@ -555,10 +581,21 @@ html, body, #quarto-content {
       Ce dossier a vocation à rester exact et à jour. Si vous constatez une
       imprécision factuelle ou souhaitez porter à connaissance un document
       officiel complémentaire concernant le four banal de Grignan, n’hésitez
-      pas à nous écrire : fourbanalgrignan@gmail.com
+      pas à nous écrire : <a href="mailto:fourbanalgrignan@gmail.com">fourbanalgrignan@gmail.com</a>
     </p>
   </div>
 
+</div>
+
+
+<!-- =====================================
+     ACCÈS MENTIONS LÉGALES
+===================================== -->
+
+<div class="about-legal-bar">
+  <a href="Mentions%20l%C3%A9gales.html" class="about-legal-btn">
+    ⚖️ Consulter les Mentions légales &amp; RGPD
+  </a>
 </div>
 
 

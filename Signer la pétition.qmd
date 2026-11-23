@@ -566,7 +566,7 @@ html, body, #quarto-content {
     <path d="M122 156 L176 102 L192 118 L138 172 L116 178 Z" fill="#9e2a2b"/>
   </svg>
 
-  <span class="petition-badge">Pétition citoyenne · Grignan</span>
+  <span class="petition-badge">Rassembler · Pétition</span>
 
   <h2>RESTAURONS LE FOUR BANAL DE GRIGNAN !</h2>
 

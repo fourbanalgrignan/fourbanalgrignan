@@ -888,7 +888,7 @@ html, body, #quarto-content {
     <span class="gazette-price-tag">Prix : 200 000 € TTC</span>
   </div>
 
-  <span class="gh-section-badge--satire">Création &amp; Satire</span>
+  <span class="gh-section-badge--satire">Diffuser · Création &amp; Satire</span>
 
   <h2>DESSINS, CARICATURES &amp; VIDÉOS HUMORISTIQUES</h2>
 

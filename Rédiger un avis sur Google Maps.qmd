@@ -586,7 +586,7 @@ html, body, #quarto-content {
     <circle cx="100" cy="88" r="22" fill="#f0fff4"/>
   </svg>
 
-  <span class="avis-badge">Expression citoyenne · Google Maps</span>
+  <span class="avis-badge">Diffuser · Google Maps</span>
 
   <h2>RÉDIGER UN AVIS SUR LE FOUR BANAL</h2>
 

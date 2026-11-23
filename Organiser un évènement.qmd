@@ -650,7 +650,7 @@ html, body, #quarto-content {
     <path d="M100 156 C100 126 120 110 138 110 C156 110 176 126 176 156 Z" fill="#26394d"/>
   </svg>
 
-  <span class="rassembler-badge">Pilier 3 · Rassembler</span>
+  <span class="rassembler-badge">Rassembler · Évènement</span>
 
   <h2>ORGANISER UN ÉVÈNEMENT</h2>
 
