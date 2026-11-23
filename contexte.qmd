@@ -870,7 +870,7 @@ html, body, #quarto-content {
       <p>
         Le village de Grignan possède un riche patrimoine médiéval,
         marqué notamment par son château et la figure emblématique
-        de la marquise de Sévigné, mais aussi par son ancien four banal.
+        de la marquise de Sévigné, mais aussi par son ancien Four banal placée dans la rue du four.
       </p>
       <p>
         Au Moyen Âge, celui-ci occupait une place essentielle dans
