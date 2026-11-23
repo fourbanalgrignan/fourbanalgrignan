@@ -19,13 +19,13 @@ website:
     logo-alt: "Logo Four banal Grignan"
     left:
       - text: Accueil
-        href: Accueil.qmd
+        href: Accueil.html
       - text: Comprendre
-        href: Comprendre.qmd
+        href: Comprendre.html
       - text: Agir
-        href: Agir.qmd
+        href: Agir.html
       - text: À propos
-        href: about.qmd
+        href: about.html
   page-footer:
     background: "#F4F0E8"
     foreground: "#899098"
