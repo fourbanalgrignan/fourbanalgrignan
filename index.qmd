@@ -672,8 +672,8 @@ html, body, #quarto-content {
   <h2>Pourquoi ce site ?</h2>
 
   <p>
-    Le patrimoine appartient à tous. Sa transformation, l’utilisation de l’argent public et le respect des règles qui le protègent méritent une information claire et accessible.
-    <br><br>
+    Le patrimoine appartient à tous. Chacun doit pouvoir accéder à une information complète et loyale sur sa transformation, l’utilisation de l’argent public et le respect des règles qui le protègent.
+    <br>
     Ce dossier met les faits et les sources à disposition de chacun, pour que chacun puisse se forger une opinion et, s’il le souhaite, agir.
   </p>
 
