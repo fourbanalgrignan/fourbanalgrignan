@@ -680,11 +680,5 @@ html, body, #quarto-content {
 </div>
 
 
-<div class="gh-footer">
-  Dossier indépendant d’information · Four banal de Grignan · Affaire du portail
-  <br>
-  Réalisé en s'inspirant du dossier Gardasil de MEHA France.
-</div>
-
 </section>
 ```
