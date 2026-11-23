@@ -10,7 +10,7 @@ format:
 <section class="context-page">
 
 <style>
-@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap)');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 
 /* =====================================
    FOND ET DÉCORATIONS — IDENTIQUES À L'ACCUEIL
@@ -276,9 +276,11 @@ html, body, #quarto-content {
 ===================================== */
 
 .timeline-project {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   margin: 0;
-  padding: 26px 24px;
+  padding: 26px 24px 36px;
   font-family: Arial, Helvetica, sans-serif;
   color: #26394d;
   background: #ffffff;
@@ -286,6 +288,22 @@ html, body, #quarto-content {
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(38, 57, 77, 0.045);
   min-width: 0;
+}
+
+.timeline-project > *:not(.timeline-filigrane) {
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-filigrane {
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  width: 250px;
+  height: auto;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .timeline-project h2 {
@@ -307,9 +325,18 @@ html, body, #quarto-content {
 
 .timeline {
   position: relative;
-  border-left: 2px solid #b49a70;
-  margin-left: 10px;
+  margin-left: 11px;
   padding-left: 25px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 14px;
+  bottom: 0;
+  width: 2px;
+  background: #b49a70;
 }
 
 .timeline-item {
@@ -324,7 +351,7 @@ html, body, #quarto-content {
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -33px;
+  left: -35px;
   top: 4px;
   width: 14px;
   height: 14px;
@@ -333,6 +360,7 @@ html, body, #quarto-content {
   border: 3px solid white;
   box-shadow: 0 0 0 1px #b49a70;
   box-sizing: content-box;
+  z-index: 1;
 }
 
 .timeline-date {
@@ -562,6 +590,13 @@ html, body, #quarto-content {
     padding: 23px 20px;
   }
 
+  .timeline-filigrane {
+    width: 185px;
+    right: 8px;
+    bottom: 6px;
+    opacity: 0.11;
+  }
+
   .timeline-project h2,
   .project-actors h2 {
     font-size: 27px;
@@ -572,7 +607,7 @@ html, body, #quarto-content {
   }
 
   .timeline-item::before {
-    left: -31px;
+    left: -33px;
   }
 }
 
@@ -622,7 +657,8 @@ html, body, #quarto-content {
 
   .lavande-filigrane,
   .ble-filigrane,
-  .context-filigrane {
+  .context-filigrane,
+  .timeline-filigrane {
     display: none;
   }
 
@@ -1001,6 +1037,62 @@ html, body, #quarto-content {
       </div>
 
     </div>
+
+    <!-- FILIGRANE CALENDRIER & LOUPE EN BAS DE L'ENCADRÉ -->
+    <svg class="timeline-filigrane"
+         viewBox="0 0 190 160"
+         xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+         aria-hidden="true">
+
+      <!-- Calendrier à gauche -->
+      <rect x="24" y="34" width="92" height="92" rx="10"
+            fill="none"
+            stroke="#26394d"
+            stroke-width="3.2"/>
+      <line x1="24" y1="60" x2="116" y2="60"
+            stroke="#9b784b"
+            stroke-width="3"/>
+
+      <!-- Anneaux du calendrier -->
+      <line x1="48" y1="22" x2="48" y2="42"
+            stroke="#26394d"
+            stroke-width="3.4"
+            stroke-linecap="round"/>
+      <line x1="92" y1="22" x2="92" y2="42"
+            stroke="#26394d"
+            stroke-width="3.4"
+            stroke-linecap="round"/>
+
+      <!-- Grille des dates -->
+      <circle cx="46" cy="78" r="3" fill="#9b784b"/>
+      <circle cx="70" cy="78" r="3" fill="#26394d"/>
+      <circle cx="94" cy="78" r="3" fill="#26394d"/>
+      <circle cx="46" cy="96" r="3" fill="#26394d"/>
+      <circle cx="70" cy="96" r="3" fill="#9b784b"/>
+      <circle cx="94" cy="96" r="3" fill="#26394d"/>
+      <circle cx="46" cy="112" r="3" fill="#26394d"/>
+      <circle cx="70" cy="112" r="3" fill="#26394d"/>
+
+      <!-- Loupe à droite -->
+      <circle cx="132" cy="96" r="24"
+              fill="#ffffff"
+              stroke="#26394d"
+              stroke-width="3.4"/>
+      <circle cx="132" cy="96" r="18"
+              fill="none"
+              stroke="#9b784b"
+              stroke-width="1.6"
+              stroke-dasharray="3 3"/>
+      <line x1="149" y1="113" x2="169" y2="133"
+            stroke="#26394d"
+            stroke-width="5"
+            stroke-linecap="round"/>
+      <line x1="149" y1="113" x2="169" y2="133"
+            stroke="#9b784b"
+            stroke-width="2"
+            stroke-linecap="round"/>
+
+    </svg>
   </section>
 
 
