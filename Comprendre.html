@@ -289,7 +289,7 @@ body,
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 0 10px 45px;
+  padding: 0 10px 24px;
 }
 
 .grignan-home a.gh-item {
@@ -385,6 +385,92 @@ body,
 }
 
 /* =====================================
+   BOUTON QUIZZ TOUT EN BAS
+===================================== */
+
+.grignan-home .gh-quizz-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px 60px;
+}
+
+.grignan-home a.gh-quizz-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  min-width: 320px;
+  padding: 26px 40px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffe07d 0%, #eab308 48%, #b47b10 100%);
+  border: 3px solid #2a9d8f;
+  color: #1a2430 !important;
+  text-decoration: none !important;
+  box-shadow: 0 10px 24px rgba(180, 123, 16, 0.34), 0 0 0 5px rgba(234, 179, 8, 0.22);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+}
+
+.grignan-home a.gh-quizz-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  filter: brightness(1.05);
+  box-shadow: 0 15px 30px rgba(180, 123, 16, 0.44), 0 0 0 7px rgba(42, 157, 143, 0.24);
+  text-decoration: none !important;
+}
+
+.grignan-home .gh-quizz-crown-svg {
+  width: 48px;
+  height: 38px;
+  display: block;
+  filter: drop-shadow(0 2px 3px rgba(26, 36, 48, 0.22));
+  transition: transform 0.25s ease;
+}
+
+.grignan-home a.gh-quizz-btn:hover .gh-quizz-crown-svg {
+  transform: translateY(-2px) rotate(-6deg) scale(1.1);
+}
+
+.grignan-home .gh-quizz-main {
+  display: block;
+  font-family: 'Comfortaa', Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  line-height: 1.1;
+  color: #16222e;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.grignan-home .gh-quizz-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 2px;
+  color: #26394d;
+  line-height: 1.3;
+}
+
+.grignan-home .gh-quizz-sub-count {
+  display: block;
+  font-family: 'Comfortaa', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #16222e;
+}
+
+.grignan-home .gh-quizz-sub-text {
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #26394d;
+}
+
+/* =====================================
    RESPONSIVE (HARMONISÉ AVEC AGIR)
 ===================================== */
 
@@ -437,6 +523,30 @@ body,
     font-size: 16px;
   }
 
+  .grignan-home a.gh-quizz-btn {
+    min-width: 0;
+    width: 100%;
+    max-width: 360px;
+    padding: 22px 24px;
+  }
+
+  .grignan-home .gh-quizz-crown-svg {
+    width: 42px;
+    height: 34px;
+  }
+
+  .grignan-home .gh-quizz-main {
+    font-size: 31px;
+  }
+
+  .grignan-home .gh-quizz-sub-count {
+    font-size: 17px;
+  }
+
+  .grignan-home .gh-quizz-sub-text {
+    font-size: 14.5px;
+  }
+
   .lavande-filigrane {
     width: 110px;
     right: -12px;
@@ -460,7 +570,8 @@ body,
 
   .lavande-filigrane,
   .ble-filigrane,
-  .comprendre-titre-filigrane {
+  .comprendre-titre-filigrane,
+  .gh-quizz-footer {
     display: none;
   }
 
@@ -734,6 +845,31 @@ body,
     </span>
   </a>
 
+</div>
+
+
+<!-- =====================================
+     BOUTON QUIZZ EN BAS DE PAGE
+===================================== -->
+
+<div class="gh-quizz-footer">
+  <a class="gh-quizz-btn" href="Quizz.html">
+    <svg class="gh-quizz-crown-svg" viewbox="0 0 64 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M8 36 L4 14 L20 26 L32 8 L44 26 L60 14 L56 36 Z" fill="#fff8dc" stroke="#16222e" stroke-width="3.2" stroke-linejoin="round"></path>
+      <rect x="8" y="38" width="48" height="6" rx="2.5" fill="#16222e"></rect>
+      <circle cx="4" cy="11" r="3" fill="#fff8dc" stroke="#16222e" stroke-width="2"></circle>
+      <circle cx="32" cy="5" r="3.5" fill="#fff8dc" stroke="#16222e" stroke-width="2"></circle>
+      <circle cx="60" cy="11" r="3" fill="#fff8dc" stroke="#16222e" stroke-width="2"></circle>
+      <circle cx="21" cy="30" r="2.2" fill="#2a9d8f"></circle>
+      <circle cx="32" cy="28" r="2.6" fill="#d97706"></circle>
+      <circle cx="43" cy="30" r="2.2" fill="#2a9d8f"></circle>
+    </svg>
+    <span class="gh-quizz-main">Quizz</span>
+    <span class="gh-quizz-sub">
+      <span class="gh-quizz-sub-count">10 questions</span>
+      <span class="gh-quizz-sub-text">pour tester vos connaissances</span>
+    </span>
+  </a>
 </div>
 
 </section>
