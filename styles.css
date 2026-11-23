@@ -1,1 +1,88 @@
 /* css styles */
+/* CENTRAGE ET GRAS DU PIED DE PAGE QUARTO */
+footer.footer .nav-footer {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px 20px !important;
+  text-align: center !important;
+  font-size: 14.5px !important;
+}
+
+footer.footer .nav-footer-left,
+footer.footer .nav-footer-right {
+  flex: 0 1 auto !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+footer.footer .nav-footer-right ul.footer-items {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+footer.footer .nav-footer a {
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+}
+
+footer.footer .nav-footer a:hover {
+  color: #26394d !important;
+}
+
+/* CENTRAGE STRICT AU MILIEU DU PIED DE PAGE QUARTO */
+.nav-footer {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px 22px !important;
+  width: 100% !important;
+  text-align: center !important;
+  font-size: 14.5px !important;
+}
+
+.nav-footer > *,
+.nav-footer-left,
+.nav-footer-center,
+.nav-footer-right {
+  flex: 0 1 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: fit-content !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.nav-footer-right ul,
+.nav-footer-right .footer-items {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.nav-footer a {
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+}
+
+.nav-footer a:hover {
+  color: #26394d !important;
+}

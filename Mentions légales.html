@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5888ef8daf45ae2bc2fe02a4021222d7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-7a0fb27765793d7f2ad04b7d2f00a599.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,18 +78,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Four banal Grignan">
+<meta property="og:title" content="– Four banal Grignan">
 <meta property="og:image" content="https://www.fourbanalgrignan.fr/Comprendre/logositefbg2.jpg">
 <meta property="og:site_name" content="Four banal Grignan">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:image:height" content="2000">
 <meta property="og:image:width" content="2000">
-<meta name="twitter:title" content="Four banal Grignan">
+<meta name="twitter:title" content="– Four banal Grignan">
 <meta name="twitter:image" content="https://www.fourbanalgrignan.fr/Comprendre/logositefbg2.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -134,20 +134,645 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content" tabindex="-1"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page" id="quarto-document-content" tabindex="-1"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section class="legal-page">
+
+<style>
+@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap)');
+
+/* =====================================
+   FOND ET DÉCORATIONS
+===================================== */
+
+html, body, #quarto-content {
+  background-color: #F4F0E8 !important;
+}
+
+#title-block-header {
+  display: none !important;
+}
+
+.legal-page {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #293747;
+  background: transparent;
+  padding: 35px 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+}
+
+.legal-page * {
+  box-sizing: border-box;
+}
+
+/* LAVANDE À DROITE */
+
+.lavande-filigrane {
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  width: 190px;
+  height: auto;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ÉPI DE BLÉ À GAUCHE */
+
+.ble-filigrane {
+  position: fixed;
+  left: 8px;
+  bottom: 15px;
+  width: 175px;
+  height: auto;
+  opacity: 0.30;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =====================================
+   EN-TÊTE
+===================================== */
+
+.legal-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 38px;
+  padding: 26px 12px 10px;
+  overflow: visible;
+}
+
+.legal-filigrane {
+  position: absolute;
+  left: 50%;
+  top: 32%;
+  transform: translate(-50%, -50%);
+  width: 215px;
+  height: auto;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.legal-eyebrow {
+  color: #9b784b;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.legal-header h1 {
+  color: #26394d;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: clamp(32px, 5vw, 46px);
+  line-height: 1.3;
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+
+.legal-header p {
+  color: #59636e;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* =====================================
+   GRILLE & CARTES DE CONTENU
+===================================== */
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.legal-card {
+  background: #ffffff;
+  border: 1px solid #e5e0d8;
+  border-radius: 12px;
+  padding: 26px;
+  box-shadow: 0 4px 15px rgba(38, 57, 77, 0.045);
+}
+
+.legal-card-full {
+  background: #ffffff;
+  border: 1px solid #e5e0d8;
+  border-radius: 12px;
+  padding: 26px;
+  box-shadow: 0 4px 15px rgba(38, 57, 77, 0.045);
+  margin-bottom: 22px;
+}
+
+.legal-tag {
+  display: block;
+  color: #9b784b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  margin-bottom: 10px;
+}
+
+.legal-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.legal-card h2,
+.legal-card-full h2 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  color: #26394d;
+  margin: 0 0 12px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.legal-card p,
+.legal-card-full p {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: #4d5965;
+  margin: 0 0 12px;
+}
+
+.legal-card p:last-child,
+.legal-card-full p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-card ul,
+.legal-card-full ul {
+  margin: 0 0 12px;
+  padding-left: 20px;
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: #4d5965;
+}
+
+.legal-card ul:last-child,
+.legal-card-full ul:last-child {
+  margin-bottom: 0;
+}
+
+.legal-card li,
+.legal-card-full li {
+  margin-bottom: 6px;
+}
+
+.legal-note {
+  font-size: 14.5px !important;
+  color: #6b7682 !important;
+  font-style: italic;
+}
+
+.legal-page a {
+  color: #9b784b;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.legal-page a:hover {
+  color: #26394d;
+}
+
+/* =====================================
+   ENCART PROPRIÉTÉ INTELLECTUELLE / PARTAGE
+===================================== */
+
+.legal-callout {
+  background: #fcfaf6;
+  border: 1px solid #e5e0d8;
+  border-left: 5px solid #b49363;
+  border-radius: 10px;
+  padding: 26px 28px;
+  margin-bottom: 22px;
+}
+
+.legal-callout span {
+  display: block;
+  color: #9b784b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  margin-bottom: 8px;
+}
+
+.legal-callout h2 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  color: #26394d;
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.legal-callout p,
+.legal-callout ul {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: #4d5965;
+  margin: 0 0 12px;
+}
+
+.legal-callout ul {
+  padding-left: 20px;
+}
+
+.legal-callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* =====================================
+   BANNIÈRE DE CONTACT / RGPD
+===================================== */
+
+.legal-contact {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #26394d;
+  color: #ffffff;
+  padding: 26px 28px;
+  border-radius: 12px;
+  box-shadow: 0 5px 16px rgba(38, 57, 77, 0.10);
+}
+
+.legal-contact-icon {
+  font-size: 34px;
+  flex-shrink: 0;
+}
+
+.legal-contact span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1.8px;
+  font-weight: bold;
+  color: #d2b17d;
+  margin-bottom: 6px;
+}
+
+.legal-contact h2 {
+  font-family: Georgia, serif;
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.legal-contact p {
+  margin: 0 0 10px;
+  color: #e3e7eb;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.legal-contact p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-contact a {
+  color: #d2b17d;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.legal-footer {
+  text-align: center;
+  color: #899098;
+  font-size: 15px;
+  padding: 26px 10px 10px;
+  line-height: 1.6;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 750px) {
+
+  .legal-page {
+    padding: 25px 14px;
+  }
+
+  .legal-filigrane {
+    width: 170px;
+    top: 30%;
+    opacity: 0.12;
+  }
+
+  .legal-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .legal-card,
+  .legal-card-full,
+  .legal-callout,
+  .legal-contact {
+    padding: 21px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .lavande-filigrane {
+    width: 110px;
+    right: -12px;
+    bottom: 5px;
+    opacity: 0.20;
+  }
+
+  .ble-filigrane {
+    width: 105px;
+    left: -15px;
+    bottom: 5px;
+    opacity: 0.22;
+  }
+
+  .legal-contact {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* =====================================
+   IMPRESSION
+===================================== */
+
+@media print {
+
+  .lavande-filigrane,
+  .ble-filigrane,
+  .legal-filigrane {
+    display: none !important;
+  }
+
+}
+</style>
+
+
+<!-- =====================================
+     ÉPI DE BLÉ SVG À GAUCHE
+===================================== -->
+
+<svg class="ble-filigrane" viewbox="0 0 200 430" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+
+  <path d="M95 420 Q105 320 92 220 Q83 130 105 35" fill="none" stroke="#71805B" stroke-width="3" stroke-linecap="round"></path>
+
+  <g fill="#89966C">
+    <path d="M98 350 Q55 328 38 290 Q79 302 98 350"></path>
+    <path d="M95 375 Q136 342 150 303 Q111 319 95 375"></path>
+    <path d="M93 290 Q48 265 43 228 Q79 246 93 290"></path>
+    <path d="M90 315 Q128 281 138 244 Q105 263 90 315"></path>
+    <path d="M91 225 Q52 201 55 164 Q84 184 91 225"></path>
+    <path d="M91 250 Q130 218 139 184 Q105 198 91 250"></path>
+  </g>
+
+  <g fill="#C4A15E">
+    <ellipse cx="101" cy="42" rx="7" ry="17" transform="rotate(-28 101 42)"></ellipse>
+    <ellipse cx="86" cy="57" rx="7" ry="16" transform="rotate(-58 86 57)"></ellipse>
+    <ellipse cx="111" cy="69" rx="7" ry="17" transform="rotate(25 111 69)"></ellipse>
+    <ellipse cx="79" cy="82" rx="7" ry="16" transform="rotate(-58 79 82)"></ellipse>
+    <ellipse cx="112" cy="97" rx="7" ry="17" transform="rotate(25 112 97)"></ellipse>
+    <ellipse cx="77" cy="110" rx="7" ry="16" transform="rotate(-55 77 110)"></ellipse>
+    <ellipse cx="108" cy="126" rx="7" ry="17" transform="rotate(22 108 126)"></ellipse>
+    <ellipse cx="80" cy="139" rx="7" ry="15" transform="rotate(-45 80 139)"></ellipse>
+    <ellipse cx="101" cy="154" rx="7" ry="16" transform="rotate(15 101 154)"></ellipse>
+    <ellipse cx="88" cy="169" rx="7" ry="15" transform="rotate(-35 88 169)"></ellipse>
+  </g>
+
+  <g fill="#D3B474">
+    <ellipse cx="115" cy="50" rx="6" ry="14" transform="rotate(40 115 50)"></ellipse>
+    <ellipse cx="96" cy="74" rx="6" ry="14" transform="rotate(-25 96 74)"></ellipse>
+    <ellipse cx="121" cy="83" rx="6" ry="14" transform="rotate(45 121 83)"></ellipse>
+    <ellipse cx="91" cy="102" rx="6" ry="14" transform="rotate(-25 91 102)"></ellipse>
+    <ellipse cx="119" cy="112" rx="6" ry="14" transform="rotate(42 119 112)"></ellipse>
+    <ellipse cx="91" cy="131" rx="6" ry="13" transform="rotate(-20 91 131)"></ellipse>
+    <ellipse cx="113" cy="141" rx="6" ry="13" transform="rotate(38 113 141)"></ellipse>
+    <ellipse cx="94" cy="158" rx="6" ry="12" transform="rotate(-15 94 158)"></ellipse>
+  </g>
+
+  <g stroke="#B69A61" stroke-width="1.2" stroke-linecap="round" opacity="0.9">
+    <path d="M101 42L89 15"></path>
+    <path d="M86 57L66 36"></path>
+    <path d="M111 69L127 42"></path>
+    <path d="M79 82L55 63"></path>
+    <path d="M112 97L132 69"></path>
+    <path d="M77 110L52 93"></path>
+    <path d="M108 126L128 101"></path>
+    <path d="M80 139L58 125"></path>
+    <path d="M101 154L117 133"></path>
+    <path d="M88 169L69 155"></path>
+  </g>
+
+</svg>
+
+
+<!-- =====================================
+     BRIN DE LAVANDE SVG À DROITE
+===================================== -->
+
+<svg class="lavande-filigrane" viewbox="0 0 200 420" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+
+  <path d="M105 410 Q95 300 115 190 Q120 100 145 25" fill="none" stroke="#687D58" stroke-width="3.5" stroke-linecap="round"></path>
+
+  <g fill="#82936D">
+    <path d="M105 340 Q55 320 42 278 Q85 290 105 340"></path>
+    <path d="M103 365 Q145 330 158 292 Q115 310 103 365"></path>
+    <path d="M108 275 Q60 250 55 215 Q90 230 108 275"></path>
+    <path d="M112 300 Q150 265 155 230 Q120 250 112 300"></path>
+    <path d="M115 210 Q78 185 77 155 Q107 175 115 210"></path>
+    <path d="M120 230 Q155 200 165 170 Q130 185 120 230"></path>
+    <path d="M130 145 Q102 120 107 92 Q130 110 130 145"></path>
+    <path d="M135 165 Q165 140 173 112 Q143 128 135 165"></path>
+  </g>
+
+  <g fill="#9274A9">
+    <ellipse cx="145" cy="28" rx="8" ry="14" transform="rotate(20 145 28)"></ellipse>
+    <ellipse cx="132" cy="40" rx="8" ry="14" transform="rotate(-35 132 40)"></ellipse>
+    <ellipse cx="155" cy="48" rx="8" ry="14" transform="rotate(35 155 48)"></ellipse>
+    <ellipse cx="127" cy="60" rx="8" ry="14" transform="rotate(-30 127 60)"></ellipse>
+    <ellipse cx="151" cy="69" rx="8" ry="14" transform="rotate(30 151 69)"></ellipse>
+    <ellipse cx="120" cy="81" rx="8" ry="14" transform="rotate(-25 120 81)"></ellipse>
+    <ellipse cx="144" cy="90" rx="8" ry="14" transform="rotate(25 144 90)"></ellipse>
+    <ellipse cx="119" cy="105" rx="7" ry="13" transform="rotate(-25 119 105)"></ellipse>
+    <ellipse cx="138" cy="116" rx="7" ry="13" transform="rotate(25 138 116)"></ellipse>
+    <ellipse cx="116" cy="130" rx="7" ry="12" transform="rotate(-20 116 130)"></ellipse>
+    <ellipse cx="132" cy="140" rx="7" ry="12" transform="rotate(25 132 140)"></ellipse>
+  </g>
+
+  <g fill="#B49AC6">
+    <circle cx="145" cy="28" r="2"></circle>
+    <circle cx="132" cy="40" r="2"></circle>
+    <circle cx="155" cy="48" r="2"></circle>
+    <circle cx="127" cy="60" r="2"></circle>
+    <circle cx="151" cy="69" r="2"></circle>
+    <circle cx="120" cy="81" r="2"></circle>
+    <circle cx="144" cy="90" r="2"></circle>
+  </g>
+
+</svg>
+
+
+<!-- =====================================
+     EN-TÊTE
+===================================== -->
+
+<header class="legal-header">
+
+  <!-- FILIGRANE PLUME & PARCHEMIN -->
+  <svg class="legal-filigrane" viewbox="0 0 240 180" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+
+    <!-- Feuille / parchemin -->
+    <rect x="44" y="26" width="110" height="128" rx="8" fill="none" stroke="#26394d" stroke-width="4"></rect>
+    <line x1="64" y1="54" x2="132" y2="54" stroke="#9b784b" stroke-width="2.5" stroke-linecap="round"></line>
+    <line x1="64" y1="74" x2="132" y2="74" stroke="#9b784b" stroke-width="2.5" stroke-linecap="round"></line>
+    <line x1="64" y1="94" x2="118" y2="94" stroke="#9b784b" stroke-width="2.5" stroke-linecap="round"></line>
+    <line x1="64" y1="114" x2="104" y2="114" stroke="#9b784b" stroke-width="2.5" stroke-linecap="round"></line>
+
+    <!-- Plume d'écriture -->
+    <path d="M196 24 C162 32, 134 62, 122 106 C146 98, 178 74, 196 24 Z" fill="#9b784b" opacity="0.85"></path>
+    <path d="M196 24 L112 132" fill="none" stroke="#26394d" stroke-width="3.5" stroke-linecap="round"></path>
+
+  </svg>
+
+  <div class="legal-eyebrow">
+    INFORMATIONS LÉGALES · LCEN
+  </div>
+
+  <h1>Mentions légales</h1>
+
+  <p>
+    Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), voici les informations légales relatives au site <strong>fourbanalgrignan.fr</strong>.
+  </p>
+
+</header>
+
+
+<!-- =====================================
+     DEUX CARTES PRINCIPALES (ÉDITION & HÉBERGEMENT)
+===================================== -->
+
+<div class="legal-grid">
+
+  <article class="legal-card">
+    <span class="legal-tag">01 · ÉDITION DU SITE</span>
+    <div class="legal-icon">✍️</div>
+    <h2 class="anchored">Éditeur et publication</h2>
+    <p>
+      Le site <strong>https://fourbanalgrignan.fr</strong> est édité à titre non professionnel (particulier) par :
+    </p>
+    <ul>
+      <li><strong>Éditeur et Directeur de la publication :</strong> Léo Dubois</li>
+      <li><strong>Contact :</strong> <a href="mailto:fourbanalgrignan@gmail.com">fourbanalgrignan@gmail.com</a></li>
+    </ul>
+    <p class="legal-note">
+      Conformément à l’article 6, III, 2° de la loi n° 2004-575 du 21 juin 2004, l’éditeur agissant à titre non professionnel a choisi de conserver l’anonymat concernant son adresse personnelle et son numéro de téléphone, ces informations ayant été transmises aux prestataires d’hébergement.
+    </p>
+  </article>
+
+  <article class="legal-card">
+    <span class="legal-tag">02 · HÉBERGEMENT &amp; DOMAINE</span>
+    <div class="legal-icon">🌐</div>
+    <h2 class="anchored">Hébergeur et bureau d'enregistrement</h2>
+    <p><strong>Hébergement technique :</strong><br>
+      GitHub, Inc. (GitHub Pages)<br>
+      88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis<br>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">https://github.com</a>
+    </p>
+    <p><strong>Gestion du nom de domaine :</strong><br>
+      LWS (Ligne Web Services) — SAS au capital de 500 000 €<br>
+      10 rue Penthièvre, 75008 Paris, France<br>
+      Tél. : +33 1 77 62 30 03 · <a href="https://www.lws.fr" target="_blank" rel="noopener noreferrer">https://www.lws.fr</a>
+    </p>
+  </article>
+
+</div>
+
+
+<!-- =====================================
+     ENCART PROPRIÉTÉ INTELLECTUELLE & LIBRE RÉUTILISATION
+===================================== -->
+
+<div class="legal-callout">
+  <span>03 · PROPRIÉTÉ INTELLECTUELLE &amp; LIBRE PARTAGE</span>
+  <h2 class="anchored">Autorisation de repartage et de réutilisation des contenus</h2>
+  <p>
+    Dans une démarche ouverte d’information citoyenne, l’ensemble des contenus produits pour le site <strong>fourbanalgrignan.fr</strong> (textes, analyses, photographies personnelles, schémas et mises en page) est librement partageable et réutilisable, sauf mention contraire spécifique (notamment pour les extraits de documents administratifs publics ou d’articles de presse cités à titre documentaire).
+  </p>
+  <ul>
+    <li><strong>Partager :</strong> vous êtes libre de copier, diffuser, relayer et communiquer les éléments du site par tous moyens et sur tous supports (réseaux sociaux, presse, blogs, documents).</li>
+    <li><strong>Réutiliser et adapter :</strong> vous êtes libre de citer, reproduire, transformer ou réutiliser ces contenus pour toute utilisation, y compris associative, journalistique mais non commerciale.</li>
+  </ul>
+</div>
+
+
+<!-- =====================================
+     RESPONSABILITÉ
+===================================== -->
+
+<article class="legal-card-full">
+  <span class="legal-tag">04 · LIMITATION DE RESPONSABILITÉ</span>
+  <h2 class="anchored">Exactitude des informations et liens externes</h2>
+  <p>
+    L’éditeur s’efforce de fournir sur le site <strong>fourbanalgrignan.fr</strong> des informations aussi précises et documentées que possible. Toutefois, il ne pourra être tenu responsable des omissions, des inexactitudes ou des carences dans la mise à jour, qu’elles soient de son fait ou du fait des documents et sources publics sur lesquels s’appuie le dossier.
+  </p>
+  <p>
+    Les liens hypertextes présents sur le site renvoyant vers d’autres ressources sur Internet ne sauraient engager la responsabilité de l’éditeur quant au contenu de ces sites tiers.
+  </p>
+</article>
+
+
+<!-- =====================================
+     BANNIÈRE DONNÉES PERSONNELLES & RGPD
+===================================== -->
+
+<div class="legal-contact">
+
+  <div class="legal-contact-icon">🛡️</div>
+
+  <div>
+    <span>05 · DONNÉES PERSONNELLES, FORMULAIRES &amp; RGPD</span>
+    <h2 class="anchored">Protection de votre vie privée</h2>
+    <p>
+      Ce site a un caractère strictement informatif et non commercial, et n’utilise aucun outil de suivi publicitaire. Toutefois, lorsque vous utilisez les <strong>formulaires en ligne</strong> du site ou écrivez à l’adresse <strong><a href="mailto:fourbanalgrignan@gmail.com">fourbanalgrignan@gmail.com</a></strong>, les informations que vous transmettez volontairement (nom ou pseudonyme, adresse électronique, message ou document) sont recueillies uniquement afin de traiter votre demande, vérifier un élément documentaire ou enrichir le dossier.
+    </p>
+    <p>
+      <strong>Hébergement et traitement par Google :</strong> La messagerie du site ainsi que le traitement technique des formulaires (via Google Sheets / Google Apps Script) reposent sur les services de <strong>Google Ireland Limited / Google LLC</strong>. À ce titre, des données techniques de connexion (telles que l’adresse IP ou des cookies strictement techniques de sécurité) peuvent être traitées par Google et transférées vers les États-Unis dans le cadre des clauses contractuelles types et du cadre de protection des données UE-États-Unis (<em>Data Privacy Framework</em>). Vos contributions ne sont jamais cédées ni revendues à des tiers.
+    </p>
+    <p>
+      <strong>Vos droits (RGPD) :</strong> Conformément au Règlement (UE) 2016/679 et à la loi Informatique et Libertés, vos données sont conservées uniquement le temps nécessaire au traitement de votre échange ou à la tenue du dossier. Vous disposez à tout moment d’un droit d’accès, de rectification et de suppression des informations vous concernant en écrivant à <a href="mailto:fourbanalgrignan@gmail.com">fourbanalgrignan@gmail.com</a>.
+    </p>
+  </div>
+
+</div>
+
+</section></main></div>
 
 
 
 
 
-
-
-</main> <!-- /main -->
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -624,7 +1249,31 @@ ul.task-list li input[type="checkbox"] {
   <script type="application/javascript">
   window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
-</div> <!-- /content -->
+ <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Dossier indépendant d’information · Four banal de Grignan</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./about.html">
+<p>À propos</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link active" href="./Mentions légales.html" aria-current="page">
+<p>Mentions légales</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
