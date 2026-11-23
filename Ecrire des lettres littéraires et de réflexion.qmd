@@ -67,10 +67,10 @@ html, body, #quarto-content {
   text-align: center;
   margin: 35px 0 38px;
   padding: 28px 24px;
-  background: #f0fff4;
-  border: 2px solid #9ae6b4;
+  background: #f0f7ed;
+  border: 2px solid #b7d7ad;
   border-radius: 14px;
-  box-shadow: 0 3px 14px rgba(47, 133, 90, 0.08);
+  box-shadow: 0 3px 14px rgba(56, 118, 60, 0.08);
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -82,7 +82,7 @@ html, body, #quarto-content {
   bottom: -16px;
   width: 215px;
   height: 215px;
-  opacity: 0.08;
+  opacity: 0.10;
   pointer-events: none;
   z-index: 0;
   transform: rotate(-7deg);
@@ -98,8 +98,8 @@ html, body, #quarto-content {
   margin-bottom: 12px;
   padding: 5px 13px;
   border-radius: 20px;
-  background: #c6f6d5;
-  color: #2f855a;
+  background: #d8ebd2;
+  color: #38662e;
   font-family: 'Comfortaa', sans-serif;
   font-size: 11px;
   font-weight: 700;
@@ -132,7 +132,7 @@ html, body, #quarto-content {
 .letters-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
+  gap: 24px;
 }
 
 .letter-card {
@@ -141,16 +141,16 @@ html, body, #quarto-content {
   align-items: flex-start;
   text-align: left;
   min-width: 0;
-  padding: 26px;
+  padding: 24px;
   background: #f7f8f8;
-  border: 1px solid #c6f6d5;
-  border-radius: 12px;
+  border: 1px solid #d5e2d2;
+  border-radius: 10px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .letter-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(47, 133, 90, 0.11);
+  box-shadow: 0 5px 18px rgba(41,55,71,0.08);
 }
 
 .letter-meta {
@@ -166,7 +166,7 @@ html, body, #quarto-content {
   font-family: 'Comfortaa', sans-serif;
   font-size: 12px;
   font-weight: 700;
-  color: #2f855a;
+  color: #38662e;
 }
 
 .letter-number--ochre {
@@ -184,8 +184,8 @@ html, body, #quarto-content {
 .letter-tag {
   padding: 3px 9px;
   border-radius: 5px;
-  background: #dcfce7;
-  color: #2f855a;
+  background: #e3efe0;
+  color: #38662e;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -235,7 +235,7 @@ html, body, #quarto-content {
 
 .letter-desc {
   font-size: 13.5px;
-  line-height: 1.6;
+  line-height: 1.55;
   color: #435264;
   margin: 0 0 18px;
 }
@@ -245,7 +245,7 @@ html, body, #quarto-content {
   margin: 0 0 18px;
   padding: 11px 14px;
   background: #ffffff;
-  border-left: 3px solid #2f855a;
+  border-left: 3px solid #568239;
   border-radius: 0 6px 6px 0;
   font-family: Georgia, 'Times New Roman', serif;
   font-style: italic;
@@ -283,7 +283,7 @@ html, body, #quarto-content {
   gap: 7px;
   flex: 1 1 auto;
   padding: 9px 14px;
-  background-color: #2f855a;
+  background-color: #568239;
   color: #ffffff !important;
   border-radius: 6px;
   font-size: 12.5px;
@@ -293,7 +293,7 @@ html, body, #quarto-content {
 }
 
 .letter-btn-primary:hover {
-  background-color: #276749;
+  background-color: #43692B;
   color: #ffffff !important;
   text-decoration: none !important;
   transform: translateY(-1px);
@@ -595,7 +595,7 @@ html, body, #quarto-content {
 
 <svg class="ble-filigrane"
      viewBox="0 0 200 430"
-     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     xmlns="http://www.w3.org/2000/svg"
      aria-hidden="true">
 
   <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
@@ -659,7 +659,7 @@ html, body, #quarto-content {
 
 <svg class="lavande-filigrane"
      viewBox="0 0 200 420"
-     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+     xmlns="http://www.w3.org/2000/svg"
      aria-hidden="true">
 
   <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
@@ -710,11 +710,11 @@ html, body, #quarto-content {
 <div class="gh-dossier-title">
 
   <!-- Filigrane SVG Correspondance littéraire : plume & enveloppe -->
-  <svg class="gh-dossier-hero-bg" viewBox="0 0 220 220" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
-    <rect x="24" y="64" width="118" height="86" rx="14" fill="none" stroke="#2f855a" stroke-width="5"/>
-    <path d="M28 70 L83 112 L138 70" fill="none" stroke="#2f855a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M168 38 C134 44 108 72 100 112 L116 112 C126 78 148 56 180 48 Z" fill="none" stroke="#2f855a" stroke-width="5" stroke-linejoin="round"/>
-    <line x1="100" y1="112" x2="82" y2="132" stroke="#2f855a" stroke-width="5" stroke-linecap="round"/>
+  <svg class="gh-dossier-hero-bg" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="24" y="64" width="118" height="86" rx="14" fill="none" stroke="#568239" stroke-width="5"/>
+    <path d="M28 70 L83 112 L138 70" fill="none" stroke="#568239" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M168 38 C134 44 108 72 100 112 L116 112 C126 78 148 56 180 48 Z" fill="none" stroke="#568239" stroke-width="5" stroke-linejoin="round"/>
+    <line x1="100" y1="112" x2="82" y2="132" stroke="#568239" stroke-width="5" stroke-linecap="round"/>
   </svg>
 
   <span class="gh-section-badge">Diffuser · Correspondance littéraire</span>

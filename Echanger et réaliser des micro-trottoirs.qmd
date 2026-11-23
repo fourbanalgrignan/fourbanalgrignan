@@ -10,7 +10,7 @@ format:
 <section class="grignan-home">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap)');
 
 /* =====================================
    FOND ET DÉCORATIONS
@@ -67,10 +67,10 @@ html, body, #quarto-content {
   text-align: center;
   margin: 35px 0 38px;
   padding: 28px 24px;
-  background: #f0fff4;
-  border: 2px solid #9ae6b4;
+  background: #f0f7ed;
+  border: 2px solid #b7d7ad;
   border-radius: 14px;
-  box-shadow: 0 3px 14px rgba(47, 133, 90, 0.08);
+  box-shadow: 0 3px 14px rgba(56, 118, 60, 0.08);
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -82,7 +82,7 @@ html, body, #quarto-content {
   bottom: -16px;
   width: 215px;
   height: 215px;
-  opacity: 0.08;
+  opacity: 0.10;
   pointer-events: none;
   z-index: 0;
   transform: rotate(-7deg);
@@ -98,8 +98,8 @@ html, body, #quarto-content {
   margin-bottom: 12px;
   padding: 5px 13px;
   border-radius: 20px;
-  background: #c6f6d5;
-  color: #2f855a;
+  background: #d8ebd2;
+  color: #38662e;
   font-family: 'Comfortaa', sans-serif;
   font-size: 11px;
   font-weight: 700;
@@ -131,10 +131,10 @@ html, body, #quarto-content {
 
 .dialogue-stage {
   background: #f7f8f8;
-  border: 1px solid #c6f6d5;
-  border-radius: 14px;
+  border: 1px solid #d5e2d2;
+  border-radius: 10px;
   padding: 28px 26px 26px;
-  box-shadow: 0 4px 18px rgba(47, 133, 90, 0.07);
+  box-shadow: 0 5px 18px rgba(41,55,71,0.07);
 }
 
 .dialogue-stage-header {
@@ -149,8 +149,8 @@ html, body, #quarto-content {
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #2f855a;
-  background: #dcfce7;
+  color: #38662e;
+  background: #e3efe0;
   padding: 4px 11px;
   border-radius: 5px;
   margin-bottom: 8px;
@@ -184,7 +184,7 @@ html, body, #quarto-content {
   margin: 0 auto 18px;
   padding: 14px 20px 0;
   background: #ffffff;
-  border: 1px solid #e1e7e9;
+  border: 1px solid #d9e4d6;
   border-radius: 10px;
 }
 
@@ -211,7 +211,7 @@ html, body, #quarto-content {
   font-family: 'Comfortaa', sans-serif;
   font-size: 12px;
   font-weight: 700;
-  color: #2f855a;
+  color: #38662e;
   margin-bottom: 3px;
 }
 
@@ -272,8 +272,8 @@ html, body, #quarto-content {
 }
 
 .speech-bubble--question {
-  background: #f0fff4;
-  border: 1.5px solid #2f855a;
+  background: #f0f7ed;
+  border: 1.5px solid #568239;
   color: #243647;
   border-bottom-left-radius: 3px;
 }
@@ -285,9 +285,9 @@ html, body, #quarto-content {
   bottom: -9px;
   width: 14px;
   height: 14px;
-  background: #f0fff4;
-  border-right: 1.5px solid #2f855a;
-  border-bottom: 1.5px solid #2f855a;
+  background: #f0f7ed;
+  border-right: 1.5px solid #568239;
+  border-bottom: 1.5px solid #568239;
   transform: rotate(45deg);
 }
 
@@ -324,7 +324,7 @@ html, body, #quarto-content {
 }
 
 .bubble-label--teal {
-  background: #2f855a;
+  background: #568239;
   color: #ffffff;
 }
 
@@ -846,10 +846,10 @@ html, body, #quarto-content {
 
   <!-- Filigrane SVG Dialogue citoyen : bulles d'échange & micro -->
   <svg class="gh-dossier-hero-bg" viewBox="0 0 220 220" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
-    <rect x="28" y="42" width="114" height="74" rx="18" fill="none" stroke="#2f855a" stroke-width="5"/>
-    <path d="M54 116 L42 138 L76 116" fill="none" stroke="#2f855a" stroke-width="5" stroke-linejoin="round"/>
-    <rect x="78" y="96" width="114" height="74" rx="18" fill="none" stroke="#2f855a" stroke-width="5"/>
-    <path d="M166 170 L178 192 L144 170" fill="none" stroke="#2f855a" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="28" y="42" width="114" height="74" rx="18" fill="none" stroke="#568239" stroke-width="5"/>
+    <path d="M54 116 L42 138 L76 116" fill="none" stroke="#568239" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="78" y="96" width="114" height="74" rx="18" fill="none" stroke="#568239" stroke-width="5"/>
+    <path d="M166 170 L178 192 L144 170" fill="none" stroke="#568239" stroke-width="5" stroke-linejoin="round"/>
   </svg>
 
   <span class="gh-section-badge">Diffuser · Dialogue citoyen</span>

@@ -10,7 +10,7 @@ format:
 <section class="grignan-home grignan-avis">
 
 <style>
-@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap)');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
 
 /* =====================================
    FOND ET DÉCORATIONS
@@ -63,10 +63,10 @@ html, body, #quarto-content {
 .avis-hero {
   margin: 30px 0 30px;
   padding: 28px 24px;
-  background: #f0fff4;
-  border: 2px solid #9ae6b4;
+  background: #f0f7ed;
+  border: 2px solid #b7d7ad;
   border-radius: 14px;
-  box-shadow: 0 3px 14px rgba(47, 133, 90, 0.08);
+  box-shadow: 0 3px 14px rgba(56, 118, 60, 0.08);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -80,7 +80,7 @@ html, body, #quarto-content {
   transform: translateY(-50%) rotate(10deg);
   width: 230px;
   height: 230px;
-  opacity: 0.08;
+  opacity: 0.10;
   pointer-events: none;
   z-index: 0;
 }
@@ -95,8 +95,8 @@ html, body, #quarto-content {
   margin-bottom: 12px;
   padding: 5px 13px;
   border-radius: 20px;
-  background: #c6f6d5;
-  color: #2f855a;
+  background: #d8ebd2;
+  color: #38662e;
   font-family: 'Comfortaa', sans-serif;
   font-size: 11px;
   font-weight: 700;
@@ -131,11 +131,11 @@ html, body, #quarto-content {
   padding: 6px 14px;
   margin-bottom: 20px;
   background: #ffffff;
-  border: 1px solid #9ae6b4;
+  border: 1px solid #b7d7ad;
   border-radius: 20px;
   font-size: 13px;
   font-weight: 700;
-  color: #2f855a;
+  color: #38662e;
 }
 
 .avis-cta-btn {
@@ -144,21 +144,21 @@ html, body, #quarto-content {
   justify-content: center;
   gap: 10px;
   padding: 15px 28px;
-  background: #2f855a;
+  background: #568239;
   color: #ffffff !important;
   border-radius: 8px;
   font-family: 'Comfortaa', sans-serif;
   font-size: 15px;
   font-weight: 700;
   text-decoration: none !important;
-  box-shadow: 0 4px 14px rgba(47, 133, 90, 0.22);
+  box-shadow: 0 4px 14px rgba(86, 130, 57, 0.22);
   transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .avis-cta-btn:hover {
-  background: #276749;
+  background: #43692B;
   transform: translateY(-2px);
-  box-shadow: 0 7px 20px rgba(47, 133, 90, 0.28);
+  box-shadow: 0 7px 20px rgba(67, 105, 43, 0.28);
 }
 
 .avis-cta-sub {
@@ -182,7 +182,7 @@ html, body, #quarto-content {
 .avis-rubrique-line {
   flex: 1;
   height: 1px;
-  background: #c6f6d5;
+  background: #c8dbc4;
 }
 
 .grignan-home .avis-rubrique-header h3 {
@@ -192,8 +192,8 @@ html, body, #quarto-content {
   color: #26394d !important;
   margin: 0 !important;
   padding: 6px 16px !important;
-  background: #f0fff4;
-  border: 1px solid #9ae6b4;
+  background: #f0f7ed;
+  border: 1px solid #b7d7ad;
   border-radius: 20px;
   text-align: center !important;
   white-space: nowrap;
@@ -211,11 +211,11 @@ html, body, #quarto-content {
 
 .step-card {
   background: #f7f8f8;
-  border: 1px solid #c6f6d5;
-  border-top: 4px solid #2f855a;
-  border-radius: 12px;
+  border: 1px solid #d5e2d2;
+  border-top: 4px solid #568239;
+  border-radius: 10px;
   padding: 20px 18px;
-  box-shadow: 0 2px 10px rgba(47, 133, 90, 0.05);
+  box-shadow: 0 2px 10px rgba(41, 55, 71, 0.05);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -236,8 +236,8 @@ html, body, #quarto-content {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #dcfce7;
-  color: #2f855a;
+  background: #e3efe0;
+  color: #38662e;
   font-family: 'Comfortaa', sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -286,9 +286,9 @@ html, body, #quarto-content {
   justify-content: space-between;
   padding: 20px 22px;
   background: #ffffff;
-  border: 1px solid #c6f6d5;
-  border-radius: 12px;
-  box-shadow: 0 3px 14px rgba(47, 133, 90, 0.06);
+  border: 1px solid #d5e2d2;
+  border-radius: 10px;
+  box-shadow: 0 3px 14px rgba(41, 55, 71, 0.06);
 }
 
 .gmaps-review-top {
@@ -310,7 +310,7 @@ html, body, #quarto-content {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #2f855a;
+  background: #568239;
   color: #ffffff;
   font-family: 'Comfortaa', sans-serif;
   font-size: 15px;
@@ -342,8 +342,8 @@ html, body, #quarto-content {
   flex-shrink: 0;
   font-size: 11.5px;
   font-weight: 700;
-  color: #2f855a !important;
-  background: #dcfce7;
+  color: #38662e !important;
+  background: #e3efe0;
   padding: 5px 9px;
   border-radius: 6px;
   text-decoration: none !important;
@@ -351,7 +351,7 @@ html, body, #quarto-content {
 }
 
 .gmaps-review-ext:hover {
-  background: #2f855a;
+  background: #568239;
   color: #ffffff !important;
 }
 
@@ -401,7 +401,7 @@ html, body, #quarto-content {
   background: linear-gradient(135deg, #f8f3e8 0%, #f3ebd9 100%);
   border: 1px solid #dfd1b5;
   border-left: 5px solid #c39a54;
-  border-radius: 12px;
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -508,7 +508,7 @@ html, body, #quarto-content {
      ÉPI DE BLÉ SVG À GAUCHE
 ===================================== -->
 
-<svg class="ble-filigrane" viewBox="0 0 200 430" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+<svg class="ble-filigrane" viewBox="0 0 200 430" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
   <path d="M95 420 Q105 320 92 220 Q83 130 105 35" fill="none" stroke="#71805B" stroke-width="3" stroke-linecap="round"/>
   <g fill="#89966C">
     <path d="M98 350 Q55 328 38 290 Q79 302 98 350"/>
@@ -546,7 +546,7 @@ html, body, #quarto-content {
      BRIN DE LAVANDE SVG À DROITE
 ===================================== -->
 
-<svg class="lavande-filigrane" viewBox="0 0 200 420" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
+<svg class="lavande-filigrane" viewBox="0 0 200 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
   <path d="M105 410 Q95 300 115 190 Q120 100 145 25" fill="none" stroke="#687D58" stroke-width="3.5" stroke-linecap="round"/>
   <g fill="#82936D">
     <path d="M105 340 Q55 320 42 278 Q85 290 105 340"/>
@@ -579,11 +579,11 @@ html, body, #quarto-content {
 
 <header class="avis-hero">
 
-  <svg class="avis-hero-bg-pin" viewBox="0 0 200 200" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
-    <circle cx="100" cy="100" r="82" fill="none" stroke="#2f855a" stroke-width="3" stroke-dasharray="8 8"/>
-    <circle cx="100" cy="100" r="54" fill="none" stroke="#2f855a" stroke-width="2"/>
-    <path d="M100 32 C69 32 44 57 44 88 C44 130 100 174 100 174 C100 174 156 130 156 88 C156 57 131 32 100 32 Z" fill="#2f855a"/>
-    <circle cx="100" cy="88" r="22" fill="#f0fff4"/>
+  <svg class="avis-hero-bg-pin" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="100" cy="100" r="82" fill="none" stroke="#568239" stroke-width="3" stroke-dasharray="8 8"/>
+    <circle cx="100" cy="100" r="54" fill="none" stroke="#568239" stroke-width="2"/>
+    <path d="M100 32 C69 32 44 57 44 88 C44 130 100 174 100 174 C100 174 156 130 156 88 C156 57 131 32 100 32 Z" fill="#568239"/>
+    <circle cx="100" cy="88" r="22" fill="#f0f7ed"/>
   </svg>
 
   <span class="avis-badge">Diffuser · Google Maps</span>
