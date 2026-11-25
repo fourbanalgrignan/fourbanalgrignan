@@ -170,7 +170,7 @@ html, body, #quarto-content {
   box-sizing: border-box;
 }
 
-/* LAVANDE À DROITE (AU PREMIER PLAN) */
+/* LAVANDE À DROITE */
 
 .lavande-filigrane {
   position: fixed;
@@ -180,10 +180,10 @@ html, body, #quarto-content {
   height: auto;
   opacity: 0.34;
   pointer-events: none;
-  z-index: 10;
+  z-index: 20;
 }
 
-/* ÉPI DE BLÉ À GAUCHE (AU PREMIER PLAN) */
+/* ÉPI DE BLÉ À GAUCHE */
 
 .ble-filigrane {
   position: fixed;
@@ -193,7 +193,17 @@ html, body, #quarto-content {
   height: auto;
   opacity: 0.36;
   pointer-events: none;
-  z-index: 10;
+  z-index: 20;
+}
+
+/* Contenu sous la bannière : passe devant les tiges fixes */
+.grignan-home .gh-intro,
+.grignan-home .gh-numbers,
+.grignan-home .gh-navigation,
+.grignan-home .gh-photo,
+.grignan-home .gh-conclusion {
+  position: relative;
+  z-index: 30;
 }
 
 /* =====================================
@@ -212,7 +222,7 @@ html, body, #quarto-content {
   align-items: flex-start;
   justify-content: center;
   text-align: center;
-  z-index: 1;
+  z-index: 10;
 }
 
 .grignan-home .gh-hero img {
