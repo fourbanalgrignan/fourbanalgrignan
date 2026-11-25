@@ -338,7 +338,7 @@ ul.task-list li input[type="checkbox"] {
     overflow: hidden;
   }
   .accordion-content.open {
-    max-height: 2200px;
+    max-height: 2400px;
     opacity: 1;
   }
   @keyframes floatSlow {
@@ -355,32 +355,37 @@ ul.task-list li input[type="checkbox"] {
   ===================================== */
   @media (max-width: 639px) {
     html, body, #quarto-content {
-      font-size: 16px;
+      font-size: 15px;
       overflow-x: hidden;
     }
 
+    #infographic-root,
+    #infographic-root * {
+      min-width: 0;
+    }
+
     .deonto-top-wrapper {
-      padding: 18px 12px 4px;
+      padding: 16px 10px 4px;
     }
 
     .press-header {
-      padding: 14px 4px 4px;
+      padding: 12px 4px 4px;
       margin-bottom: 8px;
     }
 
     .balance-filigrane {
-      width: 150px;
+      width: 145px;
       top: 28%;
     }
 
     .press-label {
-      font-size: 12px;
-      letter-spacing: 1.4px;
+      font-size: 11.5px;
+      letter-spacing: 1.2px;
       margin-bottom: 8px;
     }
 
     .press-header h1 {
-      font-size: 25px;
+      font-size: 23px;
       line-height: 1.28;
       margin-bottom: 10px;
     }
@@ -390,34 +395,83 @@ ul.task-list li input[type="checkbox"] {
     }
 
     .press-intro {
-      font-size: 15.5px;
-      line-height: 1.55;
+      font-size: 15px;
+      line-height: 1.5;
     }
 
     .press-divider {
-      margin: 16px auto 6px;
+      margin: 14px auto 6px;
     }
 
     #infographic-root {
-      padding-top: 12px !important;
-      padding-bottom: 28px !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      padding-top: 10px !important;
+      padding-bottom: 24px !important;
     }
 
     #infographic-root > * + * {
-      margin-top: 20px !important;
+      margin-top: 18px !important;
     }
 
     #infographic-root header.rounded-3xl,
     #infographic-root article.rounded-3xl,
     #infographic-root section.rounded-3xl {
-      border-radius: 20px;
-      padding: 18px 15px;
+      border-radius: 18px;
+      padding: 14px 12px;
+    }
+
+    /* Empiler icône + titre dans les en-têtes d'articles sur mobile */
+    #infographic-root article .border-b > .flex.items-start.gap-4 {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Empiler badge lettre A/B + titre sur mobile pour éviter l'écrasement latéral */
+    #infographic-root article .rounded-2xl > .flex.items-center.gap-2\.5 {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    /* Réduire les paddings intérieurs et écarts de grille sur petit écran */
+    #infographic-root .p-5,
+    #infographic-root .p-4 {
+      padding: 12px;
+    }
+
+    #infographic-root .gap-4,
+    #infographic-root .gap-5,
+    #infographic-root .gap-6 {
+      gap: 12px;
+    }
+
+    #infographic-root h2.text-2xl,
+    #infographic-root h2.text-3xl {
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    #infographic-root h3.text-lg {
+      font-size: 16.5px;
+      line-height: 1.3;
+    }
+
+    #infographic-root .text-base,
+    #infographic-root .text-lg {
+      font-size: 14.5px !important;
+      line-height: 1.5 !important;
+    }
+
+    #infographic-root .tracking-wider,
+    #infographic-root .tracking-wide {
+      letter-spacing: 0.02em;
     }
 
     #infographic-root blockquote {
-      font-size: 15px !important;
-      line-height: 1.55 !important;
-      word-break: break-word;
+      font-size: 14.5px !important;
+      line-height: 1.52 !important;
+      overflow-wrap: break-word;
     }
 
     /* Tableau comparatif transformé en cartes sur mobile */
@@ -434,7 +488,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     .mobile-compare-table tr {
-      padding: 14px;
+      padding: 12px;
     }
 
     .mobile-compare-table tr + tr {
@@ -443,8 +497,8 @@ ul.task-list li input[type="checkbox"] {
 
     .mobile-compare-table td {
       padding: 6px 0 !important;
-      font-size: 14.5px !important;
-      line-height: 1.5 !important;
+      font-size: 14px !important;
+      line-height: 1.48 !important;
     }
 
     .mobile-compare-table td::before {
@@ -453,7 +507,7 @@ ul.task-list li input[type="checkbox"] {
       font-size: 11px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       color: #64748b;
       margin-bottom: 3px;
     }
@@ -549,7 +603,6 @@ ul.task-list li input[type="checkbox"] {
   <!-- EN-TÊTE CONSERVÉ -->
   <div class="deonto-top-wrapper">
     <header class="press-header">
-      <!-- Filigrane SVG : Journal de presse et loupe -->
       <svg class="balance-filigrane" viewbox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <rect x="34" y="24" width="128" height="150" rx="10" fill="none" stroke="#26394d" stroke-width="5"></rect>
         <rect x="48" y="38" width="100" height="20" rx="4" fill="#9b784b"></rect>
@@ -604,7 +657,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
 
         <div class="lg:col-span-4 flex justify-center">
-          <svg class="w-44 h-44 sm:w-64 sm:h-64 animate-float" viewbox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration d'un journal examiné à la loupe et d'une balance de déontologie">
+          <svg class="w-40 h-40 sm:w-64 sm:h-64 animate-float" viewbox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration d'un journal examiné à la loupe et d'une balance de déontologie">
             <circle cx="130" cy="130" r="112" fill="#162A4A" stroke="#F5B700" stroke-width="2" stroke-dasharray="6 6"></circle>
             <rect x="46" y="44" width="136" height="168" rx="14" fill="#FAF8F5" stroke="#0F1E36" stroke-width="3"></rect>
             <rect x="62" y="60" width="104" height="22" rx="5" fill="#0F1E36"></rect>
@@ -639,8 +692,8 @@ ul.task-list li input[type="checkbox"] {
     <section aria-labelledby="essentiel-title" class="space-y-4">
       <div class="flex items-center justify-between flex-wrap gap-2">
         <h2 id="essentiel-title" class="font-serif text-2xl sm:text-3xl font-bold text-navy-900 flex items-center gap-2.5 anchored">
-          <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-ocre-500 text-navy-900 text-lg font-black">⚡</span>
-          L’essentiel en 10 secondes
+          <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-ocre-500 text-navy-900 text-lg font-black shrink-0">⚡</span>
+          <span>L’essentiel en 10 secondes</span>
         </h2>
         <span class="text-sm font-bold uppercase tracking-wider text-slate-500">4 points clés à retenir</span>
       </div>
@@ -878,15 +931,15 @@ ul.task-list li input[type="checkbox"] {
           </p>
           <ul class="space-y-2 text-base font-semibold text-navy-900">
             <li class="flex items-start gap-2">
-              <span class="text-terracotta-600 font-black">✕</span>
+              <span class="text-terracotta-600 font-black shrink-0">✕</span>
               <span>Adéquation avec le <strong>patrimoine médiéval</strong> du village ;</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-terracotta-600 font-black">✕</span>
+              <span class="text-terracotta-600 font-black shrink-0">✕</span>
               <span>Respect de <strong>l’esprit de l’ancien four banal</strong> ;</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-terracotta-600 font-black">✕</span>
+              <span class="text-terracotta-600 font-black shrink-0">✕</span>
               <span>Cohérence avec <strong>l’identité de Grignan</strong>.</span>
             </li>
           </ul>
