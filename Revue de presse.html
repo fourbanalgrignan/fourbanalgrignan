@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="scroll-smooth"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.11.9">
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="antialiased selection:bg-ocre-300 selection:text-navy-900 nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -145,217 +145,322 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-
-
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projet « Chambre de lecture » à Grignan : décryptage médiatique</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&amp;family=Fraunces:opsz,wght@9..144,700;9..144,900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['"Fraunces"', 'serif'],
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&amp;family=Fraunces:opsz,wght@9..144,700;9..144,900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          serif: ['"Fraunces"', 'serif'],
+        },
+        colors: {
+          navy: {
+            900: '#0F1E36',
+            800: '#162A4A',
+            700: '#1E3A63',
           },
-          colors: {
-            navy: {
-              900: '#0F1E36',
-              800: '#162A4A',
-              700: '#1E3A63',
-            },
-            ocre: {
-              100: '#FEF6D8',
-              300: '#FDE073',
-              500: '#F5B700',
-            },
-            terracotta: {
-              100: '#FDECE8',
-              500: '#D95D39',
-              600: '#B84726',
-            },
-            sauge: {
-              100: '#F3E8FF',
-              500: '#9333EA',
-              700: '#6B21A8',
-            },
-            creme: '#FAF8F5',
-          }
+          ocre: {
+            100: '#FEF6D8',
+            300: '#FDE073',
+            500: '#F5B700',
+          },
+          terracotta: {
+            100: '#FDECE8',
+            500: '#D95D39',
+            600: '#B84726',
+          },
+          sauge: {
+            100: '#F3E8FF',
+            500: '#9333EA',
+            700: '#6B21A8',
+          },
+          creme: '#FAF8F5',
         }
       }
     }
-  </script>
-  <style>
-    html, body, #quarto-content {
-      background-color: #F4F0E8 !important;
-      color: #0F1E36;
-      font-size: 18px;
-    }
+  }
+</script>
 
-    /* =====================================
-       EN-TÊTE IDENTIQUE AU SITE
-    ===================================== */
-    .deonto-top-wrapper {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #293747;
-      background: transparent;
-      padding: 35px 22px 10px;
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-      isolation: isolate;
-      box-sizing: border-box;
-    }
+<style>
+  html, body, #quarto-content {
+    background-color: #F4F0E8 !important;
+    color: #0F1E36;
+    font-size: 18px;
+  }
 
-    .deonto-top-wrapper * {
-      box-sizing: border-box;
-    }
+  /* =====================================
+     EN-TÊTE IDENTIQUE AU SITE
+  ===================================== */
+  .deonto-top-wrapper {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #293747;
+    background: transparent;
+    padding: 35px 22px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    isolation: isolate;
+    box-sizing: border-box;
+  }
 
+  .deonto-top-wrapper * {
+    box-sizing: border-box;
+  }
+
+  .lavande-filigrane {
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
+    width: 190px;
+    height: auto;
+    opacity: 0.17;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .ble-filigrane {
+    position: fixed;
+    left: 8px;
+    bottom: 15px;
+    width: 175px;
+    height: auto;
+    opacity: 0.19;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .press-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 16px;
+    padding: 26px 12px 10px;
+    overflow: visible;
+  }
+
+  .balance-filigrane {
+    position: absolute;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%, -50%);
+    width: 240px;
+    height: auto;
+    opacity: 0.14;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .press-label {
+    display: block;
+    color: #9b784b;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .press-header h1 {
+    color: #26394d;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: clamp(28px, 4.6vw, 44px);
+    line-height: 1.3;
+    margin: 0 0 14px;
+    font-weight: 700;
+  }
+
+  .press-intro {
+    color: #59636e;
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .press-intro em {
+    color: #26394d;
+    font-weight: 600;
+  }
+
+  .press-divider {
+    width: 65px;
+    height: 4px;
+    background: #b49363;
+    border-radius: 5px;
+    margin: 24px auto 12px;
+  }
+
+  @media (max-width: 600px) {
     .lavande-filigrane {
-      position: fixed;
-      right: 15px;
-      bottom: 10px;
-      width: 190px;
-      height: auto;
-      opacity: 0.17;
-      pointer-events: none;
-      z-index: -1;
+      width: 110px;
+      right: -12px;
+      bottom: 5px;
+      opacity: 0.12;
     }
 
     .ble-filigrane {
-      position: fixed;
-      left: 8px;
-      bottom: 15px;
-      width: 175px;
-      height: auto;
-      opacity: 0.19;
-      pointer-events: none;
-      z-index: -1;
+      width: 105px;
+      left: -15px;
+      bottom: 5px;
+      opacity: 0.13;
+    }
+  }
+
+  @media print {
+    .lavande-filigrane,
+    .ble-filigrane,
+    .balance-filigrane {
+      display: none;
+    }
+  }
+
+  /* =====================================
+     STYLES DE LA PAGE HTML REPRISE
+  ===================================== */
+  .marker-highlight {
+    background: linear-gradient(120deg, #FDE073 0%, #FDE073 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 88%;
+    background-position: 0 55%;
+    padding: 0 4px;
+    border-radius: 3px;
+  }
+  .card-shadow {
+    box-shadow: 0 12px 32px -8px rgba(15, 30, 54, 0.08), 0 4px 10px -2px rgba(15, 30, 54, 0.04);
+  }
+  .accordion-content {
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+  .accordion-content.open {
+    max-height: 2200px;
+    opacity: 1;
+  }
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+  }
+  .animate-float {
+    animation: floatSlow 4.5s ease-in-out infinite;
+  }
+
+  /* =====================================
+     ADAPTATION MOBILE UNIQUEMENT (< 640px)
+     Ne modifie pas l'affichage ordinateur
+  ===================================== */
+  @media (max-width: 639px) {
+    html, body, #quarto-content {
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    .deonto-top-wrapper {
+      padding: 18px 12px 4px;
     }
 
     .press-header {
-      position: relative;
-      text-align: center;
-      margin-bottom: 16px;
-      padding: 26px 12px 10px;
-      overflow: visible;
+      padding: 14px 4px 4px;
+      margin-bottom: 8px;
     }
 
     .balance-filigrane {
-      position: absolute;
-      left: 50%;
-      top: 32%;
-      transform: translate(-50%, -50%);
-      width: 240px;
-      height: auto;
-      opacity: 0.14;
-      pointer-events: none;
-      z-index: -1;
+      width: 150px;
+      top: 28%;
     }
 
     .press-label {
-      display: block;
-      color: #9b784b;
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
+      font-size: 12px;
+      letter-spacing: 1.4px;
+      margin-bottom: 8px;
     }
 
     .press-header h1 {
-      color: #26394d;
-      font-family: 'Comfortaa', sans-serif;
-      font-size: clamp(28px, 4.6vw, 44px);
-      line-height: 1.3;
-      margin: 0 0 14px;
-      font-weight: 700;
+      font-size: 25px;
+      line-height: 1.28;
+      margin-bottom: 10px;
+    }
+
+    .press-header h1 br {
+      display: none;
     }
 
     .press-intro {
-      color: #59636e;
-      font-size: 19px;
-      line-height: 1.7;
-      max-width: 880px;
-      margin: 0 auto;
-    }
-
-    .press-intro em {
-      color: #26394d;
-      font-weight: 600;
+      font-size: 15.5px;
+      line-height: 1.55;
     }
 
     .press-divider {
-      width: 65px;
-      height: 4px;
-      background: #b49363;
-      border-radius: 5px;
-      margin: 24px auto 12px;
+      margin: 16px auto 6px;
     }
 
-    @media (max-width: 600px) {
-      .lavande-filigrane {
-        width: 110px;
-        right: -12px;
-        bottom: 5px;
-        opacity: 0.12;
-      }
-
-      .ble-filigrane {
-        width: 105px;
-        left: -15px;
-        bottom: 5px;
-        opacity: 0.13;
-      }
+    #infographic-root {
+      padding-top: 12px !important;
+      padding-bottom: 28px !important;
     }
 
-    @media print {
-      .lavande-filigrane,
-      .ble-filigrane,
-      .balance-filigrane {
-        display: none;
-      }
+    #infographic-root > * + * {
+      margin-top: 20px !important;
     }
 
-    /* =====================================
-       STYLES DE LA PAGE HTML REPRISE
-    ===================================== */
-    .marker-highlight {
-      background: linear-gradient(120deg, #FDE073 0%, #FDE073 100%);
-      background-repeat: no-repeat;
-      background-size: 100% 88%;
-      background-position: 0 55%;
-      padding: 0 4px;
-      border-radius: 3px;
+    #infographic-root header.rounded-3xl,
+    #infographic-root article.rounded-3xl,
+    #infographic-root section.rounded-3xl {
+      border-radius: 20px;
+      padding: 18px 15px;
     }
-    .card-shadow {
-      box-shadow: 0 12px 32px -8px rgba(15, 30, 54, 0.08), 0 4px 10px -2px rgba(15, 30, 54, 0.04);
-    }
-    .accordion-content {
-      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-    }
-    .accordion-content.open {
-      max-height: 1800px;
-      opacity: 1;
-    }
-    @keyframes floatSlow {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-6px); }
-    }
-    .animate-float {
-      animation: floatSlow 4.5s ease-in-out infinite;
-    }
-  </style>
 
+    #infographic-root blockquote {
+      font-size: 15px !important;
+      line-height: 1.55 !important;
+      word-break: break-word;
+    }
 
+    /* Tableau comparatif transformé en cartes sur mobile */
+    .mobile-compare-table thead {
+      display: none;
+    }
+
+    .mobile-compare-table,
+    .mobile-compare-table tbody,
+    .mobile-compare-table tr,
+    .mobile-compare-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .mobile-compare-table tr {
+      padding: 14px;
+    }
+
+    .mobile-compare-table tr + tr {
+      border-top: 2px solid #e2e8f0;
+    }
+
+    .mobile-compare-table td {
+      padding: 6px 0 !important;
+      font-size: 14.5px !important;
+      line-height: 1.5 !important;
+    }
+
+    .mobile-compare-table td::before {
+      content: attr(data-label);
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #64748b;
+      margin-bottom: 3px;
+    }
+  }
+</style>
+
+<div class="antialiased selection:bg-ocre-300 selection:text-navy-900">
 
   <!-- ÉPI DE BLÉ SVG À GAUCHE -->
   <svg class="ble-filigrane" viewbox="0 0 200 430" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -446,20 +551,15 @@ ul.task-list li input[type="checkbox"] {
     <header class="press-header">
       <!-- Filigrane SVG : Journal de presse et loupe -->
       <svg class="balance-filigrane" viewbox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <!-- Feuille de journal -->
         <rect x="34" y="24" width="128" height="150" rx="10" fill="none" stroke="#26394d" stroke-width="5"></rect>
-        <!-- Bandeau titre journal -->
         <rect x="48" y="38" width="100" height="20" rx="4" fill="#9b784b"></rect>
-        <!-- Lignes d'articles -->
         <line x1="48" y1="74" x2="102" y2="74" stroke="#26394d" stroke-width="4" stroke-linecap="round"></line>
         <line x1="48" y1="88" x2="96" y2="88" stroke="#26394d" stroke-width="4" stroke-linecap="round"></line>
         <line x1="48" y1="102" x2="100" y2="102" stroke="#26394d" stroke-width="4" stroke-linecap="round"></line>
-        <!-- Encadré photo / bloc droit -->
         <rect x="114" y="72" width="34" height="34" rx="4" fill="none" stroke="#9b784b" stroke-width="3.5"></rect>
         <line x1="48" y1="124" x2="148" y2="124" stroke="#26394d" stroke-width="4" stroke-linecap="round"></line>
         <line x1="48" y1="138" x2="136" y2="138" stroke="#26394d" stroke-width="4" stroke-linecap="round"></line>
         <line x1="48" y1="152" x2="116" y2="152" stroke="#26394d" stroke-width="4" stroke-linecap="round"></line>
-        <!-- Loupe -->
         <circle cx="164" cy="126" r="34" fill="#F4F0E8" stroke="#26394d" stroke-width="6"></circle>
         <circle cx="164" cy="126" r="23" fill="none" stroke="#9b784b" stroke-width="3.5"></circle>
         <line x1="189" y1="151" x2="216" y2="178" stroke="#26394d" stroke-width="8" stroke-linecap="round"></line>
@@ -485,7 +585,6 @@ ul.task-list li input[type="checkbox"] {
 
     <!-- 1. EN-TÊTE VISUEL PERCUTANT -->
     <header class="relative overflow-hidden rounded-3xl bg-navy-900 text-white p-6 sm:p-10 lg:p-12 card-shadow border-2 border-navy-700">
-      <!-- Motifs décoratifs d'arrière-plan -->
       <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-ocre-500/10 blur-2xl pointer-events-none"></div>
       <div class="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-terracotta-500/15 blur-2xl pointer-events-none"></div>
 
@@ -504,16 +603,12 @@ ul.task-list li input[type="checkbox"] {
           </p>
         </div>
 
-        <!-- Illustration SVG : Journal à la loupe & Balance déontologique -->
         <div class="lg:col-span-4 flex justify-center">
-          <svg class="w-56 h-56 sm:w-64 sm:h-64 animate-float" viewbox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration d'un journal examiné à la loupe et d'une balance de déontologie">
-            <!-- Halo -->
+          <svg class="w-44 h-44 sm:w-64 sm:h-64 animate-float" viewbox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration d'un journal examiné à la loupe et d'une balance de déontologie">
             <circle cx="130" cy="130" r="112" fill="#162A4A" stroke="#F5B700" stroke-width="2" stroke-dasharray="6 6"></circle>
-            <!-- Journal stylisé -->
             <rect x="46" y="44" width="136" height="168" rx="14" fill="#FAF8F5" stroke="#0F1E36" stroke-width="3"></rect>
             <rect x="62" y="60" width="104" height="22" rx="5" fill="#0F1E36"></rect>
             <rect x="70" y="67" width="60" height="8" rx="3" fill="#FDE073"></rect>
-            <!-- Colonnes journal -->
             <rect x="62" y="92" width="48" height="44" rx="6" fill="#FDECE8" stroke="#D95D39" stroke-width="2"></rect>
             <path d="M74 122L84 108L94 118L102 104" stroke="#D95D39" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
             <rect x="118" y="94" width="48" height="7" rx="3" fill="#CBD5E1"></rect>
@@ -522,14 +617,12 @@ ul.task-list li input[type="checkbox"] {
             <rect x="62" y="148" width="104" height="8" rx="3" fill="#FDE073"></rect>
             <rect x="62" y="162" width="90" height="8" rx="3" fill="#CBD5E1"></rect>
             <rect x="62" y="176" width="76" height="8" rx="3" fill="#CBD5E1"></rect>
-            <!-- Balance miniature en haut à droite -->
             <g transform="translate(164, 28)">
               <circle cx="34" cy="34" r="30" fill="#3D7A64" stroke="#FAF8F5" stroke-width="3"></circle>
               <path d="M34 16V50M22 50H46M18 24H50" stroke="#FAF8F5" stroke-width="2.5" stroke-linecap="round"></path>
               <path d="M18 24L13 35H23L18 24Z" fill="#FDE073"></path>
               <path d="M50 24L45 35H55L50 24Z" fill="#FDE073"></path>
             </g>
-            <!-- Loupe -->
             <g transform="translate(128, 125)">
               <circle cx="46" cy="46" r="38" fill="#F5B700" fill-opacity="0.22" stroke="#F5B700" stroke-width="6"></circle>
               <circle cx="46" cy="46" r="30" stroke="#0F1E36" stroke-width="2.5"></circle>
@@ -553,7 +646,7 @@ ul.task-list li input[type="checkbox"] {
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
-<!-- Carte 1 -->
+        <!-- Carte 1 -->
         <div class="bg-white rounded-2xl p-5 card-shadow border-t-4 border-navy-900 flex flex-col hover:-translate-y-1 transition-transform">
           <div class="flex items-center justify-between gap-2 mb-4 min-h-[44px]">
             <span class="font-serif text-lg sm:text-xl font-black text-navy-900 leading-tight">2 articles analysés</span>
@@ -624,7 +717,6 @@ ul.task-list li input[type="checkbox"] {
     <article class="bg-white rounded-3xl p-6 sm:p-8 card-shadow border border-slate-200/80 space-y-6">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-5">
         <div class="flex items-start gap-4">
-          <!-- Illustration SVG Ciseaux / Copier-coller -->
           <div class="shrink-0 w-14 h-14 rounded-2xl bg-ocre-100 border border-ocre-300 flex items-center justify-center">
             <svg class="w-9 h-9" viewbox="0 0 44 44" fill="none" aria-hidden="true">
               <rect x="8" y="8" width="18" height="22" rx="3" fill="#FFFFFF" stroke="#0F1E36" stroke-width="2"></rect>
@@ -649,20 +741,18 @@ ul.task-list li input[type="checkbox"] {
         </div>
       </div>
 
-      <!-- Comparateur visuel côte à côte -->
       <div class="space-y-3">
         <p class="text-base sm:text-lg font-bold text-navy-800 flex items-center gap-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-ocre-500"></span>
-          Comparaison textuelle : un passage repris quasi mot pour mot (surligné en jaune)
+          <span class="w-2.5 h-2.5 rounded-full bg-ocre-500 shrink-0"></span>
+          <span>Comparaison textuelle : un passage repris quasi mot pour mot (surligné en jaune)</span>
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <!-- Colonne Source : La Gazette Drouot -->
           <div class="rounded-2xl bg-slate-50 border-2 border-slate-200 p-5 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
                 <span class="text-sm font-extrabold uppercase tracking-wider text-sauge-700 bg-sauge-100 px-2.5 py-1 rounded-lg">
-1. Texte original • 22 mai 2023
+                  1. Texte original • 22 mai 2023
                 </span>
                 <a href="https://www.gazette-drouot.com/article/helene-delprat-gagne-le-grand-prix-artistique-del-duca/44133" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-navy-900 underline">
                   La Gazette Drouot ↗
@@ -677,12 +767,11 @@ ul.task-list li input[type="checkbox"] {
             </div>
           </div>
 
-          <!-- Colonne Article DL -->
           <div class="rounded-2xl bg-ocre-100/50 border-2 border-ocre-300 p-5 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
                 <span class="text-sm font-extrabold uppercase tracking-wider text-amber-900 bg-ocre-300 px-2.5 py-1 rounded-lg">
-2. Reprise sans source ni autorisation
+                  2. Reprise sans source ni autorisation
                 </span>
                 <a href="https://www.ledauphine.com/culture-loisirs/2026/09/16/la-chambre-de-lecture-au-four-banal-sera-inauguree-samedi" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-navy-900 underline">
                   Le Dauphiné Libéré ↗
@@ -699,7 +788,6 @@ ul.task-list li input[type="checkbox"] {
         </div>
       </div>
 
-      <!-- Encadré coût public -->
       <div class="rounded-2xl bg-terracotta-100/70 border border-terracotta-500/30 p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <div class="shrink-0 w-11 h-11 rounded-xl bg-terracotta-500 text-white flex items-center justify-center font-serif font-black text-xl">
           €
@@ -710,7 +798,6 @@ ul.task-list li input[type="checkbox"] {
         </div>
       </div>
 
-      <!-- Tiroir dépliable : Textes de référence -->
       <div class="pt-1">
         <button type="button" onclick="toggleDrawer('drawer-1', this)" aria-expanded="false" class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-3 px-4 py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white text-sm sm:text-base font-bold transition-colors">
           <span>📚 Voir les textes de référence (Loi CPI, Munich, Charte DL)</span>
@@ -753,7 +840,6 @@ ul.task-list li input[type="checkbox"] {
     <article class="bg-white rounded-3xl p-6 sm:p-8 card-shadow border border-slate-200/80 space-y-6">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-5">
         <div class="flex items-start gap-4">
-          <!-- Illustration SVG Œil / Filtre -->
           <div class="shrink-0 w-14 h-14 rounded-2xl bg-terracotta-100 border border-terracotta-500/30 flex items-center justify-center">
             <svg class="w-9 h-9" viewbox="0 0 44 44" fill="none" aria-hidden="true">
               <path d="M6 22C10.5 13.5 16 10 22 10C28 10 33.5 13.5 38 22C33.5 30.5 28 34 22 34C16 34 10.5 30.5 6 22Z" fill="#FFFFFF" stroke="#0F1E36" stroke-width="2"></path>
@@ -782,10 +868,9 @@ ul.task-list li input[type="checkbox"] {
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <!-- Bloc A : Critiques sur place -->
         <div class="rounded-2xl bg-creme border border-slate-200 p-5 space-y-3">
           <div class="flex items-center gap-2.5">
-            <span class="w-8 h-8 rounded-lg bg-navy-900 text-ocre-300 flex items-center justify-center font-bold text-sm">A</span>
+            <span class="w-8 h-8 rounded-lg bg-navy-900 text-ocre-300 flex items-center justify-center font-bold text-sm shrink-0">A</span>
             <h3 class="font-extrabold text-lg text-navy-900 anchored">Les critiques publiques passées sous silence</h3>
           </div>
           <p class="text-base text-slate-700 leading-relaxed">
@@ -810,10 +895,9 @@ ul.task-list li input[type="checkbox"] {
           </p>
         </div>
 
-        <!-- Bloc B : Iconographie macabre -->
         <div class="rounded-2xl bg-creme border border-slate-200 p-5 space-y-3">
           <div class="flex items-center gap-2.5">
-            <span class="w-8 h-8 rounded-lg bg-navy-900 text-ocre-300 flex items-center justify-center font-bold text-sm">B</span>
+            <span class="w-8 h-8 rounded-lg bg-navy-900 text-ocre-300 flex items-center justify-center font-bold text-sm shrink-0">B</span>
             <h3 class="font-extrabold text-lg text-navy-900 anchored">Description partielle : l’iconographie macabre omise</h3>
           </div>
           <p class="text-base text-slate-700 leading-relaxed">
@@ -825,7 +909,6 @@ ul.task-list li input[type="checkbox"] {
         </div>
       </div>
 
-      <!-- Tiroir dépliable : Textes de référence -->
       <div class="pt-1">
         <button type="button" onclick="toggleDrawer('drawer-2', this)" aria-expanded="false" class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-3 px-4 py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white text-sm sm:text-base font-bold transition-colors">
           <span>📚 Voir les textes de référence (Munich Devoirs 1, 2, 3 &amp; Charte DL)</span>
@@ -858,7 +941,6 @@ ul.task-list li input[type="checkbox"] {
     <article class="bg-white rounded-3xl p-6 sm:p-8 card-shadow border border-slate-200/80 space-y-6">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-5">
         <div class="flex items-start gap-4">
-          <!-- Illustration SVG Masque / Plume / Question -->
           <div class="shrink-0 w-14 h-14 rounded-2xl bg-sauge-100 border border-sauge-500/30 flex items-center justify-center">
             <svg class="w-9 h-9" viewbox="0 0 44 44" fill="none" aria-hidden="true">
               <circle cx="22" cy="16" r="7" fill="#FFFFFF" stroke="#0F1E36" stroke-width="2"></circle>
@@ -882,7 +964,6 @@ ul.task-list li input[type="checkbox"] {
         </div>
       </div>
 
-      <!-- Chaîne logique en 3 étapes visuelles -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
           <div class="text-sm font-black uppercase text-slate-400">Étape 1 • Les articles</div>
@@ -913,7 +994,6 @@ ul.task-list li input[type="checkbox"] {
         </div>
       </div>
 
-      <!-- Tiroir dépliable : Textes de référence -->
       <div class="pt-1">
         <button type="button" onclick="toggleDrawer('drawer-3', this)" aria-expanded="false" class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-3 px-4 py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white text-sm sm:text-base font-bold transition-colors">
           <span>📚 Voir les textes de référence (Munich Devoirs 1, 9, 10 &amp; Conflits d'intérêts DL)</span>
@@ -976,15 +1056,12 @@ ul.task-list li input[type="checkbox"] {
           </div>
         </div>
 
-        <!-- Illustration SVG Mégaphone / Dialogue -->
         <div class="lg:col-span-3 flex justify-center">
-          <svg class="w-40 h-40" viewbox="0 0 180 180" fill="none" aria-label="Illustration mégaphone et dialogue lecteur">
+          <svg class="w-32 h-32 sm:w-40 sm:h-40" viewbox="0 0 180 180" fill="none" aria-label="Illustration mégaphone et dialogue lecteur">
             <circle cx="90" cy="90" r="80" fill="#1E3A63" stroke="#FDE073" stroke-width="2" stroke-dasharray="5 5"></circle>
-            <!-- Bulle dialogue -->
             <rect x="92" y="28" width="58" height="36" rx="12" fill="#3D7A64" stroke="#FAF8F5" stroke-width="2.5"></rect>
             <path d="M104 64L98 74L114 64" fill="#3D7A64"></path>
             <path d="M105 42H137M105 50H127" stroke="#FAF8F5" stroke-width="2.5" stroke-linecap="round"></path>
-            <!-- Mégaphone -->
             <g transform="translate(26, 62)">
               <path d="M16 32L66 12V68L16 48V32Z" fill="#F5B700" stroke="#FAF8F5" stroke-width="2.5" stroke-linejoin="round"></path>
               <rect x="6" y="30" width="12" height="20" rx="4" fill="#D95D39" stroke="#FAF8F5" stroke-width="2.5"></rect>
@@ -998,7 +1075,7 @@ ul.task-list li input[type="checkbox"] {
       <!-- Tableau comparatif bien contrasté et lisible -->
       <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white text-navy-900 shadow-md">
         
-<table class="w-full text-left border-collapse text-base caption-top table">
+<table class="mobile-compare-table w-full text-left border-collapse text-base caption-top table">
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -1013,20 +1090,20 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody class="divide-y divide-slate-200 text-slate-800">
 <tr class="bg-white odd">
-<td class="p-4 font-bold text-navy-900 align-top">📜 Loi du 29 juillet 1881 &amp; <a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000357475" class="underline text-navy-700 hover:text-terracotta-600" target="_blank" rel="noopener noreferrer">Code de la propriété intellectuelle (CPI) ↗</a></td>
-<td class="p-4 align-top leading-relaxed">Liberté de la presse, mais protection contre toute reproduction sans accord (CPI art. L.111-1, L.122-4, L.218-2, L.335-2), sauf courte citation sourcée (art. L.122-5).</td>
-<td class="p-4 align-top leading-relaxed">L'angle éditorial est libre, mais la reprise quasi mot pour mot de <em>La Gazette Drouot</em> sans accord préalable ni citation pose problème.</td>
+<td class="p-4 font-bold text-navy-900 align-top" data-label="Référence">📜 Loi du 29 juillet 1881 &amp; <a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000357475" class="underline text-navy-700 hover:text-terracotta-600" target="_blank" rel="noopener noreferrer">Code de la propriété intellectuelle (CPI) ↗</a></td>
+<td class="p-4 align-top leading-relaxed" data-label="Ce que prévoit le texte">Liberté de la presse, mais protection contre toute reproduction sans accord (CPI art. L.111-1, L.122-4, L.218-2, L.335-2), sauf courte citation sourcée (art. L.122-5).</td>
+<td class="p-4 align-top leading-relaxed" data-label="Points soulevés sur les articles DL">L'angle éditorial est libre, mais la reprise quasi mot pour mot de <em>La Gazette Drouot</em> sans accord préalable ni citation pose problème.</td>
 </tr>
 <tr class="bg-slate-50/70 even">
-<td class="p-4 font-bold text-navy-900 align-top">🧭 <a href="https://cdjm.org/les-chartes/" class="underline text-navy-700 hover:text-terracotta-600" target="_blank" rel="noopener noreferrer">Charte de Munich (1971) ↗</a><br>
+<td class="p-4 font-bold text-navy-900 align-top" data-label="Référence">🧭 <a href="https://cdjm.org/les-chartes/" class="underline text-navy-700 hover:text-terracotta-600" target="_blank" rel="noopener noreferrer">Charte de Munich (1971) ↗</a><br>
 <span class="text-sm font-semibold text-slate-600">Devoirs 1, 2, 3, 6, 8, 9 &amp; 10</span></td>
-<td class="p-4 align-top leading-relaxed">Vérité et droit du public (1), liberté de critique (2), ne pas supprimer d'infos essentielles (3), rectifier (6), pas de plagiat (8), indépendance (9 &amp; 10).</td>
-<td class="p-4 align-top leading-relaxed">Reprise non sourcée (8), omission des 200 000 €, de l’iconographie macabre et de la controverse lors de l'inauguration (1, 2, 3), question d'indépendance (9, 10) et rectification (6).</td>
+<td class="p-4 align-top leading-relaxed" data-label="Ce que prévoit le texte">Vérité et droit du public (1), liberté de critique (2), ne pas supprimer d'infos essentielles (3), rectifier (6), pas de plagiat (8), indépendance (9 &amp; 10).</td>
+<td class="p-4 align-top leading-relaxed" data-label="Points soulevés sur les articles DL">Reprise non sourcée (8), omission des 200 000 €, de l’iconographie macabre et de la controverse lors de l'inauguration (1, 2, 3), question d'indépendance (9, 10) et rectification (6).</td>
 </tr>
 <tr class="bg-white odd">
-<td class="p-4 font-bold text-navy-900 align-top">📰 <a href="https://www.ledauphine.com/societe/2023/11/23/declaration-des-principes-editoriaux-des-titres-du-groupe-ebra-dont-le-dauphine-libere-fait-partie" class="underline text-navy-700 hover:text-terracotta-600" target="_blank" rel="noopener noreferrer">Principes éditoriaux du <em>Dauphiné Libéré</em> (EBRA) ↗</a></td>
-<td class="p-4 align-top leading-relaxed">Exactitude, vigilance critique, interdiction du plagiat, pluralisme des opinions et des points de vue, écoute du public, prévention des conflits d'intérêts.</td>
-<td class="p-4 align-top leading-relaxed">Non-citation de la source, description incomplète de l'œuvre, absence du débat patrimonial sur place, transparence sur l'auteur réel.</td>
+<td class="p-4 font-bold text-navy-900 align-top" data-label="Référence">📰 <a href="https://www.ledauphine.com/societe/2023/11/23/declaration-des-principes-editoriaux-des-titres-du-groupe-ebra-dont-le-dauphine-libere-fait-partie" class="underline text-navy-700 hover:text-terracotta-600" target="_blank" rel="noopener noreferrer">Principes éditoriaux du <em>Dauphiné Libéré</em> (EBRA) ↗</a></td>
+<td class="p-4 align-top leading-relaxed" data-label="Ce que prévoit le texte">Exactitude, vigilance critique, interdiction du plagiat, pluralisme des opinions et des points de vue, écoute du public, prévention des conflits d'intérêts.</td>
+<td class="p-4 align-top leading-relaxed" data-label="Points soulevés sur les articles DL">Non-citation de la source, description incomplète de l'œuvre, absence du débat patrimonial sur place, transparence sur l'auteur réel.</td>
 </tr>
 </tbody>
 </table>
@@ -1035,23 +1112,20 @@ ul.task-list li input[type="checkbox"] {
     </section>
 
   </main>
+</div>
 
-  <script>
-    // Gestion des tiroirs dépliables (textes de référence)
-    function toggleDrawer(id, btn) {
-      const drawer = document.getElementById(id);
-      if (!drawer) return;
-      const isOpen = drawer.classList.toggle('open');
-      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      const arrow = btn.querySelector('.drawer-arrow');
-      if (arrow) {
-        arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
-      }
+<script>
+  function toggleDrawer(id, btn) {
+    const drawer = document.getElementById(id);
+    if (!drawer) return;
+    const isOpen = drawer.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    const arrow = btn.querySelector('.drawer-arrow');
+    if (arrow) {
+      arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
     }
-  </script>
-
-
-
+  }
+</script>
 
 
 
