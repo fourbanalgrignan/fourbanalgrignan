@@ -514,12 +514,26 @@ ul.task-list li input[type="checkbox"] {
     }
   }
 
-  /* Restauration du bandeau Quarto */
-  #quarto-header .navbar-nav,
-  #quarto-header .navbar-collapse {
+  /* Restauration du bandeau Quarto sans forcer l'ouverture du menu mobile */
+  #quarto-header .navbar-nav {
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
+  }
+
+  #quarto-header .navbar-collapse.show,
+  #quarto-header .navbar-collapse.collapsing {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  @media (min-width: 992px) {
+    #quarto-header .navbar-collapse {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
   }
 
   #infographic-root *,
