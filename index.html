@@ -148,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
 <section class="grignan-home">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Comfortaa:wght@700&family=Montserrat:wght@700;800;900&display=swap');
 
 /* =====================================
    FOND ET DÉCORATIONS
@@ -164,14 +164,13 @@ html, body, #quarto-content {
   max-width: 1100px;
   margin: auto;
   position: relative;
-  isolation: isolate;
 }
 
 .grignan-home * {
   box-sizing: border-box;
 }
 
-/* LAVANDE À DROITE */
+/* LAVANDE À DROITE (AU PREMIER PLAN) */
 
 .lavande-filigrane {
   position: fixed;
@@ -179,12 +178,12 @@ html, body, #quarto-content {
   bottom: 10px;
   width: 190px;
   height: auto;
-  opacity: 0.28;
+  opacity: 0.34;
   pointer-events: none;
-  z-index: -1;
+  z-index: 10;
 }
 
-/* ÉPI DE BLÉ À GAUCHE */
+/* ÉPI DE BLÉ À GAUCHE (AU PREMIER PLAN) */
 
 .ble-filigrane {
   position: fixed;
@@ -192,9 +191,99 @@ html, body, #quarto-content {
   bottom: 15px;
   width: 175px;
   height: auto;
-  opacity: 0.30;
+  opacity: 0.36;
   pointer-events: none;
-  z-index: -1;
+  z-index: 10;
+}
+
+/* =====================================
+   BANNIÈRE CHÂTEAU
+===================================== */
+
+.grignan-home .gh-hero {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.grignan-home .gh-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 48%;
+  z-index: 0;
+}
+
+/* Dégradé sur le ciel pour faire ressortir le titre */
+.grignan-home .gh-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(16, 24, 36, 0.80) 0%,
+    rgba(24, 36, 50, 0.44) 46%,
+    rgba(24, 36, 50, 0.06) 100%
+  );
+  z-index: 1;
+}
+
+.grignan-home .gh-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 38px 24px 24px;
+  max-width: 1020px;
+  width: 100%;
+}
+
+.grignan-home .gh-hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: clamp(32px, 5.5vw, 56px);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.15;
+  margin: 0;
+  color: #ffffff;
+  text-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.75),
+    0 1px 3px rgba(0, 0, 0, 0.95);
+}
+
+.grignan-home .gh-hero-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 14px 0 0;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: clamp(20px, 3.1vw, 30px);
+  line-height: 1.3;
+  color: #f9dc9c;
+  letter-spacing: 0.6px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+}
+
+.grignan-home .gh-devil-svg {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  overflow: visible;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.8));
+  transform: translateY(-1px);
 }
 
 /* =====================================
@@ -203,33 +292,7 @@ html, body, #quarto-content {
 
 .grignan-home .gh-intro {
   text-align: center;
-  padding: 45px 25px 35px;
-}
-
-.grignan-home .gh-kicker {
-  color: #9b784b;
-  font-size: 16.8px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
-}
-
-.grignan-home .gh-intro h1 {
-  font-family: 'Comfortaa', sans-serif;
-  font-weight: 700;
-  color: #26394d;
-  font-size: clamp(38.4px, 6vw, 55.2px);
-  line-height: 1.3;
-  margin: 0 0 20px;
-}
-
-.grignan-home .gh-intro h2 {
-  font-family: 'Comfortaa', sans-serif;
-  font-size: clamp(22.8px, 3.6vw, 28.8px);
-  font-weight: 700;
-  color: #c0392b;
-  margin: 0 0 28px;
-  line-height: 1.5;
+  padding: 38px 25px 25px;
 }
 
 .grignan-home .gh-intro p {
@@ -499,18 +562,32 @@ html, body, #quarto-content {
     width: 110px;
     right: -12px;
     bottom: 5px;
-    opacity: 0.20;
+    opacity: 0.24;
   }
 
   .ble-filigrane {
     width: 105px;
     left: -15px;
     bottom: 5px;
-    opacity: 0.22;
+    opacity: 0.26;
   }
 }
 
 @media(max-width:480px) {
+
+  .grignan-home .gh-hero {
+    min-height: 340px;
+    border-radius: 10px;
+  }
+
+  .grignan-home .gh-hero-content {
+    padding: 26px 14px 18px;
+  }
+
+  .grignan-home .gh-devil-svg {
+    width: 28px;
+    height: 28px;
+  }
 
   .grignan-home .gh-numbers {
     grid-template-columns: 1fr;
@@ -526,7 +603,7 @@ html, body, #quarto-content {
   }
 
   .grignan-home .gh-intro {
-    padding: 32px 14px;
+    padding: 28px 14px 20px;
   }
 
   .grignan-home .gh-intro p {
@@ -678,18 +755,43 @@ html, body, #quarto-content {
 
 
 <!-- =====================================
+     BANNIÈRE CHÂTEAU
+===================================== -->
+
+<header class="gh-hero">
+  <img src="images/chateau-grignan.jpg" alt="Vue du château et du village de Grignan">
+  <div class="gh-hero-content">
+    <div class="gh-hero-title">LE FOUR BANAL DE GRIGNAN</div>
+    <p class="gh-hero-subtitle">
+      <span>Une transformation controversée</span>
+      <svg class="gh-devil-svg" viewbox="-6 -6 76 76" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <radialgradient id="devilGrad" cx="35%" cy="30%" r="70%">
+            <stop offset="0%" stop-color="#f25c4d"></stop>
+            <stop offset="65%" stop-color="#b82419"></stop>
+            <stop offset="100%" stop-color="#6e110b"></stop>
+          </radialgradient>
+        </defs>
+        <path d="M18 22 C11 16, 11 8, 17 5 C16 11, 19 15, 24 17 Z" fill="#f9dc9c"></path>
+        <path d="M46 22 C53 16, 53 8, 47 5 C48 11, 45 15, 40 17 Z" fill="#f9dc9c"></path>
+        <circle cx="32" cy="34" r="19" fill="url(#devilGrad)" stroke="#f9dc9c" stroke-width="2"></circle>
+        <path d="M21 27 L29 31" stroke="#f9dc9c" stroke-width="2.4" stroke-linecap="round"></path>
+        <path d="M43 27 L35 31" stroke="#f9dc9c" stroke-width="2.4" stroke-linecap="round"></path>
+        <circle cx="25" cy="33" r="2.2" fill="#fff6df"></circle>
+        <circle cx="39" cy="33" r="2.2" fill="#fff6df"></circle>
+        <path d="M23 41 Q32 47 41 41" fill="none" stroke="#f9dc9c" stroke-width="2.3" stroke-linecap="round"></path>
+        <path d="M30 47 L32 52 L34 47 Z" fill="#f9dc9c"></path>
+      </svg>
+    </p>
+  </div>
+</header>
+
+
+<!-- =====================================
      INTRODUCTION
 ===================================== -->
 
 <div class="gh-intro">
-
-  <div class="gh-kicker">
-    GRIGNAN · DRÔME · AFFAIRE DU PORTAIL
-  </div>
-
-  <h1>LE FOUR BANAL DE GRIGNAN</h1>
-
-  <h2 class="anchored">Une transformation controversée</h2>
 
   <p>
     En 2026, une commande publique de 200 000 € a été consacrée à la réalisation d’une installation artistique contemporaine au sein de l’ancien four banal de Grignan. Celle-ci a profondément transformé ce lieu médiéval et soulève de nombreuses questions relatives à la préservation du patrimoine, à l’utilisation de l’argent public et au respect du cadre juridique applicable.
@@ -786,7 +888,7 @@ html, body, #quarto-content {
 
 
 <!-- =====================================
-     CONCLUSION
+     ENCART FINAL
 ===================================== -->
 
 <div class="gh-conclusion">
