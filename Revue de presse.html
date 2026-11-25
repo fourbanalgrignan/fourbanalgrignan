@@ -151,6 +151,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&amp;family=Fraunces:opsz,wght@9..144,700;9..144,900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <script>
   tailwind.config = {
+    corePlugins: { preflight: false },
     theme: {
       extend: {
         fontFamily: {
@@ -511,6 +512,22 @@ ul.task-list li input[type="checkbox"] {
       color: #64748b;
       margin-bottom: 3px;
     }
+  }
+
+  /* Restauration du bandeau Quarto */
+  #quarto-header .navbar-nav,
+  #quarto-header .navbar-collapse {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  #infographic-root *,
+  #infographic-root *::before,
+  #infographic-root *::after {
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 0;
   }
 </style>
 
