@@ -75,7 +75,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script data-goatcounter="https://leodubois.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -413,153 +412,10 @@ html, body, #quarto-content {
   text-decoration: underline !important;
 }
 
-/* =====================================
-   ENCADRÉ SPÉCIAL DÉONTOLOGIE DL
-   (entre les cartes et la méthodologie)
-===================================== */
-
-.deonto-alert-box {
-  display: block;
-  width: 100%;
-  margin: 26px 0 0;
-  padding: 24px 28px;
-  background: #fffbeb;
-  border: 2px solid #f59e0b;
-  border-left: 6px solid #d97706;
-  border-radius: 12px;
-  box-shadow: 0 4px 18px rgba(41, 55, 71, 0.08);
-  float: none !important;
-  clear: both;
-}
-
-.deonto-alert-top {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 12px;
-}
-
-.deonto-alert-badge {
-  display: inline-block;
-  padding: 5px 12px;
-  border-radius: 20px;
-  background: #fef3c7;
-  color: #92400e;
-  font-family: 'Comfortaa', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-}
-
-.deonto-alert-ref {
-  font-size: 12px;
-  font-weight: 700;
-  color: #78350f;
-}
-
-.grignan-home .deonto-alert-box h2 {
-  display: block !important;
-  width: 100% !important;
-  text-align: left !important;
-  font-family: 'Comfortaa', Arial, sans-serif !important;
-  font-size: 20px !important;
-  line-height: 1.38 !important;
-  font-weight: 700 !important;
-  color: #293747 !important;
-  margin: 0 0 12px !important;
-  padding: 0 !important;
-  float: none !important;
-}
-
-.deonto-alert-box p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #435264;
-  margin: 0 0 16px;
-}
-
-.deonto-alert-points {
-  list-style: none;
-  margin: 0 0 20px;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px 18px;
-  font-size: 13px;
-  color: #293747;
-}
-
-.deonto-alert-points li {
-  padding-left: 16px;
-  position: relative;
-  line-height: 1.5;
-}
-
-.deonto-alert-points li::before {
-  content: "▸";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #d97706;
-  font-weight: bold;
-}
-
-.deonto-alert-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-}
-
-.deonto-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 10px 16px;
-  background-color: #b45309;
-  color: #ffffff !important;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none !important;
-  transition: background-color 0.2s ease, transform 0.15s ease;
-}
-
-.deonto-btn-primary:hover {
-  background-color: #92400e;
-  color: #ffffff !important;
-  text-decoration: none !important;
-  transform: translateY(-1px);
-}
-
-.deonto-btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 10px 16px;
-  background-color: #ffffff;
-  color: #293747 !important;
-  border: 1px solid #d6c5a5;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none !important;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-.deonto-btn-secondary:hover {
-  background-color: #fef3c7;
-  border-color: #b45309;
-  text-decoration: none !important;
-}
-
 /* SÉPARATION */
 
 .elus-separator {
-  margin: 34px 0 30px;
+  margin: 38px 0 30px;
   border: 0;
   border-top: 1px solid #e1e5e7;
 }
@@ -808,10 +664,6 @@ html, body, #quarto-content {
   .elus-card {
     padding: 20px;
   }
-
-  .deonto-alert-points {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 600px) {
@@ -829,14 +681,6 @@ html, body, #quarto-content {
   .gh-dossier-title p {
     font-size: 16px;
     padding: 0 10px;
-  }
-
-  .deonto-alert-box {
-    padding: 20px 16px;
-  }
-
-  .grignan-home .deonto-alert-box h2 {
-    font-size: 17px !important;
   }
 
   .methodology-letter {
@@ -888,12 +732,6 @@ html, body, #quarto-content {
   .lavande-filigrane,
   .ble-filigrane {
     display: none;
-  }
-
-  .deonto-alert-box {
-    break-inside: avoid;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
   }
 
   .methodology-letter {
@@ -1198,39 +1036,6 @@ html, body, #quarto-content {
 
   </article>
 
-</div>
-
-<!-- =====================================
-     ENCADRÉ SPÉCIAL : DÉONTOLOGIE DL
-===================================== -->
-
-<div class="deonto-alert-box">
-  <div class="deonto-alert-top">
-    <span class="deonto-alert-badge">⚖️ Courrier spécial · Déontologie &amp; Traitement médiatique</span>
-    <span class="deonto-alert-ref">Charte de Munich · Principes EBRA</span>
-  </div>
-
-  <h2 class="anchored">Interpeller Le Dauphiné Libéré sur de possibles manquements déontologiques</h2>
-
-  <p>
-    Un modèle de courrier dédié permet d’interpeller la rédaction sur le traitement médiatique de la transformation du four banal (articles des 16 et 20 septembre 2026) au regard de leurs propres principes éditoriaux et de la Charte de Munich (1971) :
-  </p>
-
-  <ul class="deonto-alert-points">
-    <li>Plagiat : reprise sans attribution</li>
-    <li>Omission du montant de 200 000 € d’argent public</li>
-    <li>Compte rendu partiel de l’inauguration du 19 septembre</li>
-    <li>Clarification de la signature et éventuels conflits d’intérêts</li>
-  </ul>
-
-  <div class="deonto-alert-actions">
-    <a class="deonto-btn-primary" href="agir 2/Interpeller/Presse/Modèle de lettre pour le Dauphiné Libéré - Traitement médiatique.pdf" target="_blank" rel="noopener noreferrer">
-      🔗 Télécharger le modèle de lettre
-    </a>
-    <a class="deonto-btn-secondary" href="https://www.ledauphine.com/contact-redactions" target="_blank" rel="noopener noreferrer">
-      ✉️ Formulaire de contact Dauphiné Libéré
-    </a>
-  </div>
 </div>
 
 <hr class="elus-separator">
