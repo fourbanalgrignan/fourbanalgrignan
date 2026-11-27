@@ -128,118 +128,108 @@ html, body, #quarto-content {
 }
 
 /* =====================================
-   COÛT GLOBAL
+   CARTE UNIFIÉE ANNEAU + LIAISONS
 ===================================== */
 
-.funding-total {
-  background: #ffffff;
-  padding: 22px;
-  border-radius: 9px;
+.funding-unified {
+  background: radial-gradient(circle at 50% 60%, rgba(180, 147, 99, 0.06), transparent 52%),
+              #ffffff;
+  padding: 34px 28px 38px;
+  border-radius: 16px;
   border: 1px solid #e5e0d8;
+  box-shadow: 0 10px 28px rgba(38, 57, 77, 0.06);
   position: relative;
   overflow: hidden;
 }
-
-.funding-total > span {
-  font-size: 11px;
-  letter-spacing: 1.4px;
-  color: #94764b;
-  font-weight: 700;
-  position: relative;
-  z-index: 1;
-}
-
-.funding-total > strong {
-  display: block;
-  font-size: 36px;
-  color: #26394d;
-  margin: 8px 0 18px;
-  position: relative;
-  z-index: 1;
-}
-
-.funding-bar {
-  display: flex;
-  height: 15px;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-
-.commune-part {
-  width: 25%;
-  background: #344e68;
-}
-
-.drac-part {
-  width: 75%;
-  background: #b9b9b0;
-}
-
-.funding-legend {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 12px;
-  font-size: 12px;
-  color: #555;
-  position: relative;
-  z-index: 1;
-}
-
-/* ARGENT QUI S'ENVOLE */
 
 .money-flying {
   position: absolute;
-  right: 25px;
-  top: 5px;
-  width: 115px;
-  height: 105px;
-  opacity: 0.8;
+  right: 22px;
+  top: 12px;
+  width: 108px;
+  height: 98px;
+  opacity: 0.72;
   pointer-events: none;
   z-index: 0;
 }
 
-@media (max-width: 560px) {
-  .money-flying {
-    width: 75px;
-    height: 75px;
-    right: 8px;
-    top: 8px;
-    opacity: 0.55;
-  }
+/* TITRE AU-DESSUS DE L'ANNEAU */
+
+.funding-top-title {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 18px;
 }
 
-/* =====================================
-   RÉPARTITION DES FINANCEMENTS
-===================================== */
-
-.funding-flow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 18px;
+.funding-kicker {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  color: #9b784b;
+  text-transform: uppercase;
+  margin-bottom: 6px;
 }
 
-.funding-card {
+.funding-top-title h2 {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  color: #26394d;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* SCÈNE ANNEAU + CÔTÉS EXTÉRIEURS */
+
+.donut-diagram {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 880px;
+  height: 310px;
+  margin: 0 auto;
+}
+
+.donut-diagram-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* BLOCS EXTÉRIEURS GAUCHE (COMMUNE) & DROITE (DRAC) */
+
+.callout-side {
+  position: absolute;
+  width: 245px;
   display: flex;
-  align-items: flex-start;
-  gap: 13px;
-  padding: 18px;
-  background: #ffffff;
-  border: 1px solid #e5e0d8;
-  border-radius: 9px;
+  flex-direction: column;
 }
 
-.institution-logo {
-  flex: 0 0 43px;
-  height: 43px;
-  display: grid;
-  place-items: center;
-  background: #f1eee7;
-  border-radius: 50%;
-  font-size: 23px;
+.callout-left {
+  left: 0;
+  top: 34px;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.callout-right {
+  right: 0;
+  top: 136px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.callout-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.callout-left .callout-head {
+  flex-direction: row-reverse;
 }
 
 /* DRAPEAU FRANÇAIS */
@@ -248,10 +238,11 @@ html, body, #quarto-content {
   display: flex;
   overflow: hidden;
   border-radius: 50%;
-  width: 43px;
-  height: 43px;
-  padding: 0;
-  flex: 0 0 43px;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border: 1px solid rgba(38, 57, 77, 0.16);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .french-flag span {
@@ -271,24 +262,69 @@ html, body, #quarto-content {
   background: #ed2939;
 }
 
-.funding-card h3 {
+.commune-emblem {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #f5eee2, #eadbc3);
+  border: 1px solid rgba(180, 147, 99, 0.30);
+  font-size: 17px;
+}
+
+.callout-name {
   font-family: Georgia, serif;
-  font-size: 19px;
+  font-size: 17px;
+  font-weight: 700;
   color: #26394d;
-  margin: 2px 0 8px;
-  line-height: 1.4;
+  line-height: 1.25;
 }
 
-.funding-card strong {
+.callout-amount-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0 3px;
+}
+
+.callout-left .callout-amount-row {
+  flex-direction: row-reverse;
+}
+
+.callout-amount {
+  font-family: Georgia, serif;
   font-size: 25px;
-  color: #344e68;
+  font-weight: 700;
+  color: #26394d;
+  line-height: 1.15;
 }
 
-.funding-card p {
-  font-size: 13px;
-  line-height: 1.5;
-  color: #777;
-  margin-bottom: 0;
+.funding-pill {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 2px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.funding-pill.drac {
+  background: #26394d;
+  color: #ffffff;
+}
+
+.funding-pill.commune {
+  background: #b49363;
+  color: #ffffff;
+}
+
+.callout-desc {
+  font-size: 12.5px;
+  color: #6b7682;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 225px;
 }
 
 /* =====================================
@@ -415,6 +451,40 @@ html, body, #quarto-content {
    RESPONSIVE
 ===================================== */
 
+@media (max-width: 860px) {
+  .donut-diagram {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .donut-diagram-svg {
+    width: 260px;
+    height: 260px;
+  }
+
+  .connector-lines {
+    display: none;
+  }
+
+  .callout-side {
+    position: static;
+    width: 100%;
+    max-width: 420px;
+    align-items: center;
+    text-align: center;
+    padding-top: 14px;
+    border-top: 1px solid #ece7de;
+  }
+
+  .callout-left .callout-head,
+  .callout-left .callout-amount-row {
+    flex-direction: row;
+  }
+}
+
 @media (max-width: 750px) {
 
   .funding-page {
@@ -445,22 +515,22 @@ html, body, #quarto-content {
   }
 }
 
-@media(max-width: 560px) {
+@media (max-width: 560px) {
 
-  .funding-flow {
-    grid-template-columns: 1fr;
+  .funding-unified {
+    padding: 24px 16px 28px;
   }
 
-  .funding-legend {
-    font-size: 10px;
+  .money-flying {
+    width: 68px;
+    height: 62px;
+    right: 8px;
+    top: 8px;
+    opacity: 0.42;
   }
 
-  .funding-total {
-    padding: 17px;
-  }
-
-  .funding-total > strong {
-    font-size: 32px;
+  .funding-top-title h2 {
+    font-size: 22px;
   }
 
   .funding-reference {
@@ -627,13 +697,11 @@ html, body, #quarto-content {
        xmlns="http://www.w3.org/2000/svg"
        aria-hidden="true">
 
-    <!-- Lien / fronces nouées en haut du sac -->
     <path d="M86 58 L74 36 L98 44 L110 26 L122 44 L146 36 L134 58 Z"
           fill="#9b784b"/>
     <rect x="84" y="55" width="52" height="10" rx="4"
           fill="#26394d"/>
 
-    <!-- Corps arrondi du sac d'argent -->
     <path d="M84 65
              C56 76, 38 106, 40 144
              C42 178, 68 196, 110 196
@@ -644,7 +712,6 @@ html, body, #quarto-content {
           stroke-width="6"
           stroke-linejoin="round"/>
 
-    <!-- Liséré intérieur doré -->
     <path d="M88 73
              C64 83, 49 109, 51 143
              C53 170, 74 185, 110 185
@@ -655,7 +722,6 @@ html, body, #quarto-content {
           stroke-width="2.2"
           stroke-dasharray="5 4"/>
 
-    <!-- Symbole Euro (€) central -->
     <path d="M126 106
              C118 99, 104 100, 97 110
              C91 120, 91 140, 97 150
@@ -690,33 +756,28 @@ html, body, #quarto-content {
 
 
 <!-- =====================================
-     FINANCEMENT
+     FINANCEMENT (GRAPHIQUE ANNEAU CENTRAL)
 ===================================== -->
 
 <section class="funding">
 
-  <div class="funding-total">
+  <div class="funding-unified">
 
     <!-- ARGENT QUI S'ENVOLE -->
-
     <svg class="money-flying"
          viewBox="0 0 150 120"
          xmlns="http://www.w3.org/2000/svg"
          aria-hidden="true">
 
-      <!-- Billet principal -->
       <g transform="rotate(-18 75 55)">
         <rect x="48" y="38" width="75" height="42"
               rx="4" fill="#A5B69A"
               stroke="#687D58" stroke-width="1.5"/>
-
         <rect x="54" y="44" width="63" height="30"
               rx="2" fill="none"
               stroke="#E8E5D9" stroke-width="1"/>
-
         <circle cx="85" cy="59" r="11"
                 fill="#E8E5D9" opacity="0.8"/>
-
         <text x="85" y="65"
               text-anchor="middle"
               font-size="17"
@@ -725,16 +786,13 @@ html, body, #quarto-content {
               fill="#687D58">€</text>
       </g>
 
-      <!-- Deuxième billet -->
       <g transform="rotate(17 35 78)">
         <rect x="8" y="65" width="54" height="30"
               rx="3" fill="#D3B474"
               stroke="#A8895D" stroke-width="1.3"/>
-
         <rect x="13" y="70" width="44" height="20"
               rx="2" fill="none"
               stroke="#F4F0E8" stroke-width="1"/>
-
         <text x="35" y="85"
               text-anchor="middle"
               font-size="13"
@@ -743,12 +801,10 @@ html, body, #quarto-content {
               fill="#80663E">€</text>
       </g>
 
-      <!-- Petit billet qui s'envole -->
       <g transform="rotate(-35 115 20)">
         <rect x="101" y="8" width="34" height="21"
               rx="2" fill="#B9C5A8"
               stroke="#71805B" stroke-width="1"/>
-
         <text x="118" y="23"
               text-anchor="middle"
               font-size="11"
@@ -756,21 +812,17 @@ html, body, #quarto-content {
               fill="#52664B">€</text>
       </g>
 
-      <!-- Traits de mouvement -->
       <g fill="none"
          stroke="#B69A61"
          stroke-width="1.7"
          stroke-linecap="round"
          opacity="0.8">
-
         <path d="M18 35 Q27 25 36 29"/>
         <path d="M112 99 Q124 91 135 95"/>
         <path d="M72 15 Q80 8 88 12"/>
         <path d="M22 105 Q30 99 38 102"/>
-
       </g>
 
-      <!-- Petites étoiles -->
       <g fill="#C4A15E">
         <path d="M39 15 L42 22 L49 25 L42 28 L39 35 L36 28 L29 25 L36 22 Z"/>
         <path d="M132 48 L134 53 L139 55 L134 57 L132 62 L130 57 L125 55 L130 53 Z"/>
@@ -778,53 +830,136 @@ html, body, #quarto-content {
 
     </svg>
 
-
-    <span>COÛT GLOBAL DU PROJET</span>
-
-    <strong>200 000 €</strong>
-
-    <div class="funding-bar">
-      <div class="commune-part"></div>
-      <div class="drac-part"></div>
+    <!-- TITRE AU-DESSUS DE L'ANNEAU -->
+    <div class="funding-top-title">
+      <span class="funding-kicker">Répartition des financements</span>
+      <h2>Deux financeurs publics</h2>
     </div>
 
-    <div class="funding-legend">
-      <span>25 % Commune</span>
-      <span>75 % DRAC</span>
-    </div>
+    <!-- ANNEAU AU CENTRE + LÉGENDES RELIÉES SUR LES CÔTÉS -->
+    <div class="donut-diagram">
 
-  </div>
+      <!-- SVG CENTRAL : ANNEAU + TEXTE CENTRAL + LIGNES DE LIAISON -->
+      <svg class="donut-diagram-svg"
+           viewBox="0 0 880 310"
+           role="img"
+           aria-label="Graphique anneau du financement : coût global de 200 000 €, dont 25 % Commune de Grignan (50 000 €) et 75 % DRAC (150 000 €)">
 
+        <defs>
+          <linearGradient id="gradDrac" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3c5a78"/>
+            <stop offset="100%" stop-color="#223344"/>
+          </linearGradient>
+          <linearGradient id="gradCommune" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#caa773"/>
+            <stop offset="100%" stop-color="#9e7b49"/>
+          </linearGradient>
+        </defs>
 
-  <!-- RÉPARTITION DES FINANCEMENTS -->
+        <!-- Disque intérieur doux -->
+        <circle cx="440" cy="155" r="88"
+                fill="#fcfaf6"
+                stroke="#ece6db"
+                stroke-width="1.5"/>
 
-  <div class="funding-flow">
+        <!-- Piste de fond -->
+        <circle cx="440" cy="155" r="110"
+                fill="none"
+                stroke="#f1ede5"
+                stroke-width="30"/>
 
-    <div class="funding-card">
+        <!-- Anneau (rayon = 110, circonférence ≈ 691.15) -->
+        <g transform="rotate(-90 440 155)">
+          <!-- DRAC : 75% de 691.15 = 518.36 -->
+          <circle cx="440" cy="155" r="110"
+                  fill="none"
+                  stroke="url(#gradDrac)"
+                  stroke-width="30"
+                  stroke-dasharray="518.36 691.15"
+                  stroke-dashoffset="0"/>
 
-      <div class="institution-logo">🏛️</div>
+          <!-- Commune : 25% de 691.15 = 172.79 -->
+          <circle cx="440" cy="155" r="110"
+                  fill="none"
+                  stroke="url(#gradCommune)"
+                  stroke-width="30"
+                  stroke-dasharray="172.79 691.15"
+                  stroke-dashoffset="-518.36"/>
+        </g>
 
-      <div>
-        <h3>Commune de Grignan</h3>
-        <strong>50 000 €</strong>
-        <p>Participation communale</p>
+        <!-- TEXTE COÛT GLOBAL PARFAITEMENT CENTRÉ DANS L'ANNEAU -->
+        <text x="440" y="130"
+              text-anchor="middle"
+              font-family="Arial, Helvetica, sans-serif"
+              font-size="11"
+              font-weight="800"
+              letter-spacing="1.6"
+              fill="#9b784b">COÛT GLOBAL</text>
+
+        <text x="440" y="164"
+              text-anchor="middle"
+              font-family="Georgia, serif"
+              font-size="29"
+              font-weight="700"
+              fill="#111111">200 000 €</text>
+
+        <text x="440" y="186"
+              text-anchor="middle"
+              font-family="Arial, Helvetica, sans-serif"
+              font-size="11.5"
+              fill="#6b7682">Commande publique</text>
+
+        <!-- LIGNES DE LIAISON EN NOIR -->
+        <g class="connector-lines">
+          <!-- Liaison gauche : arc Commune -> bloc gauche -->
+          <polyline points="362,77 312,52 256,52"
+                    fill="none"
+                    stroke="#111111"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+          <circle cx="362" cy="77" r="5" fill="#111111" stroke="#ffffff" stroke-width="2"/>
+          <circle cx="256" cy="52" r="3.5" fill="#111111"/>
+
+          <!-- Liaison droite courte : flanc droit arc DRAC -> bloc droite -->
+          <line x1="550" y1="155" x2="624" y2="155"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"/>
+          <circle cx="550" cy="155" r="5" fill="#111111" stroke="#ffffff" stroke-width="2"/>
+          <circle cx="624" cy="155" r="3.5" fill="#111111"/>
+        </g>
+
+      </svg>
+
+      <!-- BLOC GAUCHE : COMMUNE DE GRIGNAN -->
+      <div class="callout-side callout-left">
+        <div class="callout-head">
+          <div class="commune-emblem" aria-hidden="true">🏛️</div>
+          <span class="callout-name">Commune de Grignan</span>
+        </div>
+        <div class="callout-amount-row">
+          <span class="callout-amount">50 000 €</span>
+          <span class="funding-pill commune">25 %</span>
+        </div>
+        <p class="callout-desc">Participation communale</p>
       </div>
 
-    </div>
-
-
-    <div class="funding-card">
-
-      <div class="institution-logo french-flag" title="République française">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <div>
-        <h3>DRAC</h3>
-        <strong>150 000 €</strong>
-        <p>Direction régionale des affaires culturelles</p>
+      <!-- BLOC DROIT : DRAC -->
+      <div class="callout-side callout-right">
+        <div class="callout-head">
+          <div class="french-flag" title="République française">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span class="callout-name">DRAC</span>
+        </div>
+        <div class="callout-amount-row">
+          <span class="callout-amount">150 000 €</span>
+          <span class="funding-pill drac">75 %</span>
+        </div>
+        <p class="callout-desc">Direction régionale des affaires culturelles</p>
       </div>
 
     </div>

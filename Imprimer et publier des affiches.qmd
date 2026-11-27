@@ -10,7 +10,7 @@ format:
 <section class="grignan-home">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import url('[https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap](https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap)');
 
 /* =====================================
    FOND ET DÉCORATIONS
@@ -133,6 +133,15 @@ html, body, #quarto-content {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
+}
+
+/* Centrer la 3e carte seule sur la 2e ligne avec la même largeur */
+@media (min-width: 721px) {
+  .posters-grid > .poster-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc(50% - 12px);
+    justify-self: center;
+  }
 }
 
 .poster-card {
@@ -550,7 +559,7 @@ html, body, #quarto-content {
 
 <svg class="ble-filigrane"
      viewBox="0 0 200 430"
-     xmlns="http://www.w3.org/2000/svg"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
      aria-hidden="true">
 
   <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
@@ -614,7 +623,7 @@ html, body, #quarto-content {
 
 <svg class="lavande-filigrane"
      viewBox="0 0 200 420"
-     xmlns="http://www.w3.org/2000/svg"
+     xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
      aria-hidden="true">
 
   <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
@@ -665,7 +674,7 @@ html, body, #quarto-content {
 <div class="gh-dossier-title">
 
   <!-- Filigrane SVG Supports visuels : affiche épinglée & tract -->
-  <svg class="gh-dossier-hero-bg" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <svg class="gh-dossier-hero-bg" viewBox="0 0 220 220" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" aria-hidden="true">
     <rect x="44" y="28" width="114" height="154" rx="10" fill="none" stroke="#568239" stroke-width="5"/>
     <circle cx="101" cy="24" r="8" fill="#568239"/>
     <line x1="68" y1="68" x2="134" y2="68" stroke="#568239" stroke-width="5" stroke-linecap="round"/>
@@ -684,7 +693,7 @@ html, body, #quarto-content {
 </div>
 
 <!-- =====================================
-     GRILLE DES 2 SUPPORTS VISUELS
+     GRILLE DES SUPPORTS VISUELS
 ===================================== -->
 
 <div class="posters-grid">
@@ -774,6 +783,56 @@ html, body, #quarto-content {
               class="poster-btn-secondary poster-btn-secondary--inline"
               onclick="imprimerImage('agir 2/Diffuser/Imprimer des affiches/Visuel 1.png')">
         🖨️ Imprimer
+      </button>
+    </div>
+
+  </article>
+
+  <!-- 03 : NOUVELLE AFFICHE / TRACT SITE -->
+
+  <article class="poster-card">
+
+    <div class="poster-meta">
+      <span class="poster-number">03 · AFFICHE &amp; TRACT SITE</span>
+      <span class="poster-format">PNG · A4 / A5</span>
+    </div>
+
+    <a class="poster-preview-link"
+       href="agir 2/Diffuser/Imprimer des affiches/TRACT site A4.png"
+       target="_blank"
+       title="Ouvrir l'affiche du site en grand format">
+      <img class="poster-preview-img"
+           src="agir 2/Diffuser/Imprimer des affiches/TRACT site A4.png"
+           alt="Aperçu de l'affiche et tract du site sur le Four banal de Grignan">
+      <span class="poster-zoom-hint">🔍 Cliquer pour afficher en taille réelle</span>
+    </a>
+
+    <h2>Affiche et tract du site : Four banal de Grignan</h2>
+
+    <p class="poster-desc">
+      Support d'information renvoyant vers le site et la démarche citoyenne autour du Four banal de Grignan, disponible aux formats A4 pour l'affichage et A5 pour la diffusion.
+    </p>
+
+    <div class="poster-actions">
+      <a class="poster-btn-primary"
+         href="agir 2/Diffuser/Imprimer des affiches/TRACT site A4.png"
+         download="TRACT site A4.png">
+        ⬇️ PNG format A4
+      </a>
+      <a class="poster-btn-primary"
+         href="agir 2/Diffuser/Imprimer des affiches/TRACT site A5.png"
+         download="TRACT site A5.png">
+        ⬇️ PNG format A5
+      </a>
+      <button type="button"
+              class="poster-btn-secondary"
+              onclick="imprimerImage('agir 2/Diffuser/Imprimer des affiches/TRACT site A4.png')">
+        🖨️ Imprimer (A4)
+      </button>
+      <button type="button"
+              class="poster-btn-secondary"
+              onclick="imprimerImage('agir 2/Diffuser/Imprimer des affiches/TRACT site A5.png')">
+        🖨️ Imprimer (A5)
       </button>
     </div>
 

@@ -609,8 +609,11 @@ html, body, #quarto-content {
   </p>
   <ul>
     <li><strong>Partager :</strong> vous êtes libre de copier, diffuser, relayer et communiquer les éléments du site par tous moyens et sur tous supports (réseaux sociaux, presse, blogs, documents).</li>
-    <li><strong>Réutiliser et adapter :</strong> vous êtes libre de citer, reproduire, transformer ou réutiliser ces contenus pour toute utilisation, y compris associative, journalistique mais non commerciale.</li>
+    <li><strong>Réutiliser et adapter :</strong> vous êtes libre de citer ou réutiliser ces contenus pour toute utilisation, y compris associative, journalistique mais non commerciale.</li>
   </ul>
+  <p>
+    <strong>Crédit photographique (page d'accueil) :</strong> photographie du château de Grignan par <strong>Léo Dubois</strong> (<a href="https://commons.wikimedia.org/wiki/File:Le_ch%C3%A2teau_de_Grignan_-_photo_LEO_DUBOIS.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>), licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>.
+  </p>
 </div>
 
 
