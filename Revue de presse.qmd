@@ -1,0 +1,1109 @@
+---
+title: ""
+format:
+  html:
+    title-block-style: none
+    page-layout: full
+---
+
+```{=html}
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    corePlugins: { preflight: false },
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          serif: ['"Fraunces"', 'serif'],
+        },
+        colors: {
+          navy: {
+            900: '#0F1E36',
+            800: '#162A4A',
+            700: '#1E3A63',
+          },
+          ocre: {
+            100: '#FEF6D8',
+            300: '#FDE073',
+            500: '#F5B700',
+          },
+          terracotta: {
+            100: '#FDECE8',
+            500: '#D95D39',
+            600: '#B84726',
+          },
+          sauge: {
+            100: '#F3E8FF',
+            500: '#9333EA',
+            700: '#6B21A8',
+          },
+          creme: '#FAF8F5',
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  html, body, #quarto-content {
+    background-color: #F4F0E8 !important;
+    color: #0F1E36;
+    font-size: 18px;
+  }
+
+  /* =====================================
+     EN-TÊTE IDENTIQUE AU SITE
+  ===================================== */
+  .deonto-top-wrapper {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #293747;
+    background: transparent;
+    padding: 35px 22px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    isolation: isolate;
+    box-sizing: border-box;
+  }
+
+  .deonto-top-wrapper * {
+    box-sizing: border-box;
+  }
+
+  .lavande-filigrane {
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
+    width: 190px;
+    height: auto;
+    opacity: 0.17;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .ble-filigrane {
+    position: fixed;
+    left: 8px;
+    bottom: 15px;
+    width: 175px;
+    height: auto;
+    opacity: 0.19;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .press-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 16px;
+    padding: 26px 12px 10px;
+    overflow: visible;
+  }
+
+  .balance-filigrane {
+    position: absolute;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%, -50%);
+    width: 240px;
+    height: auto;
+    opacity: 0.14;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .press-label {
+    display: block;
+    color: #9b784b;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .press-header h1 {
+    color: #26394d;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: clamp(28px, 4.6vw, 44px);
+    line-height: 1.3;
+    margin: 0 0 14px;
+    font-weight: 700;
+  }
+
+  .press-intro {
+    color: #59636e;
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .press-intro em {
+    color: #26394d;
+    font-weight: 600;
+  }
+
+  .press-divider {
+    width: 65px;
+    height: 4px;
+    background: #b49363;
+    border-radius: 5px;
+    margin: 24px auto 12px;
+  }
+
+  @media (max-width: 600px) {
+    .lavande-filigrane {
+      width: 110px;
+      right: -12px;
+      bottom: 5px;
+      opacity: 0.12;
+    }
+
+    .ble-filigrane {
+      width: 105px;
+      left: -15px;
+      bottom: 5px;
+      opacity: 0.13;
+    }
+  }
+
+  @media print {
+    .lavande-filigrane,
+    .ble-filigrane,
+    .balance-filigrane {
+      display: none;
+    }
+  }
+
+  /* =====================================
+     STYLES DE LA PAGE HTML REPRISE
+  ===================================== */
+  .marker-highlight {
+    background: linear-gradient(120deg, #FDE073 0%, #FDE073 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 88%;
+    background-position: 0 55%;
+    padding: 0 4px;
+    border-radius: 3px;
+  }
+  .card-shadow {
+    box-shadow: 0 12px 32px -8px rgba(15, 30, 54, 0.08), 0 4px 10px -2px rgba(15, 30, 54, 0.04);
+  }
+  .accordion-content {
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+  .accordion-content.open {
+    max-height: 2400px;
+    opacity: 1;
+  }
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+  }
+  .animate-float {
+    animation: floatSlow 4.5s ease-in-out infinite;
+  }
+
+  /* =====================================
+     ADAPTATION MOBILE UNIQUEMENT (< 640px)
+     Ne modifie pas l'affichage ordinateur
+  ===================================== */
+  @media (max-width: 639px) {
+    html, body, #quarto-content {
+      font-size: 15px;
+      overflow-x: hidden;
+    }
+
+    #infographic-root,
+    #infographic-root * {
+      min-width: 0;
+    }
+
+    .deonto-top-wrapper {
+      padding: 16px 10px 4px;
+    }
+
+    .press-header {
+      padding: 12px 4px 4px;
+      margin-bottom: 8px;
+    }
+
+    .balance-filigrane {
+      width: 145px;
+      top: 28%;
+    }
+
+    .press-label {
+      font-size: 11.5px;
+      letter-spacing: 1.2px;
+      margin-bottom: 8px;
+    }
+
+    .press-header h1 {
+      font-size: 23px;
+      line-height: 1.28;
+      margin-bottom: 10px;
+    }
+
+    .press-header h1 br {
+      display: none;
+    }
+
+    .press-intro {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .press-divider {
+      margin: 14px auto 6px;
+    }
+
+    #infographic-root {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      padding-top: 10px !important;
+      padding-bottom: 24px !important;
+    }
+
+    #infographic-root > * + * {
+      margin-top: 18px !important;
+    }
+
+    #infographic-root header.rounded-3xl,
+    #infographic-root article.rounded-3xl,
+    #infographic-root section.rounded-3xl {
+      border-radius: 18px;
+      padding: 14px 12px;
+    }
+
+    /* Empiler icône + titre dans les en-têtes d'articles sur mobile */
+    #infographic-root article .border-b > .flex.items-start.gap-4 {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Empiler badge lettre A/B + titre sur mobile pour éviter l'écrasement latéral */
+    #infographic-root article .rounded-2xl > .flex.items-center.gap-2\.5 {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    /* Réduire les paddings intérieurs et écarts de grille sur petit écran */
+    #infographic-root .p-5,
+    #infographic-root .p-4 {
+      padding: 12px;
+    }
+
+    #infographic-root .gap-4,
+    #infographic-root .gap-5,
+    #infographic-root .gap-6 {
+      gap: 12px;
+    }
+
+    #infographic-root h2.text-2xl,
+    #infographic-root h2.text-3xl {
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    #infographic-root h3.text-lg {
+      font-size: 16.5px;
+      line-height: 1.3;
+    }
+
+    #infographic-root .text-base,
+    #infographic-root .text-lg {
+      font-size: 14.5px !important;
+      line-height: 1.5 !important;
+    }
+
+    #infographic-root .tracking-wider,
+    #infographic-root .tracking-wide {
+      letter-spacing: 0.02em;
+    }
+
+    #infographic-root blockquote {
+      font-size: 14.5px !important;
+      line-height: 1.52 !important;
+      overflow-wrap: break-word;
+    }
+
+    /* Tableau comparatif transformé en cartes sur mobile */
+    .mobile-compare-table thead {
+      display: none;
+    }
+
+    .mobile-compare-table,
+    .mobile-compare-table tbody,
+    .mobile-compare-table tr,
+    .mobile-compare-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .mobile-compare-table tr {
+      padding: 12px;
+    }
+
+    .mobile-compare-table tr + tr {
+      border-top: 2px solid #e2e8f0;
+    }
+
+    .mobile-compare-table td {
+      padding: 6px 0 !important;
+      font-size: 14px !important;
+      line-height: 1.48 !important;
+    }
+
+    .mobile-compare-table td::before {
+      content: attr(data-label);
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+      margin-bottom: 3px;
+    }
+  }
+
+  /* Restauration du bandeau Quarto sans forcer l'ouverture du menu mobile */
+  #quarto-header .navbar-nav {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  #quarto-header .navbar-collapse.show,
+  #quarto-header .navbar-collapse.collapsing {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  @media (min-width: 992px) {
+    #quarto-header .navbar-collapse {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  }
+
+  #infographic-root *,
+  #infographic-root *::before,
+  #infographic-root *::after {
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 0;
+  }
+</style>
+
+<div class="antialiased selection:bg-ocre-300 selection:text-navy-900">
+
+  <!-- ÉPI DE BLÉ SVG À GAUCHE -->
+  <svg class="ble-filigrane"
+       viewBox="0 0 200 430"
+       xmlns="http://www.w3.org/2000/svg"
+       aria-hidden="true">
+    <path d="M95 420 Q105 320 92 220 Q83 130 105 35"
+          fill="none"
+          stroke="#71805B"
+          stroke-width="3"
+          stroke-linecap="round"/>
+    <g fill="#89966C">
+      <path d="M98 350 Q55 328 38 290 Q79 302 98 350"/>
+      <path d="M95 375 Q136 342 150 303 Q111 319 95 375"/>
+      <path d="M93 290 Q48 265 43 228 Q79 246 93 290"/>
+      <path d="M90 315 Q128 281 138 244 Q105 263 90 315"/>
+      <path d="M91 225 Q52 201 55 164 Q84 184 91 225"/>
+      <path d="M91 250 Q130 218 139 184 Q105 198 91 250"/>
+    </g>
+    <g fill="#C4A15E">
+      <ellipse cx="101" cy="42" rx="7" ry="17" transform="rotate(-28 101 42)"/>
+      <ellipse cx="86" cy="57" rx="7" ry="16" transform="rotate(-58 86 57)"/>
+      <ellipse cx="111" cy="69" rx="7" ry="17" transform="rotate(25 111 69)"/>
+      <ellipse cx="79" cy="82" rx="7" ry="16" transform="rotate(-58 79 82)"/>
+      <ellipse cx="112" cy="97" rx="7" ry="17" transform="rotate(25 112 97)"/>
+      <ellipse cx="77" cy="110" rx="7" ry="16" transform="rotate(-55 77 110)"/>
+      <ellipse cx="108" cy="126" rx="7" ry="17" transform="rotate(22 108 126)"/>
+      <ellipse cx="80" cy="139" rx="7" ry="15" transform="rotate(-45 80 139)"/>
+      <ellipse cx="101" cy="154" rx="7" ry="16" transform="rotate(15 101 154)"/>
+      <ellipse cx="88" cy="169" rx="7" ry="15" transform="rotate(-35 88 169)"/>
+    </g>
+    <g fill="#D3B474">
+      <ellipse cx="115" cy="50" rx="6" ry="14" transform="rotate(40 115 50)"/>
+      <ellipse cx="96" cy="74" rx="6" ry="14" transform="rotate(-25 96 74)"/>
+      <ellipse cx="121" cy="83" rx="6" ry="14" transform="rotate(45 121 83)"/>
+      <ellipse cx="91" cy="102" rx="6" ry="14" transform="rotate(-25 91 102)"/>
+      <ellipse cx="119" cy="112" rx="6" ry="14" transform="rotate(42 119 112)"/>
+      <ellipse cx="91" cy="131" rx="6" ry="13" transform="rotate(-20 91 131)"/>
+      <ellipse cx="113" cy="141" rx="6" ry="13" transform="rotate(38 113 141)"/>
+      <ellipse cx="94" cy="158" rx="6" ry="12" transform="rotate(-15 94 158)"/>
+    </g>
+    <g stroke="#B69A61" stroke-width="1.2" stroke-linecap="round" opacity="0.9">
+      <path d="M101 42L89 15"/>
+      <path d="M86 57L66 36"/>
+      <path d="M111 69L127 42"/>
+      <path d="M79 82L55 63"/>
+      <path d="M112 97L132 69"/>
+      <path d="M77 110L52 93"/>
+      <path d="M108 126L128 101"/>
+      <path d="M80 139L58 125"/>
+      <path d="M101 154L117 133"/>
+      <path d="M88 169L69 155"/>
+    </g>
+  </svg>
+
+  <!-- BRIN DE LAVANDE SVG À DROITE -->
+  <svg class="lavande-filigrane"
+       viewBox="0 0 200 420"
+       xmlns="http://www.w3.org/2000/svg"
+       aria-hidden="true">
+    <path d="M105 410 Q95 300 115 190 Q120 100 145 25"
+          fill="none" stroke="#687D58"
+          stroke-width="3.5" stroke-linecap="round"/>
+    <g fill="#82936D">
+      <path d="M105 340 Q55 320 42 278 Q85 290 105 340"/>
+      <path d="M103 365 Q145 330 158 292 Q115 310 103 365"/>
+      <path d="M108 275 Q60 250 55 215 Q90 230 108 275"/>
+      <path d="M112 300 Q150 265 155 230 Q120 250 112 300"/>
+      <path d="M115 210 Q78 185 77 155 Q107 175 115 210"/>
+      <path d="M120 230 Q155 200 165 170 Q130 185 120 230"/>
+      <path d="M130 145 Q102 120 107 92 Q130 110 130 145"/>
+      <path d="M135 165 Q165 140 173 112 Q143 128 135 165"/>
+    </g>
+    <g fill="#9274A9">
+      <ellipse cx="145" cy="28" rx="8" ry="14" transform="rotate(20 145 28)"/>
+      <ellipse cx="132" cy="40" rx="8" ry="14" transform="rotate(-35 132 40)"/>
+      <ellipse cx="155" cy="48" rx="8" ry="14" transform="rotate(35 155 48)"/>
+      <ellipse cx="127" cy="60" rx="8" ry="14" transform="rotate(-30 127 60)"/>
+      <ellipse cx="151" cy="69" rx="8" ry="14" transform="rotate(30 151 69)"/>
+      <ellipse cx="120" cy="81" rx="8" ry="14" transform="rotate(-25 120 81)"/>
+      <ellipse cx="144" cy="90" rx="8" ry="14" transform="rotate(25 144 90)"/>
+      <ellipse cx="119" cy="105" rx="7" ry="13" transform="rotate(-25 119 105)"/>
+      <ellipse cx="138" cy="116" rx="7" ry="13" transform="rotate(25 138 116)"/>
+      <ellipse cx="116" cy="130" rx="7" ry="12" transform="rotate(-20 116 130)"/>
+      <ellipse cx="132" cy="140" rx="7" ry="12" transform="rotate(25 132 140)"/>
+    </g>
+    <g fill="#B49AC6">
+      <circle cx="145" cy="28" r="2"/>
+      <circle cx="132" cy="40" r="2"/>
+      <circle cx="155" cy="48" r="2"/>
+      <circle cx="127" cy="60" r="2"/>
+      <circle cx="151" cy="69" r="2"/>
+      <circle cx="120" cy="81" r="2"/>
+      <circle cx="144" cy="90" r="2"/>
+    </g>
+  </svg>
+
+  <!-- EN-TÊTE CONSERVÉ -->
+  <div class="deonto-top-wrapper">
+    <header class="press-header">
+      <svg class="balance-filigrane"
+           viewBox="0 0 240 200"
+           xmlns="http://www.w3.org/2000/svg"
+           aria-hidden="true">
+        <rect x="34" y="24" width="128" height="150" rx="10" fill="none" stroke="#26394d" stroke-width="5"/>
+        <rect x="48" y="38" width="100" height="20" rx="4" fill="#9b784b"/>
+        <line x1="48" y1="74" x2="102" y2="74" stroke="#26394d" stroke-width="4" stroke-linecap="round"/>
+        <line x1="48" y1="88" x2="96" y2="88" stroke="#26394d" stroke-width="4" stroke-linecap="round"/>
+        <line x1="48" y1="102" x2="100" y2="102" stroke="#26394d" stroke-width="4" stroke-linecap="round"/>
+        <rect x="114" y="72" width="34" height="34" rx="4" fill="none" stroke="#9b784b" stroke-width="3.5"/>
+        <line x1="48" y1="124" x2="148" y2="124" stroke="#26394d" stroke-width="4" stroke-linecap="round"/>
+        <line x1="48" y1="138" x2="136" y2="138" stroke="#26394d" stroke-width="4" stroke-linecap="round"/>
+        <line x1="48" y1="152" x2="116" y2="152" stroke="#26394d" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="164" cy="126" r="34" fill="#F4F0E8" stroke="#26394d" stroke-width="6"/>
+        <circle cx="164" cy="126" r="23" fill="none" stroke="#9b784b" stroke-width="3.5"/>
+        <line x1="189" y1="151" x2="216" y2="178" stroke="#26394d" stroke-width="8" stroke-linecap="round"/>
+      </svg>
+
+      <span class="press-label">
+        DOSSIER DOCUMENTAIRE · GRIGNAN
+      </span>
+
+      <h1>Traitement médiatique : 
+        <br> analyse de Léo Décode🔍</h1>
+
+      <p class="press-intro">
+        Une lecture critique de la couverture médiatique de la transformation du four banal, à la lumière de la Loi, de la Charte de Munich et des principes éditoriaux du journal.
+      </p>
+
+      <div class="press-divider"></div>
+    </header>
+  </div>
+
+  <!-- Conteneur principal de l'infographie -->
+  <main id="infographic-root" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-10">
+
+    <!-- 1. EN-TÊTE VISUEL PERCUTANT -->
+    <header class="relative overflow-hidden rounded-3xl bg-navy-900 text-white p-6 sm:p-10 lg:p-12 card-shadow border-2 border-navy-700">
+      <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-ocre-500/10 blur-2xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-terracotta-500/15 blur-2xl pointer-events-none"></div>
+
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8 space-y-4">
+          <div class="inline-flex flex-wrap items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 px-3.5 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider text-ocre-300">
+            <span>🔍 Décryptage journalistique • Grignan (Drôme)</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
+            Transformation du Four banal : <span class="text-ocre-300">ce que deux articles du Dauphiné Libéré</span> ne vous disent pas
+          </h2>
+
+          <p class="text-lg sm:text-xl text-slate-200 leading-relaxed max-w-2xl">
+            Une lecture critique de la couverture médiatique de la transformation du four banal, à la lumière de la Loi, de la Charte de Munich et des principes éditoriaux du journal.
+          </p>
+        </div>
+
+        <div class="lg:col-span-4 flex justify-center">
+          <svg class="w-40 h-40 sm:w-64 sm:h-64 animate-float" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration d'un journal examiné à la loupe et d'une balance de déontologie">
+            <circle cx="130" cy="130" r="112" fill="#162A4A" stroke="#F5B700" stroke-width="2" stroke-dasharray="6 6"></circle>
+            <rect x="46" y="44" width="136" height="168" rx="14" fill="#FAF8F5" stroke="#0F1E36" stroke-width="3"></rect>
+            <rect x="62" y="60" width="104" height="22" rx="5" fill="#0F1E36"></rect>
+            <rect x="70" y="67" width="60" height="8" rx="3" fill="#FDE073"></rect>
+            <rect x="62" y="92" width="48" height="44" rx="6" fill="#FDECE8" stroke="#D95D39" stroke-width="2"></rect>
+            <path d="M74 122L84 108L94 118L102 104" stroke="#D95D39" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <rect x="118" y="94" width="48" height="7" rx="3" fill="#CBD5E1"></rect>
+            <rect x="118" y="107" width="42" height="7" rx="3" fill="#CBD5E1"></rect>
+            <rect x="118" y="120" width="48" height="7" rx="3" fill="#FDE073"></rect>
+            <rect x="62" y="148" width="104" height="8" rx="3" fill="#FDE073"></rect>
+            <rect x="62" y="162" width="90" height="8" rx="3" fill="#CBD5E1"></rect>
+            <rect x="62" y="176" width="76" height="8" rx="3" fill="#CBD5E1"></rect>
+            <g transform="translate(164, 28)">
+              <circle cx="34" cy="34" r="30" fill="#3D7A64" stroke="#FAF8F5" stroke-width="3"></circle>
+              <path d="M34 16V50M22 50H46M18 24H50" stroke="#FAF8F5" stroke-width="2.5" stroke-linecap="round"></path>
+              <path d="M18 24L13 35H23L18 24Z" fill="#FDE073"></path>
+              <path d="M50 24L45 35H55L50 24Z" fill="#FDE073"></path>
+            </g>
+            <g transform="translate(128, 125)">
+              <circle cx="46" cy="46" r="38" fill="#F5B700" fill-opacity="0.22" stroke="#F5B700" stroke-width="6"></circle>
+              <circle cx="46" cy="46" r="30" stroke="#0F1E36" stroke-width="2.5"></circle>
+              <path d="M32 38C36 31 44 28 52 30" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"></path>
+              <path d="M74 74L102 102" stroke="#D95D39" stroke-width="11" stroke-linecap="round"></path>
+              <path d="M74 74L102 102" stroke="#0F1E36" stroke-width="3" stroke-linecap="round"></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. BANDEAU « L'ESSENTIEL EN 10 SECONDES » -->
+    <section aria-labelledby="essentiel-title" class="space-y-4">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <h2 id="essentiel-title" class="font-serif text-2xl sm:text-3xl font-bold text-navy-900 flex items-center gap-2.5">
+          <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-ocre-500 text-navy-900 text-lg font-black shrink-0">⚡</span>
+          <span>L’essentiel en 10 secondes</span>
+        </h2>
+        <span class="text-sm font-bold uppercase tracking-wider text-slate-500">4 points clés à retenir</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
+        <!-- Carte 1 -->
+        <div class="bg-white rounded-2xl p-5 card-shadow border-t-4 border-navy-900 flex flex-col hover:-translate-y-1 transition-transform">
+          <div class="flex items-center justify-between gap-2 mb-4 min-h-[44px]">
+            <span class="font-serif text-lg sm:text-xl font-black text-navy-900 leading-tight">2 articles analysés</span>
+            <svg class="w-10 h-10 shrink-0 text-navy-700" viewBox="0 0 40 40" fill="none">
+              <rect x="6" y="8" width="20" height="26" rx="3" fill="#E2E8F0" stroke="#0F1E36" stroke-width="2"></rect>
+              <rect x="14" y="5" width="20" height="26" rx="3" fill="#FAF8F5" stroke="#0F1E36" stroke-width="2"></rect>
+              <path d="M18 11H30M18 16H30M18 21H25" stroke="#0F1E36" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <div class="space-y-1.5">
+            <p class="font-sans text-base font-normal text-navy-900 leading-relaxed">Publiés par <em>Le Dauphiné Libéré</em> sur la « Chambre de lecture » d’Hélène Delprat à Grignan.</p>
+          </div>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="bg-white rounded-2xl p-5 card-shadow border-t-4 border-ocre-500 flex flex-col hover:-translate-y-1 transition-transform">
+          <div class="flex items-center justify-between gap-2 mb-4 min-h-[44px]">
+            <span class="font-serif text-lg sm:text-xl font-black text-amber-800 leading-tight">Plagiat</span>
+            <svg class="w-10 h-10 shrink-0" viewBox="0 0 40 40" fill="none">
+              <rect x="6" y="10" width="16" height="20" rx="3" fill="#FDE073" stroke="#0F1E36" stroke-width="2"></rect>
+              <rect x="18" y="6" width="16" height="20" rx="3" fill="#FEF6D8" stroke="#0F1E36" stroke-width="2"></rect>
+              <path d="M22 12H30M22 17H28" stroke="#0F1E36" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <div class="space-y-1.5">
+            <p class="font-sans text-base font-normal text-navy-900 leading-relaxed">Reprise quasi mot pour mot de <em>La Gazette Drouot</em> sans mention ni preuve d’autorisation.</p>
+          </div>
+        </div>
+
+        <!-- Carte 3 : Information tronquée -->
+        <div class="bg-white rounded-2xl p-5 card-shadow border-t-4 border-terracotta-500 flex flex-col hover:-translate-y-1 transition-transform">
+          <div class="flex items-center justify-between gap-2 mb-4 min-h-[44px]">
+            <span class="font-serif text-lg sm:text-xl font-black text-terracotta-600 leading-tight">Information tronquée</span>
+            <svg class="w-10 h-10 shrink-0" viewBox="0 0 40 40" fill="none" aria-label="Œil barré rouge">
+              <path d="M5 20C9 12 14 9 20 9C26 9 31 12 35 20C31 28 26 31 20 31C14 31 9 28 5 20Z" fill="#FDECE8" stroke="#D95D39" stroke-width="2"></path>
+              <circle cx="20" cy="20" r="5" fill="#D95D39"></circle>
+              <path d="M8 32L32 8" stroke="#D95D39" stroke-width="2.4" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <div class="font-sans text-base font-normal text-navy-900 leading-relaxed space-y-1">
+            <p>- Montant de la commande publique omise ;</p>
+            <p>- Critiques publiques ignorées ;</p>
+            <p>- Description de l'œuvre partielle.</p>
+          </div>
+        </div>
+
+        <!-- Carte 4 : Alertes déontologiques -->
+        <div class="bg-white rounded-2xl p-5 card-shadow border-t-4 border-sauge-500 flex flex-col hover:-translate-y-1 transition-transform">
+          <div class="mb-4 min-h-[44px]">
+            <div class="flex items-center justify-between gap-2">
+              <span class="font-serif text-lg sm:text-xl font-black text-sauge-700 leading-tight">Alertes</span>
+              <svg class="w-10 h-10 shrink-0" viewBox="0 0 40 40" fill="none" aria-label="Panneau attention">
+                <path d="M20 6L35 32H5L20 6Z" fill="#FEF6D8" stroke="#D95D39" stroke-width="2.2" stroke-linejoin="round"></path>
+                <path d="M20 15V23" stroke="#B84726" stroke-width="2.6" stroke-linecap="round"></path>
+                <circle cx="20" cy="27.5" r="1.5" fill="#B84726"></circle>
+              </svg>
+            </div>
+            <span class="block font-serif text-base sm:text-lg font-black text-sauge-700 leading-tight -mt-1">déontologiques</span>
+          </div>
+          <div>
+            <p class="font-sans text-base font-normal text-navy-900 leading-relaxed">Déontologie du journalisme bafouée et Charte de Munich violée ?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CARTE 1 — ARTICLE 1 DL : PLAGIAT & COÛT CACHÉ -->
+    <article class="bg-white rounded-3xl p-6 sm:p-8 card-shadow border border-slate-200/80 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-5">
+        <div class="flex items-start gap-4">
+          <div class="shrink-0 w-14 h-14 rounded-2xl bg-ocre-100 border border-ocre-300 flex items-center justify-center">
+            <svg class="w-9 h-9" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <rect x="8" y="8" width="18" height="22" rx="3" fill="#FFFFFF" stroke="#0F1E36" stroke-width="2"></rect>
+              <rect x="18" y="14" width="18" height="22" rx="3" fill="#FDE073" stroke="#0F1E36" stroke-width="2"></rect>
+              <circle cx="14" cy="34" r="3.5" stroke="#D95D39" stroke-width="2"></circle>
+              <circle cx="23" cy="36" r="3.5" stroke="#D95D39" stroke-width="2"></circle>
+              <path d="M16.5 31.5L26 22M20.5 33.5L13 23" stroke="#D95D39" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <div>
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-sm font-extrabold uppercase tracking-wide bg-ocre-100 text-amber-800 mb-1">
+              <a href="https://www.ledauphine.com/culture-loisirs/2026/09/16/la-chambre-de-lecture-au-four-banal-sera-inauguree-samedi" target="_blank" rel="noopener noreferrer" class="underline hover:text-navy-900">Article 1 du Dauphiné Libéré ↗</a>
+            </span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy-900">
+              Plagiat &amp; Coût public passé sous silence
+            </h2>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 rounded-lg bg-navy-900 text-white text-sm font-bold">Loi CPI</span>
+          <span class="px-2.5 py-1 rounded-lg bg-ocre-500 text-navy-900 text-sm font-bold">Munich Devoir 8</span>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <p class="text-base sm:text-lg font-bold text-navy-800 flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-ocre-500 shrink-0"></span>
+          <span>Comparaison textuelle : un passage repris quasi mot pour mot (surligné en jaune)</span>
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-slate-50 border-2 border-slate-200 p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+                <span class="text-sm font-extrabold uppercase tracking-wider text-sauge-700 bg-sauge-100 px-2.5 py-1 rounded-lg">
+                  1. Texte original • 22 mai 2023
+                </span>
+                <a href="https://www.gazette-drouot.com/article/helene-delprat-gagne-le-grand-prix-artistique-del-duca/44133" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-navy-900 underline">
+                  La Gazette Drouot ↗
+                </a>
+              </div>
+              <blockquote class="text-base sm:text-lg text-navy-900 leading-relaxed font-medium">
+                « <span class="marker-highlight">L'artiste</span> <span class="text-slate-500 line-through">française née en 1957</span>, <span class="marker-highlight">chef d'atelier à l'École nationale des beaux-arts de Paris, reçoit 100 000 €. Le prix, récompensant l’ensemble d’une carrière internationale, est attribué par</span> <span class="marker-highlight">la</span> <span class="marker-highlight">fondation Simone et Cino del Duca sur proposition de l’Académie des beaux-arts.</span> »
+              </blockquote>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-sm">
+              <span class="text-slate-500 font-semibold">© La Gazette Drouot @uctionspress</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-ocre-100/50 border-2 border-ocre-300 p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+                <span class="text-sm font-extrabold uppercase tracking-wider text-amber-900 bg-ocre-300 px-2.5 py-1 rounded-lg">
+                  2. Reprise sans source ni autorisation
+                </span>
+                <a href="https://www.ledauphine.com/culture-loisirs/2026/09/16/la-chambre-de-lecture-au-four-banal-sera-inauguree-samedi" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-navy-900 underline">
+                  Le Dauphiné Libéré ↗
+                </a>
+              </div>
+              <blockquote class="text-base sm:text-lg text-navy-900 leading-relaxed font-medium">
+                « <span class="marker-highlight">L’artiste, chef d’atelier à l’École nationale des Beaux-Arts de Paris, reçoit 100 000 €. Le prix, récompensant l’ensemble d’une carrière internationale, est attribué par la fondation Simone et Cino del Duca sur proposition de l’Académie des Beaux-Arts.</span> »
+              </blockquote>
+            </div>
+            <div class="mt-4 pt-3 border-t border-ocre-300/70 text-sm sm:text-base font-normal text-navy-900">
+              ⚠️ Il appartiendra au <em>Dauphiné Libéré</em> de prouver qu’une autorisation préalable a été accordée par le groupe @uctionspress. Dans le cas contraire, le plagiat serait avéré (Devoir 8 de la Charte de Munich).
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl bg-terracotta-100/70 border border-terracotta-500/30 p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div class="shrink-0 w-11 h-11 rounded-xl bg-terracotta-500 text-white flex items-center justify-center font-serif font-black text-xl">
+          €
+        </div>
+        <div class="text-base sm:text-lg text-navy-900 leading-relaxed">
+          <strong class="text-terracotta-600">Omission du montant de la commande publique (200 000 €) :</strong>
+          Si le reste de l'article relève de la liberté de la presse, aucune mention n’est faite du coût public de <strong>200 000 €</strong> — une information financière majeure pour les habitants (<strong>Devoirs 1 et 3 de la Charte de Munich</strong>).
+        </div>
+      </div>
+
+      <div class="pt-1">
+        <button type="button" onclick="toggleDrawer('drawer-1', this)" aria-expanded="false" class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-3 px-4 py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white text-sm sm:text-base font-bold transition-colors">
+          <span>📚 Voir les textes de référence (Loi CPI, Munich, Charte DL)</span>
+          <span class="drawer-arrow transition-transform duration-300" style="transform: rotate(0deg);">▼</span>
+        </button>
+
+        <div id="drawer-1" class="accordion-content mt-3">
+          <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5 space-y-4 text-base text-slate-700 leading-relaxed">
+            <div>
+              <h4 class="font-extrabold text-navy-900 mb-1">1. <a href="https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069414/" target="_blank" rel="noopener noreferrer" class="underline text-navy-700 hover:text-terracotta-600">Code de la propriété intellectuelle (CPI) ↗</a> &amp; Mentions légales</h4>
+              <ul class="list-disc pl-5 space-y-1.5">
+                <li><strong>Mentions légales de <em>La Gazette Drouot</em> (<a href="https://www.gazette-drouot.com/contact" target="_blank" rel="noopener noreferrer" class="underline text-navy-700">source</a>) :</strong> <em>« Toute mise en réseau ou reproduction, sous quelque forme que ce soit, partielle ou totale, des informations, publicités ou commentaires contenus sur ce site sont interdites sans l'accord préalable du groupe @uctionspress. Tous droits réservés. »</em></li>
+                <li><strong>Article L. 111-1 du CPI :</strong> L'auteur d'une œuvre de l'esprit jouit sur cette œuvre, du seul fait de sa création, d'un droit de propriété incorporelle exclusif et opposable à tous.</li>
+                <li><strong>Article L. 122-4 du CPI :</strong> Toute représentation ou reproduction intégrale ou partielle faite sans le consentement de l'auteur ou de ses ayants droit est illicite.</li>
+                <li><strong>Article L. 122-5, 3° a) du CPI :</strong> La courte citation n'est dispensée d'autorisation que si elle est justifiée par un caractère critique, polémique, pédagogique, scientifique ou d'information, et <em>« sous réserve que soient indiqués clairement le nom de l'auteur et la source »</em>.</li>
+                <li><strong>Articles L. 335-2 et L. 335-3 du CPI :</strong> Qualifient de délit de contrefaçon toute reproduction d'écrits au mépris des lois sur la propriété des auteurs (puni jusqu'à 3 ans d'emprisonnement et 300 000 € d'amende).</li>
+                <li><strong>Article L. 218-2 du CPI :</strong> Soumet à l'autorisation de l'éditeur de presse toute reproduction totale ou partielle de ses publications en ligne.</li>
+              </ul>
+            </div>
+
+            <div class="border-t border-slate-200 pt-3">
+              <h4 class="font-extrabold text-navy-900 mb-1">2. <a href="https://cdjm.org/les-chartes/" target="_blank" rel="noopener noreferrer" class="underline text-navy-700">Charte de Munich (1971) ↗</a> - Devoirs 1, 3 et 8</h4>
+              <ul class="list-disc pl-5 space-y-1">
+                <li><strong>Devoir 1 :</strong> <em>« Respecter la vérité, quelles qu'en puissent être les conséquences pour lui-même, et ce, en raison du droit que le public a de connaître la vérité. »</em></li>
+                <li><strong>Devoir 3 :</strong> <em>« [...] ne pas supprimer les informations essentielles et ne pas altérer les textes et les documents. »</em></li>
+                <li><strong>Devoir 8 :</strong> <em>« S'interdire le plagiat, la calomnie, la diffamation, les accusations sans fondement [...]. »</em></li>
+              </ul>
+            </div>
+
+            <div class="border-t border-slate-200 pt-3">
+              <h4 class="font-extrabold text-navy-900 mb-1">3. <a href="https://www.ledauphine.com/societe/2023/11/23/declaration-des-principes-editoriaux-des-titres-du-groupe-ebra-dont-le-dauphine-libere-fait-partie" target="_blank" rel="noopener noreferrer" class="underline text-navy-700">Principes éditoriaux du <em>Dauphiné Libéré</em> (Groupe EBRA) ↗</a></h4>
+              <p><em>« Le Dauphiné Libéré s'interdit tout plagiat. Il cite les confrères ou médias dont il reprend les informations dans les conditions définies par la charte de la traçabilité adoptée par l'Alliance de la presse d'information générale dont il est membre. »</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. CARTE 2 — ARTICLE 2 DL : L'INAUGURATION EN VERSION FILTRÉE -->
+    <article class="bg-white rounded-3xl p-6 sm:p-8 card-shadow border border-slate-200/80 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-5">
+        <div class="flex items-start gap-4">
+          <div class="shrink-0 w-14 h-14 rounded-2xl bg-terracotta-100 border border-terracotta-500/30 flex items-center justify-center">
+            <svg class="w-9 h-9" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <path d="M6 22C10.5 13.5 16 10 22 10C28 10 33.5 13.5 38 22C33.5 30.5 28 34 22 34C16 34 10.5 30.5 6 22Z" fill="#FFFFFF" stroke="#0F1E36" stroke-width="2"></path>
+              <circle cx="22" cy="22" r="6" fill="#D95D39"></circle>
+              <circle cx="24" cy="20" r="2" fill="#FFFFFF"></circle>
+              <path d="M10 34L34 10" stroke="#0F1E36" stroke-width="2.5" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <div>
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-sm font-extrabold uppercase tracking-wide bg-terracotta-100 text-terracotta-600 mb-1">
+              <a href="https://www.ledauphine.com/culture-loisirs/2026/09/20/au-four-banal-une-chambre-de-lecture-qui-invite-a-la-reverie" target="_blank" rel="noopener noreferrer" class="underline hover:text-navy-900">Article 2 du Dauphiné Libéré ↗</a> • Inauguration du 19 septembre
+            </span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy-900">
+              L’inauguration en version filtrée
+            </h2>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 rounded-lg bg-terracotta-600 text-white text-sm font-bold">Munich Devoirs 1, 2 &amp; 3</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-navy-900 text-sm font-bold">Pluralisme &amp; Exactitude</span>
+        </div>
+      </div>
+
+      <p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+        Si l'angle descriptif d'un article relève de la liberté de la presse, ce compte rendu porte précisément sur la <strong>cérémonie d’inauguration du samedi 19 septembre</strong>. Or, deux éléments factuels majeurs sont absents du texte :
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="rounded-2xl bg-creme border border-slate-200 p-5 space-y-3">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-navy-900 text-ocre-300 flex items-center justify-center font-bold text-sm shrink-0">A</span>
+            <h3 class="font-extrabold text-lg text-navy-900">Les critiques publiques passées sous silence</h3>
+          </div>
+          <p class="text-base text-slate-700 leading-relaxed">
+            Pendant la cérémonie, plusieurs participants ont soulevé publiquement des interrogations majeures remettant en question le projet :
+          </p>
+          <ul class="space-y-2 text-base font-semibold text-navy-900">
+            <li class="flex items-start gap-2">
+              <span class="text-terracotta-600 font-black shrink-0">✕</span>
+              <span>Adéquation avec le <strong>patrimoine médiéval</strong> du village ;</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-terracotta-600 font-black shrink-0">✕</span>
+              <span>Respect de <strong>l’esprit de l’ancien four banal</strong> ;</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-terracotta-600 font-black shrink-0">✕</span>
+              <span>Cohérence avec <strong>l’identité de Grignan</strong>.</span>
+            </li>
+          </ul>
+          <p class="text-sm sm:text-base text-slate-500 pt-1">
+            → Aucune mention de ces réserves dans l’article.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-creme border border-slate-200 p-5 space-y-3">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-navy-900 text-ocre-300 flex items-center justify-center font-bold text-sm shrink-0">B</span>
+            <h3 class="font-extrabold text-lg text-navy-900">Description partielle : l’iconographie macabre omise</h3>
+          </div>
+          <p class="text-base text-slate-700 leading-relaxed">
+            L’article décrit l’œuvre comme un espace de contemplation et de rêverie, sans jamais mentionner la représentation d’une iconographie macabre.
+          </p>
+          <div class="rounded-xl bg-white p-3.5 border border-slate-200 text-base text-navy-900 leading-relaxed">
+            <strong>Constat factuel, non interprétatif :</strong> Signaler la présence de têtes de mort, de la faucheuse et du diable relève d'une description objective des éléments visibles de l'installation, indispensable pour informer loyalement le lecteur.
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-1">
+        <button type="button" onclick="toggleDrawer('drawer-2', this)" aria-expanded="false" class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-3 px-4 py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white text-sm sm:text-base font-bold transition-colors">
+          <span>📚 Voir les textes de référence (Munich Devoirs 1, 2, 3 &amp; Charte DL)</span>
+          <span class="drawer-arrow transition-transform duration-300" style="transform: rotate(0deg);">▼</span>
+        </button>
+
+        <div id="drawer-2" class="accordion-content mt-3">
+          <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5 space-y-4 text-base text-slate-700 leading-relaxed">
+            <div>
+              <h4 class="font-extrabold text-navy-900 mb-1">1. <a href="https://cdjm.org/les-chartes/" target="_blank" rel="noopener noreferrer" class="underline text-navy-700">Charte de Munich (1971) ↗</a> - Devoirs 1, 2 et 3</h4>
+              <ul class="list-disc pl-5 space-y-1">
+                <li><strong>Devoir 1 :</strong> <em>« Respecter la vérité, quelles qu'en puissent être les conséquences pour lui-même, et ce, en raison du droit que le public a de connaître la vérité. »</em></li>
+                <li><strong>Devoir 2 :</strong> <em>« Défendre la liberté de l'information, du commentaire et de la critique. »</em></li>
+                <li><strong>Devoir 3 :</strong> <em>« Publier seulement les informations dont l'origine est connue ou les accompagner, si c'est nécessaire, des réserves qui s'imposent ; ne pas supprimer les informations essentielles et ne pas altérer les textes et les documents. »</em></li>
+              </ul>
+            </div>
+            <div class="border-t border-slate-200 pt-3">
+              <h4 class="font-extrabold text-navy-900 mb-1">2. <a href="https://www.ledauphine.com/societe/2023/11/23/declaration-des-principes-editoriaux-des-titres-du-groupe-ebra-dont-le-dauphine-libere-fait-partie" target="_blank" rel="noopener noreferrer" class="underline text-navy-700">Principes éditoriaux du <em>Dauphiné Libéré</em> (Groupe EBRA) ↗</a></h4>
+              <ul class="list-disc pl-5 space-y-1">
+                <li><strong>Exactitude et vigilance critique :</strong> <em>« Le Dauphiné Libéré s’attache avant tout à l’exactitude des faits, des actes, des propos qu’il révèle ou dont il rend compte. Il examine avec rigueur et une vigilance critique les informations, documents, images ou sons qui lui parviennent. »</em></li>
+                <li><strong>Pluralisme et débat local :</strong> Le journal s’affirme comme un média <em>« indépendant, pluraliste et démocratique »</em>, veillant à <em>« assurer le pluralisme des opinions et des points de vue »</em> et à être <em>« le lieu des débats qui animent [les territoires] : il les suscite et y participe »</em>.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. CARTE 3 — SIGNATURE & CONFLIT D'INTÉRÊTS POTENTIEL -->
+    <article class="bg-white rounded-3xl p-6 sm:p-8 card-shadow border border-slate-200/80 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-5">
+        <div class="flex items-start gap-4">
+          <div class="shrink-0 w-14 h-14 rounded-2xl bg-sauge-100 border border-sauge-500/30 flex items-center justify-center">
+            <svg class="w-9 h-9" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <circle cx="22" cy="16" r="7" fill="#FFFFFF" stroke="#0F1E36" stroke-width="2"></circle>
+              <path d="M10 35C10 28.5 15.5 25 22 25C28.5 25 34 28.5 34 35" fill="#3D7A64" stroke="#0F1E36" stroke-width="2" stroke-linecap="round"></path>
+              <circle cx="33" cy="13" r="7" fill="#F5B700" stroke="#0F1E36" stroke-width="1.8"></circle>
+              <text x="33" y="17" text-anchor="middle" font-size="11" font-weight="900" fill="#0F1E36">?</text>
+            </svg>
+          </div>
+          <div>
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-sm font-extrabold uppercase tracking-wide bg-sauge-100 text-sauge-700 mb-1">
+              Transparence &amp; Indépendance éditoriale
+            </span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy-900">
+              Qui signe vraiment ? La question d’un potentiel conflit d’intérêts
+            </h2>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 rounded-lg bg-sauge-700 text-white text-sm font-bold">Munich Devoirs 1, 9 &amp; 10</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-navy-900 text-sm font-bold">Conflit d'intérêts</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <div class="text-sm font-black uppercase text-slate-400">Étape 1 • Les articles</div>
+          <h3 class="font-extrabold text-base sm:text-lg text-navy-900">Signature générique &amp; crédit photo</h3>
+          <p class="text-sm sm:text-base text-slate-700 leading-relaxed">
+            Les deux articles sur la transformation du four banal - projet porté par le maire <strong>Bruno Durieux</strong> - sont signés génériquement <strong>« Le Dauphiné Libéré »</strong>, mais les photos sont créditées <strong>Michèle Laurent</strong>.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <div class="text-sm font-black uppercase text-slate-400">Étape 2 • Archives publiques</div>
+          <h3 class="font-extrabold text-base sm:text-lg text-navy-900">Élue sur la liste du maire</h3>
+          <p class="text-sm sm:text-base text-slate-700 leading-relaxed">
+            Lors des <strong>municipales de 2020 à Grignan</strong>, Michèle Laurent s’est présentée sur la liste conduite par <strong>Bruno Durieux</strong> et a été élue au conseil municipal sous son mandat.
+          </p>
+          <a href="https://www.archives-resultats-elections.interieur.gouv.fr/resultats/municipales-2020/026/C1026146L001.php" target="_blank" rel="noopener noreferrer" class="inline-block text-sm sm:text-base font-bold text-navy-700 hover:text-terracotta-600 underline pt-1">
+            Archives Ministère de l'Intérieur ↗
+          </a>
+        </div>
+
+        <div class="rounded-2xl bg-ocre-100/70 border border-ocre-300 p-4 space-y-2">
+          <div class="text-sm font-black uppercase text-amber-800">Étape 3 • Double question</div>
+          <h3 class="font-extrabold text-base sm:text-lg text-navy-900">Auteur réel &amp; indépendance</h3>
+          <p class="text-sm sm:text-base text-navy-900 leading-relaxed">
+            <strong>1. Qui est l’auteur(e) réel(le)</strong> des deux articles ?<br>
+            <strong>2. Si Michèle Laurent en est l’autrice </strong>(ou même en partie), se pose directement la question d’un potentiel <strong>conflit d’intérêts.</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="pt-1">
+        <button type="button" onclick="toggleDrawer('drawer-3', this)" aria-expanded="false" class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-3 px-4 py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white text-sm sm:text-base font-bold transition-colors">
+          <span>📚 Voir les textes de référence (Munich Devoirs 1, 9, 10 &amp; Conflits d'intérêts DL)</span>
+          <span class="drawer-arrow transition-transform duration-300" style="transform: rotate(0deg);">▼</span>
+        </button>
+
+        <div id="drawer-3" class="accordion-content mt-3">
+          <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5 space-y-4 text-base text-slate-700 leading-relaxed">
+            <div>
+              <h4 class="font-extrabold text-navy-900 mb-1">1. <a href="https://cdjm.org/les-chartes/" target="_blank" rel="noopener noreferrer" class="underline text-navy-700">Charte de Munich (1971) ↗</a> - Devoirs 1, 9 et 10</h4>
+              <ul class="list-disc pl-5 space-y-1">
+                <li><strong>Devoir 1 :</strong> <em>« Respecter la vérité, quelles qu'en puissent être les conséquences pour lui-même, et ce, en raison du droit que le public a de connaître la vérité. »</em></li>
+                <li><strong>Devoir 9 :</strong> <em>« Ne jamais confondre le métier de journaliste avec celui du publicitaire ou du propagandiste ; n'accepter aucune consigne, directe ou indirecte, des annonceurs. »</em></li>
+                <li><strong>Devoir 10 :</strong> <em>« Refuser toute pression et n'accepter de directives rédactionnelles que des responsables de la rédaction. »</em></li>
+              </ul>
+            </div>
+            <div class="border-t border-slate-200 pt-3">
+              <h4 class="font-extrabold text-navy-900 mb-1">2. <a href="https://www.ledauphine.com/societe/2023/11/23/declaration-des-principes-editoriaux-des-titres-du-groupe-ebra-dont-le-dauphine-libere-fait-partie" target="_blank" rel="noopener noreferrer" class="underline text-navy-700">Principes éditoriaux du <em>Dauphiné Libéré</em> (Groupe EBRA) ↗</a></h4>
+              <p><em>« Au sein de notre rédaction, les journalistes se préservent de tout conflit d'intérêt. Si une activité lucrative ou pas, extérieure à l'exercice de leur métier, peut porter atteinte à leur crédibilité et à leur indépendance, ils alertent leur rédaction en chef qui met en place les mesures adéquates conformément au règlement intérieur du groupe EBRA et donc du Dauphiné Libéré. »</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. ENCADRÉ FINAL : APPEL AU DAUPHINÉ LIBÉRÉ & TABLEAU COMPARATIF -->
+    <section class="rounded-3xl bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 text-white p-6 sm:p-8 lg:p-10 card-shadow space-y-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+        <div class="lg:col-span-9 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ocre-500/20 border border-ocre-500/40 text-ocre-300 text-sm font-extrabold uppercase tracking-wider">
+            📣 Appel citoyen au journal
+          </div>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold">
+            Appliquer les propres engagements pris envers les lecteurs
+          </h2>
+          <p class="text-base sm:text-lg text-slate-200 leading-relaxed">
+            Au regard de ces constats, <em>Le Dauphiné Libéré</em> est appelé à mettre en œuvre sa <a href="https://www.ledauphine.com/societe/2023/11/23/declaration-des-principes-editoriaux-des-titres-du-groupe-ebra-dont-le-dauphine-libere-fait-partie" target="_blank" rel="noopener noreferrer" class="underline text-ocre-300 hover:text-white">déclaration des principes éditoriaux ↗</a>, en cohérence avec la <a href="https://cdjm.org/les-chartes/" target="_blank" rel="noopener noreferrer" class="underline text-ocre-300 hover:text-white">Charte de Munich ↗</a> (Devoirs 1 et 6) :
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+            <div class="rounded-2xl bg-white/10 border border-white/15 p-4 space-y-1.5">
+              <div class="text-sm font-extrabold uppercase text-ocre-300">Rectification &amp; transparence</div>
+              <p class="text-base text-white/95 italic leading-relaxed">
+                « Le Dauphiné Libéré rectifie dans les meilleurs délais les erreurs qu’il a pu commettre. Il doit informer le public des manipulations dont il a pu être victime. »
+              </p>
+              <div class="text-sm text-slate-300 pt-1">
+                + <strong>Charte de Munich, Devoir 6 :</strong> « Rectifier toute information publiée qui se révèle inexacte. »
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-white/10 border border-white/15 p-4 space-y-1.5">
+              <div class="text-sm font-extrabold uppercase text-sauge-100">Nos engagements • Être à l'écoute</div>
+              <p class="text-base text-white/95 italic leading-relaxed">
+                « Le Dauphiné Libéré est ouvert aux critiques et suggestions du public. Il prend en compte ses remarques qui peuvent trouver place dans sa réflexion et sa pratique journalistique. »
+              </p>
+              <div class="text-sm text-slate-300 pt-1">
+                + <strong>Charte de Munich, Devoir 1 :</strong> Droit du public à connaître la vérité.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 flex justify-center">
+          <svg class="w-32 h-32 sm:w-40 sm:h-40" viewBox="0 0 180 180" fill="none" aria-label="Illustration mégaphone et dialogue lecteur">
+            <circle cx="90" cy="90" r="80" fill="#1E3A63" stroke="#FDE073" stroke-width="2" stroke-dasharray="5 5"></circle>
+            <rect x="92" y="28" width="58" height="36" rx="12" fill="#3D7A64" stroke="#FAF8F5" stroke-width="2.5"></rect>
+            <path d="M104 64L98 74L114 64" fill="#3D7A64"></path>
+            <path d="M105 42H137M105 50H127" stroke="#FAF8F5" stroke-width="2.5" stroke-linecap="round"></path>
+            <g transform="translate(26, 62)">
+              <path d="M16 32L66 12V68L16 48V32Z" fill="#F5B700" stroke="#FAF8F5" stroke-width="2.5" stroke-linejoin="round"></path>
+              <rect x="6" y="30" width="12" height="20" rx="4" fill="#D95D39" stroke="#FAF8F5" stroke-width="2.5"></rect>
+              <path d="M22 49L28 70C29 73 27 76 24 76H19C16 76 14 73 14 70L12 49" fill="#FAF8F5"></path>
+              <path d="M76 26C83 32 83 48 76 54M85 18C96 29 96 51 85 62" stroke="#FDE073" stroke-width="3" stroke-linecap="round"></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Tableau comparatif bien contrasté et lisible -->
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white text-navy-900 shadow-md">
+        <table class="mobile-compare-table w-full text-left border-collapse text-base">
+          <thead>
+            <tr class="bg-creme text-navy-900 uppercase text-sm tracking-wider border-b-2 border-slate-200">
+              <th class="p-4 font-extrabold">Référence</th>
+              <th class="p-4 font-extrabold">Ce que prévoit le texte</th>
+              <th class="p-4 font-extrabold">Points soulevés sur les articles DL</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-800">
+            <tr class="bg-white">
+              <td data-label="Référence" class="p-4 font-bold text-navy-900 align-top">
+                📜 Loi du 29 juillet 1881 &amp; <a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000357475" target="_blank" rel="noopener noreferrer" class="underline text-navy-700 hover:text-terracotta-600">Code de la propriété intellectuelle (CPI) ↗</a>
+              </td>
+              <td data-label="Ce que prévoit le texte" class="p-4 align-top leading-relaxed">
+                Liberté de la presse, mais protection contre toute reproduction sans accord (CPI art. L.111-1, L.122-4, L.218-2, L.335-2), sauf courte citation sourcée (art. L.122-5).
+              </td>
+              <td data-label="Points soulevés sur les articles DL" class="p-4 align-top leading-relaxed">
+                L'angle éditorial est libre, mais la reprise quasi mot pour mot de <em>La Gazette Drouot</em> sans accord préalable ni citation pose problème.
+              </td>
+            </tr>
+            <tr class="bg-slate-50/70">
+              <td data-label="Référence" class="p-4 font-bold text-navy-900 align-top">
+                🧭 <a href="https://cdjm.org/les-chartes/" target="_blank" rel="noopener noreferrer" class="underline text-navy-700 hover:text-terracotta-600">Charte de Munich (1971) ↗</a><br>
+                <span class="text-sm font-semibold text-slate-600">Devoirs 1, 2, 3, 6, 8, 9 &amp; 10</span>
+              </td>
+              <td data-label="Ce que prévoit le texte" class="p-4 align-top leading-relaxed">
+                Vérité et droit du public (1), liberté de critique (2), ne pas supprimer d'infos essentielles (3), rectifier (6), pas de plagiat (8), indépendance (9 &amp; 10).
+              </td>
+              <td data-label="Points soulevés sur les articles DL" class="p-4 align-top leading-relaxed">
+                Reprise non sourcée (8), omission des 200 000 €, de l’iconographie macabre et de la controverse lors de l'inauguration (1, 2, 3), question d'indépendance (9, 10) et rectification (6).
+              </td>
+            </tr>
+            <tr class="bg-white">
+              <td data-label="Référence" class="p-4 font-bold text-navy-900 align-top">
+                📰 <a href="https://www.ledauphine.com/societe/2023/11/23/declaration-des-principes-editoriaux-des-titres-du-groupe-ebra-dont-le-dauphine-libere-fait-partie" target="_blank" rel="noopener noreferrer" class="underline text-navy-700 hover:text-terracotta-600">Principes éditoriaux du <em>Dauphiné Libéré</em> (EBRA) ↗</a>
+              </td>
+              <td data-label="Ce que prévoit le texte" class="p-4 align-top leading-relaxed">
+                Exactitude, vigilance critique, interdiction du plagiat, pluralisme des opinions et des points de vue, écoute du public, prévention des conflits d'intérêts.
+              </td>
+              <td data-label="Points soulevés sur les articles DL" class="p-4 align-top leading-relaxed">
+                Non-citation de la source, description incomplète de l'œuvre, absence du débat patrimonial sur place, transparence sur l'auteur réel.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+<!-- 7. BOUTON VERS LA PAGE INTERPELLER LA PRESSE -->
+    <div class="pt-2 pb-4 text-center">
+      <a href="La presse.html"
+         class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl bg-ocre-500 hover:bg-ocre-300 text-navy-900 font-extrabold text-base sm:text-lg shadow-lg hover:-translate-y-0.5 transition-all no-underline">
+        <span>✉️</span>
+        <span>Cliquez ici pour interpeller le Dauphiné Libéré</span>
+        <span>→</span>
+      </a>
+    </div>
+  </main>
+</div>
+
+<script>
+  function toggleDrawer(id, btn) {
+    const drawer = document.getElementById(id);
+    if (!drawer) return;
+    const isOpen = drawer.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    const arrow = btn.querySelector('.drawer-arrow');
+    if (arrow) {
+      arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+  }
+</script>
+```
