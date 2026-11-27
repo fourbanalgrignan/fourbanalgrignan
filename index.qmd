@@ -679,9 +679,5 @@ html, body, #quarto-content {
 
 </div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 9b23f4e5d4f8159d4cd85bf156b0d106e0b58278
 </section>
 ```
